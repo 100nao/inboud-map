@@ -971,6 +971,31 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #newsView .nw-none{color:#9aa3b5;font-size:12px}
 #newsView .nw-empty,#newsView .nw-status{padding:32px 8px;text-align:center;color:#5a6a88;font-size:14px}
 #newsView .nw-retry{margin-top:10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 14px;font-family:inherit;font-weight:700;cursor:pointer}
+#newsView .ho{max-width:1100px;margin:0 auto;padding:14px 16px 4px}
+#newsView .ho-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 14px}
+#newsView .ho h2{margin:0;font-size:18px;line-height:1.35}
+#newsView .ho h2 small{display:block;margin-top:2px;font-size:12px;font-weight:700;color:#5a6a88}
+#newsView .ho-asof{margin:6px 0 0;font-size:12px;font-weight:700;color:#3e4f6d}
+#newsView .ho-count{margin:4px 0 0;font-size:13px;color:#14284b;font-variant-numeric:tabular-nums}
+#newsView .ho-note{margin:4px 0 0;font-size:11.5px;color:#7d8aa5;line-height:1.5}
+#newsView .ho-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+#newsView .ho-filters input,#newsView .ho-filters select{flex:1 1 150px;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:16px;color:var(--navy);background:#f7f9fc}
+#newsView .ho-filters input:focus,#newsView .ho-filters select:focus{outline:2px solid #e4d8f6;border-color:#5b3d8f}
+#newsView .ho-table-wrap{margin-top:10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+#newsView .ho-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+#newsView .ho-table th{text-align:left;font-size:12px;color:#3e4f6d;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;background:#f7f8fc;position:sticky;top:0}
+#newsView .ho-table th[aria-sort="ascending"]::after{content:" ▲"}
+#newsView .ho-table th[aria-sort="descending"]::after{content:" ▼"}
+#newsView .ho-table td{padding:8px;border-bottom:1px solid #eef1f6;vertical-align:top}
+#newsView .ho-table a{color:#1f5fbf;font-weight:700}
+#newsView .ho-sub{color:#5a6a88;font-size:12px;font-weight:400;margin-top:2px}
+#newsView .ho-memo{color:#3d2a63;font-size:12px;margin-top:2px}
+#newsView .ho-st{display:inline-block;border-radius:999px;padding:1px 8px;font-size:11px;font-weight:700;white-space:nowrap}
+#newsView .ho-st-open{background:#e7f6ee;color:#0d6b3a}
+#newsView .ho-st-plan{background:#efe8f8;color:#3d2a63}
+#newsView .ho-st-delay{background:#fff3ea;color:#a8420b}
+#newsView .ho-empty{color:#9aa3b5}
+#newsView .ho-status{padding:18px 8px;text-align:center;color:#5a6a88;font-size:14px}
 @media (max-width:640px){
   #newsView .nw-top{padding:8px 10px 6px}
   #newsView .nw-tools{flex-wrap:wrap}
@@ -978,6 +1003,14 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   #newsView .nw-wrap{padding:10px 10px 36px}
   #newsView .nw-card{padding:10px 12px 12px}
   #newsView .nw-card h2{font-size:15.5px}
+  #newsView .ho{padding:10px 10px 4px}
+  #newsView .ho-table thead{display:none}
+  #newsView .ho-table,#newsView .ho-table tbody,#newsView .ho-table tr,#newsView .ho-table td{display:block;width:auto}
+  #newsView .ho-table tr{padding:10px 10px 8px;border-bottom:1px solid #eef1f6}
+  #newsView .ho-table td{border:0;padding:1px 0}
+  #newsView .ho-table td.ho-blank{display:none}
+  #newsView .ho-table td::before{content:attr(data-label);display:inline-block;min-width:4.5em;margin-right:6px;color:#7d8aa5;font-size:11px;font-weight:700}
+  #newsView .ho-table td.ho-name::before{display:none}
 }
 </style>
 </head>
@@ -1027,7 +1060,26 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
     <div id="nwChips" class="nw-chips"></div>
     <p class="nw-legend"><span class="up">▲+</span> は増加、<span class="dn">▼</span> は減少。出典は新しいタブで開きます。</p>
   </header>
-  <div id="nwScroll" class="nw-scroll"><div id="nwBody" class="nw-wrap"></div></div>
+  <div id="nwScroll" class="nw-scroll">
+    <section id="hoPanel" class="ho" hidden>
+      <div class="ho-card">
+        <h2>全国の新規開業ホテル<small>2026年10月以降</small></h2>
+        <p class="ho-asof" id="hoAsof"></p>
+        <p class="ho-count" id="hoCount" aria-live="polite"></p>
+        <p class="ho-note">カテゴリは当サイトの独自分類で、公式の格付けではありません。</p>
+        <div class="ho-filters">
+          <input id="hoQ" type="search" placeholder="ホテル名・ブランド・運営・エリア" autocomplete="off" enterkeyhint="search">
+          <select id="hoPref" aria-label="都道府県"></select>
+          <select id="hoMonth" aria-label="開業年月"></select>
+          <select id="hoStatus" aria-label="ステータス"></select>
+          <select id="hoCat" aria-label="カテゴリ"></select>
+          <select id="hoSort" aria-label="並び順"></select>
+        </div>
+        <div id="hoList"></div>
+      </div>
+    </section>
+    <div id="nwBody" class="nw-wrap"></div>
+  </div>
 </div>
 <script id="lfjs">/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
@@ -2968,7 +3020,21 @@ scan();
   const toggle=document.getElementById('nwToggle');
   const input=document.getElementById('nwQ');
   const scroll=document.getElementById('nwScroll');
+  const hoPanel=document.getElementById('hoPanel');
+  const hoAsof=document.getElementById('hoAsof');
+  const hoCount=document.getElementById('hoCount');
+  const hoList=document.getElementById('hoList');
+  const hoQ=document.getElementById('hoQ');
+  const hoPref=document.getElementById('hoPref');
+  const hoMonth=document.getElementById('hoMonth');
+  const hoStatus=document.getElementById('hoStatus');
+  const hoCat=document.getElementById('hoCat');
+  const hoSortEl=document.getElementById('hoSort');
   let data=null, loading=false, failed=false, filter='all', query='', openDates=new Set();
+  let hotels=null, hoLoading=false, hoFailed=false, hoQuery='', hoPrefV='all', hoMonthV='all', hoStatusV='all', hoCatV='all', hoSort='date', hoDir=1, hoReady=false;
+  const REGIONS=[['北海道',['北海道']],['東北',['青森県','岩手県','宮城県','秋田県','山形県','福島県']],['関東',['茨城県','栃木県','群馬県','埼玉県','千葉県','東京都','神奈川県']],['中部',['新潟県','富山県','石川県','福井県','山梨県','長野県','岐阜県','静岡県','愛知県','三重県']],['近畿',['滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県']],['中国',['鳥取県','島根県','岡山県','広島県','山口県']],['四国',['徳島県','香川県','愛媛県','高知県']],['九州・沖縄',['福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県']]];
+  const PREF_ORDER=REGIONS.flatMap(r=>r[1]);
+  const REGION_OF=Object.fromEntries(REGIONS.flatMap(([n,ps])=>ps.map(p=>[p,n])));
 
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function colorize(s){return esc(s).replace(/▲\s*[+＋]/g,'<span class="up">▲+</span>').replace(/▼/g,'<span class="dn">▼</span>')}
@@ -3009,6 +3075,137 @@ scan();
     }else openDates=new Set(groups.map(g=>g.date));
   }
   function chipCount(id){return data.items.filter(it=>hit(it)&&(id==='all'||it.theme===id)).length}
+  function fmtOpen(h){
+    const d=h['開業日'], p=h['開業日の精度'];
+    if(p==='日'){const a=d.split('-');return a[0]+'年'+Number(a[1])+'月'+Number(a[2])+'日'}
+    if(p==='月'){const a=d.split('-');return a[0]+'年'+Number(a[1])+'月'}
+    if(p==='年')return /^\d{4}$/.test(d)?d+'年':d;
+    const a=String(d).split('-'); return a.length===2?a[0]+'年'+a[1]:d;
+  }
+  function fmtAnn(iso){const a=String(iso||'').split('-');return a.length===3?a[0]+'年'+Number(a[1])+'月'+Number(a[2])+'日':''}
+  function openKey(h){
+    const d=String(h['開業日']||''), p=h['開業日の精度'];
+    const prec=p==='日'?'0':p==='月'?'1':p==='季節'?'2':'3';
+    let key='9999-99-99';
+    if(p==='日'&&/^\d{4}-\d{2}-\d{2}$/.test(d)) key=d;
+    else if(p==='月'&&/^\d{4}-\d{2}$/.test(d)) key=d+'-32';
+    else if(p==='年'){
+      const y=d.slice(0,4);
+      if(d.endsWith('年以降')) key=y+'-13-50';
+      else if(d.endsWith('年度')) key=String(+y+1)+'-03-40';
+      else if(/^\d{4}$/.test(d)) key=d+'-13-00';
+    }else if(p==='季節'){
+      const y=d.slice(0,4), s=d.slice(5);
+      const m={春:y+'-05-32',夏:y+'-08-32',秋:y+'-11-32',冬:String(+y+1)+'-02-32',Q1:y+'-03-32',Q2:y+'-06-32',Q4:y+'-12-32',後半:y+'-12-32',前半:y+'-06-32',末:y+'-12-40',初頭:y+'-01-32'};
+      if(m[s]) key=m[s];
+    }
+    return key+'|'+prec+'|'+d;
+  }
+  function monthKey(h){
+    const d=String(h['開業日']||''), p=h['開業日の精度'];
+    if((p==='日'||p==='月')&&/^\d{4}-\d{2}/.test(d)) return 'm:'+d.slice(0,7);
+    return 'd:'+d;
+  }
+  function monthLabel(k){
+    if(k.startsWith('m:')){const a=k.slice(2).split('-');return a[0]+'年'+Number(a[1])+'月'}
+    return fmtOpen({'開業日':k.slice(2),'開業日の精度':k.slice(2).includes('-')&&k.slice(2).split('-')[1].length===2?'月':'季節'});
+  }
+  function roomNum(h){const m=String(h['客室数']||'').match(/(\d+)/);return m?+m[1]:-1}
+  function hoWords(){return hoQuery.normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean)}
+  function hoHit(h){
+    const ws=hoWords(); if(!ws.length)return true;
+    const blob=[h['ホテル名'],h['ブランド'],h['運営会社'],h['都道府県'],h['市区町村'],h['最寄駅・エリア'],h['カテゴリ'],h['備考'],h['ステータス']].join('\n').normalize('NFKC').toLowerCase();
+    return ws.every(w=>blob.includes(w));
+  }
+  function hoMatch(h){
+    if(!hoHit(h))return false;
+    if(hoStatusV!=='all'&&h['ステータス']!==hoStatusV)return false;
+    if(hoCatV!=='all'&&h['カテゴリ']!==hoCatV)return false;
+    if(hoPrefV!=='all'){
+      if(hoPrefV.startsWith('r:')){if(REGION_OF[h['都道府県']]!==hoPrefV.slice(2))return false}
+      else if(h['都道府県']!==hoPrefV)return false;
+    }
+    if(hoMonthV!=='all'&&monthKey(h)!==hoMonthV)return false;
+    return true;
+  }
+  function hoCmp(a,b){
+    let c=0;
+    if(hoSort==='date'){
+      const ua=a['ステータス']==='開業済'?1:0, ub=b['ステータス']==='開業済'?1:0;
+      c=hoDir===1?(ua-ub)||openKey(a).localeCompare(openKey(b)):(ub-ua)||openKey(b).localeCompare(openKey(a));
+    }else if(hoSort==='name') c=a['ホテル名'].localeCompare(b['ホテル名'],'ja');
+    else if(hoSort==='pref') c=(PREF_ORDER.indexOf(a['都道府県'])-PREF_ORDER.indexOf(b['都道府県']))||a['ホテル名'].localeCompare(b['ホテル名'],'ja');
+    else if(hoSort==='rooms') c=roomNum(a)-roomNum(b);
+    else if(hoSort==='ann'){
+      const aa=a['発表日']||'', bb=b['発表日']||'';
+      c=!aa&&bb?-1:!bb&&aa?1:aa.localeCompare(bb);
+    }else if(hoSort==='status') c=String(a['ステータス']).localeCompare(String(b['ステータス']),'ja');
+    else if(hoSort==='cat') c=String(a['カテゴリ']).localeCompare(String(b['カテゴリ']),'ja');
+    if(hoSort!=='date'&&hoDir<0) c=-c;
+    return c||a['ホテル名'].localeCompare(b['ホテル名'],'ja');
+  }
+  function stClass(s){return s==='開業済'?'ho-st ho-st-open':s==='延期'?'ho-st ho-st-delay':'ho-st ho-st-plan'}
+  function fillSelect(el,html){const v=el.value; el.innerHTML=html; if([...el.options].some(o=>o.value===v))el.value=v}
+  function buildHotelControls(){
+    if(hoReady||!hotels)return;
+    const prefs=new Set(hotels.items.map(h=>h['都道府県']));
+    const months=[]; const seen=new Set();
+    hotels.items.forEach(h=>{const k=monthKey(h); if(!seen.has(k)){seen.add(k); months.push(k)}});
+    months.sort((a,b)=>openKey(hotels.items.find(h=>monthKey(h)===a)).localeCompare(openKey(hotels.items.find(h=>monthKey(h)===b))));
+    const monthOpts=months.map(k=>{
+      const sample=hotels.items.find(h=>monthKey(h)===k);
+      const label=k.startsWith('m:')?monthLabel(k):fmtOpen(sample);
+      return '<option value="'+esc(k)+'">'+esc(label)+'</option>';
+    }).join('');
+    hoPref.innerHTML='<option value="all">すべての都道府県</option><optgroup label="地方">'+REGIONS.map(([n])=>'<option value="r:'+esc(n)+'">'+esc(n)+'</option>').join('')+'</optgroup><optgroup label="都道府県">'+PREF_ORDER.filter(p=>prefs.has(p)).map(p=>'<option value="'+esc(p)+'">'+esc(p)+'</option>').join('')+'</optgroup>';
+    hoMonth.innerHTML='<option value="all">すべての開業年月</option>'+monthOpts;
+    hoStatus.innerHTML='<option value="all">すべてのステータス</option>'+['開業予定','開業済','延期'].map(s=>'<option value="'+s+'">'+s+'</option>').join('');
+    const cats=[...new Set(hotels.items.map(h=>h['カテゴリ']))].sort((a,b)=>a.localeCompare(b,'ja'));
+    hoCat.innerHTML='<option value="all">すべてのカテゴリ</option>'+cats.map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('');
+    hoSortEl.innerHTML='<option value="date:1">開業日（予定が先・早い順）</option><option value="date:-1">開業日（新しい順）</option><option value="name:1">ホテル名</option><option value="pref:1">都道府県</option><option value="rooms:-1">客室数（多い順）</option><option value="ann:-1">発表日（新しい順）</option>';
+    hoReady=true;
+  }
+  function hotelRows(){return hotels.items.filter(hoMatch).sort(hoCmp)}
+  function renderHotels(){
+    if(filter!=='openings'){hoPanel.hidden=true;return}
+    hoPanel.hidden=false;
+    if(hoLoading&&!hotels){hoAsof.textContent=''; hoCount.textContent=''; hoList.innerHTML='<div class="ho-status">開業リストを読み込み中…</div>'; return}
+    if(hoFailed||!hotels){hoAsof.textContent=''; hoCount.textContent=''; hoList.innerHTML='<div class="ho-status">開業リストを読み込めませんでした。<div><button type="button" class="nw-retry" id="hoRetry">再読み込み</button></div></div>'; const b=document.getElementById('hoRetry'); if(b)b.onclick=()=>{hoFailed=false; ensureHotels(true)}; return}
+    buildHotelControls();
+    const rows=hotelRows();
+    const total=hotels.items.length;
+    const bits={}; hotels.items.forEach(h=>{bits[h['ステータス']]=(bits[h['ステータス']]||0)+1});
+    hoAsof.textContent='最終更新日 '+fmtDate(hotels.updated);
+    hoCount.textContent=rows.length===total
+      ? total+'件（開業予定 '+(bits['開業予定']||0)+'・開業済 '+(bits['開業済']||0)+'・延期 '+(bits['延期']||0)+'）'
+      : rows.length+'件を表示（全'+total+'件）';
+    const cols=[['date','開業日'],['status','ステータス'],['name','ホテル名'],['pref','場所'],['rooms','客室数'],['cat','カテゴリ'],['ann','発表日']];
+    const head=cols.map(([k,lab])=>{
+      const on=hoSort===(k==='pref'?'pref':k==='status'?'status':k);
+      const sort=on?(hoDir>0?'ascending':'descending'):'none';
+      return '<th data-k="'+k+'" aria-sort="'+sort+'">'+lab+'</th>';
+    }).join('');
+    const body=rows.map(h=>{
+      const href=safeUrl(h['出典URL']);
+      const name=href?'<a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+esc(h['ホテル名'])+'</a>':esc(h['ホテル名']);
+      const sub=[h['ブランド'],h['運営会社'],h['最寄駅・エリア']].filter(Boolean).map(esc).join(' · ');
+      const memo=h['備考']?'<div class="ho-memo">'+esc(h['備考'])+'</div>':'';
+      const ann=fmtAnn(h['発表日']);
+      const rooms=h['客室数']?esc(h['客室数']):'';
+      const place=esc(h['都道府県'])+(h['市区町村']?'<br>'+esc(h['市区町村']):'');
+      return '<tr><td data-label="開業日">'+esc(fmtOpen(h))+'</td><td data-label="ステータス"><span class="'+stClass(h['ステータス'])+'">'+esc(h['ステータス'])+'</span></td><td class="ho-name" data-label="ホテル名">'+name+(sub?'<div class="ho-sub">'+sub+'</div>':'')+memo+'</td><td data-label="場所">'+place+'</td><td data-label="客室数"'+(rooms?'':' class="ho-blank"')+'>'+(rooms||'—')+'</td><td data-label="カテゴリ">'+esc(h['カテゴリ'])+'</td><td data-label="発表日"'+(ann?'':' class="ho-blank"')+'>'+(ann||'—')+'</td></tr>';
+    }).join('');
+    hoList.innerHTML=rows.length?'<div class="ho-table-wrap"><table class="ho-table"><thead><tr>'+head+'</tr></thead><tbody>'+body+'</tbody></table></div>':'<div class="ho-status">該当するホテルはありません。</div>';
+  }
+  function ensureHotels(force){
+    if(hotels&&!force){renderHotels();return}
+    if(hoLoading)return;
+    hoLoading=true; hoFailed=false; renderHotels();
+    fetch('hotel_openings.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(j=>{
+      if(!j||!Array.isArray(j.items))throw new Error('items');
+      hotels=j; hoLoading=false; hoFailed=false; hoReady=false; renderHotels();
+    }).catch(()=>{hotels=null; hoLoading=false; hoFailed=true; renderHotels()});
+  }
   function sourcesHtml(it){
     const links=(it.sources||[]).map(s=>{const href=safeUrl(s.url);return href?'<a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label||href)+'</a>':''}).filter(Boolean);
     if(!links.length)return '<div class="nw-src"><span class="nw-none">出典リンクなし</span></div>';
@@ -3049,6 +3246,7 @@ scan();
       return '<section class="nw-day"><button type="button" class="nw-dayh" data-date="'+esc(g.date)+'" aria-expanded="'+open+'"><span class="nw-dayt">'+esc(fmtDate(g.date,g.weekday))+'</span>'+(g.date===latest?'<span class="nw-new">最新</span>':'')+'<span class="nw-dayn">'+g.items.length+'件</span><span class="ch" aria-hidden="true">▼</span></button>'+(open?'<div class="nw-dayb">'+g.items.map(cardHtml).join('')+'</div>':'')+'</section>';
     }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>';
     if(toTop&&scroll)scroll.scrollTop=0;
+    if(filter==='openings')ensureHotels(false); else if(hoPanel)hoPanel.hidden=true;
   }
   function load(force){
     if(data&&!force){render(false);return}
@@ -3087,9 +3285,24 @@ scan();
   });
   document.addEventListener('keydown',e=>{
     if(e.key!=='Escape'||!view||view.getAttribute('aria-hidden')!=='false')return;
+    if(e.target===hoQ&&hoQ.value){hoQ.value=''; hoQuery=''; renderHotels(); return}
     if(e.target===input&&input.value){input.value=''; query=''; retarget(); render(true); return}
     if(window.__showView)window.__showView(window.__newsFrom||'in');
   });
+  hoPref.addEventListener('change',()=>{hoPrefV=hoPref.value; renderHotels()});
+  hoMonth.addEventListener('change',()=>{hoMonthV=hoMonth.value; renderHotels()});
+  hoStatus.addEventListener('change',()=>{hoStatusV=hoStatus.value; renderHotels()});
+  hoCat.addEventListener('change',()=>{hoCatV=hoCat.value; renderHotels()});
+  hoSortEl.addEventListener('change',()=>{const [k,d]=hoSortEl.value.split(':'); hoSort=k; hoDir=+d||1; renderHotels()});
+  hoList.addEventListener('click',e=>{
+    const th=e.target.closest('th'); if(!th||!hotels)return;
+    const k=th.dataset.k; if(!k)return;
+    if(hoSort===k)hoDir=-hoDir; else {hoSort=k; hoDir=(k==='rooms'||k==='ann')?-1:1}
+    const v=hoSort+':'+hoDir; if([...hoSortEl.options].some(o=>o.value===v))hoSortEl.value=v;
+    renderHotels();
+  });
+  let hoTimer=0;
+  hoQ.addEventListener('input',()=>{hoQuery=hoQ.value; clearTimeout(hoTimer); hoTimer=setTimeout(()=>renderHotels(),120)});
   window.__openNews=()=>load(false);
   window.__newsDebug=()=>({loaded:!!data,failed,filter,query,open:[...openDates],counts:data&&data.counts,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
 })();
