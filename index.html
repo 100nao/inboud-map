@@ -886,7 +886,8 @@ footer#foot{flex:none;height:24px;min-height:24px;padding:0 14px;display:flex;fl
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+@media (max-width:760px){.vnav{flex-wrap:wrap;row-gap:6px}}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}
 .vnav{margin-left:4px}
 
@@ -927,13 +928,64 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #legend .tkl{white-space:nowrap;font-size:10.5px}#legend:has(.tkl){max-width:none}
 #legend .tkc{display:inline-block;width:12px;height:12px;border-radius:50%;background:#9fb1d6;border:1.5px solid #3d5a8c;box-sizing:border-box}
 .li .subdot.sw{display:inline-block;vertical-align:middle;margin-right:0;border-radius:50%}
+#newsView{flex-direction:column;background:#f3f5fa;color:var(--navy)}
+#newsView .nw-top{flex:none;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 8px}
+#newsView .nw-tools{display:flex;gap:10px;align-items:center;margin-top:8px}
+#newsView .nw-tools input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit;font-size:16px;color:var(--navy);background:#f7f9fc}
+#newsView .nw-tools input:focus{outline:2px solid #e4d8f6;border-color:#5b3d8f}
+#newsView .nw-count{margin:0;font-size:12.5px;color:#5a6a88;white-space:nowrap}
+#newsView .nw-all{border:0;background:transparent;color:#5b3d8f;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 2px;white-space:nowrap}
+#newsView .nw-chips{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:8px;align-items:flex-start}
+#newsView .nw-cluster{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#newsView .nw-cluster .lb{font-size:11px;font-weight:700;color:#7d8aa5}
+#newsView .nw-chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;line-height:1.4;cursor:pointer;font-family:inherit;color:var(--navy)}
+#newsView .nw-chip:hover{border-color:#5b3d8f}
+#newsView .nw-chip.on{background:#5b3d8f;color:#fff;border-color:#5b3d8f}
+#newsView .nw-chip .n{font-variant-numeric:tabular-nums;font-size:10.5px;margin-left:4px;opacity:.75}
+#newsView .nw-legend{margin:6px 0 0;font-size:11.5px;color:#7d8aa5}
+#newsView .nw-scroll{flex:1;min-height:0;overflow:auto}
+#newsView .nw-wrap{max-width:920px;margin:0 auto;padding:14px 16px 48px}
+#newsView .nw-day{margin:0 0 12px;background:#fff;border:1px solid var(--line);border-radius:12px}
+#newsView .nw-dayh{width:100%;display:flex;align-items:center;gap:8px;text-align:left;border:0;background:#f7f8fc;padding:10px 12px;cursor:pointer;font-family:inherit;color:var(--navy);position:sticky;top:0;z-index:1;border-radius:12px 12px 0 0}
+#newsView .nw-dayh[aria-expanded="false"]{border-radius:12px}
+#newsView .nw-dayt{font-weight:700;font-size:15px}
+#newsView .nw-new{font-size:10.5px;font-weight:700;color:#fff;background:#5b3d8f;border-radius:999px;padding:1px 7px}
+#newsView .nw-dayn{margin-left:auto;font-size:12px;color:#5a6a88;font-variant-numeric:tabular-nums}
+#newsView .nw-dayh .ch{color:#7d8aa5;font-size:11px;transition:transform .15s}
+#newsView .nw-dayh[aria-expanded="false"] .ch{transform:rotate(-90deg)}
+#newsView .nw-card{padding:12px 14px 14px;border-top:1px solid #eef1f6}
+#newsView .nw-card.yoten{background:#fbf7ff;box-shadow:inset 4px 0 0 #5b3d8f}
+#newsView .nw-kicker{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px}
+#newsView .nw-cat{font-size:12px;font-weight:700;color:#3d2a63;background:#efe8f8;border-radius:999px;padding:1px 8px}
+#newsView .nw-feed{font-size:11px;color:#7d8aa5}
+#newsView .nw-card h2{font-size:16px;line-height:1.45;margin:0 0 6px;font-weight:700}
+#newsView .nw-card.yoten h2{font-size:17.5px}
+#newsView .nw-card p{margin:0 0 6px;font-size:14px;line-height:1.7}
+#newsView .nw-card ul{margin:0 0 6px;padding-left:1.25em;font-size:14px;line-height:1.7}
+#newsView .nw-card li{margin:2px 0}
+#newsView .nw-note{background:#f4f7fb;border-radius:8px;padding:8px 10px;margin-top:6px;font-size:13.5px;line-height:1.65}
+#newsView .nw-note b{display:block;font-size:11px;letter-spacing:.02em;color:#5b3d8f;margin-bottom:2px}
+#newsView .nw-src{margin-top:8px;font-size:12.5px;line-height:1.7}
+#newsView .nw-src a{color:#1f5fbf;margin-right:12px}
+#newsView .nw-src .lb{color:#7d8aa5;margin-right:6px}
+#newsView .nw-none{color:#9aa3b5;font-size:12px}
+#newsView .nw-empty,#newsView .nw-status{padding:32px 8px;text-align:center;color:#5a6a88;font-size:14px}
+#newsView .nw-retry{margin-top:10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 14px;font-family:inherit;font-weight:700;cursor:pointer}
+@media (max-width:640px){
+  #newsView .nw-top{padding:8px 10px 6px}
+  #newsView .nw-tools{flex-wrap:wrap}
+  #newsView .nw-count{white-space:normal}
+  #newsView .nw-wrap{padding:10px 10px 36px}
+  #newsView .nw-card{padding:10px 12px 12px}
+  #newsView .nw-card h2{font-size:15.5px}
+}
 </style>
 </head>
 <body>
 <div id="app">
 <header>
   <div class="titlerow">
-    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small></h1><span class="vnav"><button class="vb vb-in cur" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button></span>
+    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small></h1><span class="vnav"><button class="vb vb-in cur" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
     <div class="stats" id="stats"></div>
   </div>
   <div class="row" id="perCtl"></div>
@@ -961,6 +1013,22 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 </div>
 <div id="flightView" class="ovl"></div>
 <div id="occView" class="ovl"></div>
+<div id="newsView" class="ovl" aria-hidden="true">
+  <header class="nw-top">
+    <div class="titlerow">
+      <h1 class="vt">ニュースまとめ<small id="nwMeta">読み込み中…</small></h1>
+      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw">📰 ニュースまとめ</button></span>
+    </div>
+    <div class="nw-tools">
+      <input id="nwQ" type="search" placeholder="キーワードで検索（見出し・本文・メモ・出典）" autocomplete="off" enterkeyhint="search">
+      <p id="nwCount" class="nw-count" aria-live="polite"></p>
+      <button type="button" class="nw-all" id="nwToggle">すべて開く</button>
+    </div>
+    <div id="nwChips" class="nw-chips"></div>
+    <p class="nw-legend"><span class="up">▲+</span> は増加、<span class="dn">▼</span> は減少。出典は新しいタブで開きます。</p>
+  </header>
+  <div id="nwScroll" class="nw-scroll"><div id="nwBody" class="nw-wrap"></div></div>
+</div>
 <script id="lfjs">/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
  * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
@@ -1114,7 +1182,8 @@ footer a{color:#4a6390}
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+@media (max-width:760px){.vnav{flex-wrap:wrap;row-gap:6px}}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}
 .vnav{margin-left:4px}
 
@@ -1175,7 +1244,7 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
 <div id="app">
 <header>
  <div class="titlerow">
-  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button></span>
+  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="row">
@@ -1622,7 +1691,8 @@ footer a{color:#4a6390}
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+@media (max-width:760px){.vnav{flex-wrap:wrap;row-gap:6px}}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}
 .vnav{margin-left:4px}
 
@@ -1701,7 +1771,7 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
 <div id="app">
 <header>
  <div class="titlerow">
-  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button></span>
+  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="row">
@@ -2500,7 +2570,18 @@ window.__GEO=GEO;
 let FLIGHT=false,VIEWNOW='in';
 const OVL={fl:['flightView','flightSrc','国際線定期便マップ','__fmap'],oc:['occView','occSrc','都道府県別 客室稼働率マップ','__omap']};
 function unesc(x){return x.replace(/<\\\/script/g,'</script').replace(/<\\!--/g,'<!--')}
-function showView(v){if(NATOPEN)openNat(false);
+function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
+  if(v==='nw'&&typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
+  if(v==='nw'&&from!=='nw')window.__newsFrom=from;
+  document.querySelectorAll('header .vb[data-v]').forEach(b=>b.classList.toggle('cur',b.dataset.v===v));
+  const news=document.getElementById('newsView');
+  if(v==='nw'){
+    for(const [, [id]] of Object.entries(OVL)){const el=document.getElementById(id);if(el)el.style.display='none'}
+    if(news){news.style.display='flex';news.setAttribute('aria-hidden','false')}
+    VIEWNOW='nw';FLIGHT=false;
+    if(window.__openNews)window.__openNews();
+    return}
+  if(news){news.style.display='none';news.setAttribute('aria-hidden','true')}
   for(const [k,[id,src,ttl,mp]] of Object.entries(OVL)){const el=document.getElementById(id);
     if(k===v){if(!el.firstChild){const f=document.createElement('iframe');f.title=ttl;f.srcdoc=unesc(document.getElementById(src).textContent);el.appendChild(f)}
       el.style.display='block';const w=el.firstChild.contentWindow;if(w&&w[mp])setTimeout(()=>w[mp].invalidateSize(),0)}
@@ -2848,6 +2929,143 @@ window.RZ.watch('.t3grid',el=>grid(el,'t3grid',220));
 window.RZ.watch('#repMap',el=>side(el,{key:'repmap',edge:'bottom',min:240,max:1200}));
 window.RZ.watch('#jchart',el=>{});
 scan();
+})();
+</script>
+<script>
+// ニュースまとめ。本文は news.json（日次更新はこのファイルだけ）。地図の描画には触らない。
+(function(){
+  const view=document.getElementById('newsView');
+  const meta=document.getElementById('nwMeta');
+  const chips=document.getElementById('nwChips');
+  const body=document.getElementById('nwBody');
+  const countEl=document.getElementById('nwCount');
+  const toggle=document.getElementById('nwToggle');
+  const input=document.getElementById('nwQ');
+  const scroll=document.getElementById('nwScroll');
+  let data=null, loading=false, failed=false, filter='all', query='', openDates=new Set();
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function colorize(s){return esc(s).replace(/▲\s*[+＋]/g,'<span class="up">▲+</span>').replace(/▼/g,'<span class="dn">▼</span>')}
+  function rich(s){
+    const out=[], lis=[];
+    const flush=()=>{if(!lis.length)return;out.push('<ul>'+lis.map(t=>'<li>'+colorize(t)+'</li>').join('')+'</ul>');lis.length=0};
+    String(s||'').split('\n').forEach(line=>{
+      const t=line.trim(); if(!t){flush();return}
+      const b=t.match(/^[・•●]\s*(.*)$/);
+      if(b)lis.push(b[1]); else {flush();out.push('<p>'+colorize(t)+'</p>')}
+    });
+    flush(); return out.join('');
+  }
+  function safeUrl(u){try{const x=new URL(u,location.href);if(x.protocol==='http:'||x.protocol==='https:')return x.href}catch(e){}return ''}
+  function fmtDate(iso,wd){const p=String(iso||'').split('-');if(p.length<3)return iso||'';return p[0]+'年'+Number(p[1])+'月'+Number(p[2])+'日'+(wd?'（'+wd+'）':'')}
+  function words(){return query.normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean)}
+  function hit(it){
+    const ws=words(); if(!ws.length)return true;
+    const blob=[it.headline,it.body,it.note,it.category,it.categoryLabel,it.theme,it.themeLabel,it.feedLabel,it.noteLabel].concat((it.sources||[]).flatMap(s=>[s.label,s.url])).join('\n').normalize('NFKC').toLowerCase();
+    return ws.every(w=>blob.includes(w));
+  }
+  function visibleGroups(){
+    if(!data)return [];
+    const map=new Map();
+    data.items.forEach(it=>{
+      if(filter!=='all'&&it.theme!==filter)return;
+      if(!hit(it))return;
+      if(!map.has(it.date))map.set(it.date,{date:it.date,weekday:it.weekday,items:[]});
+      map.get(it.date).items.push(it);
+    });
+    return [...map.values()];
+  }
+  function retarget(){
+    const groups=visibleGroups();
+    if(filter==='all'&&!words().length){
+      const latest=data&&data.items[0]?data.items[0].date:null;
+      openDates=new Set(latest?[latest]:[]);
+    }else openDates=new Set(groups.map(g=>g.date));
+  }
+  function chipCount(id){return data.items.filter(it=>hit(it)&&(id==='all'||it.theme===id)).length}
+  function sourcesHtml(it){
+    const links=(it.sources||[]).map(s=>{const href=safeUrl(s.url);return href?'<a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+esc(s.label||href)+'</a>':''}).filter(Boolean);
+    if(!links.length)return '<div class="nw-src"><span class="nw-none">出典リンクなし</span></div>';
+    return '<div class="nw-src"><span class="lb">出典</span>'+links.join('')+'</div>';
+  }
+  function cardHtml(it){
+    const feed=it.feed==='ota'?'海外OTAニュース':'旅行業界ニュース';
+    const note=it.note?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
+    return '<article class="nw-card'+(it.highlight?' yoten':'')+'"><div class="nw-kicker"><span class="nw-cat">'+esc(it.category||it.categoryLabel)+'</span><span class="nw-feed">'+feed+'</span></div><h2>'+colorize(it.headline)+'</h2>'+rich(it.body)+note+sourcesHtml(it)+'</article>';
+  }
+  function render(toTop){
+    if(!data){
+      meta.textContent=failed?'読み込めませんでした':'読み込み中…';
+      countEl.textContent='';
+      chips.innerHTML='';
+      toggle.hidden=true;
+      body.innerHTML=failed
+        ?'<div class="nw-status">ニュースを読み込めませんでした。<br>news.json がこのページと同じ場所にあるか確認してください。<div><button type="button" class="nw-retry" id="nwRetry">再読み込み</button></div></div>'
+        :'<div class="nw-status">読み込み中…</div>';
+      const retry=document.getElementById('nwRetry'); if(retry)retry.onclick=()=>load(true);
+      return;
+    }
+    toggle.hidden=false;
+    const wd=(data.items.find(it=>it.date===data.updated)||{}).weekday||'';
+    meta.textContent='最終更新 '+fmtDate(data.updated,wd);
+    chips.innerHTML='<div class="nw-cluster">'+(data.filters||[]).map(f=>'<button type="button" class="nw-chip'+(f.id===filter?' on':'')+'" data-f="'+esc(f.id)+'" aria-pressed="'+(f.id===filter)+'">'+esc(f.label)+'<span class="n">'+chipCount(f.id)+'</span></button>').join('')+'</div>';
+    const groups=visibleGroups();
+    const shown=groups.reduce((n,g)=>n+g.items.length,0);
+    const total=data.counts?data.counts.items:data.items.length;
+    const totalDays=data.counts?data.counts.dates:new Set(data.items.map(it=>it.date)).size;
+    countEl.textContent=shown+'件・'+groups.length+'日分を表示（全'+total+'件・'+totalDays+'日分）';
+    const every=groups.length>0&&groups.every(g=>openDates.has(g.date));
+    toggle.textContent=every?'日付を折りたたむ':'すべての日付を開く';
+    toggle.disabled=!groups.length;
+    const latest=data.items[0]?data.items[0].date:'';
+    body.innerHTML=groups.length?groups.map(g=>{
+      const open=openDates.has(g.date);
+      return '<section class="nw-day"><button type="button" class="nw-dayh" data-date="'+esc(g.date)+'" aria-expanded="'+open+'"><span class="nw-dayt">'+esc(fmtDate(g.date,g.weekday))+'</span>'+(g.date===latest?'<span class="nw-new">最新</span>':'')+'<span class="nw-dayn">'+g.items.length+'件</span><span class="ch" aria-hidden="true">▼</span></button>'+(open?'<div class="nw-dayb">'+g.items.map(cardHtml).join('')+'</div>':'')+'</section>';
+    }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>';
+    if(toTop&&scroll)scroll.scrollTop=0;
+  }
+  function load(force){
+    if(data&&!force){render(false);return}
+    if(loading)return;
+    loading=true; failed=false; render(false);
+    fetch('news.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(j=>{
+      data=j; loading=false; failed=false;
+      if(!Array.isArray(data.items))throw new Error('items');
+      const latest=data.items[0]?data.items[0].date:null;
+      openDates=new Set(latest?[latest]:[]);
+      filter='all'; query=''; if(input)input.value='';
+      render(true);
+    }).catch(()=>{data=null; loading=false; failed=true; render(false)});
+  }
+  chips.addEventListener('click',e=>{
+    const b=e.target.closest('.nw-chip'); if(!b||!data)return;
+    filter=b.dataset.f||'all'; retarget(); render(true);
+  });
+  body.addEventListener('click',e=>{
+    const b=e.target.closest('.nw-dayh'); if(!b)return;
+    const d=b.dataset.date;
+    if(openDates.has(d))openDates.delete(d); else openDates.add(d);
+    render(false);
+  });
+  toggle.addEventListener('click',()=>{
+    const groups=visibleGroups();
+    const every=groups.length&&groups.every(g=>openDates.has(g.date));
+    openDates=new Set(every?(groups[0]?[groups[0].date]:[]):groups.map(g=>g.date));
+    render(false);
+  });
+  let timer=0;
+  input.addEventListener('input',()=>{
+    query=input.value;
+    clearTimeout(timer);
+    timer=setTimeout(()=>{if(!data)return; retarget(); render(true)},120);
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape'||!view||view.getAttribute('aria-hidden')!=='false')return;
+    if(e.target===input&&input.value){input.value=''; query=''; retarget(); render(true); return}
+    if(window.__showView)window.__showView(window.__newsFrom||'in');
+  });
+  window.__openNews=()=>load(false);
+  window.__newsDebug=()=>({loaded:!!data,failed,filter,query,open:[...openDates],counts:data&&data.counts,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
 })();
 </script>
 </body>
