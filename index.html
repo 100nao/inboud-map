@@ -1018,7 +1018,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 <div id="app">
 <header>
   <div class="titlerow">
-    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in cur" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
+    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
     <div class="stats" id="stats"></div>
   </div>
   <div class="row" id="perCtl"></div>
@@ -1046,11 +1046,11 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 </div>
 <div id="flightView" class="ovl"></div>
 <div id="occView" class="ovl"></div>
-<div id="newsView" class="ovl" aria-hidden="true">
+<div id="newsView" class="ovl" style="display:flex" aria-hidden="false">
   <header class="nw-top">
     <div class="titlerow">
       <h1 class="vt">ニュースまとめ<small id="nwMeta">読み込み中…</small></h1>
-      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw">📰 ニュースまとめ</button></span>
+      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button></span>
     </div>
     <div class="nw-tools">
       <input id="nwQ" type="search" placeholder="キーワードで検索（見出し・本文・メモ・出典）" autocomplete="off" enterkeyhint="search">
@@ -2645,7 +2645,7 @@ document.getElementById('mmchk').onchange=()=>{restyle();renderLegend()};
 renderSub();refresh();
 // ---- ✈ フライト情報（国際線マップ）ビュー：iframe srcdoc（初回表示時に生成、Leaflet と県境界は親から共有）----
 window.__GEO=GEO;
-let FLIGHT=false,VIEWNOW='in';
+let FLIGHT=false,VIEWNOW='nw';
 const OVL={fl:['flightView','flightSrc','国際線定期便マップ','__fmap'],oc:['occView','occSrc','都道府県別 客室稼働率マップ','__omap']};
 function unesc(x){return x.replace(/<\\\/script/g,'</script').replace(/<\\!--/g,'<!--')}
 function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
@@ -2664,7 +2664,7 @@ function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
     if(k===v){if(!el.firstChild){const f=document.createElement('iframe');f.title=ttl;f.srcdoc=unesc(document.getElementById(src).textContent);el.appendChild(f)}
       el.style.display='block';const w=el.firstChild.contentWindow;if(w&&w[mp])setTimeout(()=>w[mp].invalidateSize(),0)}
     else el.style.display='none'}
-  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in')setTimeout(()=>map.invalidateSize(),0)}
+  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in'){const fix=()=>{try{map.invalidateSize()}catch(e){}};setTimeout(fix,0);setTimeout(fix,80)}}
 function showFlight(){showView('fl')}
 function showInbound(){showView('in')}
 document.querySelectorAll('header .vb[data-v]').forEach(b=>b.onclick=()=>showView(b.dataset.v));
@@ -3304,6 +3304,7 @@ scan();
   let hoTimer=0;
   hoQ.addEventListener('input',()=>{hoQuery=hoQ.value; clearTimeout(hoTimer); hoTimer=setTimeout(()=>renderHotels(),120)});
   window.__openNews=()=>load(false);
+  if(window.__viewNow&&window.__viewNow()==='nw')load(false);
   window.__newsDebug=()=>({loaded:!!data,failed,filter,query,open:[...openDates],counts:data&&data.counts,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
 })();
 </script>
