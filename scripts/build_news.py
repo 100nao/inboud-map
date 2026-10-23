@@ -54,17 +54,20 @@ SHEETS = OrderedDict(
 )
 
 # フィルタの並び。要点はチップにせず、日付ごとの要約としてカード先頭に出す。
-# その他は、どれにも当てはまらない項目があるときだけ出す。
 # B2B・卸（Expedia、Hotelbeds、サイトコントローラー、配信規格など）は海外OTAに含める。
+# 行政・インバウンド施策とその他は分類はするが、チップにも「すべて」にも出さない。
 THEMES = [
     ("overseas", "海外OTA"),
     ("domestic", "国内OTA・旅行会社"),
     ("openings", "新規開業ホテル"),
     ("flights", "国際線フライト"),
+]
+OMITTED_THEMES = (
     ("policy", "行政・インバウンド施策"),
     ("other", "その他"),
-]
-THEME_LABEL = dict(THEMES)
+)
+THEME_LABEL = dict(THEMES + list(OMITTED_THEMES))
+OMITTED_IDS = {theme_id for theme_id, _label in OMITTED_THEMES}
 
 WEEKDAYS = "月火水木金土日"
 
@@ -494,6 +497,8 @@ def build(workbook_path: Path, industry_csv: Path | None, ota_csv: Path | None, 
     # (industry sheet, then OTA sheet). Sort is stable, so equal keys keep that order.
     # reverse=True applies to the whole key, so the highlight flag is 1 for 要点.
     combined.sort(key=lambda item: (item["date"], 1 if item["highlight"] else 0), reverse=True)
+    omitted = [item for item in combined if item["theme"] in OMITTED_IDS]
+    combined = [item for item in combined if item["theme"] not in OMITTED_IDS]
 
     items = [public_item(item, index + 1) for index, item in enumerate(combined, 1)]
     theme_counts = {theme_id: sum(1 for item in items if item["theme"] == theme_id) for theme_id, _label in THEMES}
@@ -521,6 +526,7 @@ def build(workbook_path: Path, industry_csv: Path | None, ota_csv: Path | None, 
         "_audit": {
             "industrySourceMatch": _tally(industry_items),
             "otaSourceMatch": _tally(ota_items),
+            "omitted": {label: sum(1 for item in omitted if item["theme"] == theme_id) for theme_id, label in OMITTED_THEMES},
         },
     }
 
@@ -571,11 +577,13 @@ def main() -> None:
     print("  テーマ別:")
     for theme_id, label in THEMES:
         print(f"    {label}: {counts['themes'][label]}")
-    other = [item for item in payload["items"] if item["theme"] == "other" and not item["highlight"]]
-    if other:
-        print(f"  その他（要点以外） {len(other)} 件:")
-        for item in other:
-            print(f"    {item['date']} [{item['categoryLabel']}] {item['headline'][:70]}")
+    omitted = audit.get("omitted") or {}
+    if any(omitted.values()):
+        print(
+            "  一覧から除外: "
+            + "、".join(f"{theme_id} {n}" for theme_id, n in omitted.items())
+            + f"（計 {sum(omitted.values())} 件）"
+        )
     if unmatched:
         print(f"  要確認 {len(unmatched)} 件:")
         for line in unmatched:

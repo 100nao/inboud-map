@@ -1014,77 +1014,155 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
+.monly{display:none}
 @media (max-width:900px){
-  html,body{overflow-x:hidden}
-  #app{height:100dvh;max-height:100dvh;overflow:hidden}
-  #app>header{padding:8px 10px 6px;max-height:50vh;overflow-y:auto}
-  #app>header:has(.dd.open){overflow:visible;max-height:none}
-  .titlerow{display:flex;flex-direction:column;align-items:stretch;gap:6px;min-width:0}
-  h1.vt{font-size:16px;overflow-wrap:anywhere}
-  .vnav{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;width:100%;max-width:100%;margin:0;gap:6px;padding:0 0 2px}
-  .vb{flex:0 0 auto;min-height:44px;padding:8px 14px;font-size:13px}
-  .stats{margin-left:0;width:100%;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px}
-  .stat{flex:0 0 auto}
-  .unote{white-space:normal}
-  .row{flex-wrap:nowrap;max-width:100%;min-width:0;margin-top:6px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
-  .row:has(.dd.open){overflow:visible}
-  .seg{flex:0 0 auto;overflow:visible}
-  .row>.btn2,.row>.dd,.row>.chk,.row>span,.row>#subCtl,.row>#muCtl,.row>#rtCtl,.row>#crCtl{flex:0 0 auto}
-  .seg button,.dd>.btn,.btn2,.qb{min-height:44px}
-  .chk{min-height:44px;padding:4px 2px}
-  select.sel{min-height:44px;font-size:16px;max-width:70vw}
-  .dd .pn{max-height:min(420px,55vh);max-width:92vw}
+  html,body{overflow-x:hidden;max-width:100%}
+  #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
+  #app>header{padding:8px 10px 8px;max-height:none;overflow:visible}
+  #app>header .titlerow{
+    display:grid;grid-template-columns:auto minmax(0,1fr);
+    grid-template-areas:"btn title" "btn asof";
+    align-items:center;column-gap:8px;row-gap:0;min-width:0
+  }
+  #app>header .mmenu-btn{grid-area:btn;align-self:center}
+  #app>header .mtitle{grid-area:title}
+  #app>header h1.vt{grid-area:asof;font-size:0;line-height:0;margin:0;min-width:0}
+  #app>header h1.vt small{display:none}
+  #app>header h1.vt .asof{font-size:11px;line-height:1.35;font-weight:600;color:#5a6a88;display:block}
+  #app>header .vnav,#app>header>.row,#app>header .stats{display:none!important}
+  .mmenu-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:4px;
+    min-height:40px;padding:6px 10px;border-radius:10px;border:0;cursor:pointer;
+    background:#14284b;color:#fff;font-weight:700;font-size:13px;font-family:inherit;white-space:nowrap
+  }
+  .mtitle{display:block;font-size:17px;line-height:1.25;font-weight:800;color:#14284b;min-width:0}
+  .mbar{display:flex;align-items:center;gap:6px;margin-top:8px;min-width:0}
+  .mfilt-btn,.mdet{
+    flex:0 0 auto;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--line);background:#fff;color:#14284b;font-weight:700;font-size:13px;font-family:inherit
+  }
+  .mchip{
+    flex:1 1 auto;min-width:0;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid #d5deee;background:#f4f7fb;color:#14284b;font-size:12.5px;font-weight:700;
+    text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:inherit
+  }
   main{position:relative;min-width:0;min-height:0}
-  #map{position:absolute;inset:0;min-width:0;width:auto}
+  #map{position:absolute;inset:0;min-width:0;width:auto;height:auto}
+  #map>.stats{
+    position:absolute;left:0;right:0;bottom:0;z-index:600;margin:0;
+    width:auto;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;gap:8px;padding:18px 10px 10px;
+    background:linear-gradient(to top,rgba(255,255,255,.97),rgba(255,255,255,.88) 62%,rgba(255,255,255,0));
+    pointer-events:none
+  }
+  #map>.stats .stat{pointer-events:auto;flex:0 0 auto;box-shadow:0 1px 4px rgba(20,40,75,.08)}
   .leaflet-control-zoom a{width:36px!important;height:36px!important;line-height:36px!important;font-size:18px}
   aside,body.wide aside{
     position:absolute;left:0;right:0;bottom:0;top:auto;
     width:auto!important;max-width:100%!important;min-width:0!important;
-    height:min(420px,52%);
-    z-index:820;
+    height:min(70dvh,620px);z-index:720;
     border-left:0;border-top:1px solid var(--line);
     border-radius:16px 16px 0 0;
     box-shadow:0 -10px 28px rgba(20,40,75,.18);
     overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
+    overscroll-behavior:contain;background:#fff
+  }
+  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0;pointer-events:none}
+  .msheet-btn{display:none!important}
+  aside #foot,aside footer#foot{
+    position:static!important;height:auto!important;min-height:0!important;max-height:none!important;
+    overflow:visible!important;flex:none;border-top:1px solid var(--line);background:#f7f8fb
   }
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
-  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0}
-  .msheet-btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    position:absolute;right:10px;bottom:calc(min(420px, 52%) + 8px);
-    z-index:860;min-height:44px;padding:8px 14px;cursor:pointer;
-    border-radius:999px;background:#14284b;color:#fff;
-    font-size:13px;font-weight:700;letter-spacing:.02em;
-    box-shadow:0 2px 10px rgba(20,40,75,.28);
-  }
-  .msheet-btn .cl{display:none}
-  #mSheet:not(:checked)~.msheet-btn{bottom:10px}
-  #mSheet:not(:checked)~.msheet-btn .op{display:none}
-  #mSheet:not(:checked)~.msheet-btn .cl{display:inline}
   #legend,#legend:has(.tkl){
     left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:30%;
-    overflow:auto;padding:6px 8px;font-size:10.5px;
+    max-width:min(168px,46vw);max-height:28%;
+    overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
   #legend .lt,#legend .li{overflow-wrap:anywhere}
-  #inset{display:none}
-  #grip{display:none}
+  #inset,#grip{display:none!important}
   #info{padding:10px 12px 6px}
   .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kpi{padding:4px 6px}
   .kpi b{font-size:13px;overflow-wrap:anywhere}
   #natCmp,#repCmp{padding:10px 12px}
+  #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
+  #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
+  body.m-list #map{visibility:hidden}
+  body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
+    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
+    overflow:auto;pointer-events:auto
+  }
+  body.m-list #mDetBtn{display:none!important}
+  body.m-list aside>.stats{
+    position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
+    background:#fff;margin:0;padding:8px 10px;border-bottom:1px solid var(--line);
+    width:auto;max-width:100%
+  }
+  .mmenu{
+    position:fixed;inset:0;z-index:8000;background:#f3f5fa;flex-direction:column;
+    padding-top:env(safe-area-inset-top)
+  }
+  .mmenu:not([hidden]){display:flex}
+  .mmenu[hidden]{display:none!important}
+  .mmenu-bar,.mfilt-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 14px;background:#fff;border-bottom:1px solid var(--line)
+  }
+  .mmenu-bar b,.mfilt-bar b{font-size:16px;color:#14284b}
+  .mmenu-bar button,.mfilt-bar button{
+    border:0;background:transparent;color:#1f5fbf;font-weight:700;font-size:14px;
+    font-family:inherit;min-height:40px;cursor:pointer;padding:6px 4px
+  }
+  #mMenuList{overflow:auto;padding:6px 12px 28px;-webkit-overflow-scrolling:touch}
+  .mitem{
+    display:flex;gap:12px;width:100%;text-align:left;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:12px;margin:8px 0;font-family:inherit;color:#14284b;cursor:pointer
+  }
+  .mitem.on{border-color:#14284b;box-shadow:inset 0 0 0 1px #14284b}
+  .mitem .mi{font-size:22px;width:32px;text-align:center;flex:none}
+  .mitem .mt{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .mitem .mt b{font-size:15px;display:flex;gap:6px;align-items:center}
+  .mitem .mt em{font-style:normal;font-size:10px;font-weight:800;background:#14284b;color:#fff;border-radius:999px;padding:1px 6px}
+  .mitem .mt small{font-size:12px;color:#5a6a88;font-weight:500;line-height:1.4}
+  .mfilt{
+    position:fixed;inset:0;z-index:7900;background:rgba(15,25,45,.45);
+    display:flex;align-items:flex-end
+  }
+  .mfilt:not([hidden]){display:flex}
+  .mfilt[hidden]{display:none!important}
+  .mfilt-panel{
+    background:#fff;width:100%;max-height:min(78dvh,640px);overflow:auto;
+    border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(20,40,75,.2);
+    padding-bottom:max(18px,env(safe-area-inset-bottom))
+  }
+  .mfilt-bar{position:sticky;top:0;z-index:1}
+  #mFiltBody{padding:4px 14px 12px}
+  .mf{display:flex;flex-direction:column;gap:4px;margin:12px 0;font-size:12px;font-weight:700;color:#3e4f6d}
+  .mf select,.mf input[type="search"]{
+    min-height:44px;font-size:16px;border:1px solid var(--line);border-radius:10px;
+    padding:8px 10px;font-family:inherit;font-weight:600;color:#14284b;background:#f7f9fc;width:100%
+  }
+  .mf.chk{flex-direction:row;align-items:center;gap:8px;font-size:14px;min-height:40px;color:#14284b}
+  .mhint{margin:4px 0 0;font-size:12px;color:#5a6a88;line-height:1.5}
   #newsView{overflow-x:hidden;height:100dvh}
-  #newsView .nw-chip{min-height:40px;padding:8px 12px}
+  #newsView .titlerow{display:flex;flex-direction:row;align-items:flex-start;gap:8px;min-width:0}
+  #newsView .vnav{display:none!important}
+  #newsView h1.vt{font-size:17px;flex:1;min-width:0}
+  #newsView h1.vt small{display:block;font-size:11px;font-weight:600;color:#5a6a88;margin-top:2px}
+  #newsView .nw-tools,#newsView .nw-legend{display:none!important}
+  #newsView .nw-chips{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px;margin-top:8px}
+  #newsView .nw-cluster{flex-wrap:nowrap;flex:0 0 auto}
+  #newsView .nw-chip{flex:0 0 auto;min-height:40px;padding:8px 12px}
   #newsView .nw-dayh{min-height:44px}
   #newsView .nw-src a,#newsView .nw-card h2,#newsView .ho-table a{overflow-wrap:anywhere}
   #newsView .ho,#newsView .nw-wrap,#newsView .ho-card{max-width:100%;min-width:0}
-  #newsView .nw-tools input,#newsView .ho-filters input,#newsView .ho-filters select{min-height:44px}
+  #newsView .nw-top{padding:8px 10px 6px}
 }
 </style>
 </head>
@@ -1092,9 +1170,12 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 <div id="app">
 <header>
   <div class="titlerow">
+    <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
+    <b class="monly mtitle" id="mTitle">宿泊者マップ</b>
     <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
     <div class="stats" id="stats"></div>
   </div>
+  <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">すべて</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
   <div class="row" id="perCtl"></div>
   <div class="row">
     <div class="seg" id="viewSeg">
@@ -1110,7 +1191,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   </div>
 </header>
 <main style="position:relative">
-  <input id="mSheet" class="msheet" type="checkbox" checked>
+  <input id="mSheet" class="msheet" type="checkbox">
   <div id="natCmp"></div>
   <div id="repCmp"></div>
   <div id="map"><div id="legend"></div></div>
@@ -1120,14 +1201,26 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 <div id="grip" title="ドラッグで高さ調整／ダブルクリックで開閉"><span></span></div>
 <footer id="foot"><div id="fhead"><span id="fsrc">出典</span><span class="ftg"><span id="ftl">注意書きを表示</span> <b id="farr">▲</b></span></div><div id="fbody"></div></footer>
 </div>
+<div id="mMenu" class="mmenu monly" hidden>
+  <div class="mmenu-bar"><b>メニュー</b><button type="button" id="mMenuClose">閉じる</button></div>
+  <div id="mMenuList"></div>
+</div>
+<div id="mFilt" class="mfilt monly" hidden>
+  <div class="mfilt-panel">
+    <div class="mfilt-bar"><b>絞り込み</b><button type="button" id="mFiltClose">閉じる</button></div>
+    <div id="mFiltBody"></div>
+  </div>
+</div>
 <div id="flightView" class="ovl"></div>
 <div id="occView" class="ovl"></div>
 <div id="newsView" class="ovl" style="display:flex" aria-hidden="false">
   <header class="nw-top">
     <div class="titlerow">
+      <button type="button" class="monly mmenu-btn" id="nwMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
       <h1 class="vt">ニュースまとめ<small id="nwMeta">読み込み中…</small></h1>
       <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button></span>
     </div>
+    <div class="monly mbar" id="nwBar"><button type="button" class="mfilt-btn" id="nwFiltBtn">絞り込み</button><button type="button" class="mchip" id="nwChip">すべて</button></div>
     <div class="nw-tools">
       <input id="nwQ" type="search" placeholder="キーワードで検索（見出し・本文・メモ・出典）" autocomplete="off" enterkeyhint="search">
       <p id="nwCount" class="nw-count" aria-live="polite"></p>
@@ -1370,85 +1463,166 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
 
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
+.monly{display:none}
 @media (max-width:900px){
-  html,body{overflow-x:hidden}
-  #app{height:100dvh;max-height:100dvh;overflow:hidden}
-  #app>header{padding:8px 10px 6px;max-height:50vh;overflow-y:auto}
-  #app>header:has(.dd.open){overflow:visible;max-height:none}
-  .titlerow{display:flex;flex-direction:column;align-items:stretch;gap:6px;min-width:0}
-  h1.vt{font-size:16px;overflow-wrap:anywhere}
-  .vnav{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;width:100%;max-width:100%;margin:0;gap:6px;padding:0 0 2px}
-  .vb{flex:0 0 auto;min-height:44px;padding:8px 14px;font-size:13px}
-  .stats{margin-left:0;width:100%;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px}
-  .stat{flex:0 0 auto}
-  .unote{white-space:normal}
-  .row{flex-wrap:nowrap;max-width:100%;min-width:0;margin-top:6px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
-  .row:has(.dd.open){overflow:visible}
-  .seg{flex:0 0 auto;overflow:visible}
-  .row>.btn2,.row>.dd,.row>.chk,.row>span,.row>#subCtl,.row>#muCtl,.row>#rtCtl,.row>#crCtl{flex:0 0 auto}
-  .seg button,.dd>.btn,.btn2,.qb{min-height:44px}
-  .chk{min-height:44px;padding:4px 2px}
-  select.sel{min-height:44px;font-size:16px;max-width:70vw}
-  .dd .pn{max-height:min(420px,55vh);max-width:92vw}
+  html,body{overflow-x:hidden;max-width:100%}
+  #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
+  #app>header{padding:8px 10px 8px;max-height:none;overflow:visible}
+  #app>header .titlerow{
+    display:grid;grid-template-columns:auto minmax(0,1fr);
+    grid-template-areas:"btn title" "btn asof";
+    align-items:center;column-gap:8px;row-gap:0;min-width:0
+  }
+  #app>header .mmenu-btn{grid-area:btn;align-self:center}
+  #app>header .mtitle{grid-area:title}
+  #app>header h1.vt{grid-area:asof;font-size:0;line-height:0;margin:0;min-width:0}
+  #app>header h1.vt small{display:none}
+  #app>header h1.vt .asof{font-size:11px;line-height:1.35;font-weight:600;color:#5a6a88;display:block}
+  #app>header .vnav,#app>header>.row,#app>header .stats{display:none!important}
+  .mmenu-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:4px;
+    min-height:40px;padding:6px 10px;border-radius:10px;border:0;cursor:pointer;
+    background:#14284b;color:#fff;font-weight:700;font-size:13px;font-family:inherit;white-space:nowrap
+  }
+  .mtitle{display:block;font-size:17px;line-height:1.25;font-weight:800;color:#14284b;min-width:0}
+  .mbar{display:flex;align-items:center;gap:6px;margin-top:8px;min-width:0}
+  .mfilt-btn,.mdet{
+    flex:0 0 auto;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--line);background:#fff;color:#14284b;font-weight:700;font-size:13px;font-family:inherit
+  }
+  .mchip{
+    flex:1 1 auto;min-width:0;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid #d5deee;background:#f4f7fb;color:#14284b;font-size:12.5px;font-weight:700;
+    text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:inherit
+  }
   main{position:relative;min-width:0;min-height:0}
-  #map{position:absolute;inset:0;min-width:0;width:auto}
+  #map{position:absolute;inset:0;min-width:0;width:auto;height:auto}
+  #map>.stats{
+    position:absolute;left:0;right:0;bottom:0;z-index:600;margin:0;
+    width:auto;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;gap:8px;padding:18px 10px 10px;
+    background:linear-gradient(to top,rgba(255,255,255,.97),rgba(255,255,255,.88) 62%,rgba(255,255,255,0));
+    pointer-events:none
+  }
+  #map>.stats .stat{pointer-events:auto;flex:0 0 auto;box-shadow:0 1px 4px rgba(20,40,75,.08)}
   .leaflet-control-zoom a{width:36px!important;height:36px!important;line-height:36px!important;font-size:18px}
   aside,body.wide aside{
     position:absolute;left:0;right:0;bottom:0;top:auto;
     width:auto!important;max-width:100%!important;min-width:0!important;
-    height:min(420px,52%);
-    z-index:820;
+    height:min(70dvh,620px);z-index:720;
     border-left:0;border-top:1px solid var(--line);
     border-radius:16px 16px 0 0;
     box-shadow:0 -10px 28px rgba(20,40,75,.18);
     overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
+    overscroll-behavior:contain;background:#fff
+  }
+  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0;pointer-events:none}
+  .msheet-btn{display:none!important}
+  aside #foot,aside footer#foot{
+    position:static!important;height:auto!important;min-height:0!important;max-height:none!important;
+    overflow:visible!important;flex:none;border-top:1px solid var(--line);background:#f7f8fb
   }
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
-  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0}
-  .msheet-btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    position:absolute;right:10px;bottom:calc(min(420px, 52%) + 8px);
-    z-index:860;min-height:44px;padding:8px 14px;cursor:pointer;
-    border-radius:999px;background:#14284b;color:#fff;
-    font-size:13px;font-weight:700;letter-spacing:.02em;
-    box-shadow:0 2px 10px rgba(20,40,75,.28);
-  }
-  .msheet-btn .cl{display:none}
-  #mSheet:not(:checked)~.msheet-btn{bottom:10px}
-  #mSheet:not(:checked)~.msheet-btn .op{display:none}
-  #mSheet:not(:checked)~.msheet-btn .cl{display:inline}
   #legend,#legend:has(.tkl){
     left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:30%;
-    overflow:auto;padding:6px 8px;font-size:10.5px;
+    max-width:min(168px,46vw);max-height:28%;
+    overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
   #legend .lt,#legend .li{overflow-wrap:anywhere}
-  #inset{display:none}
-  #grip{display:none}
+  #inset,#grip{display:none!important}
   #info{padding:10px 12px 6px}
   .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kpi{padding:4px 6px}
   .kpi b{font-size:13px;overflow-wrap:anywhere}
   #natCmp,#repCmp{padding:10px 12px}
+  #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
+  #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
+  body.m-list #map{visibility:hidden}
+  body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
+    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
+    overflow:auto;pointer-events:auto
+  }
+  body.m-list #mDetBtn{display:none!important}
+  body.m-list aside>.stats{
+    position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
+    background:#fff;margin:0;padding:8px 10px;border-bottom:1px solid var(--line);
+    width:auto;max-width:100%
+  }
+  .mmenu{
+    position:fixed;inset:0;z-index:8000;background:#f3f5fa;flex-direction:column;
+    padding-top:env(safe-area-inset-top)
+  }
+  .mmenu:not([hidden]){display:flex}
+  .mmenu[hidden]{display:none!important}
+  .mmenu-bar,.mfilt-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 14px;background:#fff;border-bottom:1px solid var(--line)
+  }
+  .mmenu-bar b,.mfilt-bar b{font-size:16px;color:#14284b}
+  .mmenu-bar button,.mfilt-bar button{
+    border:0;background:transparent;color:#1f5fbf;font-weight:700;font-size:14px;
+    font-family:inherit;min-height:40px;cursor:pointer;padding:6px 4px
+  }
+  #mMenuList{overflow:auto;padding:6px 12px 28px;-webkit-overflow-scrolling:touch}
+  .mitem{
+    display:flex;gap:12px;width:100%;text-align:left;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:12px;margin:8px 0;font-family:inherit;color:#14284b;cursor:pointer
+  }
+  .mitem.on{border-color:#14284b;box-shadow:inset 0 0 0 1px #14284b}
+  .mitem .mi{font-size:22px;width:32px;text-align:center;flex:none}
+  .mitem .mt{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .mitem .mt b{font-size:15px;display:flex;gap:6px;align-items:center}
+  .mitem .mt em{font-style:normal;font-size:10px;font-weight:800;background:#14284b;color:#fff;border-radius:999px;padding:1px 6px}
+  .mitem .mt small{font-size:12px;color:#5a6a88;font-weight:500;line-height:1.4}
+  .mfilt{
+    position:fixed;inset:0;z-index:7900;background:rgba(15,25,45,.45);
+    display:flex;align-items:flex-end
+  }
+  .mfilt:not([hidden]){display:flex}
+  .mfilt[hidden]{display:none!important}
+  .mfilt-panel{
+    background:#fff;width:100%;max-height:min(78dvh,640px);overflow:auto;
+    border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(20,40,75,.2);
+    padding-bottom:max(18px,env(safe-area-inset-bottom))
+  }
+  .mfilt-bar{position:sticky;top:0;z-index:1}
+  #mFiltBody{padding:4px 14px 12px}
+  .mf{display:flex;flex-direction:column;gap:4px;margin:12px 0;font-size:12px;font-weight:700;color:#3e4f6d}
+  .mf select,.mf input[type="search"]{
+    min-height:44px;font-size:16px;border:1px solid var(--line);border-radius:10px;
+    padding:8px 10px;font-family:inherit;font-weight:600;color:#14284b;background:#f7f9fc;width:100%
+  }
+  .mf.chk{flex-direction:row;align-items:center;gap:8px;font-size:14px;min-height:40px;color:#14284b}
+  .mhint{margin:4px 0 0;font-size:12px;color:#5a6a88;line-height:1.5}
   #newsView{overflow-x:hidden;height:100dvh}
-  #newsView .nw-chip{min-height:40px;padding:8px 12px}
+  #newsView .titlerow{display:flex;flex-direction:row;align-items:flex-start;gap:8px;min-width:0}
+  #newsView .vnav{display:none!important}
+  #newsView h1.vt{font-size:17px;flex:1;min-width:0}
+  #newsView h1.vt small{display:block;font-size:11px;font-weight:600;color:#5a6a88;margin-top:2px}
+  #newsView .nw-tools,#newsView .nw-legend{display:none!important}
+  #newsView .nw-chips{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px;margin-top:8px}
+  #newsView .nw-cluster{flex-wrap:nowrap;flex:0 0 auto}
+  #newsView .nw-chip{flex:0 0 auto;min-height:40px;padding:8px 12px}
   #newsView .nw-dayh{min-height:44px}
   #newsView .nw-src a,#newsView .nw-card h2,#newsView .ho-table a{overflow-wrap:anywhere}
   #newsView .ho,#newsView .nw-wrap,#newsView .ho-card{max-width:100%;min-width:0}
-  #newsView .nw-tools input,#newsView .ho-filters input,#newsView .ho-filters select{min-height:44px}
+  #newsView .nw-top{padding:8px 10px 6px}
 }
 </style></head><body>
 <div id="app">
 <header>
  <div class="titlerow">
+  <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
+  <b class="monly mtitle" id="mTitle">フライト情報</b>
   <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
   <div class="stats" id="stats"></div>
  </div>
+ <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">2026冬ダイヤ</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
  <div class="row">
   <div class="seg" id="seaSeg"></div>
   <span class="perlab" id="perlab"></span>
@@ -1461,9 +1635,15 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
   <label class="chk"><input type="checkbox" id="bgchk" checked>背景地図</label>
  </div>
 </header>
-<main><input id="mSheet" class="msheet" type="checkbox" checked><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="rankBox"></div></aside></main>
+<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="rankBox"></div></aside></main>
 <div id="grip" title="ドラッグで高さ調整／ダブルクリックで開閉"><span></span></div>
 <footer id="foot"><div id="fhead"><span id="fsrc"><b>出典</b>：国土交通省 航空局「各空港における国際線就航状況」／関西エアポート（OAG）・空港会社スケジュール</span><span class="ftg"><span id="ftl">注意書きを表示</span> <b id="farr">▲</b></span></div><div id="fbody"></div></footer>
+</div>
+<div id="mFilt" class="mfilt monly" hidden>
+  <div class="mfilt-panel">
+    <div class="mfilt-bar"><b>絞り込み</b><button type="button" id="mFiltClose">閉じる</button></div>
+    <div id="mFiltBody"></div>
+  </div>
 </div>
 <script>(function(){const s=document.createElement("script");s.textContent=parent.document.getElementById("lfjs").textContent;document.head.appendChild(s)})();<\/script>
 <script>
@@ -1526,7 +1706,7 @@ const lineL=L.layerGroup().addTo(map), apL=L.layerGroup().addTo(map), labL=L.lay
 document.getElementById('bgchk').onchange=e=>{e.target.checked?tiles.addTo(map):map.removeLayer(tiles)};
 document.getElementById('labchk').onchange=()=>draw();
 document.getElementById('lnchk').onchange=()=>drawLines();
-map.on('click',()=>{pinned=false;selAp=null;info();drawLines();rank();});
+map.on('click',()=>{pinned=false;selAp=null;info();drawLines();rank();if(window.__mDetail)window.__mDetail(false);});
 // ---- controls
 const ss=document.getElementById('seaSeg');
 SEL.forEach(s=>{const b=document.createElement('button');b.dataset.s=s;b.textContent=SLAB[s]+(BSUF[s]||'');if(BTIP[s])b.title=BTIP[s];if(s===sea)b.className='on';
@@ -1572,7 +1752,7 @@ function draw(){const asof=document.getElementById('dataAsof');if(asof)asof.text
    if(v<=0) t+='<br>（該当便なし）';
    mk.bindTooltip(t);}
   mk.on('mouseover',()=>{if(!pinned){selAp=ap;info();}});
-  mk.on('click',e=>{L.DomEvent.stopPropagation(e);pinned=true;selAp=ap;info();drawLines();rank();});
+  mk.on('click',e=>{L.DomEvent.stopPropagation(e);pinned=true;selAp=ap;info();drawLines();rank();if(window.__mDetail)window.__mDetail(true);});
   mk.addTo(apL);
   if(showLab){const big=['成田','羽田','関西','中部','福岡','新千歳','那覇'].includes(ap);
    if(big||map.getZoom()>=6) L.marker(ll,{icon:L.divIcon({className:'alab',html:ap,iconSize:[60,14],iconAnchor:[-6,7]}),interactive:false}).addTo(labL);}
@@ -1648,7 +1828,7 @@ function rank(){const el=document.getElementById('rankBox');
  const S=D.M[sea],P=D.M[PREV[sea]];const base=S.scope?S.scope:[...new Set([...Object.keys(S.aps),...Object.keys(P.aps)])];
  const aps=base.map(a=>[a,apVal(S,a),apVal(P,a)]).filter(x=>x[1]>0||x[2]>0).sort((a,b)=>b[1]-a[1]||b[2]-a[2]);
  const mx=Math.max(...aps.map(x=>x[1]),1);
- el.innerHTML=`<h4>空港ランキング（${ctry?ctry+'便・':''}${UNIT}・${NY()?'暫定':'右列＝'+cmpLab()+'比'}）</h4>`+aps.map((x,i)=>`<div class="rk2${x[0]===selAp?' hl':''}" onclick="pinned=true;selAp='${x[0]}';info();drawLines();rank()"><span class="n">${i+1}</span><span class="p">${x[0]}</span><span class="b"><div style="width:${x[1]/mx*100}%;background:${ctry?col(ctry):(S.aps[x[0]]?col(Object.keys(S.aps[x[0]].c)[0]):'#ccc')}"></div></span><span class="v">${fmt(x[1])}</span><span class="v" style="width:92px;font-size:11px">${yoyHtml(x[1],x[2])}</span></div>`).join('');}
+ el.innerHTML=`<h4>空港ランキング（${ctry?ctry+'便・':''}${UNIT}・${NY()?'暫定':'右列＝'+cmpLab()+'比'}）</h4>`+aps.map((x,i)=>`<div class="rk2${x[0]===selAp?' hl':''}" onclick="pinned=true;selAp='${x[0]}';info();drawLines();rank();if(window.__mDetail)window.__mDetail(true)"><span class="n">${i+1}</span><span class="p">${x[0]}</span><span class="b"><div style="width:${x[1]/mx*100}%;background:${ctry?col(ctry):(S.aps[x[0]]?col(Object.keys(S.aps[x[0]].c)[0]):'#ccc')}"></div></span><span class="v">${fmt(x[1])}</span><span class="v" style="width:92px;font-size:11px">${yoyHtml(x[1],x[2])}</span></div>`).join('');}
 function drawLines(){lineL.clearLayers();if(!document.getElementById('lnchk').checked)return;
  const S=D.M[sea];const list=selAp?[selAp]:(ctry?Object.keys(S.aps):[]);
  list.forEach(ap=>{const a=S.aps[ap];if(!a)return;Object.entries(a.c).forEach(([c,v])=>{if(ctry&&c!==ctry)return;const d=D.DEST[c];if(!d)return;
@@ -1683,6 +1863,90 @@ window.__fmap=map;window.__fsea=()=>sea;window.__fsel=()=>selAp;
  g.addEventListener('dblclick',toggle);document.getElementById('fhead').addEventListener('click',toggle);
  window.addEventListener('resize',()=>set(f.getBoundingClientRect().height,false));
 })();
+
+const mEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let mFixT=0;
+function mFix(){clearTimeout(mFixT);mFixT=setTimeout(()=>{try{map.invalidateSize()}catch(e){}},40)}
+function mPlace(){
+  const mob=window.matchMedia('(max-width:900px)').matches;
+  const stats=document.getElementById('stats'),foot=document.getElementById('foot'),mapEl=document.getElementById('map');
+  const aside=document.querySelector('main > aside'),title=document.querySelector('#app > header .titlerow'),grip=document.getElementById('grip');
+  if(stats&&title&&mapEl){
+    if(mob){if(stats.parentElement!==mapEl)mapEl.appendChild(stats)}
+    else if(stats.parentElement!==title)title.appendChild(stats);
+  }
+  if(foot&&aside&&grip){
+    if(mob){if(foot.parentElement!==aside)aside.appendChild(foot)}
+    else if(foot.previousElementSibling!==grip)grip.after(foot);
+  }
+}
+function mChipText(){
+  const base=SLAB[sea]+(BSUF[sea]||'');
+  if(sea==='S27')return base+'・発表日は詳細';
+  if(ctry)return base+'・'+ctry;
+  return base+'・'+(mode==='yoy'?'前年同期比':'1位の就航先');
+}
+function mSync(){
+  const t=document.getElementById('mTitle');if(t)t.textContent='フライト情報';
+  const c=document.getElementById('mChip');if(c)c.textContent=mChipText();
+  const det=document.getElementById('mDetBtn'),box=document.getElementById('mSheet');
+  if(det&&box)det.textContent=box.checked?'閉じる':'詳細';
+  mPlace();
+  try{if(parent.__mSync)parent.__mSync()}catch(e){}
+}
+function mSel(label,key,opts,cur){
+  return '<label class="mf">'+label+'<select data-k="'+key+'">'+opts.map(([k,l])=>'<option value="'+mEsc(k)+'"'+(String(k)===String(cur)?' selected':'')+'>'+mEsc(l)+'</option>').join('')+'</select></label>';
+}
+function mChk(id,label){
+  const el=document.getElementById(id);
+  return '<label class="mf chk"><input type="checkbox" data-src="'+id+'"'+(el&&el.checked?' checked':'')+'>'+label+'</label>';
+}
+function mFillFilt(){
+  const body=document.getElementById('mFiltBody');if(!body)return;
+  const seasons=SEL.map(s=>[s,SLAB[s]+(BSUF[s]||'')]);
+  const modes=[['top','1位の就航先']];
+  if(!NY())modes.push(['yoy','前年同期比']);
+  const countries=[['', 'すべて']].concat(Object.keys((D.M[sea]&&D.M[sea].ctot)||{}).map(c=>[c,c]));
+  let html=mSel('ダイヤ','sea',seasons,sea)+mSel('表示','mode',modes,mode)+mSel('就航先の国・地域','ctry',countries,ctry||'');
+  html+=mChk('lnchk','方面ライン（選択空港）')+mChk('labchk','空港名')+mChk('bgchk','背景地図');
+  if(sea==='S27')html+='<p class="mhint">発表日は「詳細」の路線一覧に表示します。</p>';
+  body.innerHTML=html;
+  body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
+    const k=sel.dataset.k,v=sel.value;
+    if(k==='sea'){const b=document.querySelector('#seaSeg button[data-s="'+v+'"]');if(b)b.click()}
+    else if(k==='mode'){const b=document.querySelector('#modeSeg button[data-m="'+v+'"]');if(b&&!b.disabled)b.click()}
+    else if(k==='ctry'){ctry=v||null;draw()}
+    const f=document.getElementById('mFilt');
+    if(f&&!f.hidden)mFillFilt();
+  });
+  body.querySelectorAll('input[data-src]').forEach(inp=>inp.onchange=()=>{
+    const real=document.getElementById(inp.dataset.src);if(!real)return;
+    real.checked=inp.checked;real.dispatchEvent(new Event('change'));
+  });
+}
+function mFiltOpen(){mFillFilt();const f=document.getElementById('mFilt');if(f)f.hidden=false}
+function mFiltClose(){const f=document.getElementById('mFilt');if(f)f.hidden=true}
+function mDetail(on){const box=document.getElementById('mSheet');if(box)box.checked=!!on;mSync()}
+function mInit(){
+  const mb=document.getElementById('mMenuBtn');if(mb)mb.onclick=()=>{try{parent.__openMenu()}catch(e){}};
+  const fb=document.getElementById('mFiltBtn');if(fb)fb.onclick=mFiltOpen;
+  const chip=document.getElementById('mChip');if(chip)chip.onclick=mFiltOpen;
+  const fc=document.getElementById('mFiltClose');if(fc)fc.onclick=mFiltClose;
+  const filt=document.getElementById('mFilt');if(filt)filt.addEventListener('click',e=>{if(e.target===filt)mFiltClose()});
+  const det=document.getElementById('mDetBtn');
+  if(det)det.onclick=()=>{const box=document.getElementById('mSheet');if(!box)return;box.checked=!box.checked;mSync()};
+  if(window.matchMedia('(max-width:900px)').matches){const box=document.getElementById('mSheet');if(box)box.checked=false}
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const sheet=document.getElementById('mFilt');
+    if(sheet&&!sheet.hidden){mFiltClose();e.preventDefault();e.stopPropagation()}
+  },true);
+  window.addEventListener('resize',()=>{mPlace();mFix()});
+}
+window.__mFix=mFix;window.__mSync=mSync;window.__mDetail=mDetail;
+mInit();
+const __draw0=draw;draw=function(){__draw0();mSync()};
+
 draw();
 <\/script><script>window.__RZNS="fl";
 // ---- マウスで幅・高さを調整（スプリッター・表の列幅）共通モジュール ----
@@ -1982,85 +2246,166 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
 
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
+.monly{display:none}
 @media (max-width:900px){
-  html,body{overflow-x:hidden}
-  #app{height:100dvh;max-height:100dvh;overflow:hidden}
-  #app>header{padding:8px 10px 6px;max-height:50vh;overflow-y:auto}
-  #app>header:has(.dd.open){overflow:visible;max-height:none}
-  .titlerow{display:flex;flex-direction:column;align-items:stretch;gap:6px;min-width:0}
-  h1.vt{font-size:16px;overflow-wrap:anywhere}
-  .vnav{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;width:100%;max-width:100%;margin:0;gap:6px;padding:0 0 2px}
-  .vb{flex:0 0 auto;min-height:44px;padding:8px 14px;font-size:13px}
-  .stats{margin-left:0;width:100%;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px}
-  .stat{flex:0 0 auto}
-  .unote{white-space:normal}
-  .row{flex-wrap:nowrap;max-width:100%;min-width:0;margin-top:6px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
-  .row:has(.dd.open){overflow:visible}
-  .seg{flex:0 0 auto;overflow:visible}
-  .row>.btn2,.row>.dd,.row>.chk,.row>span,.row>#subCtl,.row>#muCtl,.row>#rtCtl,.row>#crCtl{flex:0 0 auto}
-  .seg button,.dd>.btn,.btn2,.qb{min-height:44px}
-  .chk{min-height:44px;padding:4px 2px}
-  select.sel{min-height:44px;font-size:16px;max-width:70vw}
-  .dd .pn{max-height:min(420px,55vh);max-width:92vw}
+  html,body{overflow-x:hidden;max-width:100%}
+  #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
+  #app>header{padding:8px 10px 8px;max-height:none;overflow:visible}
+  #app>header .titlerow{
+    display:grid;grid-template-columns:auto minmax(0,1fr);
+    grid-template-areas:"btn title" "btn asof";
+    align-items:center;column-gap:8px;row-gap:0;min-width:0
+  }
+  #app>header .mmenu-btn{grid-area:btn;align-self:center}
+  #app>header .mtitle{grid-area:title}
+  #app>header h1.vt{grid-area:asof;font-size:0;line-height:0;margin:0;min-width:0}
+  #app>header h1.vt small{display:none}
+  #app>header h1.vt .asof{font-size:11px;line-height:1.35;font-weight:600;color:#5a6a88;display:block}
+  #app>header .vnav,#app>header>.row,#app>header .stats{display:none!important}
+  .mmenu-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:4px;
+    min-height:40px;padding:6px 10px;border-radius:10px;border:0;cursor:pointer;
+    background:#14284b;color:#fff;font-weight:700;font-size:13px;font-family:inherit;white-space:nowrap
+  }
+  .mtitle{display:block;font-size:17px;line-height:1.25;font-weight:800;color:#14284b;min-width:0}
+  .mbar{display:flex;align-items:center;gap:6px;margin-top:8px;min-width:0}
+  .mfilt-btn,.mdet{
+    flex:0 0 auto;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--line);background:#fff;color:#14284b;font-weight:700;font-size:13px;font-family:inherit
+  }
+  .mchip{
+    flex:1 1 auto;min-width:0;min-height:36px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid #d5deee;background:#f4f7fb;color:#14284b;font-size:12.5px;font-weight:700;
+    text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:inherit
+  }
   main{position:relative;min-width:0;min-height:0}
-  #map{position:absolute;inset:0;min-width:0;width:auto}
+  #map{position:absolute;inset:0;min-width:0;width:auto;height:auto}
+  #map>.stats{
+    position:absolute;left:0;right:0;bottom:0;z-index:600;margin:0;
+    width:auto;max-width:100%;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;gap:8px;padding:18px 10px 10px;
+    background:linear-gradient(to top,rgba(255,255,255,.97),rgba(255,255,255,.88) 62%,rgba(255,255,255,0));
+    pointer-events:none
+  }
+  #map>.stats .stat{pointer-events:auto;flex:0 0 auto;box-shadow:0 1px 4px rgba(20,40,75,.08)}
   .leaflet-control-zoom a{width:36px!important;height:36px!important;line-height:36px!important;font-size:18px}
   aside,body.wide aside{
     position:absolute;left:0;right:0;bottom:0;top:auto;
     width:auto!important;max-width:100%!important;min-width:0!important;
-    height:min(420px,52%);
-    z-index:820;
+    height:min(70dvh,620px);z-index:720;
     border-left:0;border-top:1px solid var(--line);
     border-radius:16px 16px 0 0;
     box-shadow:0 -10px 28px rgba(20,40,75,.18);
     overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
+    overscroll-behavior:contain;background:#fff
+  }
+  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0;pointer-events:none}
+  .msheet-btn{display:none!important}
+  aside #foot,aside footer#foot{
+    position:static!important;height:auto!important;min-height:0!important;max-height:none!important;
+    overflow:visible!important;flex:none;border-top:1px solid var(--line);background:#f7f8fb
   }
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
-  #mSheet:not(:checked)~aside{height:0!important;overflow:hidden;border:0;box-shadow:none;padding:0}
-  .msheet-btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    position:absolute;right:10px;bottom:calc(min(420px, 52%) + 8px);
-    z-index:860;min-height:44px;padding:8px 14px;cursor:pointer;
-    border-radius:999px;background:#14284b;color:#fff;
-    font-size:13px;font-weight:700;letter-spacing:.02em;
-    box-shadow:0 2px 10px rgba(20,40,75,.28);
-  }
-  .msheet-btn .cl{display:none}
-  #mSheet:not(:checked)~.msheet-btn{bottom:10px}
-  #mSheet:not(:checked)~.msheet-btn .op{display:none}
-  #mSheet:not(:checked)~.msheet-btn .cl{display:inline}
   #legend,#legend:has(.tkl){
     left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:30%;
-    overflow:auto;padding:6px 8px;font-size:10.5px;
+    max-width:min(168px,46vw);max-height:28%;
+    overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
   #legend .lt,#legend .li{overflow-wrap:anywhere}
-  #inset{display:none}
-  #grip{display:none}
+  #inset,#grip{display:none!important}
   #info{padding:10px 12px 6px}
   .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kpi{padding:4px 6px}
   .kpi b{font-size:13px;overflow-wrap:anywhere}
   #natCmp,#repCmp{padding:10px 12px}
+  #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
+  #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
+  body.m-list #map{visibility:hidden}
+  body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
+    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
+    overflow:auto;pointer-events:auto
+  }
+  body.m-list #mDetBtn{display:none!important}
+  body.m-list aside>.stats{
+    position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
+    background:#fff;margin:0;padding:8px 10px;border-bottom:1px solid var(--line);
+    width:auto;max-width:100%
+  }
+  .mmenu{
+    position:fixed;inset:0;z-index:8000;background:#f3f5fa;flex-direction:column;
+    padding-top:env(safe-area-inset-top)
+  }
+  .mmenu:not([hidden]){display:flex}
+  .mmenu[hidden]{display:none!important}
+  .mmenu-bar,.mfilt-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 14px;background:#fff;border-bottom:1px solid var(--line)
+  }
+  .mmenu-bar b,.mfilt-bar b{font-size:16px;color:#14284b}
+  .mmenu-bar button,.mfilt-bar button{
+    border:0;background:transparent;color:#1f5fbf;font-weight:700;font-size:14px;
+    font-family:inherit;min-height:40px;cursor:pointer;padding:6px 4px
+  }
+  #mMenuList{overflow:auto;padding:6px 12px 28px;-webkit-overflow-scrolling:touch}
+  .mitem{
+    display:flex;gap:12px;width:100%;text-align:left;align-items:center;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:12px;margin:8px 0;font-family:inherit;color:#14284b;cursor:pointer
+  }
+  .mitem.on{border-color:#14284b;box-shadow:inset 0 0 0 1px #14284b}
+  .mitem .mi{font-size:22px;width:32px;text-align:center;flex:none}
+  .mitem .mt{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .mitem .mt b{font-size:15px;display:flex;gap:6px;align-items:center}
+  .mitem .mt em{font-style:normal;font-size:10px;font-weight:800;background:#14284b;color:#fff;border-radius:999px;padding:1px 6px}
+  .mitem .mt small{font-size:12px;color:#5a6a88;font-weight:500;line-height:1.4}
+  .mfilt{
+    position:fixed;inset:0;z-index:7900;background:rgba(15,25,45,.45);
+    display:flex;align-items:flex-end
+  }
+  .mfilt:not([hidden]){display:flex}
+  .mfilt[hidden]{display:none!important}
+  .mfilt-panel{
+    background:#fff;width:100%;max-height:min(78dvh,640px);overflow:auto;
+    border-radius:16px 16px 0 0;box-shadow:0 -8px 24px rgba(20,40,75,.2);
+    padding-bottom:max(18px,env(safe-area-inset-bottom))
+  }
+  .mfilt-bar{position:sticky;top:0;z-index:1}
+  #mFiltBody{padding:4px 14px 12px}
+  .mf{display:flex;flex-direction:column;gap:4px;margin:12px 0;font-size:12px;font-weight:700;color:#3e4f6d}
+  .mf select,.mf input[type="search"]{
+    min-height:44px;font-size:16px;border:1px solid var(--line);border-radius:10px;
+    padding:8px 10px;font-family:inherit;font-weight:600;color:#14284b;background:#f7f9fc;width:100%
+  }
+  .mf.chk{flex-direction:row;align-items:center;gap:8px;font-size:14px;min-height:40px;color:#14284b}
+  .mhint{margin:4px 0 0;font-size:12px;color:#5a6a88;line-height:1.5}
   #newsView{overflow-x:hidden;height:100dvh}
-  #newsView .nw-chip{min-height:40px;padding:8px 12px}
+  #newsView .titlerow{display:flex;flex-direction:row;align-items:flex-start;gap:8px;min-width:0}
+  #newsView .vnav{display:none!important}
+  #newsView h1.vt{font-size:17px;flex:1;min-width:0}
+  #newsView h1.vt small{display:block;font-size:11px;font-weight:600;color:#5a6a88;margin-top:2px}
+  #newsView .nw-tools,#newsView .nw-legend{display:none!important}
+  #newsView .nw-chips{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;gap:8px;margin-top:8px}
+  #newsView .nw-cluster{flex-wrap:nowrap;flex:0 0 auto}
+  #newsView .nw-chip{flex:0 0 auto;min-height:40px;padding:8px 12px}
   #newsView .nw-dayh{min-height:44px}
   #newsView .nw-src a,#newsView .nw-card h2,#newsView .ho-table a{overflow-wrap:anywhere}
   #newsView .ho,#newsView .nw-wrap,#newsView .ho-card{max-width:100%;min-width:0}
-  #newsView .nw-tools input,#newsView .ho-filters input,#newsView .ho-filters select{min-height:44px}
+  #newsView .nw-top{padding:8px 10px 6px}
 }
 </style></head><body>
 <div id="app">
 <header>
  <div class="titlerow">
+  <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
+  <b class="monly mtitle" id="mTitle">客室稼働率</b>
   <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
   <div class="stats" id="stats"></div>
  </div>
+ <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">客室稼働率</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
  <div class="row">
   <div class="seg" id="gSeg"><button data-g="pref">都道府県</button><button data-g="muni">市区町村・東京の区</button><button data-g="reit">ホテルブランド比較</button></div>
   <span class="gnote" id="gnote"></span>
@@ -2078,9 +2423,15 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
   <span class="cvt" id="cvt"></span>
  </div>
 </header>
-<main><input id="mSheet" class="msheet" type="checkbox" checked><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="tbl"></div></aside></main>
+<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="tbl"></div></aside></main>
 <div id="grip" title="ドラッグで高さ調整／ダブルクリックで開閉"><span></span></div>
 <footer id="foot"><div id="fhead"><span id="fsrc">出典</span><span class="ftg"><span id="ftl">注意書きを表示</span> <b id="farr">▲</b></span></div><div id="fbody"></div></footer>
+</div>
+<div id="mFilt" class="mfilt monly" hidden>
+  <div class="mfilt-panel">
+    <div class="mfilt-bar"><b>絞り込み</b><button type="button" id="mFiltClose">閉じる</button></div>
+    <div id="mFiltBody"></div>
+  </div>
 </div>
 <script>(function(){const s=document.createElement("script");s.textContent=parent.document.getElementById("lfjs").textContent;document.head.appendChild(s)})();<\/script>
 <script>
@@ -2149,8 +2500,8 @@ map.fitBounds([[30.6,128.4],[45.6,146.0]]);
 const LAY=[];const CV=L.canvas({padding:.3,tolerance:2});
 L.geoJSON(GEO,{renderer:CV,style:f=>sty(f.properties.p),onEachFeature:(f,l)=>{const i=f.properties.p;LAY[i]=l;
   l.on('mouseover',()=>{if(G!=='pref')return;HOV=i;restyle();info()});l.on('mouseout',()=>{if(G!=='pref')return;if(HOV===i){HOV=null;restyle();info()}});
-  l.on('click',e=>{if(G!=='pref')return;L.DomEvent.stopPropagation(e);PIN=PIN===i?null:i;restyle();info();table()})}}).addTo(map);
-map.on('click',()=>{if(G==='pref'&&PIN!=null){PIN=null;restyle();info();table()}if(G==='muni'&&PINM!=null){PINM=null;mrestyle();info();table()}});
+  l.on('click',e=>{if(G!=='pref')return;L.DomEvent.stopPropagation(e);PIN=PIN===i?null:i;restyle();info();table();if(window.__mDetail)window.__mDetail(PIN!=null)})}}).addTo(map);
+map.on('click',()=>{if(G==='pref'&&PIN!=null){PIN=null;restyle();info();table();if(window.__mDetail)window.__mDetail(false)}if(G==='muni'&&PINM!=null){PINM=null;mrestyle();info();table()}});
 function sty(i){if(G!=='pref')return {fillColor:'#f1f3f7',fillOpacity:G==='reit'?.5:.75,color:'#aab4c8',weight:.8};const s=i===PIN||i===HOV;return {fillColor:colOf(val(YR,MO,i)),fillOpacity:.9,color:s?'#0b1a33':'#fff',weight:s?2.2:.7}}
 function restyle(){LAY.forEach((l,i)=>l&&l.setStyle(sty(i)));if(G==='pref')[HOV,PIN].forEach(i=>i!=null&&LAY[i].bringToFront())}
 // 市区町村ポリゴン
@@ -2376,7 +2727,7 @@ function table0(){const el=document.getElementById('tbl');
    R.map(r=>`<tr class="r ${r.i===PIN?'sel':''}" data-i="${r.i}"><td class="v">${r.r||'–'}</td><td>${r.n}</td><td class="v">${fmt(r.v)}</td><td class="bar"><div style="width:${r.v?(r.v/mx*100).toFixed(1):0}%"></div></td><td class="v">${r.d==null?'<span class="fl">–</span>':dpt(r.v,r.v-r.d)}</td></tr>`).join('')+
    `<tr class="nat"><td></td><td>全国</td><td class="v">${fmt(nv)}</td><td></td><td class="v">${dpt(nv,np)}</td></tr></table>`;
   el.querySelectorAll('tr.th td').forEach(td=>td.onclick=()=>{const c=td.dataset.k;SORT=SORT.k===c?{k:c,d:-SORT.d}:{k:c,d:(c==='n'||c==='r')?1:-1};table()});
-  el.querySelectorAll('tr.r').forEach(tr=>{const i=+tr.dataset.i;tr.onclick=()=>{PIN=PIN===i?null:i;restyle();info();table()};tr.onmouseenter=()=>{if(PIN==null){HOV=i;restyle();info()}};tr.onmouseleave=()=>{if(HOV===i){HOV=null;restyle();info()}}});return}
+  el.querySelectorAll('tr.r').forEach(tr=>{const i=+tr.dataset.i;tr.onclick=()=>{PIN=PIN===i?null:i;restyle();info();table();if(window.__mDetail)window.__mDetail(PIN!=null)};tr.onmouseenter=()=>{if(PIN==null){HOV=i;restyle();info()}};tr.onmouseleave=()=>{if(HOV===i){HOV=null;restyle();info()}}});return}
   if(G==='muni')return tableM(el);if(G==='cref')return tableC(el);if(G==='reit')return tableR(el)}
 function tableM(el){const k=YM(),pk=`${prevY()}-${pad(MO)}`;
   let rows=MU.munis.map((m,i)=>{const r=MREC(k,i),p=MREC(pk,i);const v=r?r[0]:null,pv=p?p[0]:null;return {i,n:m.s+(m.h?'（'+m.h+'）':''),pn:m.p,pf:PR[m.p],v,d:v!=null&&pv!=null?Math.round((v-pv)*10)/10:null,c:r&&r[3]?r[3][2]:null,po:r&&r[2]?r[2][2]:null}}).filter(r=>r.v!=null);
@@ -2432,6 +2783,115 @@ window.__oc={get:()=>({G,YR,MO,TI,PIN,SORT,PINM,PF,CI,BR,HT}),set:(y,m,t)=>{YR=y
   mode:g=>setG(g),tk23,pinMuni:n=>{const i=MU.munis.findIndex(m=>m.n===n||m.s===n);PINM=i<0?null:i;draw();return i},pf:p=>{PF=p;draw()},msort:(k,d)=>{MSORT={k,d};table()},
   city:i=>{CI=i;draw()},brand:(b,a,h)=>{BR=b;HT=h||null;draw();fitHotels()},reit:(r,h)=>{BR=r;HT=h||null;draw();fitHotels()},hotel:id=>{HT=id;draw()},rsort:(k,d)=>{RSORT={k,d};table()},
   data:()=>({nm:MU.munis.length,nr:RT.length,nc:CR.length})};
+
+const mEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mTitles={pref:'客室稼働率',muni:'市区町村の稼働率',reit:'ホテルブランド比較'};
+let mFixT=0;
+function mFix(){clearTimeout(mFixT);mFixT=setTimeout(()=>{try{map.invalidateSize()}catch(e){}},40)}
+function mPlace(){
+  const mob=window.matchMedia('(max-width:900px)').matches;
+  const list=mob&&G==='reit';
+  document.body.classList.toggle('m-list',list);
+  const stats=document.getElementById('stats'),foot=document.getElementById('foot'),mapEl=document.getElementById('map');
+  const aside=document.querySelector('main > aside'),title=document.querySelector('#app > header .titlerow'),grip=document.getElementById('grip');
+  if(stats){
+    if(list&&aside){if(stats.parentElement!==aside)aside.insertBefore(stats,aside.firstChild)}
+    else if(mob&&mapEl){if(stats.parentElement!==mapEl)mapEl.appendChild(stats)}
+    else if(title&&stats.parentElement!==title)title.appendChild(stats);
+  }
+  if(foot&&aside&&grip){
+    if(mob){if(foot.parentElement!==aside)aside.appendChild(foot)}
+    else if(foot.previousElementSibling!==grip)grip.after(foot);
+  }
+}
+function mChipText(){
+  const per=lab();
+  if(G==='pref')return per+'・'+(TY[TI]||'');
+  if(G==='muni')return per+'・'+(PF==='all'?'全国':PF==='tk23'?'東京23区':(PR[PF]||''));
+  if(G==='reit')return per+'・'+(RN[BR]||'');
+  return per;
+}
+function mSync(){
+  const t=document.getElementById('mTitle');if(t)t.textContent=mTitles[G]||'客室稼働率';
+  const c=document.getElementById('mChip');if(c)c.textContent=mChipText();
+  const det=document.getElementById('mDetBtn'),box=document.getElementById('mSheet');
+  if(det&&box){det.textContent=box.checked?'閉じる':'詳細';det.style.display=G==='reit'?'none':''}
+  mPlace();
+  try{if(parent.__mSync)parent.__mSync()}catch(e){}
+}
+function mSel(label,key,opts,cur){
+  return '<label class="mf">'+label+'<select data-k="'+key+'">'+opts.map(([k,l])=>'<option value="'+mEsc(k)+'"'+(String(k)===String(cur)?' selected':'')+'>'+mEsc(l)+'</option>').join('')+'</select></label>';
+}
+function mChk(id,label){
+  const el=document.getElementById(id);
+  return '<label class="mf chk"><input type="checkbox" data-src="'+id+'"'+(el&&el.checked?' checked':'')+'>'+label+'</label>';
+}
+function mPerOpts(){
+  const o=[];
+  YEARS.forEach(y=>{
+    if(G==='pref'&&O.Y[y]&&O.Y[y].m.Y)o.push([y+'|Y',y+'年 · 年計']);
+    monthsFor(y).forEach(m=>o.push([y+'|'+m,y+'年 · '+m+'月']));
+  });
+  return o;
+}
+function mFillFilt(){
+  const body=document.getElementById('mFiltBody');if(!body)return;
+  let html=mSel('期間','per',mPerOpts(),YR+'|'+MO);
+  if(G==='pref'){
+    const types=['全体','リゾートホテル','ビジネスホテル','シティホテル','旅館'].map(t=>[TY.indexOf(t),t]).filter(x=>x[0]>=0);
+    html+=mSel('施設タイプ','ty',types,TI);
+  }else if(G==='muni'){
+    const ps=[...new Set(MU.munis.map(m=>m.p))].sort((a,b)=>a-b);
+    const opts=[['all','全国'],['tk23','東京23区']].concat(ps.map(p=>[p,PR[p]]));
+    html+=mSel('地域','pf',opts,PF);
+  }else if(G==='reit'){
+    html+=mSel('ブランド','br',Object.keys(RN).map(r=>[r,RN[r]]),BR);
+    const ah=brandHotels();
+    html+=mSel('ホテル','ht',[['', 'すべてのホテル']].concat(ah.map(h=>[h.id,'【'+PR[h.p]+'】'+h.name])),HT||'');
+  }
+  html+=mChk('labchk',G==='reit'?'ラベル':'県ラベル')+mChk('bgchk','背景地図');
+  body.innerHTML=html;
+  body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
+    const k=sel.dataset.k,v=sel.value;
+    if(k==='per'){const p=v.split('|');YR=p[0];MO=p[1];fixMonth();draw()}
+    else if(k==='ty'){TI=+v;draw()}
+    else if(k==='pf'){
+      if(v==='all')document.getElementById('qAll').click();
+      else if(v==='tk23')document.getElementById('qTk').click();
+      else{PF=+v;PINM=null;draw();const ms=MU.munis.map((m,i)=>m.p===PF?i:-1).filter(i=>i>=0);fitMunis(ms)}
+    }else if(k==='br'){BR=v;HT=null;draw();fitHotels()}
+    else if(k==='ht'){HT=v||null;draw();const h=RT.find(x=>x.id===HT);if(h&&h.ll)map.setView(h.ll,Math.min(Math.max(map.getZoom(),11),13))}
+    const f=document.getElementById('mFilt');
+    if(f&&!f.hidden)mFillFilt();
+  });
+  body.querySelectorAll('input[data-src]').forEach(inp=>inp.onchange=()=>{
+    const real=document.getElementById(inp.dataset.src);if(!real)return;
+    real.checked=inp.checked;real.dispatchEvent(new Event('change'));
+  });
+}
+function mFiltOpen(){mFillFilt();const f=document.getElementById('mFilt');if(f)f.hidden=false}
+function mFiltClose(){const f=document.getElementById('mFilt');if(f)f.hidden=true}
+function mDetail(on){const box=document.getElementById('mSheet');if(box)box.checked=!!on;mSync()}
+function mInit(){
+  const mb=document.getElementById('mMenuBtn');if(mb)mb.onclick=()=>{try{parent.__openMenu()}catch(e){}};
+  const fb=document.getElementById('mFiltBtn');if(fb)fb.onclick=mFiltOpen;
+  const chip=document.getElementById('mChip');if(chip)chip.onclick=mFiltOpen;
+  const fc=document.getElementById('mFiltClose');if(fc)fc.onclick=mFiltClose;
+  const filt=document.getElementById('mFilt');if(filt)filt.addEventListener('click',e=>{if(e.target===filt)mFiltClose()});
+  const det=document.getElementById('mDetBtn');
+  if(det)det.onclick=()=>{const box=document.getElementById('mSheet');if(!box)return;box.checked=!box.checked;mSync()};
+  if(window.matchMedia('(max-width:900px)').matches){const box=document.getElementById('mSheet');if(box)box.checked=false}
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const sheet=document.getElementById('mFilt');
+    if(sheet&&!sheet.hidden){mFiltClose();e.preventDefault();e.stopPropagation()}
+  },true);
+  window.addEventListener('resize',()=>{mPlace();mFix()});
+}
+window.__mFix=mFix;window.__mSync=mSync;window.__mDetail=mDetail;
+mInit();
+const __draw0=draw;draw=function(){__draw0();mSync()};
+
 draw();
 
 <\/script><script>window.__RZNS="oc";
@@ -2610,8 +3070,8 @@ const gl=L.geoJSON(GEO,{renderer:L.canvas({padding:.3,tolerance:2}),style:f=>bas
   onEachFeature:(f,l)=>{const i=f.properties.p;LAY[i]=l;
     l.on('mouseover',()=>{HOV=i;restyle();renderInfo();renderRank()});
     l.on('mouseout',()=>{if(HOV===i){HOV=null;restyle();renderInfo();renderRank()}});
-    l.on('click',e=>{L.DomEvent.stopPropagation(e);PIN=PIN===i?null:i;restyle();renderInfo();renderRank()});}}).addTo(map);
-map.on('click',()=>{if(PIN!=null){PIN=null;restyle();renderInfo();renderRank()}});
+    l.on('click',e=>{L.DomEvent.stopPropagation(e);PIN=PIN===i?null:i;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(PIN!=null)});}}).addTo(map);
+map.on('click',()=>{if(PIN!=null){PIN=null;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(false)}});
 function mmOn(){return VIEW==='top'&&document.getElementById('mmchk').checked}
 function baseStyle(i){const sel=(i===PIN||i===HOV),mm=mmOn()&&MISM.has(i);return {fillColor:fillOf(i),fillOpacity:.88,color:sel?'#0b1a33':mm?'#0b1a33':'#ffffff',weight:sel?2.6:mm?1.8:.8,dashArray:mm&&!sel?'5,4':null,opacity:1}}
 function restyle(){for(let i=0;i<NP;i++)LAY[i].setStyle(baseStyle(i));[HOV,PIN].forEach(i=>i!=null&&LAY[i].bringToFront())}
@@ -2723,7 +3183,7 @@ function renderInfo(){const i=cur(),el=document.getElementById('info');
    </div>
    <h4>国籍別 外国人延べ宿泊者数 上位10<span>人泊・構成比・${MO||!isFull(YR)?'前年同期比':'前年比'}</span></h4>
    <table class="cl">${body}</table>${i!=null?sbsHTML(i):''}${trendHTML(i)}`;
-  const up=document.getElementById('unpin');if(up)up.onclick=()=>{PIN=null;restyle();renderInfo();renderRank()};
+  const up=document.getElementById('unpin');if(up)up.onclick=()=>{PIN=null;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(false)};
   el.querySelectorAll('.cl tr').forEach(r=>r.onclick=()=>{CI=+r.dataset.j;setView('country')});
   el.querySelectorAll('[data-mo]').forEach(g=>g.onclick=()=>setPeriod(YR,+g.dataset.mo));}
 function sbsHTML(i){const sr=D.Y['2025'].m.Y.d[i],er=EST['2025'].v[i],en=EST['2025'].n[i];
@@ -2744,9 +3204,9 @@ function renderRank(){const el=document.getElementById('rankBox');
   el.querySelectorAll('.rk2').forEach(r=>{const i=+r.dataset.i;
     r.onmouseenter=()=>{if(PIN==null){HOV=i;restyle();renderInfo()}};
     r.onmouseleave=()=>{if(PIN==null&&HOV===i){HOV=null;restyle();renderInfo()}};
-    r.onclick=()=>{PIN=PIN===i?null:i;restyle();renderInfo();renderRank()}})}
+    r.onclick=()=>{PIN=PIN===i?null:i;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(PIN!=null)}})}
 
-function refresh(){renderFoot();renderPeriod();computeScale();restyle();renderLegend();renderInfo();renderRank();renderLabels();renderStats()}
+function refresh(){renderFoot();renderPeriod();computeScale();restyle();renderLegend();renderInfo();renderRank();renderLabels();renderStats();if(window.__mSync)window.__mSync()}
 const EST_TIP='精度について：JNTO訪日外客数（クルーズ客を除く一般客、消費動向調査の国籍別旅行者数）に、観光庁 インバウンド消費動向調査の都道府県別訪問率（標本調査）を掛けて配分した推計値です。回答数の少ない県×国籍は誤差が大きく、四半期は年間より誤差が大きくなります。';
 const EST_FOOT='延べ訪問者数＝JNTO訪日外客数（クルーズ客を除く）を観光庁 消費動向調査の都道府県別訪問率で都道府県に配分した値（1人が複数県を訪れると各県で数える）。訪問率は出入国空港の所在県を含むため千葉（成田）・大阪（関空）・福岡などは大きく出る。';
 let FOOTBASE='';
@@ -2815,9 +3275,9 @@ function natRows(per){const P0=NPERS[per];const R=CAT21.map(c=>{const a=natVals(
 const GREY='#a7afbd';
 let NATOPEN=false;
 function openNat(on){NATOPEN=!!on;const el=document.getElementById('natCmp');el.style.display=on?'flex':'none';if(on)renderNat();
-  const b=document.getElementById('natBtn');if(b){b.classList.toggle('on',NATOPEN);b.textContent=NATOPEN?'全国比較を閉じる（地図に戻る）':'全国比較（JNTO×宿泊）'}}
+  const b=document.getElementById('natBtn');if(b){b.classList.toggle('on',NATOPEN);b.textContent=NATOPEN?'全国比較を閉じる（地図に戻る）':'全国比較（JNTO×宿泊）'};if(window.__mSync)window.__mSync()}
 // 全国比較の表示中にヘッダーの他の操作をしたら、パネルを閉じてその操作を地図に反映
-document.querySelector('header').addEventListener('click',e=>{if(!NATOPEN)return;const t=e.target.closest('button,input,label,.dd,.it');if(!t||t.closest('#natBtn'))return;openNat(false)},true);
+document.querySelector('header').addEventListener('click',e=>{if(!NATOPEN)return;const t=e.target.closest('button,input,label,.dd,.it');if(!t||t.closest('#natBtn')||t.closest('.monly'))return;openNat(false)},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&NATOPEN)openNat(false)});
 window.__natOpen=()=>NATOPEN;
 window.__openNat=openNat;window.__natSort=()=>({NSORT,NPER});window.__setNPer=p=>{NPER=p;renderNat()};
@@ -2882,13 +3342,14 @@ function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
     if(news){news.style.display='flex';news.setAttribute('aria-hidden','false')}
     VIEWNOW='nw';FLIGHT=false;
     if(window.__openNews)window.__openNews();
+    if(window.__mSync)window.__mSync();
     return}
   if(news){news.style.display='none';news.setAttribute('aria-hidden','true')}
   for(const [k,[id,src,ttl,mp]] of Object.entries(OVL)){const el=document.getElementById(id);
     if(k===v){if(!el.firstChild){const f=document.createElement('iframe');f.title=ttl;f.srcdoc=unesc(document.getElementById(src).textContent);el.appendChild(f)}
-      el.style.display='block';const w=el.firstChild.contentWindow;if(w&&w[mp])setTimeout(()=>w[mp].invalidateSize(),0)}
+      el.style.display='block';const w=el.firstChild.contentWindow;if(w)setTimeout(()=>{try{if(w[mp])w[mp].invalidateSize()}catch(e){}if(w.__mFix)w.__mFix();if(w.__mSync)w.__mSync()},50)}
     else el.style.display='none'}
-  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in'){const fix=()=>{try{map.invalidateSize()}catch(e){}};setTimeout(fix,0);setTimeout(fix,80)}}
+  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in'){const fix=()=>{try{map.invalidateSize()}catch(e){}};setTimeout(fix,0);setTimeout(fix,80)};if(window.__mFix)window.__mFix();if(window.__mSync)window.__mSync()}
 function showFlight(){showView('fl')}
 function showInbound(){showView('in')}
 document.querySelectorAll('header .vb[data-v]').forEach(b=>b.onclick=()=>showView(b.dataset.v));
@@ -2919,8 +3380,8 @@ const rPer=k=>RVPER.find(p=>p.k===k);
 const rNat=n=>n==='*'?'全国籍・地域':n;
 function rDiff(d){if(d==null)return '<span class="fl">–</span>';return d>0.05?`<span class="up">▲${d.toFixed(1)}pt</span>`:d<-0.05?`<span class="dn">▼${Math.abs(d).toFixed(1)}pt</span>`:'<span class="fl">±0.0pt</span>'}
 function openRep(on){REPOPEN=!!on;const el=document.getElementById('repCmp');el.style.display=on?'flex':'none';if(on){if(typeof NATOPEN!=='undefined'&&NATOPEN)openNat(false);renderRep()}
-  const b=document.getElementById('repBtn');if(b){b.classList.toggle('on',REPOPEN);b.textContent=REPOPEN?'訪日回数を閉じる（地図に戻る）':'訪日回数（リピーター）'}}
-document.querySelector('header').addEventListener('click',e=>{if(!REPOPEN)return;const t=e.target.closest('button,input,label,.dd,.it');if(!t||t.closest('#repBtn'))return;openRep(false)},true);
+  const b=document.getElementById('repBtn');if(b){b.classList.toggle('on',REPOPEN);b.textContent=REPOPEN?'訪日回数を閉じる（地図に戻る）':'訪日回数（リピーター）'};if(window.__mSync)window.__mSync()}
+document.querySelector('header').addEventListener('click',e=>{if(!REPOPEN)return;const t=e.target.closest('button,input,label,.dd,.it');if(!t||t.closest('#repBtn')||t.closest('.monly'))return;openRep(false)},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&REPOPEN)openRep(false)});
 window.__repOpen=()=>REPOPEN;window.__openRep=openRep;
 window.__rep={tab:t=>{RTAB=t;renderRep()},state:()=>({RTAB,RPER,RPU,RQ,RSORT,R2PER,R2PU,R2B,T23N,T23M}),
@@ -3161,6 +3622,280 @@ window.__tkHover=a=>{TKC[a]&&TKC[a].c.fire('mouseover')};
 
 // 初回描画（app.js 実行時の refresh には上のラップが掛かっていないため）
 FOOTBASE0=FOOTBASE;renderSubMarks();renderLegend();
+
+const MITEMS=[
+  {id:'nw',icon:'📰',name:'ニュースまとめ',tag:'TOP',desc:'業界と海外OTAの新着をテーマ別に一覧'},
+  {id:'stay',icon:'🏨',name:'宿泊者マップ',desc:'国籍別の延べ宿泊者数を都道府県別に表示'},
+  {id:'est',icon:'🗾',name:'訪問者マップ',desc:'延べ訪問者数の推計を都道府県別に表示'},
+  {id:'nat',icon:'📊',name:'全国比較',desc:'JNTOの入国者数と延べ宿泊者数を国籍別に比較'},
+  {id:'rep',icon:'🔁',name:'訪日回数',desc:'初訪日とリピーターの構成比'},
+  {id:'fl',icon:'✈',name:'フライト情報',desc:'国際線の便数と、発表済みの新規・増便'},
+  {id:'occ',icon:'📈',name:'客室稼働率',desc:'都道府県別の客室稼働率'},
+  {id:'muni',icon:'🏙',name:'市区町村の稼働率',desc:'主な市区町村と東京23区の稼働率'},
+  {id:'reit',icon:'🏩',name:'ホテルブランド比較',desc:'REITが開示したホテル別の稼働率'}
+];
+const mEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function mItem(){
+  if(VIEWNOW==='nw')return 'nw';
+  if(VIEWNOW==='fl')return 'fl';
+  if(VIEWNOW==='oc'){
+    try{
+      const fr=document.getElementById('occView').firstChild;
+      const g=fr&&fr.contentWindow.__oc&&fr.contentWindow.__oc.get().G;
+      if(g==='muni')return 'muni';
+      if(g==='reit')return 'reit';
+    }catch(e){}
+    return 'occ';
+  }
+  if(typeof REPOPEN!=='undefined'&&REPOPEN)return 'rep';
+  if(NATOPEN)return 'nat';
+  return SRC==='est'?'est':'stay';
+}
+function mStayPer(){
+  if(MO==='H1')return YR+'年上半期';
+  if(MO)return YR+'年'+MO+'月';
+  if(isFull(YR))return YR+'年';
+  return YR+'年1〜'+lastM(YR)+'月累計';
+}
+function mChipText(id){
+  if(id==='nw'){
+    const b=document.querySelector('#nwChips .nw-chip.on');
+    if(!b)return 'すべて';
+    const n=b.querySelector('.n');
+    return (b.textContent||'').replace(n?n.textContent:'','').trim()||'すべて';
+  }
+  if(id==='stay'){
+    const view=VIEW==='top'?'最多国籍':VIEW==='country'?C[CI].ja:VIEW==='jp'?'日本人':(FMET==='ratio'?'外国人比率':'外国人');
+    return mStayPer()+'・'+view;
+  }
+  if(id==='est'){
+    const view=VIEW==='top'?'最多国籍':VIEW==='country'?C[CI].ja:'外国人';
+    return estLabel()+'・'+view;
+  }
+  if(id==='nat')return (NPERS[NPER]&&NPERS[NPER].lab)||'';
+  if(id==='rep'){
+    if(RTAB===2)return (RVSHORT[R2PER]||R2PER)+'・訪問先';
+    const pu=RPU==='L'?'観光・レジャー':RPU==='A'?'全目的':'業務';
+    return (RVSHORT[RPER]||RPER)+'・'+pu;
+  }
+  const it=MITEMS.find(x=>x.id===id);
+  return it?it.name:'';
+}
+let mFixT=0;
+function mFix(){clearTimeout(mFixT);mFixT=setTimeout(()=>{try{map.invalidateSize()}catch(e){}},40)}
+function mPlace(){
+  const mob=window.matchMedia('(max-width:900px)').matches;
+  const stats=document.getElementById('stats');
+  const foot=document.getElementById('foot');
+  const mapEl=document.getElementById('map');
+  const aside=document.querySelector('main > aside');
+  const title=document.querySelector('#app > header .titlerow');
+  const grip=document.getElementById('grip');
+  if(stats&&title&&mapEl){
+    if(mob){if(stats.parentElement!==mapEl)mapEl.appendChild(stats)}
+    else if(stats.parentElement!==title)title.appendChild(stats);
+  }
+  if(foot&&aside&&grip){
+    if(mob){if(foot.parentElement!==aside)aside.appendChild(foot)}
+    else if(foot.previousElementSibling!==grip)grip.after(foot);
+  }
+}
+function mSync(){
+  const id=mItem();
+  const it=MITEMS.find(x=>x.id===id);
+  const title=document.getElementById('mTitle');
+  if(title&&it)title.textContent=it.name;
+  const chip=mChipText(id);
+  const c1=document.getElementById('mChip'),c2=document.getElementById('nwChip');
+  if(c1)c1.textContent=chip;
+  if(c2)c2.textContent=chip;
+  const det=document.getElementById('mDetBtn');
+  const box=document.getElementById('mSheet');
+  if(det&&box){
+    det.textContent=box.checked?'閉じる':'詳細';
+    det.style.display=(id==='nat'||id==='rep')?'none':'';
+  }
+  document.querySelectorAll('#mMenuList .mitem').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  mPlace();
+}
+function mOpen(){
+  mFiltClose();
+  const m=document.getElementById('mMenu');
+  if(!m)return;
+  m.hidden=false;
+  document.querySelectorAll('.mmenu-btn').forEach(b=>b.setAttribute('aria-expanded','true'));
+}
+function mClose(){
+  const m=document.getElementById('mMenu');
+  if(m)m.hidden=true;
+  document.querySelectorAll('.mmenu-btn').forEach(b=>b.setAttribute('aria-expanded','false'));
+}
+function mFiltClose(){const f=document.getElementById('mFilt');if(f)f.hidden=true}
+function mSel(label,key,opts,cur){
+  return '<label class="mf">'+label+'<select data-k="'+key+'">'+opts.map(([k,l])=>'<option value="'+mEsc(k)+'"'+(String(k)===String(cur)?' selected':'')+'>'+mEsc(l)+'</option>').join('')+'</select></label>';
+}
+function mChk(id,label){
+  const el=document.getElementById(id);
+  return '<label class="mf chk"><input type="checkbox" data-src="'+id+'"'+(el&&el.checked?' checked':'')+'>'+label+'</label>';
+}
+function mFillFilt(id){
+  const body=document.getElementById('mFiltBody');
+  if(!body)return;
+  let html='';
+  if(id==='nw'){
+    const q=document.getElementById('nwQ');
+    html='<label class="mf">キーワード<input id="mNwQ" type="search" placeholder="見出し・本文・メモ・出典" value="'+mEsc(q?q.value:'')+'"></label>'
+      +'<button type="button" class="mfilt-btn" id="mNwToggle">リストの開閉</button>'
+      +'<p class="mhint">テーマは画面上のチップで切り替えます。</p>';
+  }else if(id==='stay'||id==='est'){
+    if(id==='stay'){
+      const opts=[];
+      YEARS.forEach(y=>{
+        opts.push([y+'|0',y+'年 · '+(isFull(y)?'年計':'1〜'+lastM(y)+'月累計')]);
+        opts.push([y+'|H1',y+'年 · 上半期（1〜6月）']);
+        D.Y[y].months.forEach(m=>opts.push([y+'|'+m,y+'年 · '+m+'月']));
+      });
+      html+=mSel('期間','per',opts,YR+'|'+(MO==='H1'?'H1':MO||0));
+    }else html+=mSel('期間','ep',EPS,EP);
+    const views=[['top','最多国籍'],['country','国籍を選択'],['foreign','外国人']];
+    if(id==='stay')views.splice(2,0,['jp','日本人']);
+    html+=mSel('表示','view',views,VIEW);
+    if(VIEW==='country'){
+      const nats=C.map((c,j)=>({c,j})).filter(o=>o.j!==OTH&&NAT.c[0][o.j]!=null).sort((a,b)=>NAT.c[0][b.j]-NAT.c[0][a.j]);
+      html+=mSel('国籍','nat',nats.map(o=>[o.j,o.c.ja]),CI);
+      html+=mSel('数値','cm',[['abs',TX().cn],['share','外国人に占める割合']],CMET);
+    }else if(VIEW==='foreign'&&id==='stay'){
+      html+=mSel('数値','fm',[['abs','外国人合計'],['ratio','外国人比率']],FMET);
+    }
+    html+=mChk('labchk','県ラベル')+mChk('bgchk','背景地図');
+    if(id==='stay'&&VIEW==='top')html+=mChk('mmchk','1位不一致（2025）');
+  }else if(id==='nat'){
+    html+=mSel('期間','nper',Object.entries(NPERS).map(([k,o])=>[k,o.lab]),NPER);
+  }else if(id==='rep'){
+    html+=mSel('画面','rtab',[['1','国籍別 訪日回数'],['2','訪問先とリピーター']],RTAB);
+    if(RTAB===2){
+      const pers=RVPER.filter(p=>RV.pref[p.k]).map(p=>[p.k,RVSHORT[p.k]||p.label]);
+      html+=mSel('期間','r2per',pers,R2PER);
+      html+=mSel('目的','r2pu',[['L','観光・レジャー'],['A','全目的']],R2PU);
+      const is26=String(R2PER).startsWith('2026');
+      const bs=[0,'rep',1,2,3,4,5,6,7].filter(b=>b!=='rep'||is26).map(b=>[b,R2LAB(b)]);
+      html+=mSel('指標','r2b',bs,R2B);
+      const nats=Object.keys(RV.t23.data).map(n=>[n,n]);
+      html+=mSel('23区の国籍','t23n',nats,T23N);
+      html+=mSel('23区の見方','t23m',[['rate','訪問率（%）'],['diff','増減（6回目以上−1回目）']],T23M);
+    }else{
+      html+=mSel('期間','rper',RVPER.map(p=>[p.k,RVSHORT[p.k]||p.label]),RPER);
+      html+=mSel('目的','rpu',[['L','観光・レジャー'],['A','全目的'],['B','業務']],RPU);
+      html+=mSel('質問','rq',[['visit','今回が何回目の訪日か'],['past1y','過去1年間の訪日回数']],RQ);
+      html+=mSel('並び','rsort',[['asc','少ない順'],['desc','多い順'],['n','回答数順']],RSORT);
+    }
+  }
+  body.innerHTML=html;
+  const q=body.querySelector('#mNwQ');
+  if(q)q.oninput=()=>{const real=document.getElementById('nwQ');if(!real)return;real.value=q.value;real.dispatchEvent(new Event('input'))};
+  const tg=body.querySelector('#mNwToggle');
+  if(tg)tg.onclick=()=>{const b=document.getElementById('nwToggle');if(b)b.click()};
+  body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
+    const k=sel.dataset.k,v=sel.value;
+    if(k==='per'){const p=v.split('|');setPeriod(p[0],p[1]==='H1'?'H1':+p[1])}
+    else if(k==='ep')setEP(v);
+    else if(k==='view')setView(v);
+    else if(k==='nat'){CI=+v;renderSub();refresh()}
+    else if(k==='cm'){CMET=v;renderSub();refresh()}
+    else if(k==='fm'){FMET=v;renderSub();refresh()}
+    else if(k==='nper'){NPER=v;renderNat()}
+    else if(k==='rtab'){RTAB=+v;renderRep()}
+    else if(k==='rper'){RPER=v;renderRep()}
+    else if(k==='rpu'){RPU=v;renderRep()}
+    else if(k==='rq'){RQ=v;renderRep()}
+    else if(k==='rsort'){RSORT=v;renderRep()}
+    else if(k==='r2per'){R2PER=v;renderRep()}
+    else if(k==='r2pu'){R2PU=v;renderRep()}
+    else if(k==='r2b'){R2B=v==='rep'?'rep':+v;renderRep()}
+    else if(k==='t23n'){T23N=v;renderRep()}
+    else if(k==='t23m'){T23M=v;renderRep()}
+    if(window.__mSync)window.__mSync();
+    const f=document.getElementById('mFilt');
+    if(f&&!f.hidden)mFillFilt(mItem());
+  });
+  body.querySelectorAll('input[data-src]').forEach(inp=>inp.onchange=()=>{
+    const real=document.getElementById(inp.dataset.src);
+    if(!real)return;
+    real.checked=inp.checked;
+    real.dispatchEvent(new Event('change'));
+  });
+}
+function mFiltOpen(){
+  mFillFilt(mItem());
+  const f=document.getElementById('mFilt');
+  if(f)f.hidden=false;
+}
+function mDetail(on){
+  const box=document.getElementById('mSheet');
+  if(box)box.checked=!!on;
+  if(window.__mSync)window.__mSync();
+}
+function mOcc(g){
+  showView('oc');
+  let n=0;
+  const go=()=>{
+    const fr=document.getElementById('occView').firstChild;
+    const w=fr&&fr.contentWindow;
+    if(!w||!w.__oc){if(++n<40)setTimeout(go,50);return}
+    if(w.__oc.get().G!==g)w.__oc.mode(g);
+    if(w.__mSync)w.__mSync();
+    if(w.__mFix)w.__mFix();
+  };
+  setTimeout(go,0);
+}
+function mShow(id){
+  mClose();mFiltClose();
+  if(id==='nw'){showView('nw');return}
+  if(id==='fl'){showView('fl');return}
+  if(id==='occ'||id==='muni'||id==='reit'){mOcc(id==='occ'?'pref':id==='muni'?'muni':'reit');return}
+  showView('in');
+  if(id==='nat'){openNat(true);return}
+  if(id==='rep'){openRep(true);return}
+  if(typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
+  if(NATOPEN)openNat(false);
+  const src=id==='est'?'est':'stay';
+  if(SRC!==src)setSource(src);
+  else if(window.__mSync)window.__mSync();
+  mFix();
+}
+function mInit(){
+  const list=document.getElementById('mMenuList');
+  if(list){
+    list.innerHTML=MITEMS.map(it=>'<button type="button" class="mitem" data-id="'+it.id+'"><span class="mi">'+it.icon+'</span><span class="mt"><b>'+it.name+(it.tag?'<em>'+it.tag+'</em>':'')+'</b><small>'+it.desc+'</small></span></button>').join('');
+    list.onclick=e=>{const b=e.target.closest('.mitem');if(b)mShow(b.dataset.id)};
+  }
+  const mb=document.getElementById('mMenuBtn');if(mb)mb.onclick=mOpen;
+  const nb=document.getElementById('nwMenuBtn');if(nb)nb.onclick=mOpen;
+  const mc=document.getElementById('mMenuClose');if(mc)mc.onclick=mClose;
+  const fb=document.getElementById('mFiltBtn');if(fb)fb.onclick=mFiltOpen;
+  const nfb=document.getElementById('nwFiltBtn');if(nfb)nfb.onclick=mFiltOpen;
+  const chip=document.getElementById('mChip');if(chip)chip.onclick=mFiltOpen;
+  const nchip=document.getElementById('nwChip');if(nchip)nchip.onclick=mFiltOpen;
+  const fc=document.getElementById('mFiltClose');if(fc)fc.onclick=mFiltClose;
+  const filt=document.getElementById('mFilt');
+  if(filt)filt.addEventListener('click',e=>{if(e.target===filt)mFiltClose()});
+  const det=document.getElementById('mDetBtn');
+  if(det)det.onclick=()=>{const box=document.getElementById('mSheet');if(!box)return;box.checked=!box.checked;mSync()};
+  if(window.matchMedia('(max-width:900px)').matches){const box=document.getElementById('mSheet');if(box)box.checked=false}
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Escape')return;
+    const menu=document.getElementById('mMenu'),sheet=document.getElementById('mFilt');
+    if(menu&&!menu.hidden){mClose();e.preventDefault();e.stopPropagation()}
+    else if(sheet&&!sheet.hidden){mFiltClose();e.preventDefault();e.stopPropagation()}
+  },true);
+  const chips=document.getElementById('nwChips');
+  if(chips)new MutationObserver(()=>{if(window.__mSync)window.__mSync()}).observe(chips,{childList:true,subtree:true,attributes:true});
+  window.addEventListener('resize',()=>{mPlace();mFix()});
+  mSync();mFix();
+}
+window.__mSync=mSync;window.__mFix=mFix;window.__mDetail=mDetail;window.__openMenu=mOpen;window.__mShow=mShow;
+mInit();
+
 </script>
 <script>window.__RZNS="in";
 // ---- マウスで幅・高さを調整（スプリッター・表の列幅）共通モジュール ----
