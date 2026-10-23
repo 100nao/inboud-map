@@ -743,7 +743,10 @@ h4 span{font-weight:400;font-size:10.5px;color:#7d8aa5}
 .rk2:hover{background:#f2f6fc}.rk2.hl{background:#e9f5ea;font-weight:700}
 .rk2 .n{width:18px;text-align:right;color:#7d8aa5}.rk2 .p{width:62px}.rk2 .b{flex:1;height:12px}.rk2 .b div{height:100%;border-radius:2px}
 .rk2 .v{width:78px;text-align:right}
-#legend{position:absolute;left:10px;bottom:22px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+#legend{display:none;position:absolute;left:10px;bottom:56px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+.legopen{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.legbtn{position:absolute;left:10px;bottom:22px;z-index:910;margin:0;cursor:pointer;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;font-weight:700;color:#14284b;box-shadow:0 2px 8px rgba(20,40,75,.12)}
+#legOpen:checked~#legend{display:block}
 #legend .lt{font-weight:700;margin-bottom:5px;font-size:12px}
 #legend .li{display:flex;align-items:center;gap:6px;margin:2px 0}
 #legend .li .c{margin-left:auto;color:#7d8aa5;padding-left:10px}
@@ -1015,6 +1018,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
 .monly{display:none}
+#grip,footer#foot,#newsView .nw-legend,#newsView .ho-note{display:none!important}
 @media (max-width:900px){
   html,body{overflow-x:hidden;max-width:100%}
   #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
@@ -1076,9 +1080,10 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
+  .legbtn{left:8px;bottom:78px}
   #legend,#legend:has(.tkl){
-    left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:28%;
+    left:8px;right:auto;top:auto;bottom:118px;
+    max-width:min(280px,92vw);max-height:42%;
     overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
@@ -1092,11 +1097,25 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
   #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
-  body.m-list #map{visibility:hidden}
+  body.m-list #app{display:flex!important;flex-direction:column!important;height:100dvh!important;max-height:100dvh!important;overflow:hidden!important}
+  body.m-list main{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  body.m-list #map{display:none!important}
+  body.m-list .rz-v,body.m-list .rz-h{display:none!important}
   body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
-    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
-    overflow:auto;pointer-events:auto
+    position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+    width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+    flex:1 1 auto!important;display:block!important;
+    overflow-x:hidden!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;
+    border:0;border-radius:0;box-shadow:none;pointer-events:auto!important;visibility:visible!important;z-index:2
   }
+  body.m-list #info,body.m-list #tbl{
+    display:block!important;width:100%!important;max-width:100%!important;height:auto!important;
+    min-height:min-content!important;max-height:none!important;flex:none!important;overflow:visible!important
+  }
+  body.m-list #tbl{
+    overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;min-width:0!important
+  }
+  body.m-list #tbl table{width:max-content;min-width:100%}
   body.m-list #mDetBtn{display:none!important}
   body.m-list aside>.stats{
     position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
@@ -1164,6 +1183,18 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   #newsView .ho,#newsView .nw-wrap,#newsView .ho-card{max-width:100%;min-width:0}
   #newsView .nw-top{padding:8px 10px 6px}
 }
+.msrc{position:fixed;inset:0;z-index:8100;background:#f3f5fa;display:flex;flex-direction:column}
+.msrc[hidden]{display:none!important}
+.msrc-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#fff;border-bottom:1px solid var(--line)}
+.msrc-bar b{font-size:16px;color:#14284b}
+.msrc-bar button{border:0;background:transparent;color:#1f5fbf;font-weight:700;font-size:14px;font-family:inherit;min-height:40px;cursor:pointer;padding:6px 4px}
+.msrc-body{overflow:auto;padding:8px 16px 48px;-webkit-overflow-scrolling:touch}
+.srcsec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px auto;max-width:880px}
+.srcsec h3{margin:0 0 8px;font-size:15px;color:#14284b}
+.srctx{font-size:12.5px;line-height:1.65;color:#3e4f6d}
+.srctx a{color:#1f5fbf}
+.srctx .fnl{margin-top:6px}
+.vb-src{--vc:#3e4f6d;background:#3e4f6d}
 </style>
 </head>
 <body>
@@ -1172,7 +1203,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   <div class="titlerow">
     <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
     <b class="monly mtitle" id="mTitle">宿泊者マップ</b>
-    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
+    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
     <div class="stats" id="stats"></div>
   </div>
   <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">すべて</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -1194,7 +1225,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   <input id="mSheet" class="msheet" type="checkbox">
   <div id="natCmp"></div>
   <div id="repCmp"></div>
-  <div id="map"><div id="legend"></div></div>
+  <div id="map"><input id="legOpen" class="legopen" type="checkbox" onclick="event.stopPropagation()"><label class="legbtn" for="legOpen" onclick="event.stopPropagation()">凡例</label><div id="legend" onclick="event.stopPropagation()"></div></div>
   <label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label>
   <aside><div id="info"></div><div id="rankBox"></div></aside>
 </main>
@@ -1204,6 +1235,10 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 <div id="mMenu" class="mmenu monly" hidden>
   <div class="mmenu-bar"><b>メニュー</b><button type="button" id="mMenuClose">閉じる</button></div>
   <div id="mMenuList"></div>
+</div>
+<div id="mSrc" class="msrc" hidden>
+  <div class="msrc-bar"><b>出典</b><button type="button" id="mSrcClose">閉じる</button></div>
+  <div id="mSrcBody" class="msrc-body"></div>
 </div>
 <div id="mFilt" class="mfilt monly" hidden>
   <div class="mfilt-panel">
@@ -1218,7 +1253,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
     <div class="titlerow">
       <button type="button" class="monly mmenu-btn" id="nwMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
       <h1 class="vt">ニュースまとめ<small id="nwMeta">読み込み中…</small></h1>
-      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button></span>
+      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
     </div>
     <div class="monly mbar" id="nwBar"><button type="button" class="mfilt-btn" id="nwFiltBtn">絞り込み</button><button type="button" class="mchip" id="nwChip">すべて</button></div>
     <div class="nw-tools">
@@ -1330,7 +1365,10 @@ h4 span{font-weight:400;font-size:10.5px;color:#7d8aa5}
 .rk2:hover{background:#f2f6fc}.rk2.hl{background:#e9f5ea;font-weight:700}
 .rk2 .n{width:18px;text-align:right;color:#7d8aa5}.rk2 .p{width:62px}.rk2 .b{flex:1;height:12px}.rk2 .b div{height:100%;border-radius:2px}
 .rk2 .v{width:78px;text-align:right}
-#legend{position:absolute;left:10px;bottom:22px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+#legend{display:none;position:absolute;left:10px;bottom:56px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+.legopen{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.legbtn{position:absolute;left:10px;bottom:22px;z-index:910;margin:0;cursor:pointer;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;font-weight:700;color:#14284b;box-shadow:0 2px 8px rgba(20,40,75,.12)}
+#legOpen:checked~#legend{display:block}
 #legend .lt{font-weight:700;margin-bottom:5px;font-size:12px}
 #legend .li{display:flex;align-items:center;gap:6px;margin:2px 0}
 #legend .li .c{margin-left:auto;color:#7d8aa5;padding-left:10px}
@@ -1464,6 +1502,7 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
 .monly{display:none}
+#grip,footer#foot,#newsView .nw-legend,#newsView .ho-note{display:none!important}
 @media (max-width:900px){
   html,body{overflow-x:hidden;max-width:100%}
   #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
@@ -1525,9 +1564,10 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
+  .legbtn{left:8px;bottom:78px}
   #legend,#legend:has(.tkl){
-    left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:28%;
+    left:8px;right:auto;top:auto;bottom:118px;
+    max-width:min(280px,92vw);max-height:42%;
     overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
@@ -1541,11 +1581,25 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
   #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
   #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
-  body.m-list #map{visibility:hidden}
+  body.m-list #app{display:flex!important;flex-direction:column!important;height:100dvh!important;max-height:100dvh!important;overflow:hidden!important}
+  body.m-list main{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  body.m-list #map{display:none!important}
+  body.m-list .rz-v,body.m-list .rz-h{display:none!important}
   body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
-    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
-    overflow:auto;pointer-events:auto
+    position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+    width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+    flex:1 1 auto!important;display:block!important;
+    overflow-x:hidden!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;
+    border:0;border-radius:0;box-shadow:none;pointer-events:auto!important;visibility:visible!important;z-index:2
   }
+  body.m-list #info,body.m-list #tbl{
+    display:block!important;width:100%!important;max-width:100%!important;height:auto!important;
+    min-height:min-content!important;max-height:none!important;flex:none!important;overflow:visible!important
+  }
+  body.m-list #tbl{
+    overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;min-width:0!important
+  }
+  body.m-list #tbl table{width:max-content;min-width:100%}
   body.m-list #mDetBtn{display:none!important}
   body.m-list aside>.stats{
     position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
@@ -1619,7 +1673,7 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
  <div class="titlerow">
   <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
   <b class="monly mtitle" id="mTitle">フライト情報</b>
-  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
+  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">2026冬ダイヤ</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -1635,7 +1689,7 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
   <label class="chk"><input type="checkbox" id="bgchk" checked>背景地図</label>
  </div>
 </header>
-<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="rankBox"></div></aside></main>
+<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><input id="legOpen" class="legopen" type="checkbox" onclick="event.stopPropagation()"><label class="legbtn" for="legOpen" onclick="event.stopPropagation()">凡例</label><div id="legend" onclick="event.stopPropagation()"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="rankBox"></div></aside></main>
 <div id="grip" title="ドラッグで高さ調整／ダブルクリックで開閉"><span></span></div>
 <footer id="foot"><div id="fhead"><span id="fsrc"><b>出典</b>：国土交通省 航空局「各空港における国際線就航状況」／関西エアポート（OAG）・空港会社スケジュール</span><span class="ftg"><span id="ftl">注意書きを表示</span> <b id="farr">▲</b></span></div><div id="fbody"></div></footer>
 </div>
@@ -1844,6 +1898,7 @@ function stayLine(ap){const pf=AP_PREF[ap];if(!pf||!parent.__prefStay)return '';
  return `<div class="stay">${s.pref}（${s.period}）：外国人延べ宿泊者数 <b>${s.fr}</b>・最多国籍 <b>${s.top}</b>${oc?`<br>客室稼働率（全体・${oc.label}）<b>${oc.v.toFixed(1)}%</b>`:''}<br><a data-pref="${pf}" data-yr="${SEA_YR[sea]}" class="gostay">この県の宿泊データを見る</a></div>`}
 function bindStay(){document.querySelectorAll('#info .gostay').forEach(a=>a.onclick=e=>{e.preventDefault();parent.__gotoPref(a.dataset.pref,a.dataset.yr)})}
 document.querySelectorAll('.vb[data-v]').forEach(b=>b.onclick=()=>parent.__showView(b.dataset.v));
+document.querySelectorAll('.vb-src').forEach(b=>b.onclick=()=>{try{parent.__openSrc()}catch(e){}});
 window.__fmap=map;window.__fsea=()=>sea;window.__fsel=()=>selAp;
 (function(){const g=document.getElementById('grip'),f=document.getElementById('foot'),ar=document.getElementById('farr');
  const MIN=24,DEF=MIN,mx=()=>Math.round(window.innerHeight*0.6);let last=Math.round(window.innerHeight*0.3);
@@ -1943,6 +1998,7 @@ function mInit(){
   },true);
   window.addEventListener('resize',()=>{mPlace();mFix()});
 }
+window.__srcFlight=function(){return D.FOOT+'<div class="fnl"><div>・2027年2月：'+F27NOTE+'</div></div>'};
 window.__mFix=mFix;window.__mSync=mSync;window.__mDetail=mDetail;
 mInit();
 const __draw0=draw;draw=function(){__draw0();mSync()};
@@ -2095,7 +2151,10 @@ h4 span{font-weight:400;font-size:10.5px;color:#7d8aa5}
 .rk2:hover{background:#f2f6fc}.rk2.hl{background:#e9f5ea;font-weight:700}
 .rk2 .n{width:18px;text-align:right;color:#7d8aa5}.rk2 .p{width:62px}.rk2 .b{flex:1;height:12px}.rk2 .b div{height:100%;border-radius:2px}
 .rk2 .v{width:78px;text-align:right}
-#legend{position:absolute;left:10px;bottom:22px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+#legend{display:none;position:absolute;left:10px;bottom:56px;z-index:900;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;max-width:300px;box-shadow:0 2px 10px rgba(20,40,75,.1)}
+.legopen{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.legbtn{position:absolute;left:10px;bottom:22px;z-index:910;margin:0;cursor:pointer;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;font-weight:700;color:#14284b;box-shadow:0 2px 8px rgba(20,40,75,.12)}
+#legOpen:checked~#legend{display:block}
 #legend .lt{font-weight:700;margin-bottom:5px;font-size:12px}
 #legend .li{display:flex;align-items:center;gap:6px;margin:2px 0}
 #legend .li .c{margin-left:auto;color:#7d8aa5;padding-left:10px}
@@ -2247,6 +2306,7 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
 .msheet{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .msheet-btn{display:none}
 .monly{display:none}
+#grip,footer#foot,#newsView .nw-legend,#newsView .ho-note{display:none!important}
 @media (max-width:900px){
   html,body{overflow-x:hidden;max-width:100%}
   #app{height:100dvh;max-height:100dvh;overflow:hidden;max-width:100%}
@@ -2308,9 +2368,10 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
+  .legbtn{left:8px;bottom:78px}
   #legend,#legend:has(.tkl){
-    left:8px;right:auto;top:78px;bottom:auto;
-    max-width:min(168px,46vw);max-height:28%;
+    left:8px;right:auto;top:auto;bottom:118px;
+    max-width:min(280px,92vw);max-height:42%;
     overflow:auto;padding:6px 8px;font-size:10.5px
   }
   #legend .gb,#legend .gt{width:100%;max-width:148px}
@@ -2324,11 +2385,25 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
   #npSeg,#rvTab,#natClose,#repClose,.rvctl{display:none!important}
   .nc-grid,.dvcols,.rv2grid,.t3grid,.scs{grid-template-columns:1fr}
   #natCmp .nc-box,#repCmp .nc-box{min-width:0;max-width:100%;overflow-x:auto}
-  body.m-list #map{visibility:hidden}
+  body.m-list #app{display:flex!important;flex-direction:column!important;height:100dvh!important;max-height:100dvh!important;overflow:hidden!important}
+  body.m-list main{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+  body.m-list #map{display:none!important}
+  body.m-list .rz-v,body.m-list .rz-h{display:none!important}
   body.m-list #mSheet:not(:checked)~aside,body.m-list aside{
-    top:0;bottom:0;height:auto!important;max-height:none;border-radius:0;box-shadow:none;
-    overflow:auto;pointer-events:auto
+    position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+    width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+    flex:1 1 auto!important;display:block!important;
+    overflow-x:hidden!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;
+    border:0;border-radius:0;box-shadow:none;pointer-events:auto!important;visibility:visible!important;z-index:2
   }
+  body.m-list #info,body.m-list #tbl{
+    display:block!important;width:100%!important;max-width:100%!important;height:auto!important;
+    min-height:min-content!important;max-height:none!important;flex:none!important;overflow:visible!important
+  }
+  body.m-list #tbl{
+    overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;min-width:0!important
+  }
+  body.m-list #tbl table{width:max-content;min-width:100%}
   body.m-list #mDetBtn{display:none!important}
   body.m-list aside>.stats{
     position:sticky;top:0;z-index:3;display:flex;flex-wrap:nowrap;overflow-x:auto;
@@ -2402,7 +2477,7 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
  <div class="titlerow">
   <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
   <b class="monly mtitle" id="mTitle">客室稼働率</b>
-  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button></span>
+  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">客室稼働率</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -2423,7 +2498,7 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
   <span class="cvt" id="cvt"></span>
  </div>
 </header>
-<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><div id="legend"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="tbl"></div></aside></main>
+<main><input id="mSheet" class="msheet" type="checkbox"><div id="map"><input id="legOpen" class="legopen" type="checkbox" onclick="event.stopPropagation()"><label class="legbtn" for="legOpen" onclick="event.stopPropagation()">凡例</label><div id="legend" onclick="event.stopPropagation()"></div></div><label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label><aside><div id="info"></div><div id="tbl"></div></aside></main>
 <div id="grip" title="ドラッグで高さ調整／ダブルクリックで開閉"><span></span></div>
 <footer id="foot"><div id="fhead"><span id="fsrc">出典</span><span class="ftg"><span id="ftl">注意書きを表示</span> <b id="farr">▲</b></span></div><div id="fbody"></div></footer>
 </div>
@@ -2778,6 +2853,7 @@ function foot0(el){
  function toggle(){const c=f.getBoundingClientRect().height;set(c<=MIN+2?Math.max(last,Math.round(window.innerHeight*0.3)):MIN,true)}
  g.addEventListener('dblclick',toggle);document.getElementById('fhead').addEventListener('click',toggle);window.addEventListener('resize',()=>set(f.getBoundingClientRect().height,false))})();
 document.querySelectorAll('.vb[data-v]').forEach(b=>b.onclick=()=>parent.__showView(b.dataset.v));
+document.querySelectorAll('.vb-src').forEach(b=>b.onclick=()=>{try{parent.__openSrc()}catch(e){}});
 function draw(){scale();controls();stats();legend();restyle();if(G==='muni'||G==='reit')mrestyle();drawHotels();drawCref();info();table();labels();foot()}
 window.__oc={get:()=>({G,YR,MO,TI,PIN,SORT,PINM,PF,CI,BR,HT}),set:(y,m,t)=>{YR=y;MO=String(m);if(t!=null)TI=t;fixMonth();draw()},pin:i=>{PIN=i;draw()},sort:(k,d)=>{SORT={k,d};table()},
   mode:g=>setG(g),tk23,pinMuni:n=>{const i=MU.munis.findIndex(m=>m.n===n||m.s===n);PINM=i<0?null:i;draw();return i},pf:p=>{PF=p;draw()},msort:(k,d)=>{MSORT={k,d};table()},
@@ -2888,6 +2964,7 @@ function mInit(){
   },true);
   window.addEventListener('resize',()=>{mPlace();mFix()});
 }
+window.__srcOcc=function(){const saved=G,out={};['pref','muni','reit'].forEach(g=>{G=g;const el=document.createElement('div');foot0(el);let html=el.innerHTML;if(g!=='reit')html+='<div class="fnl"><div>・'+STAYNOTE()+'</div></div>';if(GN[g])html+='<div class="fnl"><div>・'+GN[g]+'</div></div>';out[g]=html});G=saved;return out};
 window.__mFix=mFix;window.__mSync=mSync;window.__mDetail=mDetail;
 mInit();
 const __draw0=draw;draw=function(){__draw0();mSync()};
@@ -3632,7 +3709,8 @@ const MITEMS=[
   {id:'fl',icon:'✈',name:'フライト情報',desc:'国際線の便数と、発表済みの新規・増便'},
   {id:'occ',icon:'📈',name:'客室稼働率',desc:'都道府県別の客室稼働率'},
   {id:'muni',icon:'🏙',name:'市区町村の稼働率',desc:'主な市区町村と東京23区の稼働率'},
-  {id:'reit',icon:'🏩',name:'ホテルブランド比較',desc:'REITが開示したホテル別の稼働率'}
+  {id:'reit',icon:'🏩',name:'ホテルブランド比較',desc:'REITが開示したホテル別の稼働率'},
+  {id:'src',icon:'📄',name:'出典',desc:'各画面のデータの出典と注意書き'}
 ];
 const mEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function mItem(){
@@ -3715,7 +3793,8 @@ function mSync(){
     det.textContent=box.checked?'閉じる':'詳細';
     det.style.display=(id==='nat'||id==='rep')?'none':'';
   }
-  document.querySelectorAll('#mMenuList .mitem').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  const srcOn=document.getElementById('mSrc')&&!document.getElementById('mSrc').hidden;
+  document.querySelectorAll('#mMenuList .mitem').forEach(b=>b.classList.toggle('on',srcOn?b.dataset.id==='src':b.dataset.id===id));
   mPlace();
 }
 function mOpen(){
@@ -3848,8 +3927,65 @@ function mOcc(g){
   };
   setTimeout(go,0);
 }
+function srcPiece(title,html){return '<section class="srcsec"><h3>'+title+'</h3><div class="srctx">'+(html||'<p>出典を取得できませんでした。</p>')+'</div></section>'}
+function srcStayEst(){
+  const saved=SRC; let stay='',est='';
+  try{
+    const a={innerHTML:''}; SRC='stay'; renderFoot0(a);
+    stay=a.innerHTML+'<div class="fnl"><div>・延べ宿泊者数（人泊）は人数ではなく延べ泊数（1人が3泊で 3）。</div></div>';
+    const k=PIN!=null&&SUBK[PIN]!=null?SUBK[PIN]:null;
+    if(k)stay+=subFoot(k);
+    const b={innerHTML:''}; SRC='est'; renderFoot0(b);
+    est=b.innerHTML+'<div class="fnl"><div>・'+EST_TIP+'</div></div>';
+  }finally{SRC=saved}
+  return {stay,est};
+}
+function srcRep(){
+  const box=document.createElement('div');
+  const grab=html=>{box.innerHTML=html;const notes=[...box.querySelectorAll('.nc-note')].map(n=>n.innerHTML);const uns=[...box.querySelectorAll('.unote')].map(n=>'・'+n.innerHTML);return notes.join('<br>')+(uns.length?'<div class="fnl">'+uns.map(u=>'<div>'+u+'</div>').join('')+'</div>':'')};
+  return '<p><b>国籍別 訪日回数</b></p>'+grab(rvTab1())+'<hr><p><b>訪問先とリピーター</b></p>'+grab(rvTab2());
+}
+function ensureOv(v){
+  const spec=OVL[v]; if(!spec)return null;
+  const el=document.getElementById(spec[0]); if(!el)return null;
+  if(!el.firstChild){const f=document.createElement('iframe');f.title=spec[2];f.srcdoc=unesc(document.getElementById(spec[1]).textContent);el.appendChild(f);if(VIEWNOW!==v)el.style.display='none'}
+  return el.firstChild;
+}
+function srcWait(v,pick,done){
+  const f=ensureOv(v); if(!f){done(null);return}
+  let n=0;(function go(){let val=null;try{const w=f.contentWindow;val=w&&pick(w)}catch(e){}if(val){done(val);return}if(++n<80)setTimeout(go,50);else done(null)})();
+}
+function mCloseSrc(){const box=document.getElementById('mSrc');if(box)box.hidden=true;if(window.__mSync)window.__mSync()}
+function mOpenSrc(){
+  mClose();mFiltClose();
+  const box=document.getElementById('mSrc'),body=document.getElementById('mSrcBody');
+  if(!box||!body)return;
+  const se=srcStayEst();
+  let nat=''; try{if(!NATFOOT)renderNat();nat=NATFOOT}catch(e){}
+  let rep=''; try{rep=srcRep()}catch(e){}
+  const wait='<p>読み込み中…</p>';
+  body.innerHTML=[
+    srcPiece('宿泊者マップ',se.stay),
+    srcPiece('訪問者マップ',se.est),
+    srcPiece('全国比較',nat),
+    srcPiece('訪日回数',rep),
+    srcPiece('フライト情報',wait),
+    srcPiece('客室稼働率',wait),
+    srcPiece('市区町村',wait),
+    srcPiece('ブランド比較',wait),
+    srcPiece('ニュースまとめ','<span class="up">▲+</span> は増加、<span class="dn">▼</span> は減少。出典は新しいタブで開きます。'),
+    srcPiece('新規開業ホテル','カテゴリは当サイトの独自分類で、公式の格付けではありません。ホテル名のリンクが各件の出典です。')
+  ].join('');
+  const put=(i,html)=>{const s=body.querySelectorAll('.srcsec')[i];if(s)s.querySelector('.srctx').innerHTML=html||'<p>出典を取得できませんでした。</p>'};
+  box.hidden=false; box.querySelector('.msrc-body').scrollTop=0;
+  if(window.__mSync)window.__mSync();
+  srcWait('fl',w=>w.__srcFlight&&w.__srcFlight(),html=>put(4,html));
+  srcWait('oc',w=>w.__srcOcc&&w.__srcOcc(),o=>{if(!o){put(5,null);put(6,null);put(7,null);return}put(5,o.pref);put(6,o.muni);put(7,o.reit)});
+}
 function mShow(id){
   mClose();mFiltClose();
+  if(id==='src'){mOpenSrc();return}
+  mCloseSrc();
   if(id==='nw'){showView('nw');return}
   if(id==='fl'){showView('fl');return}
   if(id==='occ'||id==='muni'||id==='reit'){mOcc(id==='occ'?'pref':id==='muni'?'muni':'reit');return}
@@ -3872,6 +4008,8 @@ function mInit(){
   const mb=document.getElementById('mMenuBtn');if(mb)mb.onclick=mOpen;
   const nb=document.getElementById('nwMenuBtn');if(nb)nb.onclick=mOpen;
   const mc=document.getElementById('mMenuClose');if(mc)mc.onclick=mClose;
+  const sc=document.getElementById('mSrcClose');if(sc)sc.onclick=mCloseSrc;
+  document.querySelectorAll('.vb-src').forEach(b=>b.onclick=e=>{e.stopPropagation();mOpenSrc()});
   const fb=document.getElementById('mFiltBtn');if(fb)fb.onclick=mFiltOpen;
   const nfb=document.getElementById('nwFiltBtn');if(nfb)nfb.onclick=mFiltOpen;
   const chip=document.getElementById('mChip');if(chip)chip.onclick=mFiltOpen;
@@ -3884,8 +4022,9 @@ function mInit(){
   if(window.matchMedia('(max-width:900px)').matches){const box=document.getElementById('mSheet');if(box)box.checked=false}
   document.addEventListener('keydown',e=>{
     if(e.key!=='Escape')return;
-    const menu=document.getElementById('mMenu'),sheet=document.getElementById('mFilt');
-    if(menu&&!menu.hidden){mClose();e.preventDefault();e.stopPropagation()}
+    const menu=document.getElementById('mMenu'),sheet=document.getElementById('mFilt'),src=document.getElementById('mSrc');
+    if(src&&!src.hidden){mCloseSrc();e.preventDefault();e.stopPropagation()}
+    else if(menu&&!menu.hidden){mClose();e.preventDefault();e.stopPropagation()}
     else if(sheet&&!sheet.hidden){mFiltClose();e.preventDefault();e.stopPropagation()}
   },true);
   const chips=document.getElementById('nwChips');
