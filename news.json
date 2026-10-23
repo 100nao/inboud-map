@@ -22,105 +22,25 @@
     {
       "id": "flights",
       "label": "国際線フライト"
-    },
-    {
-      "id": "policy",
-      "label": "行政・インバウンド施策"
-    },
-    {
-      "id": "other",
-      "label": "その他"
     }
   ],
   "counts": {
-    "items": 184,
-    "dates": 25,
-    "industry": 110,
-    "ota": 74,
+    "items": 103,
+    "dates": 24,
+    "industry": 51,
+    "ota": 52,
     "industryDates": 14,
-    "otaDates": 18,
+    "otaDates": 17,
     "themes": {
       "海外OTA": 53,
       "国内OTA・旅行会社": 7,
       "新規開業ホテル": 16,
-      "国際線フライト": 27,
-      "行政・インバウンド施策": 49,
-      "その他": 32
+      "国際線フライト": 27
     }
   },
   "items": [
     {
       "id": "industry-2",
-      "date": "2026-10-23",
-      "dateLabel": "10/23（金）",
-      "weekday": "金",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "7〜9月の訪日消費2.2兆円で過去最高（台湾が首位）・JATA「JAPAN, GO BEYOND」始動／エクスペディアが掲載自動化・雅叙園東京がLXRとして12/3開業・成田冬ダイヤは国際線週4,051回で過去最高",
-      "body": "・7〜9月の訪日消費は2兆2,076億円（▲+3.2%）で過去最高。\n・国別首位は台湾3,818億円（▲+26.2%）、中国は3,583億円（▼39.8%）。\n・雅叙園東京がヒルトン「LXR」として12/3開業（全60室・東京初）。\n・成田冬ダイヤは国際線週4,051回で開港以来最高、韓国線は744回（▲+180回）。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/content/002027752.pdf",
-          "label": "mlit.go.jp"
-        },
-        {
-          "url": "https://www.ryoko-net.co.jp/?p=174786",
-          "label": "ryoko-net.co.jp"
-        },
-        {
-          "url": "https://www.traicy.com/posts/20261022385570/",
-          "label": "traicy.com"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000003.000185182.html",
-          "label": "prtimes.jp"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000001095.000004762.html",
-          "label": "prtimes.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-3",
-      "date": "2026-10-23",
-      "dateLabel": "10/23（金）",
-      "weekday": "金",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "JATAが訪日の地方誘客プロジェクト「JAPAN, GO BEYOND」を始動（第1弾は東北・欧米豪向け、3年サイクル）　エクスペディアはサイトコントローラー連携で24時間以内に掲載できる「Autonomous Onboarding」を開始",
-      "body": "・日本旅行業協会（JATA）は10/22の定例会見で、インバウンドの地方誘客を進める官民プロジェクト「JAPAN, GO BEYOND」の始動を発表した。広域連携DMOや自治体と組み、1エリアを3年サイクルで魅力発掘から誘客まで進める。第1弾は東北で、欧米豪を主要ターゲットに東北観光推進機構と周遊ルートや商品造成に取り組む（2026年度は調査、2027年に受入整備・プロモーション、2028年に誘客）。東北はインバウンド延べ宿泊者数の全国シェアが1.7%にとどまる。JATAは欧米豪のロングホール向けに、手配を一括で担う「全国DMC」との連携を重視するとしている（旅行新聞）。\n・エクスペディア・グループは、宿泊施設が今使っているサイトコントローラーのまま同社サイトへの掲載を始められる「Autonomous Onboarding」を発表した。HotelRunner、Yanolja Cloud Solutions、RoomCloud、RateGain、Eviivoの5社が先行して対応し、数回のクリックと規約への同意だけで24時間以内に掲載が始まる。客室タイプ、料金プラン、写真、在庫などは自動で取り込まれる（トライシー10/22）。",
-      "note": "エクスペディアが新規掲載の手間を大きく減らしてきたので、まだ海外OTAに出していない中小ホテルや新規開業ホテルの取り合いが速くなる。Trip.comの掲載手続きやサイトコントローラー連携でホテル側が面倒だと感じている点を聞き、立ち上げ支援をどう打ち出すかの材料にする。東北の欧米豪向け商品化の動きは、地方の提携ホテルとの話題にも使える。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.ryoko-net.co.jp/?p=174786",
-          "label": "ryoko-net.co.jp"
-        },
-        {
-          "url": "https://www.jata-net.or.jp/about/jata-active/about03/2026_pressreport/",
-          "label": "jata-net.or.jp"
-        },
-        {
-          "url": "https://www.traicy.com/posts/20261022385570/",
-          "label": "traicy.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-4",
       "date": "2026-10-23",
       "dateLabel": "10/23（金）",
       "weekday": "金",
@@ -147,38 +67,7 @@
       ]
     },
     {
-      "id": "industry-5",
-      "date": "2026-10-23",
-      "dateLabel": "10/23（金）",
-      "weekday": "金",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "7〜9月期の訪日消費は2兆2,076億円（▲+3.2%）で同期間の過去最高　台湾3,818億円（▲+26.2%）が中国を抜き首位、韓国▲+45.8%・香港▲+37.1%、中国▼39.8%　1人当たり支出はフランス42.3万円が最高",
-      "body": "・観光庁が10/21に発表した7〜9月期のインバウンド消費動向調査（1次速報）で、訪日外国人の旅行消費額は2兆2,076億円（前年同期比▲+3.2%）と、同期間として過去最高になった。\n・国別：台湾3,818億円（構成比17.3%、▲+26.2%）、中国3,583億円（16.2%、▼39.8%）、韓国2,938億円（13.3%、▲+45.8%）、米国2,409億円（10.9%、▲+9.1%）、香港1,555億円（7.0%、▲+37.1%）。欧州はフランス▲+27.2%、スペイン▲+24.9%、イタリア▲+22.2%、英国▲+11.5%と伸びたが、ドイツは▼21.6%、カナダ▼7.0%、フィリピン▼21.6%。\n・費目別では宿泊費が7,778億円で全体の35.2%と最も多く、買物代27.7%、飲食費22.9%が続く。一般客の1人当たり旅行支出は23万3,677円（▲+6.1%）で、国別ではフランス42.3万円、メキシコ41.4万円、北欧40.7万円の順に高い。\n・木村観光庁長官は会見で、1〜9月累計では中国以外の主要22市場が前年を上回っており「堅調な訪日需要がある」と述べた（TMS）。",
-      "note": "客数は前年割れでも宿泊費を含む消費額は過去最高で、台湾・韓国・香港が中国の穴を埋めている。ホテルとは、7〜9月のADRが前年を上回れているか、台湾・韓国・香港からの予約の構成比がどこまで上がったかを確認する。1人当たり支出の高いフランスなど欧州客向けに、連泊プランや広めの客室をどう売るかも話題にできる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/content/002027752.pdf",
-          "label": "mlit.go.jp"
-        },
-        {
-          "url": "https://news.yahoo.co.jp/articles/deb29eb51a2de129447ce3dcb66ac045354ea7dd",
-          "label": "news.yahoo.co.jp"
-        },
-        {
-          "url": "https://tms-media.jp/posts/98780/",
-          "label": "tms-media.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-6",
+      "id": "industry-3",
       "date": "2026-10-23",
       "dateLabel": "10/23（金）",
       "weekday": "金",
@@ -213,69 +102,7 @@
       ]
     },
     {
-      "id": "industry-7",
-      "date": "2026-10-22",
-      "dateLabel": "10/22（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "9月訪日310万人（▼5.0%）・観光庁が旅行業団体に個人情報点検を通知・浅草/入谷にMinn 2施設とリゾナーレ福井・ルフトハンザG 2027夏に成田を拡充",
-      "body": "・9月の訪日客は310万3,700人（▼5.0%）で2か月連続の減少。\n・韓国84.2万人（▲+25.6%）・台湾59.6万人（▲+13.0%）は好調、中国は43.1万人（▼44.5%）。\n・観光庁が旅行業団体に個人情報の管理体制点検を通知（10/8付）。\n・入谷・浅草に「Minn」2施設が12月開業予定、ルフトハンザGは2027年夏に成田を拡充。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20261021_monthly.html",
-          "label": "jnto.go.jp"
-        },
-        {
-          "url": "https://www.sankei.com/article/20261021-PXDTKZ4ILZI3NIFC7BWUOI5QCY/",
-          "label": "sankei.com"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000264.000015235.html",
-          "label": "prtimes.jp"
-        },
-        {
-          "url": "https://newsroom.lufthansagroup.com/en/summer-2027-lufthansa-group-airlines-announce-most-extensive-route-expansion-since-2020/",
-          "label": "newsroom.lufthansagroup.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-8",
-      "date": "2026-10-22",
-      "dateLabel": "10/22（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "観光庁、旅行業団体に個人情報の管理体制点検を通知（HISのパスポート情報流出・skyticket漏洩を受け）　9月の出国日本人は148万人（▲+6.3%）",
-      "body": "・観光庁の木村長官は10/21の会見で、旅行業団体に対し、個人情報の管理体制や取り扱い状況の点検を求める通知を出したと明らかにした（通知は10/8付）。HISが10/7にパスポート情報が流出した恐れがあると発表し、航空券予約サイト「スカイチケット」の運営会社も顧客情報の漏洩を発表していた（産経）。前日に報じられた宿泊予約システム「TEMAIRAZU」の流出（最大約445万人分）と合わせ、予約情報をめぐる事故が旅行会社・宿泊施設の両方で続いている。\n・同日のJNTO発表では、9月の出国日本人数は148万1,900人（▲+6.3%）、1〜9月累計は1,120万6,400人（▲+3.2%）。訪日が減る中で日本人の海外旅行は前年を上回っている。",
-      "note": "ホテル側も予約者の個人情報（パスポート番号を含む）を受け取る立場なので、OTA連携での情報の扱い方、予約確認を装う詐欺メッセージへの注意喚起をどうしているかを聞く。Trip.comとしては、ゲストへの連絡経路をアプリ内メッセージに寄せるなど、なりすまし対策で一緒にできることを提案する材料になる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.sankei.com/article/20261021-PXDTKZ4ILZI3NIFC7BWUOI5QCY/",
-          "label": "sankei.com"
-        },
-        {
-          "url": "https://www.jnto.go.jp/news/_files/20261021_1615.pdf",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-9",
+      "id": "industry-4",
       "date": "2026-10-22",
       "dateLabel": "10/22（木）",
       "weekday": "木",
@@ -310,38 +137,7 @@
       ]
     },
     {
-      "id": "industry-10",
-      "date": "2026-10-22",
-      "dateLabel": "10/22（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "9月の訪日客は310万3,700人（▼5.0%）で2か月連続減　韓国▲+25.6%・台湾▲+13.0%など7市場が9月の過去最高、中国▼44.5%、欧州・東南アジアは中東情勢による航空券高で減少",
-      "body": "・JNTOが10/21に発表した9月の訪日外客数（推計値）は310万3,700人（前年同月比▼5.0%）。1〜9月累計は3,073万200人（▼2.9%）で、累計3,000万人は2年続けて超えた。\n・伸びた市場：韓国84万2,300人（▲+25.6%）、台湾59万5,600人（▲+13.0%）、シンガポール4万3,000人（▲+6.2%）、インド2万7,600人（▲+8.7%）、メキシコ2万2,300人（▲+13.0%）、中東3万7,700人（▲+27.0%）。これにロシアを加えた7市場が9月として過去最高。\n・減った市場：中国43万800人（▼44.5%）、香港14万5,000人（▼3.0%）、米国21万7,500人（▼3.2%）、豪州9万700人（▼6.1%）、カナダ（▼11.4%）、ドイツ（▼12.7%）、フランス（▼8.0%）、英国（▼4.1%）、タイ（▼12.6%）、マレーシア（▼19.5%）、フィリピン（▼17.1%）、ベトナム（▼9.2%）。\n・JNTOは、中東情勢による航空券価格の上昇、航空便の減便、台風による欠航を主な要因に挙げた。愛知のアジア競技大会による選手・関係者の来日はプラスに働いた。",
-      "note": "韓国・台湾は過去最高ペースなので、東京のホテルとは韓国・台湾向けの販促枠や週末の在庫の出し方を詰める。一方で欧米豪は航空券高で鈍っており、年末年始やスキーシーズンに向けて欧米豪の予約の入り方（リードタイムの短期化など）をホテル側がどう見ているかを聞く。中国客の穴を他の市場でどこまで埋められているかは、市場別の構成比で確認したい。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20261021_monthly.html",
-          "label": "jnto.go.jp"
-        },
-        {
-          "url": "https://www.jnto.go.jp/news/_files/20261021_1615.pdf",
-          "label": "jnto.go.jp"
-        },
-        {
-          "url": "https://www.nikkei.com/article/DGXZQOUA211Q00R21C26A0000000/",
-          "label": "nikkei.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-11",
+      "id": "industry-5",
       "date": "2026-10-22",
       "dateLabel": "10/22（木）",
       "weekday": "木",
@@ -372,42 +168,7 @@
       ]
     },
     {
-      "id": "industry-12",
-      "date": "2026-10-21",
-      "dateLabel": "10/21（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "免税は11/1からリファンド方式へ・Eave Hospitality新2ブランド・ZIPAIRクアラルンプール就航と米東海岸構想・エクスペディア注目旅行先に兵庫",
-      "body": "・訪日客の免税は11/1購入分からリファンド方式（出国時に返金）へ。\n・Section L運営会社が「Eave Hospitality」として新ブランド「Monograph Hotels」「VOL.」を発表。\n・ZIPAIRが10/20に成田＝クアラルンプールを開設（毎日運航・初便149人）。\n・エクスペディア「Unpack '27」で兵庫県が注目旅行先2位（検索▲+95%）。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.aviationwire.jp/archives/352751",
-          "label": "aviationwire.jp"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000025.000085022.html",
-          "label": "prtimes.jp"
-        },
-        {
-          "url": "https://www.aviationwire.jp/archives/352763",
-          "label": "aviationwire.jp"
-        },
-        {
-          "url": "https://www.expedia.co.jp/newsroom/unpack-27/",
-          "label": "expedia.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-13",
+      "id": "industry-6",
       "date": "2026-10-21",
       "dateLabel": "10/21（水）",
       "weekday": "水",
@@ -442,7 +203,7 @@
       ]
     },
     {
-      "id": "industry-14",
+      "id": "industry-7",
       "date": "2026-10-21",
       "dateLabel": "10/21（水）",
       "weekday": "水",
@@ -477,42 +238,7 @@
       ]
     },
     {
-      "id": "industry-15",
-      "date": "2026-10-21",
-      "dateLabel": "10/21（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "訪日客の消費税免税は11/1購入分から「リファンド方式」に　Cash Japanが成田など6空港で現金即時払戻、手続きはチェックイン前が必須",
-      "body": "・11/1の販売分から、訪日客向けの免税は購入時に税を引く方式から、税込で買い、出国時に空港・港の税関で持ち出し確認を受けた後に消費税相当額を返金する「リファンド方式」に変わる（観光庁・税関）。1店舗1日5,000円（税抜）以上が対象で、消耗品の特殊包装は廃止。購入から90日以内に、空港のキオスク端末でパスポートを提示して確認を受ける。成田・羽田など7空港では、Visit Japan Webと専用Wi-Fiを使ったオンライン手続きもできる。\n・Cash Japanは10/19、中部・福岡・関西・神戸・成田・新千歳の6空港で払戻サービス事業者に採用されたと発表。複数の免税事業者の取引をパスポート認証でまとめて照合し、日本円の現金で即時払戻する（多くは約1分10秒の見込み）。\n・空港側は、税関の確認は手荷物を預ける前に済ませる必要があり、出国審査後には戻れないと案内している。",
-      "note": "買い物の多い中国・台湾・香港・タイなどのゲストは、帰国日に空港へ早めに行く必要が出る。チェックアウト時刻や空港への送迎・リムジンバスの案内、フロントでの説明をどう変えるかをホテルと話す。ホテル内ショップや提携店の免税販売がある施設には、返金対応の準備状況も聞ける。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00019.html",
-          "label": "mlit.go.jp"
-        },
-        {
-          "url": "https://www.customs.go.jp/kaigairyoko/taxrefund_e.html",
-          "label": "customs.go.jp"
-        },
-        {
-          "url": "https://www.aviationwire.jp/archives/352751",
-          "label": "aviationwire.jp"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000001.000192941.html",
-          "label": "prtimes.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-16",
+      "id": "industry-8",
       "date": "2026-10-21",
       "dateLabel": "10/21（水）",
       "weekday": "水",
@@ -547,77 +273,7 @@
       ]
     },
     {
-      "id": "industry-17",
-      "date": "2026-10-20",
-      "dateLabel": "10/20（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "宿泊予約システム流出で詐欺メッセージ続く・ヴィラプリンス軽井沢・豪州訪日99万人・成田C滑走路2034年末に",
-      "body": "・予約システム「TEMAIRAZU」への不正アクセスで最大約445万人分が流出の可能性、詐欺メッセージが続く。\n・西武プリンスが「ヴィラプリンス軽井沢 東の杜」（41棟）を2027年7/30に開業。\n・豪州からの訪日は2025-26年度に99万2,550人（▲+9.0%）で過去最高。\n・成田C滑走路の完成予定は2034年末に延期。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.yomiuri.co.jp/national/20261019-GYT1T00174/",
-          "label": "yomiuri.co.jp"
-        },
-        {
-          "url": "https://www.princehotels.co.jp/press/261019_02/",
-          "label": "princehotels.co.jp"
-        },
-        {
-          "url": "https://honichi.com/news/2026/10/19/australia_outbound2026/",
-          "label": "honichi.com"
-        },
-        {
-          "url": "https://www.aviationwire.jp/archives/352714",
-          "label": "aviationwire.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-18",
-      "date": "2026-10-20",
-      "dateLabel": "10/20（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "宿泊予約システム「TEMAIRAZU」の流出は最大約445万人分、予約確認を装う詐欺メッセージが各地で続く",
-      "body": "・読売新聞（10/19）によると、宿泊施設向け予約管理システム「TEMAIRAZU」（手間いらず）への不正アクセスに関連して、予約確認を装いカード情報を入力させるメッセージが各地の予約者に届いている。旅行サイトで佐賀県の宿を予約した男性は、氏名や利用日が正しく書かれた英文メッセージを信じてカード番号を入力した（決済エラーで金銭被害はなし）。\n・手間いらずは10/9の開示で、氏名・電話番号・メールアドレス・宿泊施設名・チェックイン/アウト日・宿泊料金を含む予約情報が、最大約445万人分、第三者に閲覧・取得された可能性があると公表。カード情報とOTAのログイン情報は保有していないとしている。\n・メッセージはWhatsApp・メール・SMSで届き、事前チェックインや予約の維持を理由に外部サイトへ誘導して支払いを求める。同社はOTA各社と接続先にも、身に覚えのないログインや送金先口座の変更がないか確認するよう求めている。",
-      "note": "予約者本人の情報が正しく書かれているため、OTA経由の予約でも「ホテルからの連絡」と信じて入力してしまう。ホテル側が予約者へどのドメイン・どの経路でしか連絡しないと決めているか、OTAとの間で注意喚起の文面をどう揃えているかを聞く。Trip.comからゲストへ出す案内や、到着前決済の確認方法をすり合わせる話にもつなげられる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.yomiuri.co.jp/national/20261019-GYT1T00174/",
-          "label": "yomiuri.co.jp"
-        },
-        {
-          "url": "https://www.temairazu.co.jp/pdf/1212/news-update",
-          "label": "temairazu.co.jp"
-        },
-        {
-          "url": "https://www.temairazu.co.jp/pdf/1206/news-update.pdf",
-          "label": "temairazu.co.jp"
-        },
-        {
-          "url": "https://munihotels.com/news/2026-09-29/",
-          "label": "munihotels.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-19",
+      "id": "industry-9",
       "date": "2026-10-20",
       "dateLabel": "10/20（火）",
       "weekday": "火",
@@ -652,42 +308,7 @@
       ]
     },
     {
-      "id": "industry-20",
-      "date": "2026-10-20",
-      "dateLabel": "10/20（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "豪州からの訪日は2025-26年度に99万人（▲+9.0%）で過去最高・大丸松坂屋の免税売上は▲+13.8%、中国のシェアは57.3%に低下",
-      "body": "・オーストラリア政府統計局（ABS）によると、2025年7月〜2026年6月に日本を訪れた豪州居住者は99万2,550人（前年度比▲+9.0%）で過去最高。渡航先はインドネシア、ニュージーランドに次ぐ3位。日本での滞在日数の中央値は15日で上位3か国で最長、訪日の82%が休暇目的（訪日ラボ10/19）。\n・J.フロント リテイリングの2026年3〜8月期決算では、百貨店事業の免税売上高が566億円（▲+13.8%）。大丸松坂屋では中国本土客の減少で客数は▼16.7%だったが、円安で客単価が▲+36.6%。免税売上に占める中国のシェアは65.6%から57.3%に下がり、台湾・香港・韓国・タイが上位に並ぶ。",
-      "note": "豪州客は滞在が長く休暇目的が中心で、これから年末年始とスキーの時期に入る。東京での前後泊を連泊で取れるプランや、ニセコ・白馬などとの組み合わせを話す。免税売上は客数が減っても単価で伸びており、中国以外の国籍が買い物と宿泊の両方で厚くなっているかを確認する材料になる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://honichi.com/news/2026/10/19/australia_outbound2026/",
-          "label": "honichi.com"
-        },
-        {
-          "url": "https://yamatogokoro.jp/inbound_data/61405/",
-          "label": "yamatogokoro.jp"
-        },
-        {
-          "url": "https://honichi.com/news/2026/10/19/daimaru-matsuzakaya2027-02/",
-          "label": "honichi.com"
-        },
-        {
-          "url": "https://www.j-front-retailing.com/_data_json/financialresults/_upload/2702_2Q_presentation_J.pdf",
-          "label": "j-front-retailing.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-21",
+      "id": "industry-10",
       "date": "2026-10-20",
       "dateLabel": "10/20（火）",
       "weekday": "火",
@@ -722,7 +343,7 @@
       ]
     },
     {
-      "id": "industry-22",
+      "id": "industry-11",
       "date": "2026-10-19",
       "dateLabel": "10/19（月）",
       "weekday": "月",
@@ -757,7 +378,7 @@
       ]
     },
     {
-      "id": "industry-23",
+      "id": "industry-12",
       "date": "2026-10-19",
       "dateLabel": "10/19（月）",
       "weekday": "月",
@@ -796,77 +417,7 @@
       ]
     },
     {
-      "id": "industry-24",
-      "date": "2026-10-19",
-      "dateLabel": "10/19（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "リゾナーレ大阪が11/23で営業終了、西武・プリンスが480室を一括運営へ・神戸のホテル客室からフィッシング約48万件",
-      "body": "・星野リゾート・リート投資法人は10/16、グランドプリンスホテル大阪ベイ（480室）内の「リゾナーレ大阪」の運営を11/23に終了し、12/1をめどに全480室を西武・プリンスホテルズが一括運営すると発表。\n・リゾナーレ大阪は2022年12月開業で、2ブランドが同居する「コラボレーションホテル」だった。万博後の需要変化と2030年秋ごろの大阪IR開業を見据え、MICE・大型イベント向けに一体で販売する。星野リゾートは大阪の経営資源を「OMO7大阪」に集中。リートは承諾料約2.6億円を受け取る予定で、チャペル棟は10/31で営業終了。\n・神戸市中央区のホテルでは、偽名で宿泊した中国籍の男が客室の冷蔵庫裏にパソコンを隠し、ホテルのWi-Fiでカード会社を装うフィッシングメールを少なくとも約48万件送った疑いがあり、夫婦で逮捕・起訴された。受信者からの「ホテルのIPアドレスが使われている」との通報で発覚（読売・NHK 10/15〜16）。",
-      "note": "2ブランドの同居をやめて1社で売る判断は、ブランドの重なりより販売の一体化を優先した例。東京でも複数ブランドや複数の運営会社が入る物件で、販売窓口やOTA上の見せ方をどう整理しているかを聞く。神戸の件は、チェックイン時の本人確認と客室Wi-Fiの監視体制を確認するきっかけになる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124782",
-          "label": "travelvision.jp"
-        },
-        {
-          "url": "https://www2.jpx.co.jp/disc/32870/140120261014550767.pdf",
-          "label": "www2.jpx.co.jp"
-        },
-        {
-          "url": "https://japanir.jp/en/company/company-3287/ir/3287-20261016-01_wp_corporate_restructuring/",
-          "label": "japanir.jp"
-        },
-        {
-          "url": "https://www.yomiuri.co.jp/local/kansai/news/20261016-GYO1T00017/",
-          "label": "yomiuri.co.jp"
-        },
-        {
-          "url": "https://news.web.nhk/newsweb/na/nd-20261015de59554",
-          "label": "news.web.nhk"
-        }
-      ]
-    },
-    {
-      "id": "industry-25",
-      "date": "2026-10-19",
-      "dateLabel": "10/19（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "台湾の年末年始は航空券15%高でも予約10%増（東京首位・沖縄2位）・大阪の中国客は1〜8月▼61.5%",
-      "body": "・台湾の旅行サイトezTravel（易遊網）によると、年末年始の航空券は燃油サーチャージなどで15%以上値上がりしたが、予約数は前年比10%増（中央社10/15、グローバル・デイリー10/16）。\n・人気旅行先トップ10は東京・沖縄・バンコク・ソウル・大阪・香港・福岡・釜山・札幌・上海で、日本が5都市。東京は首位を維持し、沖縄は5位から2位へ。沖縄と釜山は予約が40%超増え、函館・神戸・小松・青森は予約が倍増。台湾の1〜8月の出国者は1,453万人（▲+15.2%）。\n・大阪観光局によると、1〜8月に大阪を訪れた中国人客は150.1万人（▼61.5%、全国は▼56.7%）。中国以外の外国人客は947万人で約2割増。関西エアポートが10/16に発表した冬期計画では、関空の中国路線便数は2024年冬比で7割減が続く一方、中国以外の国際線は7%増の見込み（J-CAST 10/17）。",
-      "note": "台湾客は値上げを受け入れて年末も東京を選んでいる。年末年始の料金を上げても需要は残る見込みなので、早めの予約確保と、地方へ回る前後の東京泊をセットで取れるかを話す。中国の比率が高かった大阪の落ち込みと比べて、東京の国籍ミックスの強さを確認する材料にもなる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.gldaily.com/news/global/global52352/",
-          "label": "gldaily.com"
-        },
-        {
-          "url": "https://www.cna.com.tw/news/ahel/202610150186.aspx",
-          "label": "cna.com.tw"
-        },
-        {
-          "url": "https://news.yahoo.co.jp/articles/1a030b04477031dc835304a0494d1a70b1626787",
-          "label": "news.yahoo.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-26",
+      "id": "industry-13",
       "date": "2026-10-19",
       "dateLabel": "10/19（月）",
       "weekday": "月",
@@ -897,7 +448,7 @@
       ]
     },
     {
-      "id": "industry-27",
+      "id": "industry-14",
       "date": "2026-10-16",
       "dateLabel": "10/16（金）",
       "weekday": "金",
@@ -936,7 +487,7 @@
       ]
     },
     {
-      "id": "industry-28",
+      "id": "industry-15",
       "date": "2026-10-16",
       "dateLabel": "10/16（金）",
       "weekday": "金",
@@ -967,7 +518,7 @@
       ]
     },
     {
-      "id": "industry-29",
+      "id": "industry-16",
       "date": "2026-10-16",
       "dateLabel": "10/16（金）",
       "weekday": "金",
@@ -998,34 +549,7 @@
       ]
     },
     {
-      "id": "industry-30",
-      "date": "2026-10-16",
-      "dateLabel": "10/16（金）",
-      "weekday": "金",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "東南アジア旅行市場は2026年▲+2%に鈍化・台湾の訪日旅行料金は7〜10%上昇見通し",
-      "body": "・フォーカスライト「Southeast Asia Travel Market Essentials 2026」（トラベルボイス10/15）。東南アジア旅行市場の2026年成長率は、米イラン戦争による燃料高で▲+2%に鈍化する見通し（2025年は総予約額630億ドル、▲+6%）。\n・2025年はタイ179億ドル、インドネシア177億ドルと僅差で、2026年はインドネシアが最大市場になる見込み。運賃高で近場・国内旅行志向が強まり、LCCは路線削減も。ホテル予約額は横ばい、OTA比率は2029年に42%へ。\n・台湾では10〜12月の日本旅行料金が前年比約7〜10%上昇する見通し。秋の海外旅行需要は強い一方、インフレと燃料費が上乗せされている（グローバル・デイリー10/9号）。",
-      "note": "航空券が高くなるなかで、近場で長く泊まるインドネシア客と、値上げを受け入れる台湾のリピーターとで動きが分かれる。旅行の総額が上がる分、連泊割や朝食込みなど「お得感」の見せ方を市場ごとに変えられるかを話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvoice.jp/20261015-160639",
-          "label": "travelvoice.jp"
-        },
-        {
-          "url": "https://www.gldaily.com/news/mailmagazine/global52297/",
-          "label": "gldaily.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-31",
+      "id": "industry-17",
       "date": "2026-10-16",
       "dateLabel": "10/16（金）",
       "weekday": "金",
@@ -1052,69 +576,7 @@
       ]
     },
     {
-      "id": "industry-32",
-      "date": "2026-10-15",
-      "dateLabel": "10/15（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "海外OTA制度調査・蒲田ENホテル・インドネシア消費",
-      "body": "・観光庁が海外OTA対応を含む各国の旅行業法制度の調査を開始（法改正は未定）。\n・「EN HOTEL Tokyo Kamata」（89室）が12/1開業、10/15予約開始。\n・4〜6月期の訪日消費は2兆5,125億円（▲+0.3%）、インドネシアは▲+44.0%。\n・UA成田＝ラスベガス臨時便、ビーマン成田＝ダッカ増便。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124623",
-          "label": "travelvision.jp"
-        },
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000888.000018265.html",
-          "label": "prtimes.jp"
-        },
-        {
-          "url": "https://www.zaikei.co.jp/releases/3663132/",
-          "label": "zaikei.co.jp"
-        },
-        {
-          "url": "https://www.zaikei.co.jp/releases/3660778/",
-          "label": "zaikei.co.jp"
-        },
-        {
-          "url": "https://www.traicy.com/posts/20261012384671/",
-          "label": "traicy.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-33",
-      "date": "2026-10-15",
-      "dateLabel": "10/15（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "観光庁、各国の旅行業法制度調査に着手（海外OTA対応も対象）",
-      "body": "・トラベルビジョン（10/7）によると、観光庁は「各国の旅行業法制度の現状等調査」に着手。旅行業法制度の具体的な調査は同庁として初めて。\n・海外OTAへの対応、旅行事業者への規制、消費者保護の仕組みを欧州中心に調べ、EUが2026年4月に改正したパッケージ旅行指令（キャンセル・払戻し・倒産時保護の見直し）も参考にする。\n・担当室長は海外OTAを巡り「以前からさまざまな課題がある」との認識。ただし現時点で法改正は前提にしていない。\n・併せて第1種旅行業の登録手続きのデジタル化・負担軽減も検討。",
-      "note": "当社を含む海外OTAが議論の対象になり始めた。ホテル側から見た取消規定・払戻し・消費者対応の不満点を先に聞いておき、契約条件の透明性を信頼材料にする。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124623",
-          "label": "travelvision.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-34",
+      "id": "industry-18",
       "date": "2026-10-15",
       "dateLabel": "10/15（木）",
       "weekday": "木",
@@ -1141,38 +603,7 @@
       ]
     },
     {
-      "id": "industry-35",
-      "date": "2026-10-15",
-      "dateLabel": "10/15（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "4〜6月期消費 2次速報：インドネシア▲+44%・タイは客数減でも消費増",
-      "body": "・観光庁「インバウンド消費動向調査」4〜6月期2次速報（9/30公表、グローバル・デイリー10/14の整理）。\n・消費額は2兆5,125億円（▲+0.3%）、1人当たり24.5万円（▲+3.4%）と、1次速報（2兆5,096億円）から小幅上方修正。\n・インドネシア：消費433億円（▲+44.0%）、客数▲+4.4%に対し1人当たり▲+38.0%、平均泊数16.3泊。\n・タイ：消費732億円（▲+2.2%）、客数▼2.1%でも1人当たり▲+4.5%。\n・JNTOの9月推計値は10/21 16:15発表予定。",
-      "note": "人数より「長く泊まり、単価が上がる」東南アジア客が狙い目。インドネシア向けには連泊割引・ムスリム対応（料理・礼拝）をどこまで打ち出せるかを話す。来週の9月速報は中国を除いた伸びも合わせて確認。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.zaikei.co.jp/releases/3660778/",
-          "label": "zaikei.co.jp"
-        },
-        {
-          "url": "https://www.mlit.go.jp/kankocho/tokei_hakusyo/gaikokujinshohidoko.html",
-          "label": "mlit.go.jp"
-        },
-        {
-          "url": "https://www.jnto.go.jp/statistics/data/20260916.pdf",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-36",
+      "id": "industry-19",
       "date": "2026-10-15",
       "dateLabel": "10/15（木）",
       "weekday": "木",
@@ -1199,7 +630,7 @@
       ]
     },
     {
-      "id": "industry-37",
+      "id": "industry-20",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1234,30 +665,7 @@
       ]
     },
     {
-      "id": "industry-38",
-      "date": "2026-10-14",
-      "dateLabel": "10/14（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "ANTB福岡：旅先選びが「体験起点」へ",
-      "body": "・アジアの観光スタートアップ交流「Asia New Travel Bootcamp（ANTB）」が10/6に福岡で初の県外開催（観光経済新聞10/13報道）。\n・基調講演では、旅行者が「どこへ行くか」より「何を体験したいか」から旅先を選ぶ流れと、SNS・AIの影響が示された。\n・会場アンケートでは約63％がAIで旅の着想・計画をした経験あり。一方、AI経由の実予約はまだ少なく、OTA等の既存経路にも余地があるとの見方。\n・ラグジュアリーも高級ホテルだけでなく「本物を知る」体験（生け花・禅など）に価値を置く傾向が紹介された。",
-      "note": "体験付き宿泊や地域文化の編集力が差別化になる。パッケージより「何が体験できるか」をフロントでどう伝えるかを話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.kankokeizai.com/2610131430kks/",
-          "label": "kankokeizai.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-39",
+      "id": "industry-21",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1284,34 +692,7 @@
       ]
     },
     {
-      "id": "industry-40",
-      "date": "2026-10-14",
-      "dateLabel": "10/14（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "宿泊税・二重価格は事業者裁量、地方分散を継続",
-      "body": "・朝鮮日報（10/13）によると、観光庁長官は外国メディア向け会見で、宿泊税や外国人向け二重価格の導入・水準は各運営主体の判断とし、政府として外国人向け料金にコメントしない方針を示した。\n・オーバーツーリズム対策として地方分散を推進し、2030年に地方部の外国人延べ宿泊1億3,000万泊を目指す（2025年は6,056万泊）。\n・中国人訪日は昨年末以降、毎月おおむね前年比約50％減の傾向が続いているとの説明もあった。\n・京都市の松井市長は出国税（国際観光旅客税）の増収分について、観光都市の課題への充当を求める趣旨の発言をラジオで行った（日経10/14）。",
-      "note": "料金・税は自治体・施設判断の流れ。東京でも宿泊税議論や外国人向けメニュー設計を「規制待ち」ではなく自社方針として整理できるかを確認する。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://biz.chosun.com/jp/jp-international/2026/10/13/A6SR5VCH5FAQHFA3GD6QIAUCRM/",
-          "label": "biz.chosun.com"
-        },
-        {
-          "url": "https://www.nikkei.com/article/DGXZQOUA051V80V01C26A0000000/",
-          "label": "nikkei.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-41",
+      "id": "industry-22",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1342,7 +723,7 @@
       ]
     },
     {
-      "id": "ota-42",
+      "id": "ota-23",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1365,7 +746,7 @@
       ]
     },
     {
-      "id": "ota-43",
+      "id": "ota-24",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1388,38 +769,7 @@
       ]
     },
     {
-      "id": "ota-44",
-      "date": "2026-10-14",
-      "dateLabel": "10/14（水）",
-      "weekday": "水",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "鹿児島ふっこう応援割が本日開始。楽天10時・ANA14時、近ツーは福岡を本日14時・長崎／熊本を15日14時",
-      "body": "・「鹿児島ふっこう応援割」が10/14開始（割引率60%）。\n・宿の直販は2027/2/28宿泊まで、旅行会社・OTAは1/31宿泊まで。\n・12/26〜1/3は対象外。\n・楽天は10:00、ANA航空券＋宿は14:00に開始。",
-      "note": "鹿児島はOTA期限より直販が1か月長い点は既報どおり。本日は楽天・ANA・近ツー福岡の枠消化スピードを見る日。打合せでは「自施設がどの経路の予算枠に乗っているか」と年末年始除外の通常価格在庫を確認。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.pref.kagoshima.jp/af08/fukko-ouenwari.html",
-          "label": "pref.kagoshima.jp"
-        },
-        {
-          "url": "https://www.knt.co.jp/kyushu-ouenwari/",
-          "label": "knt.co.jp"
-        },
-        {
-          "url": "https://travelplanet.jp/kyushu-ouenwari",
-          "label": "travelplanet.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-45",
+      "id": "ota-25",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1442,7 +792,7 @@
       ]
     },
     {
-      "id": "ota-46",
+      "id": "ota-26",
       "date": "2026-10-14",
       "dateLabel": "10/14（水）",
       "weekday": "水",
@@ -1465,7 +815,7 @@
       ]
     },
     {
-      "id": "industry-47",
+      "id": "industry-27",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1488,53 +838,7 @@
       ]
     },
     {
-      "id": "industry-48",
-      "date": "2026-10-13",
-      "dateLabel": "10/13（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "AT研修・冬ダイヤ始動",
-      "body": "・JNTOがアドベンチャートラベル実務者研修を福知山で開催。\n・今週はZIPAIR成田＝KL（10/20）、UA成田＝シカゴ・アルキア成田＝テルアビブ（10/25）が就航開始予定。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.kankokeizai.com/2610122100kks/",
-          "label": "kankokeizai.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-49",
-      "date": "2026-10-13",
-      "dateLabel": "10/13（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "JNTO アドベンチャートラベル国内ネットワーキング研修会",
-      "body": "・JNTOは9/28〜29、京都・福知山でAT実務者15人向け研修を開催（観光経済新聞10/12報道）。\n・世界AT市場は2026年推計約83兆円、2033年約274兆円（年率18.6%）との民間推計を共有。\n・日本市場は2026年約5.5兆円→2033年約19兆円の見通し。\n・北米旅行会社の96%が日本を売る理由に「文化・伝統」を挙げ、11/11〜19は山陰・瀬戸内で海外バイヤー向けアドベンチャーウィークも予定。",
-      "note": "高単価・少人数（ガイド1人あたり中央値6人）のAT客は連泊・地方周遊の前後で東京に泊まる。体験付き宿泊や滞在延長プランを組めるかを話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.kankokeizai.com/2610122100kks/",
-          "label": "kankokeizai.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-50",
+      "id": "industry-28",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1557,30 +861,7 @@
       ]
     },
     {
-      "id": "industry-51",
-      "date": "2026-10-13",
-      "dateLabel": "10/13（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "WEF旅行・観光開発指数2026で日本が世界1位",
-      "body": "・世界経済フォーラムが9/25発表（訪日ラボ10/2など）。\n・110カ国・地域で日本が前回3位から首位（スコア5.27/7）。\n・文化資源・非レジャー資源で分野1位。\n・需要の持続可能性の改善幅は世界2位、観光への開放度は世界4位の改善。\n・報告書はJNTOの市場多様化・地方誘客をケーススタディに採録し、東アジア比率が2019年70%→65%、欧米豪・中東が14%→18%になった点などを評価。",
-      "note": "人数より「基盤の強さ」が国際評価されている。欧米豪の高単価客向けに、文化体験・地方周遊のハブとしての東京宿泊をどう打ち出すか。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://honichi.com/news/2026/10/02/wef-ttdi2026/",
-          "label": "honichi.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-52",
+      "id": "industry-29",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1611,7 +892,7 @@
       ]
     },
     {
-      "id": "ota-53",
+      "id": "ota-30",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1638,34 +919,7 @@
       ]
     },
     {
-      "id": "ota-54",
-      "date": "2026-10-13",
-      "dateLabel": "10/13（火）",
-      "weekday": "火",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割続報：鹿児島は10/14開始、OTA・旅行会社は1/31宿泊まで・直販は2/28まで、12/26〜1/3除外。エアトリは福岡・長崎を10/13正午販売",
-      "body": "・鹿児島ふっこう応援割は10/14開始、割引率60%。\n・直販は2/28宿泊まで、旅行会社・OTAは1/31宿泊まで。\n・12/26〜1/3は対象外。\n・エアトリは福岡・長崎のツアーを10/13正午に販売開始。",
-      "note": "鹿児島はOTA期限（1/31）より直販（2/28）が1か月長く、年末年始は除外。2月需要は直販寄り、年末年始は通常価格在庫としてOTA厚め提案が可能。Trip.comのバナー掲載時期と宿ごとのOTA/直販予算枠配分を確認。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.pref.kagoshima.jp/af08/fukko-ouenwari.html",
-          "label": "pref.kagoshima.jp"
-        },
-        {
-          "url": "https://www.traicy.com/posts/20261012384760/",
-          "label": "traicy.com"
-        }
-      ]
-    },
-    {
-      "id": "ota-55",
+      "id": "ota-31",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1688,7 +942,7 @@
       ]
     },
     {
-      "id": "ota-56",
+      "id": "ota-32",
       "date": "2026-10-13",
       "dateLabel": "10/13（火）",
       "weekday": "火",
@@ -1711,103 +965,7 @@
       ]
     },
     {
-      "id": "ota-57",
-      "date": "2026-10-13",
-      "dateLabel": "10/13（火）",
-      "weekday": "火",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🧾 宿泊税",
-      "categoryLabel": "宿泊税",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "鎌倉市も宿泊税条例を可決。1人1泊300円、2027年10月課税開始予定",
-      "body": "・鎌倉市が9/30に宿泊税条例を可決。\n・1人1泊一律300円、免税点なし。\n・2027年10月開始予定（総務大臣の同意が前提）。",
-      "note": "鎌倉・箱根のホテルには2027年秋以降の予約が入る前に税込表示か現地徴収かを決めておくよう提案。定額・免税点なしのため低単価客室ほど負担率が高い。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://adrim.co.jp/kyakuden/industry-news/hakone-kamakura-accommodation-tax-enacted-2026-10/",
-          "label": "adrim.co.jp"
-        },
-        {
-          "url": "https://www.nikkei.com/article/DGKKZO98421070X20C26A8L83000/",
-          "label": "nikkei.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-58",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "旅行業廃業・AI調査",
-      "body": "・9月の旅行業廃業は42社（前年同月比4社減）。\n・1〜9月累計は432社で前年より7社多い。\n・訪日客の9割超が旅行中に生成AIを使い、31.3%が予定外の訪問先を追加（博報堂）。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jwing.net/news/113969",
-          "label": "jwing.net"
-        }
-      ]
-    },
-    {
-      "id": "industry-59",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "ホテルREIT 8月 7銘柄出揃う",
-      "body": "・ホテルREIT 8月は7銘柄中6銘柄がRevPAR前年割れ（星野リゾート・リート▼6.8%）。\n・プラスは霞ヶ関ホテルリート（▲+3.2%）のみ。\n・9月は関西を除けば前年超えの見通し。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://haito-lab.com/hotel-reit-monthly-watch-261010/",
-          "label": "haito-lab.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-60",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "英国評価・国慶節結果",
-      "body": "・英国ULTRAs 2026で日本が2年連続「最も好まれる旅行先の国」。\n・国慶節の中国国内移動は延べ21億4400万人、日本は人気先トップ10圏外。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/info/20261009_2.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-61",
+      "id": "industry-33",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -1830,30 +988,7 @@
       ]
     },
     {
-      "id": "industry-62",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "9月の旅行業廃業42社（官報公示）",
-      "body": "・9月の廃業公示は42社（前月比3社減・前年同月比4社減）。\n・1〜9月累計は432社で前年同期425社を上回る。\n・開業6年未満が19社（45.2%）とコロナ禍前後の参入組が半数近く、30年以上の老舗も4社。\n・物価・人件費高、中国客減、中東情勢、人材不足、個人手配の拡大が背景。",
-      "note": "中小旅行会社の退出が続くと、団体・パッケージの卸先が細る。ホテル側の販売先をOTA・直販・大手旅行会社にどう振り分けるかを話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jwing.net/news/113969",
-          "label": "jwing.net"
-        }
-      ]
-    },
-    {
-      "id": "industry-63",
+      "id": "industry-34",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -1876,99 +1011,7 @@
       ]
     },
     {
-      "id": "industry-64",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "ホテルREIT 8月実績 第二弾（星野・霞ヶ関）",
-      "body": "・星野リゾート・リートは稼働81.4%、ADR 25,004円、RevPAR 20,355円（▼6.8%）。\n・要因は万博反動・中国の渡航自粛・熊本地震・台風。\n・OMO7大阪は周辺より相対的に健闘、グランドハイアット福岡は8月として過去最高。\n・霞ヶ関ホテルリート（11物件）は稼働84.3%（▲+2.7pt）、ADR 30,309円（ほぼ横ばい）、RevPAR 25,560円（▲+3.2%）で唯一の前年超え。\n・インヴィンシブルは9月の国内RevPARを▲+7.5%程度、関西除きで▲+18.0%程度と予想。",
-      "note": "前年比の数字だけでなく、前月からの実額とADRを維持できているかで見る。9〜10月は前年の万博需要が強かったため、関西と東京を分けて話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://haito-lab.com/hotel-reit-monthly-watch-261010/",
-          "label": "haito-lab.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-65",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "英国：ULTRAs 2026で日本が2年連続受賞",
-      "body": "・JNTOが10/9発表。\n・英国のラグジュアリー旅行メディア『Ultratravel』主催のアワードで、日本が「Favourite Country for a Holiday」を2年連続受賞（10/1にロンドン塔で授賞式）。\n・読者と、会員約3,800万人のGHA DISCOVERY会員の投票による。",
-      "note": "米国の読者投票1位（前回掲載）に続き、英国の富裕層でも評価が高い。欧米の高単価客向けにスイートや長期滞在プランを打ち出す材料。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/info/20261009_2.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-66",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "国慶節（10/1〜7）の結果",
-      "body": "・中国政府発表で連休中の移動は延べ21億4400万人、国内旅行は延べ8億2600万人・支出7383億8000万元でいずれも前年超え。\n・途牛では人気先はインドネシア・トルコ・韓国などで日本はトップ10圏外。\n・トリップドットコム・グループでは平均旅行日数が9日超、海外ホテルの7泊以上予約が前年同期比123%増。",
-      "note": "中国人の長期滞在需要は伸びているが日本以外に流れている。中国の回復を前提にせず、秋冬は韓国・台湾・欧米の個人客で埋める話をする。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://news.yahoo.co.jp/expert/articles/4db6ed7d6ef11fe7bd84495ad62efaf32c327cb8",
-          "label": "news.yahoo.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-67",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "博報堂 5カ国インバウンド調査2026",
-      "body": "・10/9発表（中国・韓国・米国・タイ・インド）。\n・旅行中の生成AI利用は全5カ国で9割超（韓国92.7%、米国94.2%、中国95.6%）。\n・AIで予定外の場所・店・体験を追加した人が31.3%。\n・3回以上の訪日は韓国74.3%、タイ65.5%、米国64.6%、中国62.6%。\n・地方旅行の不安は言語29.3%、決済23.2%、移動手段20.9%。",
-      "note": "AIに拾われる多言語の施設情報や口コミの整備が集客に直結する。リピーター中心の市場で、定番以外の体験を宿泊とセットで提案できるか。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.zaikei.co.jp/releases/3656037/",
-          "label": "zaikei.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-68",
+      "id": "industry-35",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -1991,7 +1034,7 @@
       ]
     },
     {
-      "id": "industry-69",
+      "id": "industry-36",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -2014,30 +1057,7 @@
       ]
     },
     {
-      "id": "ota-70",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🧾 宿泊税",
-      "categoryLabel": "宿泊税",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "箱根町が宿泊税条例を可決（1人1泊350円・2028年4月施行目標）",
-      "body": "・箱根町が10/2に宿泊税条例を全会一致で可決。\n・1人1泊一律350円、2028年4月施行が目標。\n・対象は約800施設、年約14億円を見込む。",
-      "note": "箱根の取引施設には、2028年4月以降の税込/税別表示とOTA側の宿泊税設定の準備を早めに確認。定額のため低単価プランほど実質負担率が高くなる点も打合せ材料に。総務省同意前なので施行日は未確定",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.yomiuri.co.jp/local/kanagawa/news/20261003-GYTNT00001/",
-          "label": "yomiuri.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-71",
+      "id": "ota-37",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -2060,7 +1080,7 @@
       ]
     },
     {
-      "id": "ota-72",
+      "id": "ota-38",
       "date": "2026-10-12",
       "dateLabel": "10/12（月）",
       "weekday": "月",
@@ -2083,30 +1103,7 @@
       ]
     },
     {
-      "id": "ota-73",
-      "date": "2026-10-12",
-      "dateLabel": "10/12（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🤝 直販・テック",
-      "categoryLabel": "直販・テック",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "tripla、宿泊施設向けチャットボット「tripla Bot」をLLMの対話型にアップグレード",
-      "body": "・triplaがチャットボット「tripla Bot」をLLMの対話型に更新。\n・既存FAQと自館データから回答を作る。\n・100以上の言語に対応、施設は追加設定なしで移行可能。",
-      "note": "公式サイトの多言語問い合わせ対応を強化する直販側の動き。tripla導入施設では、OTAと自社サイトの案内内容に食い違いが出ないようFAQを整備しておくと良い。料金の変更有無は記事では未確認",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.kankokeizai.com/2610111500kks/",
-          "label": "kankokeizai.com"
-        }
-      ]
-    },
-    {
-      "id": "ota-74",
+      "id": "ota-39",
       "date": "2026-10-11",
       "dateLabel": "10/11（日）",
       "weekday": "日",
@@ -2129,138 +1126,7 @@
       ]
     },
     {
-      "id": "ota-75",
-      "date": "2026-10-11",
-      "dateLabel": "10/11（日）",
-      "weekday": "日",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🧾 宿泊税",
-      "categoryLabel": "宿泊税",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "大分県が宿泊税を2027年6月1日開始と発表（当初1月予定から5か月延期）",
-      "body": "・大分県の宿泊税は2027年6月1日開始（当初1月から5か月延期）。\n・1人1泊100円〜2,000円（素泊まり料金に応じた段階制）、修学旅行は免除・民泊も対象。\n・年約18億円を見込む。",
-      "note": "大分の取引施設には2027年6月以降の料金表示（税込/税別）とOTA側の宿泊税設定の準備を確認。ふっこう応援割期間中の新税開始は回避された形",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.nikkei.com/article/DGXZQOJC0648E0W6A001C2000000/",
-          "label": "nikkei.com"
-        },
-        {
-          "url": "https://www.pref.oita.jp/site/shukuhakuzei/system.html",
-          "label": "pref.oita.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-76",
-      "date": "2026-10-11",
-      "dateLabel": "10/11（日）",
-      "weekday": "日",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 国内政策",
-      "categoryLabel": "国内政策",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割：佐賀は宿泊施設直販が10/13開始（観光庁10/9更新）",
-      "body": "・佐賀のふっこう応援割は宿泊施設の直販が10/13開始。\n・予約サイト9/24・旅行会社10/2に続く、対象は10/1〜12/25。\n・割引は50%（熊本・鹿児島は60%）。",
-      "note": "10/10掲載の鹿児島10/14・大分直販10/16に続く直販枠の追加。佐賀の施設はOTA枠と直販枠の配分、在庫の出し方を確認",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/page13_00002.html",
-          "label": "mlit.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-77",
-      "date": "2026-10-11",
-      "dateLabel": "10/11（日）",
-      "weekday": "日",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "📊 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "博報堂調査：訪日客の旅行中の生成AI利用は5か国すべて9割超、31.3%が予定外の訪問先を追加",
-      "body": "・訪日客の生成AI利用は調査した5か国すべてで9割超（博報堂）。\n・31.3%が予定外の訪問先を追加。\n・中国は豆包（Doubao）が66.0%で最多。",
-      "note": "OTAではなくAI経由の発見が増える前提で、施設情報（多言語・決済手段・アクセス）の整備を提案材料に。本調査に宿泊予約チャネル別の設問は確認できず",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.hakuhodo.co.jp/news/newsrelease/267410/",
-          "label": "hakuhodo.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-78",
-      "date": "2026-10-10",
-      "dateLabel": "10/10（土）",
-      "weekday": "土",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🔒 システム・セキュリティ",
-      "categoryLabel": "システム・セキュリティ",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "宿泊予約管理「手間いらず」に不正アクセス、最大約445万人分の予約情報が流出の可能性",
-      "body": "・「手間いらず」に不正アクセス、最大約445万人分の予約情報が流出の可能性。\n・氏名・電話・メール・宿泊施設名・日程・料金が対象。\n・クレジットカード情報は保有していない。",
-      "note": "サイトコントローラー経由でOTA予約データが流れる仕組みなので、打合せ先ホテルが手間いらず利用なら影響有無の確認が先。本物の予約内容を使ったフィッシング（OTA名や施設名を騙る決済要求）が起きやすい状況。ゲストへの注意喚起文面と、フロントでの問い合わせ対応を準備しておく。OTA側の責任範囲ではなく、施設・システム会社側の事案である点は区別して話す。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://japanir.jp/company/company-2477/ir/2477-20261009-01_wp_disclosure_update/",
-          "label": "japanir.jp"
-        },
-        {
-          "url": "https://www.asahi.com/articles/ASVB93DN9VB9ULFA01YM.html",
-          "label": "asahi.com"
-        }
-      ]
-    },
-    {
-      "id": "ota-79",
-      "date": "2026-10-10",
-      "dateLabel": "10/10（土）",
-      "weekday": "土",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "鹿児島ふっこう応援割、10/14開始が確定（補正予算可決）。大分は旅行会社10/9〜・宿直販10/16〜",
-      "body": "・鹿児島の補正予算が可決、ふっこう応援割は10/14開始が確定（最大60%割引）。\n・直販の対象期間がOTAより1か月長い。\n・12/26〜1/3宿泊は対象外。\n・大分は旅行会社10/9〜、宿の直販は10/16〜。",
-      "note": "鹿児島は直販の対象期間がOTAより1か月長い。直販枠の在庫・プラン準備と、OTA枠の配分（どの事業者にどれだけ予算が付くか）を確認する材料。年末年始は対象外なので、そこは通常単価で組める。大分は直販開始前の10/9〜15の旅行会社販売がどう埋まるかを見る。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://news.yahoo.co.jp/articles/52e87968477dcc0d6f6326c819ccc8f57df80d17",
-          "label": "news.yahoo.co.jp"
-        },
-        {
-          "url": "https://newsdig.tbs.co.jp/articles/-/3001138",
-          "label": "newsdig.tbs.co.jp"
-        },
-        {
-          "url": "https://travelplanet.jp/kyushu-ouenwari-oita",
-          "label": "travelplanet.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-80",
+      "id": "ota-40",
       "date": "2026-10-10",
       "dateLabel": "10/10（土）",
       "weekday": "土",
@@ -2287,7 +1153,7 @@
       ]
     },
     {
-      "id": "ota-81",
+      "id": "ota-41",
       "date": "2026-10-10",
       "dateLabel": "10/10（土）",
       "weekday": "土",
@@ -2314,7 +1180,7 @@
       ]
     },
     {
-      "id": "ota-82",
+      "id": "ota-42",
       "date": "2026-10-09",
       "dateLabel": "10/9（金）",
       "weekday": "金",
@@ -2337,7 +1203,7 @@
       ]
     },
     {
-      "id": "ota-83",
+      "id": "ota-43",
       "date": "2026-10-09",
       "dateLabel": "10/9（金）",
       "weekday": "金",
@@ -2360,34 +1226,7 @@
       ]
     },
     {
-      "id": "ota-84",
-      "date": "2026-10-09",
-      "dateLabel": "10/9（金）",
-      "weekday": "金",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割続報：OTA枠は多く終了、直販・旅行会社へシフト",
-      "body": "・九州ふっこう応援割はOTA枠の多くが受付終了。\n・福岡は宿の直接割引を10/9 12時に追加受付。\n・鹿児島は10/14予約開始予定。",
-      "note": "打合せでは『OTAで受付終了＝需要終了』ではない点を共有。直販枠（福岡本日12時）と旅行会社ツアー（読売・クラブツーリズム等）が残る。ラベル表示と実割引のズレ、利用証明書の運用を再確認。鹿児島はまだ本格開始前。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://kyushu-love.com/kyushu-fukko-ouenwari-2026/",
-          "label": "kyushu-love.com"
-        },
-        {
-          "url": "https://www.pref.fukuoka.lg.jp/press-release/fukuoka-fukkou-wari-2-1001.html",
-          "label": "pref.fukuoka.lg.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-85",
+      "id": "ota-44",
       "date": "2026-10-09",
       "dateLabel": "10/9（金）",
       "weekday": "金",
@@ -2410,30 +1249,7 @@
       ]
     },
     {
-      "id": "industry-86",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "宿泊旅行統計 8月",
-      "body": "・8月の延べ宿泊者数は6,268万人泊（▼6.7%）、外国人は▼10.3%。\n・客室稼働率は64.4%（▼1.3pt）。\n・東京都は75.3%で全国最高。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/content/002024576.pdf",
-          "label": "mlit.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-87",
+      "id": "industry-45",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2456,30 +1272,7 @@
       ]
     },
     {
-      "id": "industry-88",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "国慶節・米国評価",
-      "body": "・国慶節の中国人海外旅行先は韓国が首位、日本は5位。\n・米コンデナスト・トラベラー読者投票で日本が4年連続「世界で最も魅力的な国」1位。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000177.000032118.html",
-          "label": "prtimes.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-89",
+      "id": "industry-46",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2502,126 +1295,7 @@
       ]
     },
     {
-      "id": "industry-90",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割 予約開始（日本旅行）",
-      "body": "・日本旅行が10/6 14時から熊本県分のWeb予約を開始。\n・熊本・鹿児島は最大60%、他5県は最大50%割引。\n・適用は10/7チェックイン〜12/26チェックアウト分。\n・1人あたり上限は宿泊単体・交通付き1泊2万円、交通付き2泊3万円。\n・他県分・店舗販売は未定。",
-      "note": "九州は割引で国内需要が戻る一方、東京は割引の対象外。九州周遊の前後泊や乗り継ぎ需要を東京のホテルで拾えるかを話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://travel.watch.impress.co.jp/docs/news/2146038.html",
-          "label": "travel.watch.impress.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-91",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "インバウンド安全・安心対策補助 公募延長",
-      "body": "・観光庁「地方誘客促進に向けたインバウンド安全・安心対策推進事業」の公募期限を2027年1月29日まで延長。\n・観光危機管理計画の策定や避難所機能・多言語対応の強化に最大500万円（補助率1/2）。\n・予算がなくなり次第終了。",
-      "note": "同上",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://j-net21.smrj.go.jp/news/bt5puv000000xcvi.html",
-          "label": "j-net21.smrj.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-92",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "2027年「持続可能で強靱な観光国際年」",
-      "body": "・国連の2027年国際年に向け、観光庁が行動計画を策定するナショナル・コミッティーを立ち上げ。\n・ツーリズムEXPO（9/25）でキックオフセミナーを開催。",
-      "note": "同上",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jwing.net/news/113811",
-          "label": "jwing.net"
-        }
-      ]
-    },
-    {
-      "id": "industry-93",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "宿泊旅行統計 2026年8月（第1次速報）",
-      "body": "・延べ宿泊者数6,268万人泊（▼6.7%）、うち日本人5,004万人泊（▼5.8%）、外国人1,264万人泊（▼10.3%）。\n・客室稼働率64.4%（▼1.3pt）。\n・シティ72.3%（▼3.0pt）、ビジネス75.7%（▼0.7pt）、リゾート66.9%（▼0.6pt）、旅館47.4%（▲+1.7pt）。\n・東京都は75.3%で全国最高。\n・7月は第2次速報で延べ5,397万人泊（▼4.7%）、稼働61.0%に改定。",
-      "note": "全国はシティホテルの落ち込みが大きいが、東京は75%台で全国首位。外国人泊数の減少（中国要因）を東京の稼働でどこまで埋めているか、9月以降の見通しとあわせて確認する。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/content/002024576.pdf",
-          "label": "mlit.go.jp"
-        },
-        {
-          "url": "https://kankobusiness.com/articles/accommodation-statistics-2026-08/",
-          "label": "kankobusiness.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-94",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "KKR、フォーポイントフレックス16ホテルを売却",
-      "body": "・KKRが運用するファンドが、フォーポイントフレックス by シェラトン国内16ホテル（東京圏・大阪・京都・福岡など11都市）を大手グローバル投資家へ売却（9/25発表、買い手・価格は非公表）。\n・2024年にユニゾから取得し全面改装・リブランド済み。\n・売却後もKJRMグループがAM、K+ホスピタリティマネジメントが運営を継続し、物件の段階的追加も検討。",
-      "note": "改装・リブランドで価値を上げた中価格帯ホテルが海外投資家に回る流れ。オーナー交代後の販売方針やチャネル戦略の変化を確認したい。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.kjrm.co.jp/files/co/news/20260925_KJRMHD_NewsRelease_JP.pdf",
-          "label": "kjrm.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-95",
+      "id": "industry-47",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2652,57 +1326,7 @@
       ]
     },
     {
-      "id": "industry-96",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "中国・国慶節（10/1〜7）",
-      "body": "・インタセクト調査（中国在住者）で国慶節の海外旅行先は韓国20.4%、欧州17.7%、東南アジア17.2%、豪州15.2%、日本14.1%で日本は5位。\n・訪日予定者の62.8%がリピーター。\n・1〜8月の訪日中国人は前年比▼56.7%。\n・韓国は国慶節期間に中国人13.1万〜14.3万人の訪韓を見込む。",
-      "note": "国慶節でも中国客の急回復はなく、来ている層はリピーター・個人旅行中心。団体前提の販売から、欧米・韓台など他市場と体験型の個人客へ軸足を移す話につなげる。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://prtimes.jp/main/html/rd/p/000000177.000032118.html",
-          "label": "prtimes.jp"
-        },
-        {
-          "url": "https://news.yahoo.co.jp/articles/858506f40dfdffb0d56e892d19d3ec83eeafe469",
-          "label": "news.yahoo.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-97",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "米国：コンデナスト・トラベラー読者投票",
-      "body": "・JNTOが10/7発表。\n・米国版「世界で最も魅力的な国」で日本が95.52点で4年連続1位（2位イタリア、3位アイルランド）。\n・英国版では日本が2位。\n・2026年は「日米観光交流促進キャンペーン2026」を展開中。",
-      "note": "米国は8月に単月過去最高。高評価が続く米国市場向けに、長期滞在・高単価プランをどう打ち出すか。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124626",
-          "label": "travelvision.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-98",
+      "id": "industry-48",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2725,7 +1349,7 @@
       ]
     },
     {
-      "id": "industry-99",
+      "id": "industry-49",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2748,7 +1372,7 @@
       ]
     },
     {
-      "id": "ota-100",
+      "id": "ota-50",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2775,7 +1399,7 @@
       ]
     },
     {
-      "id": "ota-101",
+      "id": "ota-51",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2798,38 +1422,7 @@
       ]
     },
     {
-      "id": "ota-102",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割の続報：KNT福岡・HIS熊本・一休長崎が開始",
-      "body": "・KNTが福岡県分を10/7 10時に開始。\n・HISは熊本県のWeb予約を10/7開始（最大60%）。\n・一休は長崎県分を10/8 12時開始（上限2万円）。",
-      "note": "県ごと・チャネルごとに枠の状況が大きく違う。一休は予算到達後も『宿泊割』ラベルが残る可能性があり、予約時に割引が付かない問い合わせに注意。一休の会員特典上乗せで、同じプランでもチャネル間に実質価格差が出る。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://news.mixi.jp/view_news.pl?from=recent_list&id=8978709&media_id=157",
-          "label": "news.mixi.jp"
-        },
-        {
-          "url": "https://travel.watch.impress.co.jp/docs/news/2146102.html",
-          "label": "travel.watch.impress.co.jp"
-        },
-        {
-          "url": "https://news.yahoo.co.jp/articles/c555a8906cca9e80a04e8a38a2a3730909df4ae2",
-          "label": "news.yahoo.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-103",
+      "id": "ota-52",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2860,34 +1453,7 @@
       ]
     },
     {
-      "id": "ota-104",
-      "date": "2026-10-08",
-      "dateLabel": "10/8（木）",
-      "weekday": "木",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🌐 旅行会社",
-      "categoryLabel": "旅行会社",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "HIS、タイ現地法人に不正アクセス：最大627人のパスポート情報流出の恐れ",
-      "body": "・HISタイ法人に不正アクセス、最大627人の旅券情報が流出の恐れ。\n・アレルギー情報も対象。\n・電話・住所・メール・カード情報は含まれない。",
-      "note": "宿側も外国人宿泊者の旅券コピー保管、送客元とのデータのやり取り（メール添付・共有フォルダ）を見直すきっかけになる。手配会社・ランドオペレーター経由の名簿の扱いを確認。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124628",
-          "label": "travelvision.jp"
-        },
-        {
-          "url": "https://www.his.co.jp/assets/20261007.pdf",
-          "label": "his.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-105",
+      "id": "ota-53",
       "date": "2026-10-08",
       "dateLabel": "10/8（木）",
       "weekday": "木",
@@ -2910,34 +1476,7 @@
       ]
     },
     {
-      "id": "ota-106",
-      "date": "2026-10-07",
-      "dateLabel": "10/7（水）",
-      "weekday": "水",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割・福岡県：旅行会社でも販売開始",
-      "body": "・福岡県のふっこう応援割が旅行会社でも販売開始。\n・楽天・一休10/1、JTB 10/7、じゃらん10/8、KNTは延期。\n・宿泊は12/15まで（一休報道は12/25で食い違い）。",
-      "note": "チャネルごとに在庫と開始日が違う。利用証明書の運用を確認。楽天の枠終了は要確認",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.jtb.co.jp/kokunai/kyushu-ouen/",
-          "label": "jtb.co.jp"
-        },
-        {
-          "url": "https://travel.watch.impress.co.jp/docs/news/2146161.html",
-          "label": "travel.watch.impress.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-107",
+      "id": "ota-54",
       "date": "2026-10-05",
       "dateLabel": "10/5（月）",
       "weekday": "月",
@@ -2960,7 +1499,7 @@
       ]
     },
     {
-      "id": "ota-108",
+      "id": "ota-55",
       "date": "2026-10-04",
       "dateLabel": "10/4（日）",
       "weekday": "日",
@@ -2983,7 +1522,7 @@
       ]
     },
     {
-      "id": "ota-109",
+      "id": "ota-56",
       "date": "2026-10-02",
       "dateLabel": "10/2（金）",
       "weekday": "金",
@@ -3006,7 +1545,7 @@
       ]
     },
     {
-      "id": "ota-110",
+      "id": "ota-57",
       "date": "2026-10-02",
       "dateLabel": "10/2（金）",
       "weekday": "金",
@@ -3029,30 +1568,7 @@
       ]
     },
     {
-      "id": "ota-111",
-      "date": "2026-10-02",
-      "dateLabel": "10/2（金）",
-      "weekday": "金",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "📊 需要・KPI",
-      "categoryLabel": "需要・KPI",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "Klook×鹿児島、訪日客に新幹線片道分を助成",
-      "body": "・Klookと鹿児島が訪日客に新幹線片道分を助成（最大11,420円）。\n・8か国・地域、福岡空港経由で県内ホテル1泊以上が条件。\n・2027/2/28まで（9/18開始）。",
-      "note": "Klook掲載が条件。九州の施設は検討の余地",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.kankokeizai.com/2610020830kks/",
-          "label": "kankokeizai.com"
-        }
-      ]
-    },
-    {
-      "id": "ota-112",
+      "id": "ota-58",
       "date": "2026-10-01",
       "dateLabel": "10/1（木）",
       "weekday": "木",
@@ -3079,7 +1595,7 @@
       ]
     },
     {
-      "id": "ota-113",
+      "id": "ota-59",
       "date": "2026-10-01",
       "dateLabel": "10/1（木）",
       "weekday": "木",
@@ -3102,34 +1618,7 @@
       ]
     },
     {
-      "id": "ota-114",
-      "date": "2026-10-01",
-      "dateLabel": "10/1（木）",
-      "weekday": "木",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 政策・支援",
-      "categoryLabel": "政策・支援",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "盛岡市・那須町で宿泊税開始",
-      "body": "・盛岡市・那須町で10/1から宿泊税開始。\n・盛岡は一律200円、那須は100〜3,000円の6段階。\n・12歳未満・修学旅行は免除（那須）。",
-      "note": "OTAの税表示と領収書の表記を確認",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.iwate-np.co.jp/article/2026/10/1/197337",
-          "label": "iwate-np.co.jp"
-        },
-        {
-          "url": "https://hotelbank.jp/industry-trends/nasu-morioka-lodging-tax-2026-10-tier-vs-flat/",
-          "label": "hotelbank.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-115",
+      "id": "ota-60",
       "date": "2026-10-01",
       "dateLabel": "10/1（木）",
       "weekday": "木",
@@ -3152,7 +1641,7 @@
       ]
     },
     {
-      "id": "ota-116",
+      "id": "ota-61",
       "date": "2026-10-01",
       "dateLabel": "10/1（木）",
       "weekday": "木",
@@ -3175,7 +1664,7 @@
       ]
     },
     {
-      "id": "ota-117",
+      "id": "ota-62",
       "date": "2026-10-01",
       "dateLabel": "10/1（木）",
       "weekday": "木",
@@ -3198,53 +1687,7 @@
       ]
     },
     {
-      "id": "industry-118",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "JATA受入調査",
-      "body": "・観光事業者のインバウンド受入は減速傾向。\n・宿泊事業者の予約チャネルは海外OTAが71%で最多。\n・課題の首位は人手不足。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvoice.jp/20260925-160532",
-          "label": "travelvoice.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-119",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "九州応援割・アジア大会",
-      "body": "・10/1宿泊分から九州ふっこう応援割が開始。\n・愛知のアジア競技大会を機に地方周遊を促す方針。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://honichi.com/news/2026/09/29/chokankaiken202609/",
-          "label": "honichi.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-120",
+      "id": "industry-63",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3267,7 +1710,7 @@
       ]
     },
     {
-      "id": "industry-121",
+      "id": "industry-64",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3290,53 +1733,7 @@
       ]
     },
     {
-      "id": "industry-122",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "JATA第5回インバウンド意識調査",
-      "body": "・1096件回答。\n・2025年の受入は「前年並み」が最多37%、「110%以上」は前回46%→33%で減速。\n・宿泊事業者の予約チャネルは海外OTA71%、海外旅行会社64%。\n・課題首位は人手不足37%。\n・強化したい市場は欧州・北米・東南アジア。",
-      "note": "海外OTA比率の高さを踏まえ、直販・国内OTA・旅行会社との役割分担と、欧米・東南アジア向けの客室・サービス設計をどう組むか。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvoice.jp/20260925-160532",
-          "label": "travelvoice.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-123",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "観光庁長官会見（九州応援割・アジア大会・JESTA）",
-      "body": "・熊本地震後のキャンセルが熊本で前年比5倍。\n・10/1宿泊分から九州ふっこう応援割を実施。\n・9/19〜愛知でアジア競技大会（アジアパラは10/18〜24）。\n・JESTA導入に伴う免税確認事務の見直しを2027年度税制改正要望。",
-      "note": "九州は国内需要の回復キャンペーン、中部は大会来訪者の周遊。東京のホテルは「地方発着・大会前後の滞在」需要を拾えるかが論点。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://honichi.com/news/2026/09/29/chokankaiken202609/",
-          "label": "honichi.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-124",
+      "id": "industry-65",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3359,30 +1756,7 @@
       ]
     },
     {
-      "id": "industry-125",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "8月訪日の「中国除く」実勢",
-      "body": "・JNTO 8月推計は総数▼9.6%だが、中国を除くと前年同月比▲+11.3%、1〜8月累計でも▲+14.1%（グローバル・デイリー試算）。\n・イタリア・スペインは単月過去最高。\n・1〜8月累計首位は韓国742万人、中国は3位に後退。",
-      "note": "総数の前年割れだけで悲観せず、「中国以外は伸び続けている」前提で国籍ミックスと単価交渉をする。秋は韓台連休と中国国慶節の影響が分かれ目。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.gldaily.com/news/columns/columns52114/",
-          "label": "gldaily.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-126",
+      "id": "industry-66",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3405,7 +1779,7 @@
       ]
     },
     {
-      "id": "ota-127",
+      "id": "ota-67",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3428,30 +1802,7 @@
       ]
     },
     {
-      "id": "ota-128",
-      "date": "2026-09-30",
-      "dateLabel": "9/30（水）",
-      "weekday": "水",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 国内・JTB",
-      "categoryLabel": "国内・JTB",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "長崎の九州ふっこう応援割、9/30から旅行会社・他OTA販売",
-      "body": "・長崎のふっこう応援割は9/30から旅行会社・他OTAが販売。\n・じゃらん・楽天の先行枠は予算上限で停止済み。\n・割引率50%、宿泊は概ね10/1〜12/25。",
-      "note": "長崎物件はOTA先行終了後も直販・旅行会社ルートが動く。チェックイン時の利用証明書署名が必要な場合あり。クーポン在庫・予算上限で早期終了あり得る。",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.pref.nagasaki.jp/doc/52397.html",
-          "label": "pref.nagasaki.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-129",
+      "id": "ota-68",
       "date": "2026-09-30",
       "dateLabel": "9/30（水）",
       "weekday": "水",
@@ -3474,71 +1825,7 @@
       ]
     },
     {
-      "id": "industry-130",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "旅行業者7月取扱",
-      "body": "・主要旅行業者の7月取扱は総額▲+1.5%。\n・海外・訪日は伸び、国内とパッケージ人数は弱め。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124415",
-          "label": "travelvision.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-131",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "ホテルREIT・開業",
-      "body": "・ホテルREIT 8月はADR/RevPARが前年割れ（大阪・沖縄要因）、9月以降は回復見込み。\n・IHG Noted Collectionが日本初進出。\n・東急ステイ新宿がリニューアル開業。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": []
-    },
-    {
-      "id": "industry-132",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "訪日8月",
-      "body": "・8月の訪日は約310万人（前年▼9.6%）。\n・韓国・台湾は堅調、中国は大きく減少。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20260916_montly.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-133",
+      "id": "industry-69",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3556,30 +1843,7 @@
       "sources": []
     },
     {
-      "id": "industry-134",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "観光庁 7月取扱速報",
-      "body": "・主要43社・総取扱額3,095億円（▲+1.5%）。\n・海外1,208億円（▲+6.2%）、外国人旅行158億円（▲+12.1%）、国内1,729億円（▼2.4%）。\n・募集型企画は額▼3.3%・人数▼11.4%。",
-      "note": "国内パッケージは人数減でも、訪日・海外と地方分散（北陸など）で単価・チャネルの話がしやすい。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.travelvision.jp/news/detail/news-124415",
-          "label": "travelvision.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-135",
+      "id": "industry-70",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3602,7 +1866,7 @@
       ]
     },
     {
-      "id": "industry-136",
+      "id": "industry-71",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3625,53 +1889,7 @@
       ]
     },
     {
-      "id": "industry-137",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "JHR 8月実績",
-      "body": "・稼働84.1%（▼0.1pt）、ADR 23,337円（▼8.8%）、RevPAR 19,616円（▼8.9%）。\n・大阪軟調と台風による沖縄影響が主因。\n・9月以降は前年同月超え見込み。",
-      "note": "8月指標は前年割れでも9月回復見込み。競合は室数減×客室大型化やプレミアム新ブランド進出で単価・客層の再設計が進む。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jhrth.co.jp/file/news-ca206863f5662b8982dd9bd6d381e53bfc617709.pdf",
-          "label": "jhrth.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-138",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "スターアジア 8月運営",
-      "body": "・札幌・仙台・名古屋・広島・福岡が国内／韓国需要で予算上振れ。\n・東京など一部は東南アジア需要落ち着きで下振れ。\n・17ホテル平均稼働89.2%、ADR 12,412円、RevPAR 11,068円。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://japanir.jp/wp-content/uploads/2026/09/3468-20260925-01.pdf",
-          "label": "japanir.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-139",
+      "id": "industry-72",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3694,7 +1912,7 @@
       ]
     },
     {
-      "id": "industry-140",
+      "id": "industry-73",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3717,53 +1935,7 @@
       ]
     },
     {
-      "id": "industry-141",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "JNTO 8月推計",
-      "body": "・訪日3,098,900人（▼9.6%）。\n・1–8月累計2,762.63万人（▼2.7%）。\n・韓国85.05万人（▲+28.7%）、台湾66.60万人（▲+7.3%）、中国41.80万人（▼59.0%）、香港24.73万人（▲+9.4%）、米国19.74万人（▲+1.5%・8月過去最高）。",
-      "note": "韓国・台湾・欧米が下支え、中国は大幅減。国籍ミックスと宿泊単価の説明材料。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20260916_montly.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-142",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "訪日外国人消費動向（4–6月期）",
-      "body": "・旅行消費額2兆5,096億円（▲+0.2%）、1人当たり24.4万円（▲+3.3%）。\n・消費額は米国が首位。\n・費目最大は宿泊37.0%。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.mlit.go.jp/kankocho/news02_00094.html",
-          "label": "mlit.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-143",
+      "id": "industry-74",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3786,7 +1958,7 @@
       ]
     },
     {
-      "id": "industry-144",
+      "id": "industry-75",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3809,7 +1981,7 @@
       ]
     },
     {
-      "id": "industry-145",
+      "id": "industry-76",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3832,7 +2004,7 @@
       ]
     },
     {
-      "id": "ota-146",
+      "id": "ota-77",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3855,7 +2027,7 @@
       ]
     },
     {
-      "id": "ota-147",
+      "id": "ota-78",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3878,7 +2050,7 @@
       ]
     },
     {
-      "id": "ota-148",
+      "id": "ota-79",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3901,7 +2073,7 @@
       ]
     },
     {
-      "id": "ota-149",
+      "id": "ota-80",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3924,7 +2096,7 @@
       ]
     },
     {
-      "id": "ota-150",
+      "id": "ota-81",
       "date": "2026-09-29",
       "dateLabel": "9/29（火）",
       "weekday": "火",
@@ -3947,99 +2119,7 @@
       ]
     },
     {
-      "id": "ota-151",
-      "date": "2026-09-29",
-      "dateLabel": "9/29（火）",
-      "weekday": "火",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 国内",
-      "categoryLabel": "国内",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割をじゃらん等OTAが販売開始",
-      "body": "・九州ふっこう応援割をじゃらん等OTAが販売開始。\n・佐賀9/24、宮崎・大分9/25。\n・長崎・熊本は予算上限で停止との案内。",
-      "note": "クーポン負担の所在は施設契約次第",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://travel.watch.impress.co.jp/docs/news/2142725.html",
-          "label": "travel.watch.impress.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-152",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "国交相・戦略産業",
-      "body": "・井林国交相が観光を戦略産業と位置づけ。\n・2030年に訪日6000万人・消費15兆円が目標。\n・地方誘客と高消費市場を重視。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://tms-media.jp/posts/97212/",
-          "label": "tms-media.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-153",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": true,
-      "headline": "ホテルREIT 8月",
-      "body": "・ホテルREIT主要5社すべてRevPAR前年割れ。\n・主因は関西の万博反動。\n・9月以降は回復の見通し。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://haito-lab.com/https-haito-lab-com-hotel-reit-monthly-watch-260926/",
-          "label": "haito-lab.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-154",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📌 要点",
-      "categoryLabel": "要点",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": true,
-      "headline": "訪日8月",
-      "body": "・8月の訪日は約310万人（前年▼9.6%）。\n・中国は約6割減。\n・韓国・台湾など14市場は8月として過去最高。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20260916_montly.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-155",
+      "id": "industry-82",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4057,7 +2137,7 @@
       "sources": []
     },
     {
-      "id": "industry-156",
+      "id": "industry-83",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4080,30 +2160,7 @@
       ]
     },
     {
-      "id": "industry-157",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "📰 旅行業界",
-      "categoryLabel": "旅行業界",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "井林国交相就任会見（9/24）",
-      "body": "・観光を国の戦略産業と明言。\n・地方誘客・オーバーツーリズム対策・高消費市場の取り込み。\n・中国減のなかでも国・地域別の消費・滞在を見て戦略誘客。",
-      "note": "「OTA経由か直販か」に加え、AIエージェント経由の予約が増えたとき、ホテル側のブランド露出とレートパリティをどう守るか。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://tms-media.jp/posts/97212/",
-          "label": "tms-media.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-158",
+      "id": "industry-84",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4126,30 +2183,7 @@
       ]
     },
     {
-      "id": "industry-159",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🏨 ホテル",
-      "categoryLabel": "ホテル",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "ホテルREIT 2026年8月実績",
-      "body": "・JHR・INV・いちご・スターアジア・みらいの5社すべてRevPAR前年割れ（JHR▼8.9%、INV▼3.8%）。\n・INV関西は▼41.5%と万博反動が主因。\n・関西除くとほぼ横ばい。\n・JHRは9月以降前年超え、INVは9月国内RevPAR＋7.5%程度予想。",
-      "note": "前年比だけ見ると関西は厳しいが、万博前の2024年比ではまだ上回る物件もある。「関西反動 vs 首都圏・地方の堅調」を分けて話す。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://haito-lab.com/https-haito-lab-com-hotel-reit-monthly-watch-260926/",
-          "label": "haito-lab.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-160",
+      "id": "industry-85",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4172,53 +2206,7 @@
       ]
     },
     {
-      "id": "industry-161",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "JNTO 8月推計",
-      "body": "・訪日外客数309万8,900人（前年同月比▼9.6%）。\n・1〜8月累計2,762万6,300人（▼2.7%）。",
-      "note": "総数は前年割れでも韓台欧米は強い。国籍ミックスと高消費客の取り込みが秋の単価交渉の材料。",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20260916_montly.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "industry-162",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "industry",
-      "feedLabel": "旅行業界",
-      "category": "🌏 インバウンド",
-      "categoryLabel": "インバウンド",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "国・地域別",
-      "body": "・韓国85万500人（▲+28.7%）、台湾66万6,000人（▲+7.3%）、米国19万7,400人（▲+1.5%）。\n・中国41万8,000人（▼59.0%）。\n・韓・台・香港・米・欧など14市場が8月として過去最高。",
-      "note": "",
-      "noteLabel": "話題の切り口",
-      "sources": [
-        {
-          "url": "https://www.nippon.com/ja/japan-data/h02895/",
-          "label": "nippon.com"
-        }
-      ]
-    },
-    {
-      "id": "industry-163",
+      "id": "industry-86",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4241,7 +2229,7 @@
       ]
     },
     {
-      "id": "industry-164",
+      "id": "industry-87",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4264,99 +2252,7 @@
       ]
     },
     {
-      "id": "ota-165",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "📊 需要",
-      "categoryLabel": "需要",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "訪日8月▼9.6%、中国▼59%、韓台・欧米堅調",
-      "body": "・8月の訪日は309.89万人（▼9.6%）。\n・中国は41.8万人（▼59%）。\n・韓国▲+28.7%、台湾▲+7.3%、14市場が8月として過去最高。",
-      "note": "中国一本足ではなく韓台・欧米豪・中東の露出バランス",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.jnto.go.jp/news/press/20260916_montly.html",
-          "label": "jnto.go.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-166",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "📊 ホテル業績",
-      "categoryLabel": "ホテル業績",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "JHR 8月RevPAR▼8.9%、9月以降前年超え見通し",
-      "body": "・JHRの8月は稼働84.1%。\n・ADR23,337円（▼8.8%）、RevPAR19,616円（▼8.9%）。\n・9月以降は前年超えの見通し。",
-      "note": "値下げ競争 vs 高単価市場寄せ。実効コストで判断",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.jhrth.co.jp/ja/portfolio/review.html",
-          "label": "jhrth.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-167",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "📊 地域",
-      "categoryLabel": "地域",
-      "theme": "other",
-      "themeLabel": "その他",
-      "highlight": false,
-      "headline": "Star Asia 8月 地方・イベント堅調／東京・SEA軟調",
-      "body": "・札幌・仙台・名古屋・広島はイベントで予算超え。\n・福岡は韓国需要が継続。\n・東京などは東南アジア需要が落ち着き予想割れ。",
-      "note": "都市一括ではなく市場別に販促を分ける",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www2.jpx.co.jp/disc/34680/140120260925539988.pdf",
-          "label": "www2.jpx.co.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-168",
-      "date": "2026-09-28",
-      "dateLabel": "9/28（月）",
-      "weekday": "月",
-      "feed": "ota",
-      "feedLabel": "海外OTA",
-      "category": "🏛️ 国内販促",
-      "categoryLabel": "国内販促",
-      "theme": "policy",
-      "themeLabel": "行政・インバウンド施策",
-      "highlight": false,
-      "headline": "九州ふっこう応援割：OTA枠早期上限、直販・旅行会社ルート本格化",
-      "body": "・大分はOTA 9/25〜、旅行会社10/9〜、直販10/16〜。\n・宮崎は9/28以降、施設・旅行会社が順次開始。\n・OTA枠の終了＝県全体の終了ではない。",
-      "note": "直販導線・旅行会社契約の案内状況を確認",
-      "noteLabel": "実務メモ",
-      "sources": [
-        {
-          "url": "https://www.pref.oita.jp/soshiki/14180/kyushu-oita.html",
-          "label": "pref.oita.jp"
-        }
-      ]
-    },
-    {
-      "id": "ota-169",
+      "id": "ota-88",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4379,7 +2275,7 @@
       ]
     },
     {
-      "id": "ota-170",
+      "id": "ota-89",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4402,7 +2298,7 @@
       ]
     },
     {
-      "id": "ota-171",
+      "id": "ota-90",
       "date": "2026-09-28",
       "dateLabel": "9/28（月）",
       "weekday": "月",
@@ -4425,7 +2321,7 @@
       ]
     },
     {
-      "id": "ota-172",
+      "id": "ota-91",
       "date": "2026-09-27",
       "dateLabel": "9/27（日）",
       "weekday": "日",
@@ -4448,7 +2344,7 @@
       ]
     },
     {
-      "id": "ota-173",
+      "id": "ota-92",
       "date": "2026-09-27",
       "dateLabel": "9/27（日）",
       "weekday": "日",
@@ -4471,7 +2367,7 @@
       ]
     },
     {
-      "id": "ota-174",
+      "id": "ota-93",
       "date": "2026-09-27",
       "dateLabel": "9/27（日）",
       "weekday": "日",
@@ -4494,7 +2390,7 @@
       ]
     },
     {
-      "id": "ota-175",
+      "id": "ota-94",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4517,7 +2413,7 @@
       ]
     },
     {
-      "id": "ota-176",
+      "id": "ota-95",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4540,7 +2436,7 @@
       ]
     },
     {
-      "id": "ota-177",
+      "id": "ota-96",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4563,7 +2459,7 @@
       ]
     },
     {
-      "id": "ota-178",
+      "id": "ota-97",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4586,7 +2482,7 @@
       ]
     },
     {
-      "id": "ota-179",
+      "id": "ota-98",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4609,7 +2505,7 @@
       ]
     },
     {
-      "id": "ota-180",
+      "id": "ota-99",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4632,7 +2528,7 @@
       ]
     },
     {
-      "id": "ota-181",
+      "id": "ota-100",
       "date": "2026-09-26",
       "dateLabel": "9/26（土）",
       "weekday": "土",
@@ -4655,7 +2551,7 @@
       ]
     },
     {
-      "id": "ota-182",
+      "id": "ota-101",
       "date": "2026-09-25",
       "dateLabel": "9/25（金）",
       "weekday": "金",
@@ -4682,7 +2578,7 @@
       ]
     },
     {
-      "id": "ota-183",
+      "id": "ota-102",
       "date": "2026-09-25",
       "dateLabel": "9/25（金）",
       "weekday": "金",
@@ -4705,7 +2601,7 @@
       ]
     },
     {
-      "id": "ota-184",
+      "id": "ota-103",
       "date": "2026-09-25",
       "dateLabel": "9/25（金）",
       "weekday": "金",
@@ -4728,7 +2624,7 @@
       ]
     },
     {
-      "id": "ota-185",
+      "id": "ota-104",
       "date": "2026-09-25",
       "dateLabel": "9/25（金）",
       "weekday": "金",
