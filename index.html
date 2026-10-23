@@ -4149,9 +4149,11 @@ scan();
   function safeUrl(u){try{const x=new URL(u,location.href);if(x.protocol==='http:'||x.protocol==='https:')return x.href}catch(e){}return ''}
   function fmtDate(iso,wd){const p=String(iso||'').split('-');if(p.length<3)return iso||'';return p[0]+'年'+Number(p[1])+'月'+Number(p[2])+'日'+(wd?'（'+wd+'）':'')}
   function words(){return query.normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean)}
+  function angleNote(it){return !!(it&&it.noteLabel==='話題の切り口')}
   function hit(it){
     const ws=words(); if(!ws.length)return true;
-    const blob=[it.headline,it.body,it.note,it.category,it.categoryLabel,it.theme,it.themeLabel,it.feedLabel,it.noteLabel].concat((it.sources||[]).flatMap(s=>[s.label,s.url])).join('\n').normalize('NFKC').toLowerCase();
+    const hide=angleNote(it);
+    const blob=[it.headline,it.body,hide?'':it.note,it.category,it.categoryLabel,it.theme,it.themeLabel,it.feedLabel,hide?'':it.noteLabel].concat((it.sources||[]).flatMap(s=>[s.label,s.url])).join('\n').normalize('NFKC').toLowerCase();
     return ws.every(w=>blob.includes(w));
   }
   function visibleGroups(){
@@ -4311,7 +4313,7 @@ scan();
   }
   function cardHtml(it){
     const feed=it.feed==='ota'?'海外OTAニュース':'旅行業界ニュース';
-    const note=it.note?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
+    const note=it.note&&!angleNote(it)?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
     return '<article class="nw-card'+(it.highlight?' yoten':'')+'"><div class="nw-kicker"><span class="nw-cat">'+esc(it.category||it.categoryLabel)+'</span><span class="nw-feed">'+feed+'</span></div><h2>'+colorize(it.headline)+'</h2>'+rich(it.body)+note+sourcesHtml(it)+'</article>';
   }
   function render(toTop){
