@@ -55,10 +55,10 @@ SHEETS = OrderedDict(
 
 # フィルタの並び。要点はチップにせず、日付ごとの要約としてカード先頭に出す。
 # その他は、どれにも当てはまらない項目があるときだけ出す。
+# B2B・卸（Expedia、Hotelbeds、サイトコントローラー、配信規格など）は海外OTAに含める。
 THEMES = [
     ("overseas", "海外OTA"),
     ("domestic", "国内OTA・旅行会社"),
-    ("b2b", "B2B・卸"),
     ("openings", "新規開業ホテル"),
     ("flights", "国際線フライト"),
     ("policy", "行政・インバウンド施策"),
@@ -198,8 +198,9 @@ def _classify(text: str, *, allow_opening: bool) -> str | None:
         return "flights"
     if re.search(r"REIT|RevPAR", text):
         return "other"
+    # Expedia / Hotelbeds / WebBeds / RateHawk / サイトコントローラー / 配信規格は海外OTA。
     if _B2B_EXPLICIT_RE.search(text) or _EXPEDIA_RE.search(text):
-        return "b2b"
+        return "overseas"
     if _DOMESTIC_RE.search(text):
         return "domestic"
     if _OVERSEAS_RE.search(text):
@@ -208,7 +209,7 @@ def _classify(text: str, *, allow_opening: bool) -> str | None:
     if re.search(r"(?<![A-Za-z])OTA(?![A-Za-z])", text) and re.search(r"AI|人工知能", text):
         return "overseas"
     if _SITE_RE.search(text):
-        return "b2b"
+        return "overseas"
     return None
 
 
@@ -262,7 +263,7 @@ def assign_theme(category: str, headline: str, body: str, note: str) -> str:
     # 見出しにテーマが無いときは、本文の最初の文にある会社名だけを見る。
     if not highlight:
         if _B2B_EXPLICIT_RE.search(first_bullet) or _EXPEDIA_RE.search(first_bullet) or _SITE_RE.search(first_bullet):
-            return "b2b"
+            return "overseas"
         if _DOMESTIC_RE.search(first_bullet):
             return "domestic"
         if _BODY_OVERSEAS_RE.search(first_bullet):
@@ -273,10 +274,8 @@ def assign_theme(category: str, headline: str, body: str, note: str) -> str:
     if "国内OTA" in label or label in ("旅行会社", "国内・JTB", "国内販促", "国内"):
         return "policy" if re.search(r"応援割|ふっこう|宿泊税", head) else "domestic"
     if "Hotelbeds" in label or label in ("配信・規格",):
-        return "b2b"
-    if any(key in label for key in ("海外OTA", "Agoda", "Airbnb", "Booking", "Trip.com", "Klook", "規制", "パリティ", "手数料")):
-        if _EXPEDIA_RE.search(head) and not re.search(r"パリティ|Booking|Agoda|Airbnb", head):
-            return "b2b"
+        return "overseas"
+    if any(key in label for key in ("海外OTA", "Agoda", "Airbnb", "Booking", "Trip.com", "Klook", "規制", "パリティ", "手数料", "Expedia")):
         return "overseas"
     return "other"
 
