@@ -55,12 +55,18 @@ SHEETS = OrderedDict(
 
 # フィルタの並び。要点はチップにせず、日付ごとの要約としてカード先頭に出す。
 # B2B・卸（Expedia、Hotelbeds、サイトコントローラー、配信規格など）は海外OTAに含める。
+# チップは「すべて」の右に 新規開業ホテル、その次に 新規フライト情報。
+# 海外OTAと国内OTA・旅行会社は項目のテーマ名として残し、「すべて」に出す。チップには出さない。
 # 行政・インバウンド施策とその他は分類はするが、チップにも「すべて」にも出さない。
 THEMES = [
     ("overseas", "海外OTA"),
     ("domestic", "国内OTA・旅行会社"),
     ("openings", "新規開業ホテル"),
-    ("flights", "国際線フライト"),
+    ("flights", "新規フライト情報"),
+]
+CHIP_THEMES = [
+    ("openings", "新規開業ホテル"),
+    ("flights", "新規フライト情報"),
 ]
 OMITTED_THEMES = (
     ("policy", "行政・インバウンド施策"),
@@ -503,9 +509,7 @@ def build(workbook_path: Path, industry_csv: Path | None, ota_csv: Path | None, 
     items = [public_item(item, index + 1) for index, item in enumerate(combined, 1)]
     theme_counts = {theme_id: sum(1 for item in items if item["theme"] == theme_id) for theme_id, _label in THEMES}
     filters = [{"id": "all", "label": "すべて"}]
-    for theme_id, label in THEMES:
-        if theme_id == "other" and theme_counts[theme_id] == 0:
-            continue
+    for theme_id, label in CHIP_THEMES:
         filters.append({"id": theme_id, "label": label})
     updated = max((item["date"] for item in items), default="")
     return {
