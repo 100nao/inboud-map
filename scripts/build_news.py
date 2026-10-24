@@ -106,8 +106,10 @@ _OPENING_RE = re.compile(
     r"グランドオープン|起工式|起工|着工|リニューアル開業|リニューアル|新規開業|新ブランド|日本初進出|開業(?!\d)"
 )
 _OPENING_BLOCK_RE = re.compile(r"営業終了|REIT|RevPAR")
+# 成田・羽田だけでなく、関西・福岡・長崎など全国の空港同士の路線（関西＝シアトル など）も対象。
 _FLIGHT_EVENT_RE = re.compile(
-    r"就航|増便|減便|新路線|燃油サーチャージ|滑走路|国際線|ダイヤ|成田[＝=]|羽田[＝=]|臨時便"
+    r"就航|増便|減便|新路線|燃油サーチャージ|滑走路|国際線|ダイヤ|臨時便|"
+    r"(?:成田|羽田|関西|関空|伊丹|中部|福岡|新千歳|那覇|広島|仙台|神戸|長崎|熊本|鹿児島|松山|高松|小松|静岡)[＝=]"
 )
 _AIRLINE_RE = re.compile(
     r"ZIPAIR|ルフトハンザ|キャセイ|Peach|ユナイテッド|ビーマン|アルキア|エアアスタナ|"
@@ -135,6 +137,31 @@ _OVERSEAS_RE = re.compile(
 )
 _SITE_RE = re.compile(
     r"サイトコントローラー|サイトコントローラ|チャネルマネージャ|Hotel Center|第三者ホテル|コネクティビティ"
+)
+# 他旅行会社動向。テーマが海外OTA・国内OTAでなくても、見出しが旅行会社・ランドオペ・B2Bなら対象。
+# 「HIS」は Hospitality などに部分一致させない。メモは見ない。
+_COMPANY_NAME_RE = re.compile(
+    r"じゃらん|楽天トラベル|楽天スーパー|楽天「|一休|Relux|"
+    r"(?<![A-Za-z0-9])JTB(?![A-Za-z0-9])|"
+    r"(?<![A-Za-z])HIS(?![A-Za-z])|エイチ・アイ・エス|"
+    r"(?<![A-Za-z])KNT(?![A-Za-z])|近畿日本ツーリスト|近ツー|"
+    r"(?<!訪日)日本旅行(?!料金|者|業)|"
+    r"エアトリ|skyticket|スカイチケット|"
+    r"阪急交通社|阪急トラベル|東武トップツアーズ|クラブツーリズム|農協観光|名鉄観光|"
+    r"読売旅行|ビッグホリデー|旅工房|はとバス|ジャルパック|(?<![A-Za-z])JALPAK(?![A-Za-z])|"
+    r"ミキ・ツーリスト|Miki\s*Travel|"
+    r"ランドオペレータ(?:ー)?|"
+    r"ホールセラー|ホールセール|ベッドバンク|[Bb]edbank|"
+    r"Hotelbeds|(?<![A-Za-z])HBX(?![A-Za-z])|Web[Bb]eds|Rate[Hh]awk|Emerging Travel|"
+    r"(?<![A-Za-z])ETG(?![A-Za-z])|(?<![A-Za-z])TAAP(?![A-Za-z])|Bedsonline|Cloudbeds|Virtuoso|"
+    r"(?<![A-Za-z])B2B(?![A-Za-z])|"
+    r"Expedia|エクスペディア|(?<![A-Za-z])Vrbo(?![A-Za-z])|"
+    r"Booking|Agoda|Trip\.com|トリップドットコム|Airbnb|エアビー|"
+    r"Klook|KKday|Veltra|ベルトラ|Viator|Tiqets|GetYourGuide|"
+    r"Traveloka|MakeMyTrip|(?<![A-Za-z])Ctrip(?![A-Za-z])|携程|Fliggy|"
+    r"サイトコントローラ(?:ー)?|"
+    r"(?<![A-Za-z])Dida(?![A-Za-z])|SiteMinder|DerbySoft|手間いらず|ねっぱん|TL-Lincoln|"
+    r"大手旅行会社|旅行会社"
 )
 # 本文から拾うのは会社・規格の固有名だけ（「OTA」「手数料」などの一般語は拾わない）。
 _BODY_OVERSEAS_RE = re.compile(
@@ -222,6 +249,32 @@ def _classify(text: str, *, allow_opening: bool) -> str | None:
     return None
 
 
+def is_company_news(item: dict) -> bool:
+    """他旅行会社動向に出すか。
+
+    海外OTAと国内OTA・旅行会社は常に対象。それ以外は見出し・カテゴリ、
+    または本文の書き出しが旅行会社・ランドオペレーター・卸/B2Bのときだけ。
+    開業記事の本文で予約先としてOTA名が並ぶだけでは含めない。
+    note（話題の切り口・実務メモ）は判定に使わない。
+    """
+    if item.get("theme") in ("overseas", "domestic"):
+        return True
+    text = _norm_text(
+        "\n".join(
+            [
+                item.get("headline") or "",
+                item.get("category") or "",
+                item.get("categoryLabel") or "",
+            ]
+        )
+    )
+    if _COMPANY_NAME_RE.search(text):
+        return True
+    lead = _first_bullet(item.get("body") or "")
+    match = _COMPANY_NAME_RE.search(lead)
+    return bool(match and match.start() <= 2)
+
+
 def assign_theme(category: str, headline: str, body: str, note: str) -> str:
     """項目をちょうど1つのテーマに振り分ける。どれにも乗らなければ other。
 
@@ -232,7 +285,8 @@ def assign_theme(category: str, headline: str, body: str, note: str) -> str:
     head = _norm_text(headline)
     highlight = label == "要点"
 
-    if "東京国際線" in label:
+    # 「東京国際線」に限らず、シートの「国際線」（関西・長崎など全国の路線）もフライト。
+    if label == "国際線" or label.endswith("国際線"):
         return "flights"
     if "宿泊税" in label or label in ("政策・支援", "国内政策"):
         return "policy"
@@ -474,6 +528,7 @@ def public_item(item: dict, seq: int) -> dict:
         "note": item["note"],
         "noteLabel": item["noteLabel"],
         "sources": item["sources"],
+        "companies": is_company_news(item),
     }
 
 
@@ -581,6 +636,7 @@ def main() -> None:
     print("  テーマ別:")
     for theme_id, label in THEMES:
         print(f"    {label}: {counts['themes'][label]}")
+    print(f"  他旅行会社動向: {sum(1 for item in payload['items'] if item.get('companies'))}")
     omitted = audit.get("omitted") or {}
     if any(omitted.values()):
         print(
