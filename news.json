@@ -17,17 +17,17 @@
     }
   ],
   "counts": {
-    "items": 127,
-    "dates": 26,
-    "industry": 58,
-    "ota": 69,
-    "industryDates": 15,
+    "items": 131,
+    "dates": 29,
+    "industry": 61,
+    "ota": 70,
+    "industryDates": 18,
     "otaDates": 25,
     "themes": {
-      "海外OTA": 68,
+      "海外OTA": 69,
       "国内OTA・旅行会社": 9,
       "新規開業ホテル": 17,
-      "新規フライト情報": 33
+      "新規フライト情報": 36
     }
   },
   "items": [
@@ -306,6 +306,33 @@
         {
           "url": "https://www.traicy.com/posts/20261023385521/",
           "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-129",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Trip.com",
+      "categoryLabel": "Trip.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Beds24、Trip.comチャネルAPIをV3からV4へ移行　対象施設は11/4まで、人数別料金と予約変更の自動取り込みに対応",
+      "body": "・サイトコントローラーBeds24は10/23、Trip.com連携をAPI V3からV4へ上げたと案内した。Trip.comはチャネルAPIのV3を年末に終了する予定。V4の新規接続は9/17に公開済みで、新規の接続はすでにV4を使う。\n・既存施設はV3のまま順次移行する。9/24に3施設、10/8に50施設、10/14に1,000施設が完了。10/21開始の1,000施設は進行中、10/29に600施設、11/4に残り全施設を移す計画で、予約と配信は止めない。\n・V4では客室をTrip.comのRoom TypeとRate Plan Codeに紐づける（V3は客室名のみ、V4はRoom IDも取る）。料金モデルはTrip.com側が施設ごとに決め、Beds24では読み取り専用。Standard（日付の幅ごとに1料金）かOccupancy Based Pricing（人数ごとの料金）で、人数別料金はV4で新たに送れる。形が違うと更新は拒否される（エラー188）。朝食の有無と料金の回収先はTrip.comの料金プラン側で設定し、予約の変更は自動で取り込む。既存のV3接続に施設側の作業は不要。",
+      "note": "Trip.com接続の施設は、11/4までに料金の形が日付あたり1料金か人数別かに切り替わる。人数別の施設は、送る料金の形が合わないと更新が拒否される。移行日の事前通知はなく、既存接続は施設側の作業なし。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://wiki.beds24.com/index.php/New_Features_and_Updates",
+          "label": "wiki.beds24.com"
+        },
+        {
+          "url": "https://wiki.beds24.com/index.php/Trip",
+          "label": "wiki.beds24.com"
         }
       ]
     },
@@ -3275,6 +3302,83 @@
         {
           "url": "https://partner.booking.com/en-us/compliance/digital-markets-act-dma/understanding-digital-market-act",
           "label": "partner.booking.com"
+        }
+      ]
+    },
+    {
+      "id": "industry-132",
+      "date": "2026-09-07",
+      "dateLabel": "9/7（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "大韓航空、大分＝ソウル（仁川）線を10/25に再開（週4往復、2年半ぶり）",
+      "body": "・発表日：2026年9/7（大韓航空）。10/25〜2027年3/27の冬ダイヤで大分＝仁川を月・水・金・日曜の週4往復再開する。182席。仁川9:15発→大分10:50着、大分12:00発→仁川13:45着。2024年3月の冬ダイヤ終了以来2年半ぶりで、週4往復は2004年以来（大分合同新聞）。\n・チェジュ航空の大分＝ソウル線は冬ダイヤで毎日運航の予定で、2社合計は週11往復。再開前の9/24〜10/24には、大韓航空の臨時チャーターが11往復ある。",
+      "note": "大分の取引ホテルとは、仁川からの週4直行（月・水・金・日、午前着）が戻る前提で、韓国客向けの露出と温泉需要の受け皿を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.oita-press.co.jp/1010000000/2026/09/07/JDC2026090702289",
+          "label": "oita-press.co.jp"
+        }
+      ]
+    },
+    {
+      "id": "industry-130",
+      "date": "2026-08-13",
+      "dateLabel": "8/13（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "スターラックス航空、中部＝台中線を10/25に開設（A321neo、初期は週4往復）",
+      "body": "・発表日：2026年8/13（スターラックス航空）。10/25から中部（セントレア）＝台中をA321neoで新規就航し、初期は週4往復。同日から販売する。同社の台中発着は12都市目になる（中央社）。\n・中部国際空港会社が10/23に発表した冬ダイヤ期初計画では、同路線は10/25から週4往復、11月は週7往復、12月以降は週3往復。台湾路線全体は10/25時点で週50往復となり、2020年1月の週49往復を上回る（Aviation Wire）。",
+      "note": "中部・名古屋の取引ホテルとは、台湾からの直行が10/25に始まる前提で、週4から11月は毎日、12月は週3に戻る在庫の出し方を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.cna.com.tw/news/ahel/202608130160.aspx",
+          "label": "cna.com.tw"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/352886",
+          "label": "aviationwire.jp"
+        }
+      ]
+    },
+    {
+      "id": "industry-131",
+      "date": "2026-08-12",
+      "dateLabel": "8/12（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "エアプサン、鹿児島＝釜山線を10/25に開設（週3往復、定期便は初めて）",
+      "body": "・発表日：2026年8/12（鹿児島県）。エアプサンは10/25からの冬ダイヤで鹿児島＝釜山の定期便を週3往復運航する。県によると、1996年にチャーター便で就航した同路線の定期便は初めて。同社はゴルフ目的の訪日需要を見込む（南日本新聞 8/13）。\n・鹿児島空港が10/15に公表した冬期スケジュールでは、水・金・日曜の運航で、釜山発は鹿児島17:15着、鹿児島発は18:35。運航期間は10/25〜2027年2/28。",
+      "note": "鹿児島の取引ホテルとは、釜山からの週3直行（水・金・日、2月末まで）を踏まえ、韓国のゴルフ・観光需要向けの露出と、金曜・日曜着に合わせた在庫を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://373news.com/news/local/detail/237962",
+          "label": "373news.com"
+        },
+        {
+          "url": "https://www.koj-ab.co.jp/ap-information/2026/10/post-329.html",
+          "label": "koj-ab.co.jp"
         }
       ]
     }
