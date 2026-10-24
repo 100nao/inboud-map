@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,105 @@
     }
   ],
   "counts": {
-    "items": 103,
-    "dates": 24,
-    "industry": 51,
-    "ota": 52,
-    "industryDates": 14,
-    "otaDates": 17,
+    "items": 125,
+    "dates": 26,
+    "industry": 56,
+    "ota": 69,
+    "industryDates": 15,
+    "otaDates": 25,
     "themes": {
-      "海外OTA": 53,
-      "国内OTA・旅行会社": 7,
-      "新規開業ホテル": 16,
-      "新規フライト情報": 27
+      "海外OTA": 68,
+      "国内OTA・旅行会社": 9,
+      "新規開業ホテル": 17,
+      "新規フライト情報": 31
     }
   },
   "items": [
+    {
+      "id": "industry-105",
+      "date": "2026-10-24",
+      "dateLabel": "10/24（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「ABホテル 茅野」が10/24開業（121室、諏訪IC約2分）・ホテルルートインは新潟県内3か所で開業へ、十日町（194室）は12/24",
+      "body": "・ABホテル（愛知県安城市）は10/24、長野県茅野市宮川の国道20号諏訪バイパス沿いにビジネスホテル「ABホテル 茅野」（121室）を開業した。長野県内では塩尻に続き2軒目で、中央道諏訪ICから車で約2分。ビジネス客と観光客を狙う（信濃毎日新聞）。\n・ルートインジャパンは新潟県内3か所でホテルルートインの開業を予定し。直近ではホテルルートイン十日町（194室、大浴場付き）が12/24に開業し、県内のルートインは12施設になる（新潟日報）。",
+      "note": "地方のロードサイド型ビジネスホテルの開業が続く。諏訪・八ヶ岳や十日町（大地の芸術祭・スキー）の取引施設とは、近隣の新規供給を踏まえた料金の位置取りと、訪日客向けの露出を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.shinmai.co.jp/news/article/gf01dbdljjnhog6jr71ffc50",
+          "label": "shinmai.co.jp"
+        },
+        {
+          "url": "https://www.niigata-nippo.co.jp/articles/-/929866",
+          "label": "niigata-nippo.co.jp"
+        }
+      ]
+    },
+    {
+      "id": "ota-106",
+      "date": "2026-10-24",
+      "dateLabel": "10/24（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤖 海外OTA・AI",
+      "categoryLabel": "海外OTA・AI",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Meta「Muse」が日本で提供開始（10/23）、Trip.com・Agoda・Klookと連携して旅行の計画・予約が可能に",
+      "body": "・Metaは10/23（日本時間）からAIエージェント「Muse」を日本で提供開始。北米以外で初の提供地域。\n・日本ではStripe・Shopify・Trip.com・Agoda・Klookなどと連携し、旅行の計画・予約ができる。Klookは体験42.6万件をMuseから検索・予約でき、決済はKlook側で行う。\n・米国ではExpedia（ホテル）、Duffel（航空）、Cloudbeds（ホテル公式予約エンジン、2027年1〜3月予定）も連携済み。\n・ザッカーバーグCEOは10/21の決算説明会で旅行を主要用途の一つとし、生み出した価値の一定割合を受け取る課金モデルを検討していると発言（Skift）。",
+      "note": "日本でもAIエージェント経由の予約がOTA（Trip.com・Agoda）を通る形で始まった。Meta側の課金やホテルの実効コスト、露出の決まり方は未公表で、日本の直販予約エンジンとの連携も発表されていない。「AI経由の予約もOTA上の在庫・料金・コンテンツの質で決まる」として、写真・設備情報・料金プランの整備を勧める材料。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://about.fb.com/ja/news/2026/10/muse-personal-ai-agent-launches-in-japan/",
+          "label": "about.fb.com"
+        },
+        {
+          "url": "https://www.phocuswire.com/news/technology/meta-muse-launches-japan-partners-klook",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://skift.com/2026/10/21/meta-calls-travel-a-top-use-case-for-muse-and-zuck-wants-a-cut/",
+          "label": "skift.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-107",
+      "date": "2026-10-24",
+      "dateLabel": "10/24（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "AirbnbがAmerican Express Travel（米国）の独占バケーションレンタル提携先に。100万件超を販売、Amexは自社の別荘商品を終了しVrboは販路を失う",
+      "body": "・Airbnbは10/22（米国時間）、米国のAmex会員がAmexTravel.comとアプリで100万件超のAirbnb物件を予約し、最大5倍のポイントを得られる提携を開始。Platinum会員はAirbnb Luxeの2泊以上で年600ドルの宿泊クレジットが使える。\n・Skift（10/23）によるとAirbnbは独占提携先で、Amexは自社の「Select Homes + Retreats」を同日に終了。Amex Travelは2015年からExpediaのB2B大口先で、Amexは「Expediaとの既存取引は変わらない」とコメント。Vrboは2025年からB2B網への供給を進めていたがAmexには入れなくなった。",
+      "note": "カード・ポイント経由のB2B販路でもOTA同士の囲い込みが進んでいる例。日本向けの発表ではない。Booking Holdingsの7〜9月期決算は10/27予定と報じられており、手数料率や露出プログラムへの言及を確認したい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://news.airbnb.com/introducing-a-new-way-to-book-stays-through-american-express-travel",
+          "label": "news.airbnb.com"
+        },
+        {
+          "url": "https://skift.com/2026/10/23/what-the-amex-travel-airbnb-deal-means-for-expedia/",
+          "label": "skift.com"
+        }
+      ]
+    },
     {
       "id": "industry-2",
       "date": "2026-10-23",
@@ -90,6 +175,137 @@
         {
           "url": "https://sky-budget.com/2026/10/22/naa-news-0ct2026/",
           "label": "sky-budget.com"
+        }
+      ]
+    },
+    {
+      "id": "industry-108",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "チェジュ航空、仙台＝ソウル（仁川）線を2027年1/8に新規就航（週3往復）",
+      "body": "・発表日：2026年10/23。韓国のLCCチェジュ航空は、仙台＝仁川線を2027年1/8から水・金・日曜の週3往復で運航すると発表した。仁川8:35発→仙台10:30着、仙台11:30発→仁川14:40着。\n・同社の日本路線の旅客は1〜9月で370万人（前年同期比▲+29%）、仁川＝広島線は▲+42%、仁川＝静岡線は▲+40%と地方路線が伸びている。10/25に仁川＝鹿児島、12/1に仁川＝函館も運航を再開する。",
+      "note": "仙台着は午前10時台で、到着日から東北を周遊しやすい。韓国からの訪日が伸びる中、東北・仙台の取引ホテルとは、韓国客向けの露出や冬の温泉・雪の商品づくり、1月以降の在庫の出し方を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOCC235NK0T21C26A0000000/",
+          "label": "nikkei.com"
+        },
+        {
+          "url": "https://topics.smt.docomo.ne.jp/article/yonhap/world/yonhap-20261023wow043",
+          "label": "topics.smt.docomo.ne.jp"
+        },
+        {
+          "url": "https://sky-budget.com/category/%e6%96%b0%e8%a6%8f%e5%b0%b1%e8%88%aa%e3%83%bb%e5%a2%97%e4%be%bf%e3%83%bb%e6%b8%9b%e4%be%bf/",
+          "label": "sky-budget.com"
+        }
+      ]
+    },
+    {
+      "id": "industry-109",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "神戸空港の冬ダイヤ、トリニティ航空（旧ティーウェイ）が12/18に初就航しソウル線は1日6往復に　スターラックスの神戸＝高雄線も1/1開設",
+      "body": "・発表日：2026年10/23（神戸市の冬ダイヤ国際チャーター便計画）。就航先は韓国2路線（ソウル・清州）と台湾3路線（台北・台中・高雄）の計5路線で、夏より1路線増える。\n・ソウル（仁川）線は、12/18からトリニティ航空が毎日1往復で新規就航し、大韓航空・アシアナ航空（12/17以降は大韓航空便）・ジンエアー・チェジュ航空と合わせて1日6往復になる。\n・清州線はエアロKが12/24〜3/27に週4往復。神戸空港初の高雄線はスターラックス航空が2027年1/1から毎日運航する。",
+      "note": "関西では関空に加えて神戸からも韓国・台湾便が増え、阪神間に入る訪日客の入口が広がる。神戸・三宮や有馬の取引ホテルとは、韓国・台湾客向けの露出や、神戸着の昼前後の便に合わせたチェックイン前の荷物預かりを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/352875",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://news.kobekeizai.jp/blog-entry-23730.html",
+          "label": "news.kobekeizai.jp"
+        }
+      ]
+    },
+    {
+      "id": "ota-110",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Hotelbeds",
+      "categoryLabel": "Hotelbeds",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "HBX Group（Hotelbeds）とTrip.com Groupが提携を拡大、中国インバウンドとバーチャルカード決済を重点分野に",
+      "body": "・10/22発表。上海での経営陣会合を受け、長年の提携を①訪中旅行（中国インバウンド）と②フィンテック（旅行事業者間の決済を簡素化するバーチャルカード）の2分野で強化する。\n・HBXは170か国超のB2B流通網、Trip.comは中国市場の知見を持ち寄る。新しい流通契約、追加在庫、手数料条件、開始時期は未発表。",
+      "note": "日本の施設への直接の影響は現時点でなし。B2B卸とOTAの精算がバーチャルカード（VCC）化に向かう流れの一例。VCCでの精算に慣れていない施設には、受け取りや手数料の扱いを整理しておく材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.hbxgroup.com/news-room/press-release/hbx-group-and-tripcom-group-announce-strategic-partnership-upgrade",
+          "label": "hbxgroup.com"
+        },
+        {
+          "url": "https://www.traveldailynews.asia/technology/china-inbound-tourism-hbx-trip-com-partnership/",
+          "label": "traveldailynews.asia"
+        }
+      ]
+    },
+    {
+      "id": "ota-111",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Booking.com",
+      "categoryLabel": "Booking.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.comがシンガポール政府観光局（STB）と初の3年MoU、共同マーケティングと旅行動向データの共有で協力",
+      "body": "・Booking.comとSTBはITB Asia（10/21〜23）で3年間の覚書を締結。STBとBooking.comのMoUは初めて。\n・共同マーケティング、乗り継ぎ客の訪問化と滞在延長、旅行動向データの共有などで協力する。",
+      "note": "日本向けの発表ではないが、OTAが観光局とデータ共有を伴う提携を結ぶ動きとして参考になる。自治体・DMOと組んだ販促を提案する際の比較材料。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.ttgasia.com/2026/10/22/booking-com-singapore-tourism-board-team-up-to-boost-visitor-arrivals/",
+          "label": "ttgasia.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-112",
+      "date": "2026-10-23",
+      "dateLabel": "10/23（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "楽天トラベル「最高級宿スペシャルオファー」10/30朝まで、宿クーポンと楽天トラベルクーポンの併用で最大30%オフ",
+      "body": "・楽天トラベルは10/15 10時〜10/30 9:59に「最高級宿スペシャルオファー」を開催。対象施設で特別プランを設定し、クーポン併用で最大30%割り引く。\n・対象はザ・カハラ・ホテル&リゾート 横浜、ザ・キャピトルホテル東急、ウェスティンホテル東京、ホテルオークラ神戸、JWマリオット・ホテル奈良など全国（TRAICY 10/23）。",
+      "note": "東京のラグジュアリー・アッパーアップスケール施設が国内OTAの高級宿セールに参加している。競合チャネルの販促カレンダーとして共有し、「最大○%」ではなく対象プランの支払総額で比べるよう伝える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261023385521/",
+          "label": "traicy.com"
         }
       ]
     },
@@ -156,6 +372,37 @@
         {
           "url": "https://www.traicy.com/posts/20261021385295/",
           "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "id": "industry-113",
+      "date": "2026-10-22",
+      "dateLabel": "10/22（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 東京国際線",
+      "categoryLabel": "東京国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "ZIPAIR、成田＝ロサンゼルス線を2027年1/4〜10に期間増便（成田発5便・現地発4便を追加）",
+      "body": "・発表日：2026年10/22。ZIPAIRは成田＝ロサンゼルス線（毎日1往復）を、1/4・6・8・10の往復と1/9の成田発片道で増便する。往復の増便分は1日2便目として設定する。\n・成田17:15発→ロサンゼルス10:10着、ロサンゼルス12:10発→成田翌日16:55着。成田発の片道はStandard 58,500円から、燃油サーチャージなし。10/22正午に発売した。\n・1/9はラスベガス発成田行きのチャーター便も予定（CES関連）。",
+      "note": "年明けの米国需要に合わせた増便で、成田着は夕方。成田周辺や都心のホテルとは、1月上旬の米国客・CES帰りのビジネス客の需要と、夕方着の便に合わせた販促を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.zipair.net/ja/notification/442",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/352855",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://sky-budget.com/2026/10/22/zipair-increase-nrt-lax-6/",
+          "label": "sky-budget.com"
         }
       ]
     },
@@ -265,6 +512,60 @@
       ]
     },
     {
+      "id": "ota-114",
+      "date": "2026-10-21",
+      "dateLabel": "10/21（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Expedia",
+      "categoryLabel": "Expedia",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Expediaが「Autonomous Onboarding」を発表、PMS・サイトコントローラーの画面から24時間未満で掲載開始",
+      "body": "・10/20発表。施設は今使っているPMS／チャネルマネージャー上でExpediaを選び、規約に電子同意するだけで掲載を始められる。\n・客室タイプ・料金プラン・在庫・支払ルール・設備・写真を接続先から自動で取り込み、エクストラネットでの手入力が不要になる。\n・開始時の接続パートナーはRateGain、Eviivo、HotelRunner、RoomCloud、Yanolja Cloud Solutionsの5社。Expediaは「自動化された流通」の第1段階と位置づける。",
+      "note": "開始パートナーに日本の主要サイトコントローラーは含まれず、日本での提供時期は未発表。新規開業・リブランド施設のOTA立ち上げの速さの比較材料になる。規約が画面上の電子同意になるため、手数料・パリティ・AI条項を読み飛ばさないよう施設に注意を促したい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.businesswire.com/news/home/20261020261483/en/Expedia-Group-Launches-AUTONOMOUS-ONBOARDING-Helping-Properties-Access-Global-Travel-Demand-Faster",
+          "label": "businesswire.com"
+        },
+        {
+          "url": "https://hospitalitytech.com/expedia-group-debuts-autonomous-onboarding-cut-property-go-live-times-under-24-hours",
+          "label": "hospitalitytech.com"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261022385570/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-115",
+      "date": "2026-10-21",
+      "dateLabel": "10/21（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Agoda",
+      "categoryLabel": "Agoda",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agodaが高級宿の在庫を4年で「倍増」と説明、ただし高級帯の予約実績や提携ホテルへの掲載条件は非開示",
+      "body": "・Skift（10/20）。Agodaの供給担当SVPが高級宿の供給を4年で倍増と発言。例として9月のCapella Hotel Group提携（8市場12軒）とMarina Bay Sandsのフラッグシップストア。\n・2025年の5つ星検索は前年比でクアラルンプール▲+15%、バンコク▲+10%。高級帯の予約数・単価は非公表。\n・記事はAccorとH Worldの推計として、直販コストは売上の約4〜5%、OTA手数料は10〜15%と紹介。",
+      "note": "新しいのは「検索は増えたが予約実績は未開示」という点と、直販4〜5%対OTA10〜15%の比較数字。高級ホテルとの手数料の話では、見出しの率だけでなく露出プログラムや会員割引の上乗せを含めた実効コストで比べる材料に。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/10/20/agoda-doubles-premium-hotel-supply-as-five-star-search-rises/",
+          "label": "skift.com"
+        }
+      ]
+    },
+    {
       "id": "industry-9",
       "date": "2026-10-20",
       "dateLabel": "10/20（火）",
@@ -331,6 +632,83 @@
         {
           "url": "https://prtimes.jp/main/html/rd/p/000001093.000004762.html",
           "label": "prtimes.jp"
+        }
+      ]
+    },
+    {
+      "id": "ota-116",
+      "date": "2026-10-20",
+      "dateLabel": "10/20（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Booking.com",
+      "categoryLabel": "Booking.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.comがサイトコントローラー・PMSへのゲスト電話番号の送信を停止（日本の施設は6/26から、全世界は9月下旬から）",
+      "body": "・Booking.comは2026年9月から、全世界・全予約タイプでゲスト電話番号をホテルの予約管理システムに送らなくなった。詐欺からゲストを守るためと説明（Mews）。\n・日本のサイトコントローラーAirHostは、日本所在の施設では6/26から電話番号が取り込まれなくなったと案内。\n・番号はエクストラネットとPulseアプリでは引き続き確認できる。予約・料金・在庫・氏名の連携は継続。",
+      "note": "「Booking.com経由の予約だけ電話番号が空欄」という相談は不具合ではなく仕様変更と説明できる。SMSや電話を前提にしたチェックイン案内は、Booking.comのメッセージ機能やオンラインチェックインに切り替える必要がある。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://hospitalitytechedition.com/news/booking-com-stops-sending-guest-phone-numbers-hotel-systems/",
+          "label": "hospitalitytechedition.com"
+        },
+        {
+          "url": "https://www.mews.com/en/press/4-things-hoteliers-need-to-do-now-bookingcom-doesnt-share-guest-phone-numbers",
+          "label": "mews.com"
+        },
+        {
+          "url": "https://support.airhost.co/en/articles/15885162-booking-com-related-why-isn-t-the-guest-s-phone-number-imported-into-airhost-reservations",
+          "label": "support.airhost.co"
+        }
+      ]
+    },
+    {
+      "id": "ota-117",
+      "date": "2026-10-20",
+      "dateLabel": "10/20（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤖 海外OTA・AI",
+      "categoryLabel": "海外OTA・AI",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Expedia、外部向けホテルコンテンツ配信の利用条件にAI条項。AIモデルでの利用は「Expediaへの送客だけ」、他モデルへの投入・改変・翻訳は禁止",
+      "body": "・Hospitality.today（10/19）：Expediaが他社サイト・アプリにホテル情報（写真・説明文・料金・在庫・キャンセル規定）を提供するデータフィードの利用条件に、AI向け条項が入った。\n・AIモデルにフィードを組み込むパートナーは「Expediaサイトへの送客のためだけ」に使う必要があり、汎用・基盤モデルを含む他のAIモデルへの投入、改変・翻訳は禁止。\n・地域ごとの適用範囲は記事になく、日本の施設契約への影響は未確認。",
+      "note": "AI上でホテルが表示されても、情報の出どころがExpediaのフィードなら予約はExpediaに向かう設計。自社サイトとGoogleビジネスプロフィールに最新の写真・説明・料金を自前で持っておく重要性を伝えられる。契約解釈は断定せず記事の指摘として紹介する。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.hospitality.today/article/expedias-rule-for-ai-apps-that-show-your-hotel",
+          "label": "hospitality.today"
+        }
+      ]
+    },
+    {
+      "id": "ota-118",
+      "date": "2026-10-20",
+      "dateLabel": "10/20（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤖 海外OTA・AI",
+      "categoryLabel": "海外OTA・AI",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "AgodaがアプリにAIアシスタントのベータ版を導入、会話形式で600万軒超の宿・航空券・アクティビティを比較し予約まで",
+      "body": "・Travel And Tour World（10/18）がAgodaの発表として報道。一部のアプリ利用者向けの招待制ベータで、数か月かけて全モバイル利用者へ広げる。\n・行き先のアイデア出し、比較、価格・空室確認、旅程作成、予約までを1つのアプリで行う。会話部分はOpenAIのモデル、複雑な計画ではGoogleマップのデータ（評価・写真・営業時間）を使う。\n・日本語での提供時期は未確認。",
+      "note": "Booking HDのVayo、Expediaに続き、アジアに強いAgodaもアプリ内AI予約に動いた。AIの推薦ではGoogleマップの評価・写真も参照されるため、OTA上の施設情報だけでなくGoogleの口コミ・写真も整えるよう伝えられる。TripGenieとの比較材料にもなる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelandtourworld.com/news/article/1v6jnt0kkpt3/",
+          "label": "travelandtourworld.com"
         }
       ]
     },
@@ -436,6 +814,83 @@
         {
           "url": "https://www.airnewzealand.jp/nrt-flights-information",
           "label": "airnewzealand.jp"
+        }
+      ]
+    },
+    {
+      "id": "ota-119",
+      "date": "2026-10-19",
+      "dateLabel": "10/19（月）",
+      "weekday": "月",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Hotelbeds",
+      "categoryLabel": "Hotelbeds",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Hotelbeds（HBX Group）がホテル向け有料露出・追加割引ツール「Growth Accelerator」を開始（国別露出・追加インセンティブ・国グループ別オファー）",
+      "body": "・Partner Portalからホテル自身が設定するセルフサービス型。①Visibility Campaigns＝指定した送客国のバイヤー向けに露出を増やす、②Incentive Booster＝期間・在庫・料金プランを指定して追加インセンティブを付ける、③Market Groups＝複数国をまとめたオファー。\n・Hospitality.today（10/16）は、費用は非公表で露出費とネット料金値下げの二重負担になりうる点、割引がどのバイヤーに出るか不明な点を指摘。日本での提供条件は未確認。",
+      "note": "OTAのPreferred系と同じ考え方をホールセール側でも有料化した形。取引ホテルから相談があれば、費用、割引の出し先（国・バイヤー種別）、単体販売かパッケージ・クローズド販売かを確認するよう勧めたい。ネット料金がオープンな価格比較に流れるとパリティの問題につながる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.hbxgroup.com/news-room/press-release/hbx-group-launches-growth-accelerator-give-hotels-greater-control",
+          "label": "hbxgroup.com"
+        },
+        {
+          "url": "https://www.hospitality.today/article/hbx-groups-new-growth-accelerator-lets-hotels-pay-for-visibility",
+          "label": "hospitality.today"
+        }
+      ]
+    },
+    {
+      "id": "ota-120",
+      "date": "2026-10-19",
+      "dateLabel": "10/19（月）",
+      "weekday": "月",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Klook",
+      "categoryLabel": "Klook",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Klookが米国IPO（NYSE・ティッカーKLK）の申請を10/16に撤回、市場環境を理由に上場時期は引き続き検討",
+      "body": "・Reuters（10/17）：Klookは10/16にSECへ米国IPO計画の撤回を申請。広報は「今はIPOを進める時期ではない」とし、2026年の体験予約件数は8,000万件超の見込みと説明。\n・2025年11月にF-1を提出し、2024年売上は前年比▲+24%の4億1,710万ドルと開示していた。",
+      "note": "上場は延期でも事業拡大は続けるとしており、日本の体験・交通商品の販売方針がすぐ変わる話ではない。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.straitstimes.com/business/travel-booking-platform-klook-technology-files-to-withdraw-us-listing",
+          "label": "straitstimes.com"
+        },
+        {
+          "url": "https://www.travhq.com/news/weekly-digest-klook-pulls-nyse-ipo-agoda-and-etg-swap-supply/",
+          "label": "travhq.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-121",
+      "date": "2026-10-17",
+      "dateLabel": "10/17（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Airbnb、ホスト向けに無料のダイナミックプライシング（推奨価格帯）を追加。Bernsteinは「ソフトなフランチャイズ」化の第一歩と分析",
+      "body": "・Skift（10/15）：Airbnbは需要と供給に応じた推奨価格帯をホストが確認できる機能を追加し、現在は無料。\n・Bernsteinは、収益管理・PMS・清掃手配・保険などへ広げ、ホテルチェーンのように運営面でホストを支える方向への第一歩と分析し、将来売上を3〜7%押し上げうると試算。日本での提供状況は未確認。",
+      "note": "民泊・アパートメント型の取引先向けの話題。Airbnbが料金設定まで握る方向に進むと、他チャネルとの価格の付け方に影響しうる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/10/15/is-airbnbs-dynamic-pricing-launch-a-step-toward-becoming-a-hotel-like-franchisor/",
+          "label": "skift.com"
         }
       ]
     },
@@ -568,6 +1023,87 @@
       ]
     },
     {
+      "id": "industry-122",
+      "date": "2026-10-16",
+      "dateLabel": "10/16（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "エア・インディア、関西＝デリー線を2027年2/2に開設（787-8で週4往復、関空初のインド直行便）　関空の冬期国際線は週1,226.8便で中国以外は▲+7%",
+      "body": "・発表日：2026年10/15（現地時間）。エア・インディアはデリー＝関西の直行便を2027年2/2から週4往復で運航する。デリー22:50発→関西翌日9:50着、関西11:50発→デリー18:20着。機材は787-8（259席）。同社は羽田にデリー線（毎日）・ムンバイ線（週4）を運航しており、関西は日本で2番目の就航地。\n・関西エアポートの2026年冬期計画（10/16）では、国際線は週1,226.8便（前年比▼2%）。中国路線は週163便（▼37%）に減る一方、中国以外は週1,063.8便（▲+7%、韓国▲+10%、東南アジア▲+13%）に増える（日経）。",
+      "note": "関空の冬は中国便が減って韓国・東南アジアが伸び、インドからの直行便も加わる。大阪の話だが、中国の回復を前提にしない市場構成の見直しは東京のホテルとの打合せでも参考になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/352520",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUF164R60W6A011C2000000/",
+          "label": "nikkei.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-123",
+      "date": "2026-10-16",
+      "dateLabel": "10/16（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤝 提携",
+      "categoryLabel": "提携",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agoda、Emerging Travel Group（RateHawk）と戦略提携。欧米・中南米・中東の在庫をAPI経由で取り込み相互販売へ",
+      "body": "・10/15発表。AgodaはRateHawk API経由でETG（RateHawk／ZenHotels／Roundtrip）のホテル在庫に接続し、欧州・米国・中南米・中東で「数百万」の宿泊オプションを追加。相互にクロスセルする。\n・ETGはAPAC拡大が狙い。手数料率や日本施設への契約条件は非公表。",
+      "note": "Agodaの供給経路が増える話。日本の施設がRateHawkなどのB2B卸経由でもAgodaに出ている場合、露出や価格の二重化に注意したい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/apac/news-releases/agoda-and-emerging-travel-group-enter-strategic-partnership-302909755.html",
+          "label": "prnewswire.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-124",
+      "date": "2026-10-16",
+      "dateLabel": "10/16（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "国内OTAセールが切り替わる時期：楽天オータムSALEは10/20朝まで、じゃらん「お得な10日間」は10/20開始、一休ホテル・リゾートSPは10/19正午まで",
+      "body": "・楽天トラベルは「オータムSALE」を10/1 10時〜10/20 9:59に開催、クーポン併用で毎日最大30%オフ（トラベルWatch）。\n・じゃらんは「お得な10日間」を毎月20日開始と公式に案内。\n・一休は「ホテル・リゾートスペシャル」を10/9正午〜10/19正午に開催（TRAICY）。割引の実効はクーポン在庫と対象プラン次第。",
+      "note": "競合チャネルの販促カレンダーとして共有できる。「最大○%」表示ではなく対象プランの支払総額で比べるよう伝える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://travel.watch.impress.co.jp/docs/news/2144679.html",
+          "label": "travel.watch.impress.co.jp"
+        },
+        {
+          "url": "https://www.jalan.net/theme/otoku_10days/",
+          "label": "jalan.net"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261012384681/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
       "id": "industry-18",
       "date": "2026-10-15",
       "dateLabel": "10/15（木）",
@@ -618,6 +1154,52 @@
         {
           "url": "https://www.traicy.com/posts/20261011384667/",
           "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-125",
+      "date": "2026-10-15",
+      "dateLabel": "10/15（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "💰 海外OTA・手数料",
+      "categoryLabel": "海外OTA・手数料",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "米国で「ホテル10%還元」が旅行以外の企業に広がる。同じExpedia在庫でもUber One会員は10%、OneKey無料会員は1%",
+      "body": "・Skift（10/14）：Robinhood×DuffelはPlatinum会員にホテル10%還元。UberはExpedia供給のホテルでUber One会員に10%をクレジットで還元。\n・Expediaのコスロシャヒ（Khosrowshahi）CEOはホテル事業をあえて収支トントンで運営し、Googleへの送客費が不要なため還元を自社負担できると説明。Airbnbは掲載ホテルで最大15%のクレジット、Booking HDのLolaはコミッションを客室価格の値下げとして還元。",
+      "note": "表示料金は同じでも、会員還元やクレジットでチャネルごとに実質価格が変わる構図。「パリティは還元・クーポン込みの実質価格で見られるようになっている」流れとして共有できる。いずれも米国の事例。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/10/14/why-everyone-wants-to-give-you-10-back-on-a-hotel/",
+          "label": "skift.com"
+        }
+      ]
+    },
+    {
+      "id": "ota-126",
+      "date": "2026-10-15",
+      "dateLabel": "10/15（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤝 B2B・卸",
+      "categoryLabel": "B2B・卸",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "アップルワールド（じげん傘下）、国内ホテルの直接仕入れを広げ「日本のホテルを世界の旅行会社へ」売るB2B流通を構築へ",
+      "body": "・トラベルボイス（10/14）のインタビュー。国内の登録旅行会社向けにHotelbeds・Expedia・WebBedsなどと接続して海外ホテルを卸してきたBtoBホテル手配事業者。\n・2025年から国内ホテルの直接仕入れを始め、海外の旅行会社に販売するモデルを加える。団体航空券・団体ホテルの手配やAI見積りなども進める。料率やネット条件は非開示。",
+      "note": "国内ホテルにとってはB2B流通の新しい選択肢であり競合でもある。卸契約では再販先（海外の旅行会社・OTA）の制限と、ネット料金がB2Cに漏れてパリティが崩れないかを確認するよう助言したい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelvoice.jp/20261014-160669",
+          "label": "travelvoice.jp"
         }
       ]
     },
