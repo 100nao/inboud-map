@@ -932,9 +932,14 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 .li .subdot.sw{display:inline-block;vertical-align:middle;margin-right:0;border-radius:50%}
 #newsView{flex-direction:column;background:#f3f5fa;color:var(--navy)}
 #newsView .nw-top{flex:none;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 8px}
-#newsView .nw-tools{display:flex;gap:10px;align-items:center;margin-top:8px}
-#newsView .nw-tools input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit;font-size:16px;color:var(--navy);background:#f7f9fc}
-#newsView .nw-tools input:focus{outline:2px solid #e4d8f6;border-color:#5b3d8f}
+#newsView .nw-tools{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-top:8px}
+#newsView .nw-tools input{flex:1 1 240px;min-width:180px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit;font-size:16px;color:var(--navy);background:#f7f9fc}
+#newsView .nw-tools input:focus,#newsView .nw-month:focus{outline:2px solid #e4d8f6;border-color:#5b3d8f}
+#newsView .nw-month{flex:0 1 auto;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:14px;color:var(--navy);background:#f7f9fc}
+#newsView .nw-co{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font:inherit;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;white-space:nowrap}
+#newsView .nw-co:hover{border-color:#5b3d8f}
+#newsView .nw-co.on{background:#5b3d8f;color:#fff;border-color:#5b3d8f}
+#newsView .nw-clear{border:0;background:transparent;color:#1f5fbf;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 2px;white-space:nowrap}
 #newsView .nw-count{margin:0;font-size:12.5px;color:#5a6a88;white-space:nowrap}
 #newsView .nw-all{border:0;background:transparent;color:#5b3d8f;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 2px;white-space:nowrap}
 #newsView .nw-chips{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:8px;align-items:flex-start}
@@ -972,6 +977,20 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #newsView .nw-src .lb{color:#7d8aa5;margin-right:6px}
 #newsView .nw-none{color:#9aa3b5;font-size:12px}
 #newsView .nw-empty,#newsView .nw-status{padding:32px 8px;text-align:center;color:#5a6a88;font-size:14px}
+#newsView .nw-sumhead{margin:0 0 8px;font-size:15px;font-weight:800;color:var(--navy)}
+#newsView .nw-sumhead span{margin-left:6px;font-size:12.5px;font-weight:700;color:#5a6a88}
+#newsView .nw-sum{list-style:none;margin:0;padding:0;background:#fff;border:1px solid var(--line);border-radius:12px}
+#newsView .nw-sumi{border-top:1px solid #eef1f6}
+#newsView .nw-sumi:first-child{border-top:0}
+#newsView .nw-sumrow{display:flex;align-items:flex-start;gap:8px;padding:8px 12px}
+#newsView .nw-sumh{flex:1;min-width:0;display:block;text-align:left;border:0;background:transparent;padding:0;cursor:pointer;font:inherit;color:var(--navy);line-height:1.5}
+#newsView .nw-sumh .dot{color:#5b3d8f;font-weight:700;margin-right:4px}
+#newsView .nw-sumd{font-size:12px;font-weight:700;color:#5a6a88;font-variant-numeric:tabular-nums;margin-right:6px;white-space:nowrap}
+#newsView .nw-sumtag{display:inline-block;font-size:10.5px;font-weight:700;color:#3d2a63;background:#efe8f8;border-radius:999px;padding:0 7px;margin-right:6px;vertical-align:1px}
+#newsView .nw-sumt{font-size:14px;font-weight:700}
+#newsView .nw-suma{flex:none;font-size:12px;font-weight:700;color:#1f5fbf;padding-top:2px;white-space:nowrap}
+#newsView .nw-sumb{padding:0 12px 12px 28px}
+#newsView .nw-sumb .nw-card{border-top:0;padding:0}
 #newsView .nw-retry{margin-top:10px;border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 14px;font-family:inherit;font-weight:700;cursor:pointer}
 #newsView .ho{max-width:1100px;margin:0 auto;padding:14px 16px 4px}
 #newsView .ho-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 14px}
@@ -1050,6 +1069,9 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
     border:1px solid #d5deee;background:#f4f7fb;color:#14284b;font-size:12.5px;font-weight:700;
     text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:inherit
   }
+  #nwChip{display:flex;align-items:center;gap:4px}
+  #nwChip .mtxt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  #nwChip .mx{flex:none;color:#1f5fbf;font-size:16px;line-height:1;padding:0 2px}
   main{position:relative;min-width:0;min-height:0}
   #map{position:absolute;inset:0;min-width:0;width:auto;height:auto}
   #map>.stats{
@@ -1169,6 +1191,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   }
   .mf.chk{flex-direction:row;align-items:center;gap:8px;font-size:14px;min-height:40px;color:#14284b}
   .mhint{margin:4px 0 0;font-size:12px;color:#5a6a88;line-height:1.5}
+  #mFilt .nw-clear{display:inline-flex;margin:2px 0 8px;padding:6px 0;border:0;background:transparent;color:#1f5fbf;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
   #newsView{overflow-x:hidden;height:100dvh}
   #newsView .titlerow{display:flex;flex-direction:row;align-items:flex-start;gap:8px;min-width:0}
   #newsView .vnav{display:none!important}
@@ -1258,6 +1281,9 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
     <div class="monly mbar" id="nwBar"><button type="button" class="mfilt-btn" id="nwFiltBtn">絞り込み</button><button type="button" class="mchip" id="nwChip">すべて</button></div>
     <div class="nw-tools">
       <input id="nwQ" type="search" placeholder="キーワードで検索（見出し・本文・メモ・出典）" autocomplete="off" enterkeyhint="search">
+      <select id="nwMonth" class="nw-month" aria-label="期間"><option value="all">すべての期間</option></select>
+      <button type="button" class="nw-co" id="nwCompanies" aria-pressed="false">他旅行会社動向</button>
+      <button type="button" class="nw-clear" id="nwClear" hidden>解除</button>
       <p id="nwCount" class="nw-count" aria-live="polite"></p>
       <button type="button" class="nw-all" id="nwToggle">すべて開く</button>
     </div>
@@ -3735,12 +3761,29 @@ function mStayPer(){
   if(isFull(YR))return YR+'年';
   return YR+'年1〜'+lastM(YR)+'月累計';
 }
+function mNewsExtra(){
+  const mo=document.getElementById('nwMonth');
+  const co=document.getElementById('nwCompanies');
+  return !!((mo&&mo.value&&mo.value!=='all')||(co&&co.getAttribute('aria-pressed')==='true'));
+}
 function mChipText(id){
   if(id==='nw'){
     const b=document.querySelector('#nwChips .nw-chip.on');
-    if(!b)return 'すべて';
-    const n=b.querySelector('.n');
-    return (b.textContent||'').replace(n?n.textContent:'','').trim()||'すべて';
+    let theme='すべて';
+    if(b){
+      const n=b.querySelector('.n');
+      theme=(b.textContent||'').replace(n?n.textContent:'','').trim()||'すべて';
+    }
+    const parts=[];
+    if(theme!=='すべて')parts.push(theme);
+    const co=document.getElementById('nwCompanies');
+    if(co&&co.getAttribute('aria-pressed')==='true')parts.push('他旅行会社動向');
+    const mo=document.getElementById('nwMonth');
+    if(mo&&mo.value&&mo.value!=='all'){
+      const opt=mo.selectedOptions&&mo.selectedOptions[0];
+      if(opt)parts.push(opt.textContent);
+    }
+    return parts.length?parts.join('・'):'すべて';
   }
   if(id==='stay'){
     const view=VIEW==='top'?'最多国籍':VIEW==='country'?C[CI].ja:VIEW==='jp'?'日本人':(FMET==='ratio'?'外国人比率':'外国人');
@@ -3786,7 +3829,10 @@ function mSync(){
   const chip=mChipText(id);
   const c1=document.getElementById('mChip'),c2=document.getElementById('nwChip');
   if(c1)c1.textContent=chip;
-  if(c2)c2.textContent=chip;
+  if(c2){
+    if(id==='nw')c2.innerHTML='<span class="mtxt">'+mEsc(chip)+'</span>'+(mNewsExtra()?'<span class="mx" role="button" aria-label="期間と他旅行会社動向を解除">×</span>':'');
+    else c2.textContent=chip;
+  }
   const det=document.getElementById('mDetBtn');
   const box=document.getElementById('mSheet');
   if(det&&box){
@@ -3823,9 +3869,17 @@ function mFillFilt(id){
   let html='';
   if(id==='nw'){
     const q=document.getElementById('nwQ');
-    html='<label class="mf">キーワード<input id="mNwQ" type="search" placeholder="見出し・本文・メモ・出典" value="'+mEsc(q?q.value:'')+'"></label>'
+    const mo=document.getElementById('nwMonth');
+    const months=mo?[...mo.options].map(o=>[o.value,o.textContent]):[['all','すべての期間']];
+    const co=document.getElementById('nwCompanies');
+    const on=!!(co&&co.getAttribute('aria-pressed')==='true');
+    html=mSel('期間','nwmonth',months,mo?mo.value:'all')
+      +'<label class="mf chk"><input type="checkbox" id="mNwCo"'+(on?' checked':'')+'>他旅行会社動向</label>'
+      +'<p class="mhint">海外OTA、国内OTA、大手旅行会社、ランドオペレーター、卸・B2Bの記事に絞ります。</p>'
+      +'<label class="mf">キーワード<input id="mNwQ" type="search" placeholder="見出し・本文・メモ・出典" value="'+mEsc(q?q.value:'')+'"></label>'
       +'<button type="button" class="mfilt-btn" id="mNwToggle">リストの開閉</button>'
-      +'<p class="mhint">テーマは画面上のチップで切り替えます。</p>';
+      +(mNewsExtra()?'<button type="button" class="nw-clear" id="mNwClear">期間と他旅行会社動向を解除</button>':'')
+      +'<p class="mhint">テーマは上のチップで切り替えます。期間を選ぶと、その月の記事を日付・テーマ・見出しの箇条書きでまとめます。</p>';
   }else if(id==='stay'||id==='est'){
     if(id==='stay'){
       const opts=[];
@@ -3874,6 +3928,10 @@ function mFillFilt(id){
   if(q)q.oninput=()=>{const real=document.getElementById('nwQ');if(!real)return;real.value=q.value;real.dispatchEvent(new Event('input'))};
   const tg=body.querySelector('#mNwToggle');
   if(tg)tg.onclick=()=>{const b=document.getElementById('nwToggle');if(b)b.click()};
+  const co=body.querySelector('#mNwCo');
+  if(co)co.onchange=()=>{const btn=document.getElementById('nwCompanies');if(!btn)return;const cur=btn.getAttribute('aria-pressed')==='true';if(co.checked!==cur)btn.click();mFillFilt('nw')};
+  const clr=body.querySelector('#mNwClear');
+  if(clr)clr.onclick=()=>{if(window.__newsClearExtra)window.__newsClearExtra();mFillFilt('nw')};
   body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
     const k=sel.dataset.k,v=sel.value;
     if(k==='per'){const p=v.split('|');setPeriod(p[0],p[1]==='H1'?'H1':+p[1])}
@@ -3893,6 +3951,7 @@ function mFillFilt(id){
     else if(k==='r2b'){R2B=v==='rep'?'rep':+v;renderRep()}
     else if(k==='t23n'){T23N=v;renderRep()}
     else if(k==='t23m'){T23M=v;renderRep()}
+    else if(k==='nwmonth'){const real=document.getElementById('nwMonth');if(real&&real.value!==v){real.value=v;real.dispatchEvent(new Event('change'))}}
     if(window.__mSync)window.__mSync();
     const f=document.getElementById('mFilt');
     if(f&&!f.hidden)mFillFilt(mItem());
@@ -4013,7 +4072,8 @@ function mInit(){
   const fb=document.getElementById('mFiltBtn');if(fb)fb.onclick=mFiltOpen;
   const nfb=document.getElementById('nwFiltBtn');if(nfb)nfb.onclick=mFiltOpen;
   const chip=document.getElementById('mChip');if(chip)chip.onclick=mFiltOpen;
-  const nchip=document.getElementById('nwChip');if(nchip)nchip.onclick=mFiltOpen;
+  const nchip=document.getElementById('nwChip');
+  if(nchip)nchip.onclick=e=>{if(e.target.closest('.mx')){e.preventDefault();if(window.__newsClearExtra)window.__newsClearExtra();return}mFiltOpen()};
   const fc=document.getElementById('mFiltClose');if(fc)fc.onclick=mFiltClose;
   const filt=document.getElementById('mFilt');
   if(filt)filt.addEventListener('click',e=>{if(e.target===filt)mFiltClose()});
@@ -4117,6 +4177,9 @@ scan();
   const countEl=document.getElementById('nwCount');
   const toggle=document.getElementById('nwToggle');
   const input=document.getElementById('nwQ');
+  const monthSel=document.getElementById('nwMonth');
+  const coBtn=document.getElementById('nwCompanies');
+  const clearBtn=document.getElementById('nwClear');
   const scroll=document.getElementById('nwScroll');
   const hoPanel=document.getElementById('hoPanel');
   const hoAsof=document.getElementById('hoAsof');
@@ -4128,11 +4191,13 @@ scan();
   const hoStatus=document.getElementById('hoStatus');
   const hoCat=document.getElementById('hoCat');
   const hoSortEl=document.getElementById('hoSort');
-  let data=null, loading=false, failed=false, filter='all', query='', openDates=new Set();
+  let data=null, loading=false, failed=false, filter='all', query='', companies=false, nwMonthV='all', openDates=new Set(), openItems=new Set();
   let hotels=null, hoLoading=false, hoFailed=false, hoQuery='', hoPrefV='all', hoMonthV='all', hoStatusV='all', hoCatV='all', hoSort='date', hoDir=1, hoReady=false;
   const REGIONS=[['北海道',['北海道']],['東北',['青森県','岩手県','宮城県','秋田県','山形県','福島県']],['関東',['茨城県','栃木県','群馬県','埼玉県','千葉県','東京都','神奈川県']],['中部',['新潟県','富山県','石川県','福井県','山梨県','長野県','岐阜県','静岡県','愛知県','三重県']],['近畿',['滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県']],['中国',['鳥取県','島根県','岡山県','広島県','山口県']],['四国',['徳島県','香川県','愛媛県','高知県']],['九州・沖縄',['福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県']]];
   const PREF_ORDER=REGIONS.flatMap(r=>r[1]);
   const REGION_OF=Object.fromEntries(REGIONS.flatMap(([n,ps])=>ps.map(p=>[p,n])));
+  // build_news.py の is_company_news と同じ。メモ（話題の切り口）は見ない。
+  const COMPANY_RE=/(?:じゃらん|楽天トラベル|楽天スーパー|楽天「|一休|Relux|(?<![A-Za-z0-9])JTB(?![A-Za-z0-9])|(?<![A-Za-z])HIS(?![A-Za-z])|エイチ・アイ・エス|(?<![A-Za-z])KNT(?![A-Za-z])|近畿日本ツーリスト|近ツー|(?<!訪日)日本旅行(?!料金|者|業)|エアトリ|skyticket|スカイチケット|阪急交通社|阪急トラベル|東武トップツアーズ|クラブツーリズム|農協観光|名鉄観光|読売旅行|ビッグホリデー|旅工房|はとバス|ジャルパック|(?<![A-Za-z])JALPAK(?![A-Za-z])|ミキ・ツーリスト|Miki\s*Travel|ランドオペレータ(?:ー)?|ホールセラー|ホールセール|ベッドバンク|[Bb]edbank|Hotelbeds|(?<![A-Za-z])HBX(?![A-Za-z])|Web[Bb]eds|Rate[Hh]awk|Emerging Travel|(?<![A-Za-z])ETG(?![A-Za-z])|(?<![A-Za-z])TAAP(?![A-Za-z])|Bedsonline|Cloudbeds|Virtuoso|(?<![A-Za-z])B2B(?![A-Za-z])|Expedia|エクスペディア|(?<![A-Za-z])Vrbo(?![A-Za-z])|Booking|Agoda|Trip\.com|トリップドットコム|Airbnb|エアビー|Klook|KKday|Veltra|ベルトラ|Viator|Tiqets|GetYourGuide|Traveloka|MakeMyTrip|(?<![A-Za-z])Ctrip(?![A-Za-z])|携程|Fliggy|サイトコントローラ(?:ー)?|(?<![A-Za-z])Dida(?![A-Za-z])|SiteMinder|DerbySoft|手間いらず|ねっぱん|TL-Lincoln|大手旅行会社|旅行会社)/;
 
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function colorize(s){return esc(s).replace(/▲\s*[+＋]/g,'<span class="up">▲+</span>').replace(/▼/g,'<span class="dn">▼</span>')}
@@ -4156,25 +4221,58 @@ scan();
     const blob=[it.headline,it.body,hide?'':it.note,it.category,it.categoryLabel,it.theme,it.themeLabel,it.feedLabel,hide?'':it.noteLabel].concat((it.sources||[]).flatMap(s=>[s.label,s.url])).join('\n').normalize('NFKC').toLowerCase();
     return ws.every(w=>blob.includes(w));
   }
+  function isCompany(it){
+    if(typeof it.companies==='boolean')return it.companies;
+    if(it.theme==='overseas'||it.theme==='domestic')return true;
+    const text=[it.headline,it.category,it.categoryLabel].join('\n').normalize('NFKC');
+    if(COMPANY_RE.test(text))return true;
+    const lead=String(it.body||'').normalize('NFKC').replace(/^[\s・　]+/,'').split(/[\n。]/)[0].trim();
+    const m=lead.match(COMPANY_RE);
+    return !!(m&&m.index<=2);
+  }
+  function inMonth(it){return nwMonthV==='all'||String(it.date||'').slice(0,7)===nwMonthV}
+  function passes(it,theme){
+    const id=theme==null?filter:theme;
+    if(id!=='all'&&it.theme!==id)return false;
+    if(companies&&!isCompany(it))return false;
+    if(!inMonth(it))return false;
+    return hit(it);
+  }
   function visibleGroups(){
     if(!data)return [];
     const map=new Map();
     data.items.forEach(it=>{
-      if(filter!=='all'&&it.theme!==filter)return;
-      if(!hit(it))return;
+      if(!passes(it))return;
       if(!map.has(it.date))map.set(it.date,{date:it.date,weekday:it.weekday,items:[]});
       map.get(it.date).items.push(it);
     });
     return [...map.values()];
   }
+  function visibleItems(){return visibleGroups().flatMap(g=>g.items)}
   function retarget(){
+    if(nwMonthV!=='all'){openItems=new Set();return}
     const groups=visibleGroups();
-    if(filter==='all'&&!words().length){
+    if(filter==='all'&&!words().length&&!companies){
       const latest=data&&data.items[0]?data.items[0].date:null;
       openDates=new Set(latest?[latest]:[]);
     }else openDates=new Set(groups.map(g=>g.date));
   }
-  function chipCount(id){return data.items.filter(it=>hit(it)&&(id==='all'||it.theme===id)).length}
+  function chipCount(id){return data.items.filter(it=>passes(it,id)).length}
+  function newsMonthName(ym){const p=String(ym||'').split('-');return p.length>=2?p[0]+'年'+Number(p[1])+'月':ym||''}
+  function syncFilters(){
+    if(coBtn){coBtn.classList.toggle('on',companies);coBtn.setAttribute('aria-pressed',companies?'true':'false')}
+    if(monthSel&&data){
+      const yms=[...new Set(data.items.map(it=>String(it.date||'').slice(0,7)).filter(v=>/^\d{4}-\d{2}$/.test(v)))].sort((a,b)=>b.localeCompare(a));
+      const key=yms.join(',');
+      if(monthSel.dataset.months!==key){
+        monthSel.dataset.months=key;
+        monthSel.innerHTML='<option value="all">すべての期間</option>'+yms.map(ym=>'<option value="'+esc(ym)+'">'+esc(newsMonthName(ym))+'</option>').join('');
+      }
+      if(![...monthSel.options].some(o=>o.value===nwMonthV))nwMonthV='all';
+      monthSel.value=nwMonthV;
+    }
+    if(clearBtn)clearBtn.hidden=!(companies||nwMonthV!=='all');
+  }
   function fmtOpen(h){
     const d=h['開業日'], p=h['開業日の精度'];
     if(p==='日'){const a=d.split('-');return a[0]+'年'+Number(a[1])+'月'+Number(a[2])+'日'}
@@ -4316,6 +4414,27 @@ scan();
     const note=it.note&&!angleNote(it)?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
     return '<article class="nw-card'+(it.highlight?' yoten':'')+'"><div class="nw-kicker"><span class="nw-cat">'+esc(it.category||it.categoryLabel)+'</span><span class="nw-feed">'+feed+'</span></div><h2>'+colorize(it.headline)+'</h2>'+rich(it.body)+note+sourcesHtml(it)+'</article>';
   }
+  function firstSource(it){
+    for(const s of (it.sources||[])){const href=safeUrl(s.url);if(href)return {href,label:s.label||href}}
+    return null;
+  }
+  function detailHtml(it){
+    const note=it.note&&!angleNote(it)?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
+    return '<div class="nw-sumb">'+rich(it.body)+note+sourcesHtml(it)+'</div>';
+  }
+  function summaryHtml(items){
+    const name=newsMonthName(nwMonthV);
+    const head='<p class="nw-sumhead">'+esc(name)+'のまとめ<span>'+items.length+'件</span></p>';
+    if(!items.length)return head+'<div class="nw-empty">該当するニュースはありません。</div>';
+    const lis=items.map(it=>{
+      const open=openItems.has(it.id);
+      const src=firstSource(it);
+      const link=src?'<a class="nw-suma" href="'+esc(src.href)+'" target="_blank" rel="noopener noreferrer">出典</a>':'';
+      const date=it.dateLabel||fmtDate(it.date,it.weekday);
+      return '<li class="nw-sumi"><div class="nw-sumrow"><button type="button" class="nw-sumh" data-id="'+esc(it.id)+'" aria-expanded="'+open+'"><span class="dot" aria-hidden="true">•</span><span class="nw-sumd">'+esc(date)+'</span><span class="nw-sumtag">'+esc(it.themeLabel||'')+'</span><span class="nw-sumt">'+colorize(it.headline)+'</span></button>'+link+'</div>'+(open?detailHtml(it):'')+'</li>';
+    }).join('');
+    return head+'<ul class="nw-sum">'+lis+'</ul>';
+  }
   function render(toTop){
     if(!data){
       meta.textContent=failed?'読み込めませんでした':'読み込み中…';
@@ -4329,24 +4448,36 @@ scan();
       return;
     }
     toggle.hidden=false;
+    syncFilters();
     const wd=(data.items.find(it=>it.date===data.updated)||{}).weekday||'';
     meta.textContent='最終更新日 '+fmtDate(data.updated,wd);
     chips.innerHTML='<div class="nw-cluster">'+(data.filters||[]).map(f=>'<button type="button" class="nw-chip'+(f.id===filter?' on':'')+'" data-f="'+esc(f.id)+'" aria-pressed="'+(f.id===filter)+'">'+esc(f.label)+'<span class="n">'+chipCount(f.id)+'</span></button>').join('')+'</div>';
     const groups=visibleGroups();
-    const shown=groups.reduce((n,g)=>n+g.items.length,0);
+    const items=groups.flatMap(g=>g.items);
+    const shown=items.length;
     const total=data.counts?data.counts.items:data.items.length;
     const totalDays=data.counts?data.counts.dates:new Set(data.items.map(it=>it.date)).size;
-    countEl.textContent=shown+'件・'+groups.length+'日分を表示（全'+total+'件・'+totalDays+'日分）';
-    const every=groups.length>0&&groups.every(g=>openDates.has(g.date));
-    toggle.textContent=every?'日付を折りたたむ':'すべての日付を開く';
-    toggle.disabled=!groups.length;
-    const latest=data.items[0]?data.items[0].date:'';
-    body.innerHTML=groups.length?groups.map(g=>{
-      const open=openDates.has(g.date);
-      return '<section class="nw-day"><button type="button" class="nw-dayh" data-date="'+esc(g.date)+'" aria-expanded="'+open+'"><span class="nw-dayt">'+esc(fmtDate(g.date,g.weekday))+'</span>'+(g.date===latest?'<span class="nw-new">最新</span>':'')+'<span class="nw-dayn">'+g.items.length+'件</span><span class="ch" aria-hidden="true">▼</span></button>'+(open?'<div class="nw-dayb">'+g.items.map(cardHtml).join('')+'</div>':'')+'</section>';
-    }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>';
+    const monthOn=nwMonthV!=='all';
+    if(monthOn){
+      const every=items.length>0&&items.every(it=>openItems.has(it.id));
+      toggle.textContent=every?'箇条書きに戻す':'すべて開く';
+      toggle.disabled=!items.length;
+      countEl.textContent=shown+'件を箇条書きで表示（'+newsMonthName(nwMonthV)+'）';
+      body.innerHTML=summaryHtml(items);
+    }else{
+      countEl.textContent=shown+'件・'+groups.length+'日分を表示（全'+total+'件・'+totalDays+'日分）';
+      const every=groups.length>0&&groups.every(g=>openDates.has(g.date));
+      toggle.textContent=every?'日付を折りたたむ':'すべての日付を開く';
+      toggle.disabled=!groups.length;
+      const latest=data.items[0]?data.items[0].date:'';
+      body.innerHTML=groups.length?groups.map(g=>{
+        const open=openDates.has(g.date);
+        return '<section class="nw-day"><button type="button" class="nw-dayh" data-date="'+esc(g.date)+'" aria-expanded="'+open+'"><span class="nw-dayt">'+esc(fmtDate(g.date,g.weekday))+'</span>'+(g.date===latest?'<span class="nw-new">最新</span>':'')+'<span class="nw-dayn">'+g.items.length+'件</span><span class="ch" aria-hidden="true">▼</span></button>'+(open?'<div class="nw-dayb">'+g.items.map(cardHtml).join('')+'</div>':'')+'</section>';
+      }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>';
+    }
     if(toTop&&scroll)scroll.scrollTop=0;
     if(filter==='openings')ensureHotels(false); else if(hoPanel)hoPanel.hidden=true;
+    if(window.__mSync)window.__mSync();
   }
   function load(force){
     if(data&&!force){render(false);return}
@@ -4357,7 +4488,8 @@ scan();
       if(!Array.isArray(data.items))throw new Error('items');
       const latest=data.items[0]?data.items[0].date:null;
       openDates=new Set(latest?[latest]:[]);
-      filter='all'; query=''; if(input)input.value='';
+      openItems=new Set();
+      filter='all'; query=''; companies=false; nwMonthV='all'; if(input)input.value='';
       render(true);
     }).catch(()=>{data=null; loading=false; failed=true; render(false)});
   }
@@ -4366,17 +4498,44 @@ scan();
     filter=b.dataset.f||'all'; retarget(); render(true);
   });
   body.addEventListener('click',e=>{
+    const sum=e.target.closest('.nw-sumh');
+    if(sum){
+      const id=sum.dataset.id;
+      if(openItems.has(id))openItems.delete(id); else openItems.add(id);
+      render(false);
+      return;
+    }
     const b=e.target.closest('.nw-dayh'); if(!b)return;
     const d=b.dataset.date;
     if(openDates.has(d))openDates.delete(d); else openDates.add(d);
     render(false);
   });
   toggle.addEventListener('click',()=>{
+    if(nwMonthV!=='all'){
+      const items=visibleItems();
+      const every=items.length&&items.every(it=>openItems.has(it.id));
+      openItems=new Set(every?[]:items.map(it=>it.id));
+      render(false);
+      return;
+    }
     const groups=visibleGroups();
     const every=groups.length&&groups.every(g=>openDates.has(g.date));
     openDates=new Set(every?(groups[0]?[groups[0].date]:[]):groups.map(g=>g.date));
     render(false);
   });
+  if(monthSel)monthSel.addEventListener('change',()=>{
+    nwMonthV=monthSel.value||'all';
+    if(nwMonthV!=='all')openItems=new Set();
+    retarget(); render(true);
+  });
+  if(coBtn)coBtn.addEventListener('click',()=>{companies=!companies;retarget();render(true)});
+  function clearExtra(){
+    if(!companies&&nwMonthV==='all'){if(window.__mSync)window.__mSync();return}
+    companies=false; nwMonthV='all'; openItems=new Set();
+    retarget(); render(true);
+  }
+  if(clearBtn)clearBtn.addEventListener('click',clearExtra);
+  window.__newsClearExtra=clearExtra;
   let timer=0;
   input.addEventListener('input',()=>{
     query=input.value;
@@ -4405,7 +4564,7 @@ scan();
   hoQ.addEventListener('input',()=>{hoQuery=hoQ.value; clearTimeout(hoTimer); hoTimer=setTimeout(()=>renderHotels(),120)});
   window.__openNews=()=>load(false);
   if(window.__viewNow&&window.__viewNow()==='nw')load(false);
-  window.__newsDebug=()=>({loaded:!!data,failed,filter,query,open:[...openDates],counts:data&&data.counts,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
+  window.__newsDebug=()=>({loaded:!!data,failed,filter,query,companies,month:nwMonthV,open:[...openDates],openItems:[...openItems],counts:data&&data.counts,companyItems:data?data.items.filter(isCompany).length:0,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
 })();
 </script>
 </body>

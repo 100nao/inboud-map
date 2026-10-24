@@ -17,9 +17,9 @@
     }
   ],
   "counts": {
-    "items": 125,
+    "items": 127,
     "dates": 26,
-    "industry": 56,
+    "industry": 58,
     "ota": 69,
     "industryDates": 15,
     "otaDates": 25,
@@ -27,7 +27,7 @@
       "海外OTA": 68,
       "国内OTA・旅行会社": 9,
       "新規開業ホテル": 17,
-      "新規フライト情報": 31
+      "新規フライト情報": 33
     }
   },
   "items": [
@@ -512,6 +512,37 @@
       ]
     },
     {
+      "id": "industry-127",
+      "date": "2026-10-21",
+      "dateLabel": "10/21（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "アラスカ航空、関西＝シアトル線を2027年5月に新規開設（ハワイアン航空ブランドのA330で週4往復・通年）",
+      "body": "・発表日：2026年10/20（米国時間）。アラスカ航空はシアトル＝関西線を開設し、シアトル発は5/14から月水金日、関西発は5/15から月火木土に運航する。関空とシアトルを結ぶ唯一の直行便になる。\n・シアトル12:10発→関西翌日16:00着、関西18:00発→シアトル12:20着。機材はA330-200（278席）で、便名はAS。\n・同グループは2025年5月に成田＝シアトル線を開設済み。シアトル経由で米国内各地へ乗り継げる。",
+      "note": "関西に米国西海岸からの直行便が増え、米国客が関西から入って東京へ移る周遊も増えうる。東京のホテルとは、関西起点の米国客の前後泊をどう取るかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/352813",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.kansai-airports.co.jp/news/j-261021-pressrelease-alaska-kix-sea/",
+          "label": "kansai-airports.co.jp"
+        },
+        {
+          "url": "https://www.flysea.org/news/sea-welcomes-alaskas-announcement-latest-new-international-services",
+          "label": "flysea.org"
+        }
+      ]
+    },
+    {
       "id": "ota-114",
       "date": "2026-10-21",
       "dateLabel": "10/21（水）",
@@ -632,6 +663,33 @@
         {
           "url": "https://prtimes.jp/main/html/rd/p/000001093.000004762.html",
           "label": "prtimes.jp"
+        }
+      ]
+    },
+    {
+      "id": "industry-128",
+      "date": "2026-10-20",
+      "dateLabel": "10/20（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "エアプサン、長崎＝釜山線を2027年1/5に運航再開（週3往復、2/28まで）",
+      "body": "・発表日：2026年10/16（長崎県）。エアプサンは長崎＝釜山の定期便を2027年1/5〜2/28に火・金・日曜の週3往復で再開する。釜山9:50発、長崎12:40発で、所要約1時間20分。同路線は2026年1/4に定期便として開設し最大週5往復を運航したが、4月から運休していた（TRAICY・KTN）。",
+      "note": "九州では韓国からの短距離便の再開・増便が続く。長崎の取引ホテルとは、冬の韓国客向けの露出や、3月以降の継続を見据えた販促を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261020385305/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.ktn.co.jp/news/detail.php?id=20261016002",
+          "label": "ktn.co.jp"
         }
       ]
     },
