@@ -512,8 +512,85 @@ def assign_dates_and_sources(items: list[dict], csv_index: dict, year: int) -> N
         previous = (item["month"], item["day"])
 
 
+# 便の種類。この並びで出し、将来の絞り込みもこのラベルをキーにする。
+FLIGHT_TAG_ORDER = ("新規", "増便", "再開", "減便", "運休", "変更")
+
+
+def _flight_clauses(headline: str, body: str) -> list[str]:
+    parts: list[str] = []
+    for chunk in re.split(r"[　\s]*／[　\s]*|　+|・", headline or ""):
+        text = _norm_text(chunk).strip(" ・")
+        if text:
+            parts.append(text)
+    for line in re.split(r"[\n。]", body or ""):
+        text = _norm_text(line).strip(" ・")
+        if text:
+            parts.append(text)
+    return parts
+
+
+def _flight_clause_tags(clause: str) -> set[str]:
+    """1つの話題から便の種類を拾う。別路線の注記や、開業の「新規」は拾わない。"""
+    if re.search(r"従来発表|別掲", clause):
+        return set()
+    text = re.sub(r"新規開業", "", clause)
+    tags: set[str] = set()
+    if re.search(r"運休(?!していた|していました|後|前)|欠航|路線廃止|運航を休止|を休止", text):
+        tags.add("運休")
+    if re.search(r"(?<!増)減便(?!がない|はない|せず)|往復減|都市が外れた", text):
+        tags.add("減便")
+    if re.search(r"再開|復便|\d+年(?:半)?ぶり", text):
+        tags.add("再開")
+    launch_off = re.search(
+        r"(?:開設|就航|開始).{0,16}(?:延期|取りやめ)|(?:延期|取りやめ).{0,12}(?:開設|就航)",
+        text,
+    )
+    aircraft_debut = bool(
+        re.search(r"初就航", text)
+        and re.search(r"A3\d{2}|787|737|A330", text)
+        and not re.search(r"新規開設|新規就航|を開設|線を開設|で開設", text)
+    )
+    past_launch = re.search(r"として開設し|開設し最大|開設したが|開設していた|就航したが", text)
+    if launch_off or aircraft_debut or re.search(r"延期", text):
+        tags.add("変更")
+    if (
+        not launch_off
+        and not aircraft_debut
+        and not past_launch
+        and not re.search(r"滑走路|誘導路|駐機場", text)
+        and re.search(r"新規就航|新規開設|新規路線|路線を新設|(?<!新規)開設|就航(?!先|都市)", text)
+    ):
+        tags.add("新規")
+    # 過去の開設話（「開設し最大週5往復を運航したが」）の便数は、今の増便ではない。
+    if not past_launch and re.search(
+        r"増便|デイリー化|ダブルデイリー|増やす|が増え|を増や(?!した)|追加便|往復を足|を足して|往復追加|臨時便|"
+        r"1日[2-9]往復に|1日[2-9]往復へ|週7へ|1日最大[2-9]往復|最大週\d+往復",
+        text,
+    ):
+        tags.add("増便")
+    if re.search(
+        r"移管|に移し|に移す|小型化|ワイドボディ|時刻を変更|時刻が変わる|ダイヤが(?:一部)?変わ|"
+        r"運航曜日を変更|燃油サーチャージ(?:の)?引き上げ|サーチャージ引き上げ|追加販売|出発時刻",
+        text,
+    ):
+        tags.add("変更")
+    return tags
+
+
+def flight_tags(headline: str, body: str = "") -> list[str]:
+    """見出しと本文から便の種類を返す。話題の切り口（note）は見ない。
+
+    開設が延期したものは新規にしない。燃油サーチャージなし、という注記だけでは変更にしない。
+    滑走路の新設は路線の新規開設ではない。
+    """
+    found: set[str] = set()
+    for clause in _flight_clauses(headline, body):
+        found.update(_flight_clause_tags(clause))
+    return [label for label in FLIGHT_TAG_ORDER if label in found]
+
+
 def public_item(item: dict, seq: int) -> dict:
-    return {
+    public = {
         "id": f"{item['feed']}-{seq}",
         "date": item["date"],
         "dateLabel": f"{int(item['date'][5:7])}/{int(item['date'][8:10])}（{item['weekday']}）",
@@ -532,6 +609,14 @@ def public_item(item: dict, seq: int) -> dict:
         "sources": item["sources"],
         "companies": is_company_news(item),
     }
+    if item["theme"] == "flights":
+        tagged = {}
+        for key, value in public.items():
+            tagged[key] = value
+            if key == "themeLabel":
+                tagged["flightTags"] = flight_tags(item["headline"], item["body"])
+        return tagged
+    return public
 
 
 def build(workbook_path: Path, industry_csv: Path | None, ota_csv: Path | None, year: int) -> dict:
@@ -639,6 +724,12 @@ def main() -> None:
     for theme_id, label in THEMES:
         print(f"    {label}: {counts['themes'][label]}")
     print(f"  他旅行会社動向: {sum(1 for item in payload['items'] if item.get('companies'))}")
+    tag_counts = {label: 0 for label in FLIGHT_TAG_ORDER}
+    for item in payload["items"]:
+        for tag in item.get("flightTags") or []:
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+    if any(tag_counts.values()):
+        print("  便の種類: " + "、".join(f"{label} {count}" for label, count in tag_counts.items() if count))
     omitted = audit.get("omitted") or {}
     if any(omitted.values()):
         print(
