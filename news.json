@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,525 @@
     }
   ],
   "counts": {
-    "items": 147,
-    "dates": 31,
-    "industry": 77,
+    "items": 164,
+    "dates": 32,
+    "industry": 94,
     "ota": 70,
-    "industryDates": 24,
+    "industryDates": 25,
     "otaDates": 25,
     "themes": {
       "海外OTA": 69,
       "国内OTA・旅行会社": 9,
-      "新規開業ホテル": 17,
-      "新規フライト情報": 52
+      "新規開業ホテル": 21,
+      "新規フライト情報": 65
     }
   },
   "items": [
+    {
+      "id": "industry-149",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便",
+        "再開",
+        "運休"
+      ],
+      "highlight": false,
+      "headline": "JAL、成田＝上海（浦東）を10/25から毎日で再開　羽田＝香港は春節中心に増便、羽田＝ドーハは冬も運休",
+      "body": "・発表日：2026年8/18（JALグループの2026年度下期路線便数計画）。冬ダイヤ初日の10/25から成田＝上海（浦東）を再開し、週7往復で運航する。上海線は羽田・成田・関西の3空港発着になる。\n・同じ計画で、羽田＝香港は春節期間を中心に増便する。2月末から運休している羽田＝ドーハは、中東情勢で再開が見通せないとして2026年度下期も期間運休（10/24〜2027年3/28のJL59/JL50）。中東・アフリカはカタール航空のコードシェアで対応する。\n・JTAの那覇＝台北（桃園）は、朝便に夜帯を足して1日2往復にする。sky-budgetの10/25冬ダイヤ一覧も、成田＝上海の再開を10/25からとしている。\n・ANAの成田＝上海（NH921/922）は、8/20時点の運航案内で冬ダイヤ期間（10/25〜2027年3/27）も運休のままで、夏（3/29〜10/24）からの継続。",
+      "note": "成田・上野・東京駅周辺のホテルとは、上海線の再開で戻る中国の個人・出張需要と、ドーハ運休が続く中東経由の入りを分けて聞く材料になる。那覇は台北の夜帯便が増える前提で、前後泊を話す。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://press.jal.co.jp/ja/release/202608/009668.html",
+          "label": "press.jal.co.jp"
+        },
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        },
+        {
+          "url": "https://www.ana.co.jp/ja/jp/guide/plan/airinfo/int-routeinfo/",
+          "label": "ana.co.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-150",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "ZIPAIR、成田＝仁川を10/25〜11/30は毎日2往復に増便（12月の期間増便とは別）",
+      "body": "・発表日：2026年9/10（ZIPAIR）。成田＝仁川は冬ダイヤ通期では1日1往復で、10/25〜11/30は毎日1往復を足して1日2往復（週14便）にする。12月の一部曜日だけの追加便とは期間が違う。\n・増便分はZG43 成田10:55発→仁川13:35着、ZG44 仁川17:15発→成田19:40着。既存便はZG45 成田8:55発→仁川11:35着、ZG46 仁川13:05発→成田15:30着。機材は787-8で、燃油サーチャージはない。販売開始は9/10正午。",
+      "note": "仁川発の増便は夕方に成田へ着く。成田周辺や都心の取引ホテルとは、10月末〜11月の韓国客の前泊・後泊を、12月の追加便と分けて押さえる材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.zipair.net/ja/notification/425",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/350317",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20260910381492/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-151",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "タイ・ベトジェット、成田＝バンコクを11/6から週7便を週11便に増便",
+      "body": "・発表日：2026年10/25（sky-budgetの冬ダイヤ一覧。航空会社の個別リリースは未確認）。タイ・ベトジェットエアは成田＝バンコクを11/6から週7便を週11便に増やす。\n・同社は、成田空港が10/22に発表した冬期の新規乗り入れ会社（パラタ航空、タイベトジェットエア、ニューギニア航空、ビーマン・バングラデシュ航空）の一つ。",
+      "note": "バンコク線の週11便は11月上旬から。到着時刻は一覧にないので、成田・都心の取引ホテルとは増便後の到着帯を確認してから在庫の話をする。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-152",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "ターキッシュエアラインズ、成田＝イスタンブールを2027年2/2から週12往復に増便",
+      "body": "・発表日：2026年3/17（ターキッシュ エアラインズ）。成田＝イスタンブールは、10/25〜2027年2/1が週10往復、2/2〜3/27が週12往復。夏に増やしたTK300/301を冬も続け、2月から火・金を足す。\n・TK50はイスタンブール15:25発→成田翌日8:45着、TK300はイスタンブール1:50発→成田19:10着。羽田と関西も毎日で、2月以降の日本路線は週26便になる（Aviation Wire）。sky-budgetの10/25一覧も、2027年2/2から週10便を週12便としている。",
+      "note": "イスタンブール経由の欧州・中東は、朝着（TK50）と夜着（TK300）の両方が厚くなる。成田・都心の取引ホテルとは、2月からの週12往復を前提に乗り継ぎ客の前後泊を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000147.000030426.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/340057",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-153",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "アメリカン航空、成田＝シカゴを2027年3/19に再開（毎日、当初の3/27から前倒し）",
+      "body": "・発表日：2026年8/28（sky-budget。JALの共同事業ページも3/19再開と記載）。アメリカン航空は成田＝シカゴを2027年3/19（シカゴ発）から毎日再開する。当初予定の3/27から約1週間前倒しした。機材は787-9（ビジネス30席、プレミアムエコノミー21席）。\n・AA154 成田17:50発→シカゴ15:10着、AA153 シカゴ12:45発→成田翌日15:30着。同社のシカゴ発着アジア路線は2020年以降運休していた。10/25に再開したユナイテッドの成田＝シカゴとは別便。",
+      "note": "春のシカゴ線はユナイテッドにアメリカンが加わる。成田・都心の取引ホテルとは、3月下旬の北米個人客を、10月に戻ったユナイテッド便と分けて見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/08/28/american-air-nrt-ord-2027/",
+          "label": "sky-budget.com"
+        },
+        {
+          "url": "https://www.jal.co.jp/jp/ja/inter/route/pjb/",
+          "label": "jal.co.jp"
+        },
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-154",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "エア・インディア、羽田＝ムンバイを12/31から週4便を週5便に増便",
+      "body": "・発表日：2026年10/25（sky-budgetの冬ダイヤ一覧。航空会社の個別リリースは未確認）。エア・インディアは羽田＝ムンバイを12/31から週4便を週5便に増やす。\n・同社の羽田＝デリーは毎日。関西＝デリーの2027年2/2開設（週4往復）は別掲。",
+      "note": "年末からムンバイ線が週5便になる。羽田・品川・浜松町の取引ホテルとは、インドからの年末年始の入りが1便分厚くなる前提で在庫を聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-155",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便",
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "成田の冬後半、カンタスがメルボルンを週11便に　ジェットスターは台北を増便、デルタはシアトルを3/27再開",
+      "body": "・発表日：2026年10/25（sky-budgetの冬ダイヤ一覧）。カンタス航空は成田＝メルボルンを12/2から週7便を週11便に増やす。ジェットスター・ジャパンは成田＝台北を12/26から、1日2往復に週4便を足す。デルタ航空は成田＝シアトルを2027年3/27から週7便で再開する。\n・一覧は予定で、当局の認可や国際情勢で変わりうるとしている。10/26のJAL成田＝メルボルン毎日化、フィリピン航空の成田＝マニラ、ANAの成田＝バンコクは以前の要点にある。",
+      "note": "メルボルンの週11便は12月上旬、シアトルの再開は冬ダイヤ最終日。成田・都心の取引ホテルとは、豪州の年末と北米の春を分けて、前後泊の在庫を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-162",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "カソク、「AIMA Nihonbashi」を10/23に開業（日本橋本石町・37室、全室キッチン付き）",
+      "body": "・発表日：2026年10/23（カソク）。中央区日本橋本石町4-1-6にアパートメントホテル「AIMA Nihonbashi」を同日開業した。全37室・8タイプ（33.86〜60.07㎡）で、定員は1室4〜8名。全室キッチン・洗濯機付き、フロントは24時間。\n・JR新日本橋駅徒歩約5分、神田駅徒歩約6分、大手町駅徒歩約8分。チェックイン16:00、チェックアウト11:00。",
+      "note": "日本橋・神田に4名以上で泊まれるキッチン付き客室が加わった。周辺ホテルとは、ファミリー・グループの在庫をOTAにどこまで出すかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000067.000056249.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/aima-nihonbashi-opening/",
+          "label": "innippon.news"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-163",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "アスコット、「シタディーンノース新宿東京」を10/28に開業（ホテル106室＋サービスレジデンス73室）",
+      "body": "・発表日：2026年10/25（TRAICY。開業は予定どおり10/28）。アスコットは新宿区百人町に「シタディーンノース新宿東京」を開業する。ホテル106室とサービスレジデンス73室の全179室で、多くの客室にキッチンがあり、3〜6名で泊まれる2ベッドルームもある。\n・大久保駅徒歩約3分、新大久保駅徒歩約7分。国内のシタディーンはこれで4軒目。",
+      "note": "新大久保・大久保に、短期と中長期が同じ建物に入る。新宿の取引ホテルとは、4名以上やキッチン付きの在庫をOTAにどう出すかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261025378942/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-164",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "箱根G邸.、開業を2027年春へ再延期（8/30から10/30に延ばしたあと、改修遅れで正式日は未定）",
+      "body": "・箱根町強羅の「箱根G邸.」（23室）は、2026年8/30の開業を資材搬入の遅れで10/30に延期したあと、既存建物の改修が想定より長引き、開業を再度延期した。新たな開業時期は2027年春の見込みで、正式な日は未定。予約客には個別に連絡している（公式サイト）。",
+      "note": "強羅の取引宿とは、10/30に入る予定だった供給が春までずれる前提で、紅葉と冬の在庫を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://hakone-g.jp/news/%e9%96%8b%e6%a5%ad%e6%97%a5%e5%bb%b6%e6%9c%9f%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b-2/",
+          "label": "hakone-g.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-165",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "ホテルエバーホーム蘇我（131室）が12/25開業、10/21から予約開始",
+      "body": "・発表日：2026年10/21（相鉄ホテルズ）。千葉市中央区南町の「ホテルエバーホーム蘇我」（131室）は12/25に開業し、同日から公式サイトで予約を始めた。JR蘇我駅東口徒歩約4分。大浴場とサウナがあり、4名利用の客室もある。\n・相鉄ホテルズのパートナーホテル加盟は9/16に発表され、その時点の開業は12月下旬だった。京葉道路・松ヶ丘ICから約10分、敷地内に駐車場20台。",
+      "note": "蘇我・千葉の取引ホテルとは、幕張メッセや房総方面の拠点として131室が年末に加わる前提で、料金の位置取りを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.sotetsu-hotels.com/partnerhotel/everhome-soga/",
+          "label": "sotetsu-hotels.com"
+        },
+        {
+          "url": "https://sotetsu-hotels.com/news/560/",
+          "label": "sotetsu-hotels.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-156",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "韓国の冬ダイヤ国際線は最大週5,353回（前年冬比+7.6%、2019年冬も上回る）　日本線は週314回増",
+      "body": "・発表日：2026年10/25（韓国国土交通部、聯合ニュース）。冬ダイヤ（10/25〜2027年3/27）の国際線旅客定期便は44か国264路線、最大週5,353回。前年冬の週4,973回より7.6%多く、2019年冬の週4,980回も上回る。韓国系11社と外航73社が運航する。\n・増便の中心は日本線（週314回増）と中国線（週232回増）。中国側で新規開設された直行は、仁川＝寧波（エアプレミア）、仁川＝臨沂（トリニティ）、釜山＝厦門（イースター）、清州＝厦門（イースター）、釜山＝広州（エアプサン）、済州＝石家荘（春秋）の6路線。",
+      "note": "韓国発の座席はこの冬さらに増える。地方空港への直行も厚くなるので、東京のホテルとは、地方直行で東京を経由しない分と、東京での前後泊を分けて聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261025016000003",
+          "label": "yna.co.kr"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-157",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便",
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "鹿児島のソウル線が冬は曜日により1日最大4往復（チェジュ・イースターが再開、大韓が増便）",
+      "body": "・発表日：2026年10/25（鹿児島テレビ）。冬ダイヤ開始日にチェジュ航空とイースター航空がソウル線を再開し、増便した大韓航空と合わせて25日はソウル線が3往復飛んだ。曜日によってはソウル線だけで1日4往復で、1日の便数としては過去最多。\n・同日、エアプサンの鹿児島＝釜山定期便（週3便）も始まった。開設の発表は別掲。いずれも冬のゴルフ客などの訪日需要を見込んでいる。",
+      "note": "鹿児島の取引ホテルとは、ソウル線が曜日によって1日4往復まで増える前提で、韓国のゴルフ・短期滞在を平日にどう分散するかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.fnn.jp/articles/-/1139592",
+          "label": "fnn.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-158",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "春秋航空、新千歳＝上海（浦東）を10/25から週2便を週4便に増便",
+      "body": "・発表日：2026年10/25（sky-budget。冬ダイヤ開始日の増便として報道）。春秋航空は新千歳＝上海（浦東）を、火・土の週2便から火・木・土・日の週4便にした。\n・9C8792 新千歳13:50発→上海17:15着（火・土は15分早着）、9C8791 上海8:20発→新千歳12:50着（火・土は10分遅発）。機材はA320。\n・同じ記事は、中国東方航空の新千歳＝上海は週3便のままで、春秋の週4と合わせて両都市間は週7便になるとしている。",
+      "note": "新千歳は中国線の増便が久々に出た。札幌・北海道の取引ホテルとは、上海からの週4（昼過ぎ着）を冬のあいだどう受けるかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/spring-airlines-increase-cts-pvg-oct2026/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-159",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便",
+        "変更"
+      ],
+      "highlight": false,
+      "headline": "エミレーツ航空、5月から延期していた成田＝ドバイの2便目を10/25に開始（羽田と合わせて東京1日3往復）",
+      "body": "・発表日：2026年10/25（運航開始日。sky-budget）。エミレーツ航空は成田＝ドバイにEK320/321を毎日足し、A380のEK318/319と合わせて1日2往復にした。増便便の機材は777-300ER。\n・EK321 成田21:30発→ドバイ翌日4:40着（成田発は10/26から）、EK320 ドバイ22:45発→成田翌日13:10着。2便目は当初2026年5/1開始の計画が延期され、冬ダイヤ初日に始まった。\n・羽田＝ドバイの毎日便と合わせ東京は1日3往復。関西＝ドバイを含めると日本発着は1日4往復。",
+      "note": "ドバイ経由の中東・欧州・アフリカが成田に1便増える。成田・都心の取引ホテルとは、翌日昼着の増便に合わせた荷物預かりと、5月からずれ込んだ需要が冬に来るかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/emirates-increase-nrt-dxb-oct2026/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-160",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "増便",
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "新千歳の冬ダイヤ、マニラ再開・仁川と香港の増便・シドニー再開・サンフランシスコとバンクーバーを開設",
+      "body": "・発表日：2026年10/25（sky-budgetの冬ダイヤ一覧）。春秋航空の上海週4便化は別掲。\n・セブパシフィックはマニラ線を10/27から週3便で再開し、11/27から週7便に増やす。フィリピン航空はマニラ線を11/23から週5便で再開する。\n・エアプレミアは仁川線を12/2から週4便で新規開設する。イースター航空は仁川線を12/25から1日3往復を1日最大4往復に増やす。\n・カンタスはシドニー線を12/7から最大週5便で再開する。ユナイテッドはサンフランシスコ線を12/11から週3便で新規開設する（日経は2026年5/15に、新千歳と米国本土を結ぶ初めての定期便として報じている）。グレーターベイ航空は香港線を12/12から1日1往復を1日2往復に期間増便する。エアカナダはバンクーバー線を12/17から週3便で新規開設する。",
+      "note": "新千歳は冬にアジアと北米・豪州の直行が同時に厚くなる。札幌・ニセコ方面の取引ホテルとは、マニラ再開と12月のサンフランシスコ・バンクーバーを分けて、スキー客の入りを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOFC151WH0V10C26A5000000/",
+          "label": "nikkei.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-161",
+      "date": "2026-10-25",
+      "dateLabel": "10/25（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "増便",
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "冬ダイヤ一覧：福岡・関西・中部・那覇・函館・仙台・広島・熊本・松山の国際線（新規・増便・再開）",
+      "body": "・発表日：2026年10/25（sky-budgetの冬ダイヤ一覧。便数は往復）。福岡＝バンコクはタイ・ベトジェットが10/25から週4便で再開する。\n・関西＝仁川はイースター航空が10/25から1日2往復を3往復にする。関西＝マニラはフィリピン航空が10/26から1日2往復を3往復にする。関西＝バンコクはベトジェットが11/13から週4便を週7便にする。関西＝ハノイはベトジェットが12/18から週11便を1日2往復にする（ベトナム航空の増便は別掲）。関西＝ダナンはベトジェットが12/20から週4便で新規開設する。関西＝ロサンゼルスはユナイテッドが2027年3/27から週7便で再開する。\n・中部＝セブはセブパシフィックが11/19から週4便で新規開設する。中部＝仁川はトリニティ航空が12/18から週7便で新規開設する。\n・那覇＝シンガポールはスクートが10/31から週4便を週5便にする。那覇＝高雄はジェットスター・ジャパンが12/6から週3便、スターラックスが2027年1/1から週7便で新規開設する。那覇＝サンフランシスコはユナイテッドが2027年3/27から週3便で新規開設する。JTAの那覇＝台北1日2往復化はJALの下期計画（別掲）。\n・函館＝台北はスターラックスが10/25から週5便を週7便に、タイガーエア台湾が10/27から週5便を週7便にする。仙台＝香港は香港エクスプレスが12/3から週5便を週7便に、グレーターベイ航空が12/17から週3便で再開する。\n・広島＝仁川は大韓航空が12/23から毎日1往復で新規就航する（発表日：2026年8/24、広島国際空港。広島13:25発、仁川10:35発）。熊本＝清州はエアロKが12/23から週3便、松山＝清州は2027年1/2から週2便で新規開設する。\n・神戸のトリニティ・高雄、鹿児島＝釜山、大分＝仁川、熊本＝台中、中部＝台中は別掲。",
+      "note": "地方空港の冬は韓国・台湾・東南アジアの直行が同時に動く。福岡・関西・中部・那覇・函館・仙台・広島・熊本・松山の取引ホテルとは、自空港に着く便の曜日と、12月以降に始まる新規路線を分けて在庫を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/25/japan-international-2026winter-schedule/",
+          "label": "sky-budget.com"
+        },
+        {
+          "url": "https://www.yomiuri.co.jp/local/hiroshima/news/20260824-GYTNT00205/",
+          "label": "yomiuri.co.jp"
+        }
+      ],
+      "companies": false
+    },
     {
       "id": "industry-133",
       "date": "2026-10-25",
