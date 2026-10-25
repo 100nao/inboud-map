@@ -964,6 +964,16 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #newsView .nw-card.yoten{background:#fbf7ff;box-shadow:inset 4px 0 0 #5b3d8f}
 #newsView .nw-kicker{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px}
 #newsView .nw-cat{font-size:12px;font-weight:700;color:#3d2a63;background:#efe8f8;border-radius:999px;padding:1px 8px}
+#newsView .nw-ftags{display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center}
+#newsView .nw-ftag{display:inline-block;font-size:10.5px;font-weight:700;line-height:1.45;color:#fff;background:#3e4f6d;border-radius:999px;padding:0 7px;white-space:nowrap}
+#newsView .nw-ftag[data-flight-tag="新規"]{background:#1d4ed8}
+#newsView .nw-ftag[data-flight-tag="増便"]{background:#15803d}
+#newsView .nw-ftag[data-flight-tag="再開"]{background:#0f766e}
+#newsView .nw-ftag[data-flight-tag="減便"]{background:#c2410c}
+#newsView .nw-ftag[data-flight-tag="運休"]{background:#b91c1c}
+#newsView .nw-ftag[data-flight-tag="変更"]{background:#4b5563}
+#newsView .nw-sumh .nw-ftags{margin-right:6px;vertical-align:1px}
+#newsView .nw-ftag-legend{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:0 0 10px;font-size:11.5px;font-weight:700;color:#5a6a88}
 #newsView .nw-feed{font-size:11px;color:#7d8aa5}
 #newsView .nw-card h2{font-size:16px;line-height:1.45;margin:0 0 6px;font-weight:700}
 #newsView .nw-card.yoten h2{font-size:17.5px}
@@ -4409,10 +4419,61 @@ scan();
     if(!links.length)return '<div class="nw-src"><span class="nw-none">出典リンクなし</span></div>';
     return '<div class="nw-src"><span class="lb">出典</span>'+links.join('')+'</div>';
   }
+  // 便の種類。並びはこの順。将来の絞り込みは FLIGHT_TAGS と data-flight-tag を使う。
+  const FLIGHT_TAGS=['新規','増便','再開','減便','運休','変更'];
+  function flightClauses(headline, body){
+    const parts=[];
+    String(headline||'').split(/[　\s]*／[　\s]*|　+|・/).forEach(chunk=>{
+      const text=chunk.normalize('NFKC').replace(/^[ 　・]+|[ 　・]+$/g,'');
+      if(text)parts.push(text);
+    });
+    String(body||'').split(/[\n。]/).forEach(line=>{
+      const text=line.normalize('NFKC').replace(/^[ 　・]+|[ 　・]+$/g,'');
+      if(text)parts.push(text);
+    });
+    return parts;
+  }
+  function flightClauseTags(clause){
+    if(/従来発表|別掲/.test(clause))return [];
+    const text=clause.replace(/新規開業/g,'');
+    const tags=new Set();
+    if(/運休(?!していた|していました|後|前)|欠航|路線廃止|運航を休止|を休止/.test(text))tags.add('運休');
+    if(/(?<!増)減便(?!がない|はない|せず)|往復減|都市が外れた/.test(text))tags.add('減便');
+    if(/再開|復便|\d+年(?:半)?ぶり/.test(text))tags.add('再開');
+    const launchOff=/(?:開設|就航|開始).{0,16}(?:延期|取りやめ)|(?:延期|取りやめ).{0,12}(?:開設|就航)/.test(text);
+    const aircraftDebut=/初就航/.test(text)&&/A3\d{2}|787|737|A330/.test(text)&&!/新規開設|新規就航|を開設|線を開設|で開設/.test(text);
+    const pastLaunch=/として開設し|開設し最大|開設したが|開設していた|就航したが/.test(text);
+    if(launchOff||aircraftDebut||/延期/.test(text))tags.add('変更');
+    if(!launchOff&&!aircraftDebut&&!pastLaunch&&!/滑走路|誘導路|駐機場/.test(text)&&/新規就航|新規開設|新規路線|路線を新設|(?<!新規)開設|就航(?!先|都市)/.test(text))tags.add('新規');
+    if(!pastLaunch&&/増便|デイリー化|ダブルデイリー|増やす|が増え|を増や(?!した)|追加便|往復を足|を足して|往復追加|臨時便|1日[2-9]往復に|1日[2-9]往復へ|週7へ|1日最大[2-9]往復|最大週\d+往復/.test(text))tags.add('増便');
+    if(/移管|に移し|に移す|小型化|ワイドボディ|時刻を変更|時刻が変わる|ダイヤが(?:一部)?変わ|運航曜日を変更|燃油サーチャージ(?:の)?引き上げ|サーチャージ引き上げ|追加販売|出発時刻/.test(text))tags.add('変更');
+    return [...tags];
+  }
+  function deriveFlightTags(headline, body){
+    const found=new Set();
+    flightClauses(headline, body).forEach(clause=>flightClauseTags(clause).forEach(tag=>found.add(tag)));
+    return FLIGHT_TAGS.filter(label=>found.has(label));
+  }
+  function flightTagList(it){
+    if(!it||it.theme!=='flights')return [];
+    const raw=Array.isArray(it.flightTags)?it.flightTags:deriveFlightTags(it.headline||'','');
+    const known=FLIGHT_TAGS.filter(tag=>raw.includes(tag));
+    const extra=raw.filter(tag=>!FLIGHT_TAGS.includes(tag));
+    return known.concat(extra);
+  }
+  function flightTagsHtml(it){
+    const tags=flightTagList(it);
+    if(!tags.length)return '';
+    return '<span class="nw-ftags">'+tags.map(tag=>'<span class="nw-ftag" data-flight-tag="'+esc(tag)+'">'+esc(tag)+'</span>').join('')+'</span>';
+  }
+  function flightLegendHtml(){
+    if(filter!=='flights')return '';
+    return '<p class="nw-ftag-legend">便の種類 '+FLIGHT_TAGS.map(tag=>'<span class="nw-ftag" data-flight-tag="'+esc(tag)+'">'+esc(tag)+'</span>').join('')+'</p>';
+  }
   function cardHtml(it){
     const feed=it.feed==='ota'?'海外OTAニュース':'旅行業界ニュース';
     const note=it.note&&!angleNote(it)?'<div class="nw-note"><b>'+esc(it.noteLabel||'メモ')+'</b>'+rich(it.note)+'</div>':'';
-    return '<article class="nw-card'+(it.highlight?' yoten':'')+'"><div class="nw-kicker"><span class="nw-cat">'+esc(it.category||it.categoryLabel)+'</span><span class="nw-feed">'+feed+'</span></div><h2>'+colorize(it.headline)+'</h2>'+rich(it.body)+note+sourcesHtml(it)+'</article>';
+    return '<article class="nw-card'+(it.highlight?' yoten':'')+'"><div class="nw-kicker">'+flightTagsHtml(it)+'<span class="nw-cat">'+esc(it.category||it.categoryLabel)+'</span><span class="nw-feed">'+feed+'</span></div><h2>'+colorize(it.headline)+'</h2>'+rich(it.body)+note+sourcesHtml(it)+'</article>';
   }
   function firstSource(it){
     for(const s of (it.sources||[])){const href=safeUrl(s.url);if(href)return {href,label:s.label||href}}
@@ -4431,7 +4492,7 @@ scan();
       const src=firstSource(it);
       const link=src?'<a class="nw-suma" href="'+esc(src.href)+'" target="_blank" rel="noopener noreferrer">出典</a>':'';
       const date=it.dateLabel||fmtDate(it.date,it.weekday);
-      return '<li class="nw-sumi"><div class="nw-sumrow"><button type="button" class="nw-sumh" data-id="'+esc(it.id)+'" aria-expanded="'+open+'"><span class="dot" aria-hidden="true">•</span><span class="nw-sumd">'+esc(date)+'</span><span class="nw-sumtag">'+esc(it.themeLabel||'')+'</span><span class="nw-sumt">'+colorize(it.headline)+'</span></button>'+link+'</div>'+(open?detailHtml(it):'')+'</li>';
+      return '<li class="nw-sumi"><div class="nw-sumrow"><button type="button" class="nw-sumh" data-id="'+esc(it.id)+'" aria-expanded="'+open+'"><span class="dot" aria-hidden="true">•</span><span class="nw-sumd">'+esc(date)+'</span><span class="nw-sumtag">'+esc(it.themeLabel||'')+'</span>'+flightTagsHtml(it)+'<span class="nw-sumt">'+colorize(it.headline)+'</span></button>'+link+'</div>'+(open?detailHtml(it):'')+'</li>';
     }).join('');
     return head+'<ul class="nw-sum">'+lis+'</ul>';
   }
@@ -4463,17 +4524,17 @@ scan();
       toggle.textContent=every?'箇条書きに戻す':'すべて開く';
       toggle.disabled=!items.length;
       countEl.textContent=shown+'件を箇条書きで表示（'+newsMonthName(nwMonthV)+'）';
-      body.innerHTML=summaryHtml(items);
+      body.innerHTML=flightLegendHtml()+summaryHtml(items);
     }else{
       countEl.textContent=shown+'件・'+groups.length+'日分を表示（全'+total+'件・'+totalDays+'日分）';
       const every=groups.length>0&&groups.every(g=>openDates.has(g.date));
       toggle.textContent=every?'日付を折りたたむ':'すべての日付を開く';
       toggle.disabled=!groups.length;
       const latest=data.items[0]?data.items[0].date:'';
-      body.innerHTML=groups.length?groups.map(g=>{
+      body.innerHTML=flightLegendHtml()+(groups.length?groups.map(g=>{
         const open=openDates.has(g.date);
         return '<section class="nw-day"><button type="button" class="nw-dayh" data-date="'+esc(g.date)+'" aria-expanded="'+open+'"><span class="nw-dayt">'+esc(fmtDate(g.date,g.weekday))+'</span>'+(g.date===latest?'<span class="nw-new">最新</span>':'')+'<span class="nw-dayn">'+g.items.length+'件</span><span class="ch" aria-hidden="true">▼</span></button>'+(open?'<div class="nw-dayb">'+g.items.map(cardHtml).join('')+'</div>':'')+'</section>';
-      }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>';
+      }).join(''):'<div class="nw-empty">該当するニュースはありません。</div>');
     }
     if(toTop&&scroll)scroll.scrollTop=0;
     if(filter==='openings')ensureHotels(false); else if(hoPanel)hoPanel.hidden=true;
@@ -4564,7 +4625,8 @@ scan();
   hoQ.addEventListener('input',()=>{hoQuery=hoQ.value; clearTimeout(hoTimer); hoTimer=setTimeout(()=>renderHotels(),120)});
   window.__openNews=()=>load(false);
   if(window.__viewNow&&window.__viewNow()==='nw')load(false);
-  window.__newsDebug=()=>({loaded:!!data,failed,filter,query,companies,month:nwMonthV,open:[...openDates],openItems:[...openItems],counts:data&&data.counts,companyItems:data?data.items.filter(isCompany).length:0,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length});
+  window.__newsDebug=()=>({loaded:!!data,failed,filter,query,companies,month:nwMonthV,open:[...openDates],openItems:[...openItems],counts:data&&data.counts,companyItems:data?data.items.filter(isCompany).length:0,visible:visibleGroups().reduce((n,g)=>n+g.items.length,0),days:visibleGroups().length,flightTags:FLIGHT_TAGS});
+  window.__deriveFlightTags=(headline,body)=>deriveFlightTags(headline||'',body||'');
 })();
 </script>
 </body>
