@@ -4,6 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>国籍別 延べ宿泊者数マップ｜Trip.com Japan</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K5YPTKZX52"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+// 画面遷移は再読み込みしない。最初の page_view は開いているニュースまとめにし、以降は __gaScreen で送る。
+gtag('config','G-K5YPTKZX52',{send_page_view:false,page_path:'/news',page_title:'ニュースまとめ'});
+gtag('event','page_view',{page_path:'/news',page_title:'ニュースまとめ',page_location:location.origin+'/news'});
+window.__gaScreenPath='/news';
+window.__gaScreen=function(path,title){
+  try{
+    if(typeof gtag!=='function'||!path||path===window.__gaScreenPath)return;
+    window.__gaScreenPath=path;
+    gtag('event','page_view',{page_path:path,page_title:title||path,page_location:location.origin+path});
+  }catch(e){}
+};
+window.__gaFilter=function(type,value){
+  try{
+    if(typeof gtag!=='function')return;
+    gtag('event','filter',{filter_type:type,filter_value:String(value==null?'':value).slice(0,80)});
+  }catch(e){}
+};
+</script>
 <style id="lfcss">/* required styles */
 
 .leaflet-pane,
@@ -1225,6 +1249,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 .srcsec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px auto;max-width:880px}
 .srcsec h3{margin:0 0 8px;font-size:15px;color:#14284b}
 .srctx{font-size:12.5px;line-height:1.65;color:#3e4f6d}
+.srcga{max-width:880px;margin:10px auto 0;font-size:12.5px;line-height:1.65;color:#3e4f6d}
 .srctx a{color:#1f5fbf}
 .srctx .fnl{margin-top:6px}
 .vb-src{--vc:#3e4f6d;background:#3e4f6d}
@@ -1800,9 +1825,9 @@ map.on('click',()=>{pinned=false;selAp=null;info();drawLines();rank();if(window.
 // ---- controls
 const ss=document.getElementById('seaSeg');
 SEL.forEach(s=>{const b=document.createElement('button');b.dataset.s=s;b.textContent=SLAB[s]+(BSUF[s]||'');if(BTIP[s])b.title=BTIP[s];if(s===sea)b.className='on';
- b.onclick=()=>{sea=s;[...ss.children].forEach(x=>x.classList.toggle('on',x===b));if(selAp&&!inScope(sea,selAp)){selAp=null;pinned=false;}draw();};ss.appendChild(b);});
+ b.onclick=()=>{sea=s;[...ss.children].forEach(x=>x.classList.toggle('on',x===b));if(selAp&&!inScope(sea,selAp)){selAp=null;pinned=false;}draw();try{parent.__gaFilter&&parent.__gaFilter('month',b.textContent.trim())}catch(e){}};ss.appendChild(b);});
 
-document.querySelectorAll('#modeSeg button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on',x===b));draw();});
+document.querySelectorAll('#modeSeg button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('on',x===b));draw();try{parent.__gaFilter&&parent.__gaFilter('category',b.textContent.trim())}catch(e){}});
 const dd=document.getElementById('ctryDD');dd.querySelector('.btn').onclick=e=>{e.stopPropagation();dd.classList.toggle('open')};
 document.addEventListener('click',()=>dd.classList.remove('open'));
 function buildDD(){const pn=dd.querySelector('.pn');const S=D.M[sea];pn.innerHTML='';
@@ -2671,9 +2696,9 @@ function controls(){
   document.getElementById('muCtl').style.display=G==='muni'?'inline-flex':'none';
   document.getElementById('rtCtl').style.display=G==='reit'?'inline-flex':'none';
   document.getElementById('crCtl').style.display=G==='cref'?'inline-flex':'none';
-  document.querySelectorAll('#yrSeg button').forEach(b=>b.onclick=()=>{YR=b.dataset.y;const ms=monthsFor(YR);if(!ms.includes(MO))MO=ms[ms.length-1];draw()});
-  document.querySelectorAll('#moSeg button').forEach(b=>b.onclick=()=>{MO=b.dataset.m;draw()});
-  document.querySelectorAll('#tySeg button').forEach(b=>b.onclick=()=>{TI=+b.dataset.t;draw()});
+  document.querySelectorAll('#yrSeg button').forEach(b=>b.onclick=()=>{YR=b.dataset.y;const ms=monthsFor(YR);if(!ms.includes(MO))MO=ms[ms.length-1];draw();try{parent.__gaFilter&&parent.__gaFilter('month',b.textContent.trim())}catch(e){}});
+  document.querySelectorAll('#moSeg button').forEach(b=>b.onclick=()=>{MO=b.dataset.m;draw();try{parent.__gaFilter&&parent.__gaFilter('month',b.textContent.trim())}catch(e){}});
+  document.querySelectorAll('#tySeg button').forEach(b=>b.onclick=()=>{TI=+b.dataset.t;draw();try{parent.__gaFilter&&parent.__gaFilter('category',b.textContent.trim())}catch(e){}});
   if(G==='muni'){const ps=[...new Set(MU.munis.map(m=>m.p))].sort((a,b)=>a-b);
     document.getElementById('pfSel').innerHTML=`<option value="all">都道府県で絞り込み（全国）</option>`+ps.map(p=>`<option value="${p}" ${String(PF)===String(p)?'selected':''}>${PR[p]}（${MU.munis.filter(m=>m.p===p).length}）</option>`).join('');
     document.getElementById('qAll').classList.toggle('on',PF==='all');document.getElementById('qTk').classList.toggle('on',PF==='tk23')}
@@ -2965,8 +2990,8 @@ function mFillFilt(){
   body.innerHTML=html;
   body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
     const k=sel.dataset.k,v=sel.value;
-    if(k==='per'){const p=v.split('|');YR=p[0];MO=p[1];fixMonth();draw()}
-    else if(k==='ty'){TI=+v;draw()}
+    if(k==='per'){const p=v.split('|');YR=p[0];MO=p[1];fixMonth();draw();try{parent.__gaFilter&&parent.__gaFilter('month',sel.selectedOptions[0].textContent.trim())}catch(e){}}
+    else if(k==='ty'){TI=+v;draw();try{parent.__gaFilter&&parent.__gaFilter('category',sel.selectedOptions[0].textContent.trim())}catch(e){}}
     else if(k==='pf'){
       if(v==='all')document.getElementById('qAll').click();
       else if(v==='tk23')document.getElementById('qTk').click();
@@ -3232,7 +3257,7 @@ document.getElementById('stats').addEventListener('click',e=>{const k=e.target.c
   requestAnimationFrame(()=>{const b=document.getElementById('jchart');if(!b)return;const box=b.closest('.nc-box')||b;box.scrollIntoView({block:'start',behavior:'smooth'});box.classList.add('jflash');setTimeout(()=>box.classList.remove('jflash'),1600)})});
 
 // ---- コントロール ----
-document.querySelectorAll('#viewSeg button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+document.querySelectorAll('#viewSeg button').forEach(b=>b.onclick=()=>{setView(b.dataset.v);if(window.__gaFilter)window.__gaFilter('category',b.textContent.trim())});
 function setView(v){if(SRC==='est'&&v==='jp')return;VIEW=v;document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));renderSub();refresh()}
 window.__setView=setView;
 function seg(id,opts,cur,fn){return `<div class="seg sm" id="${id}">${opts.map(([k,l])=>`<button data-k="${k}" class="${k===cur?'on':''}">${l}</button>`).join('')}</div>`}
@@ -3349,9 +3374,9 @@ function renderPeriod(){const el=document.getElementById('perCtl');
   el.querySelectorAll('#srcSeg button').forEach(b=>b.onclick=()=>setSource(b.dataset.s));
   {const nb=el.querySelector('#natBtn');nb.classList.toggle('on',NATOPEN);if(NATOPEN)nb.textContent='全国比較を閉じる（地図に戻る）';nb.onclick=()=>openNat(!NATOPEN)}
   {const rb=el.querySelector('#repBtn');if(rb){rb.classList.toggle('on',!!REPOPEN);if(REPOPEN)rb.textContent='訪日回数を閉じる（地図に戻る）';rb.onclick=()=>openRep(!REPOPEN)}}
-  el.querySelectorAll('#epSeg button').forEach(b=>b.onclick=()=>setEP(b.dataset.k));
-  el.querySelectorAll('#yrSeg button').forEach(b=>b.onclick=()=>setPeriod(b.dataset.y,0));
-  el.querySelectorAll('#moSeg button').forEach(b=>b.onclick=()=>setPeriod(YR,b.dataset.m==='H1'?'H1':+b.dataset.m))}
+  el.querySelectorAll('#epSeg button').forEach(b=>b.onclick=()=>{setEP(b.dataset.k);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())});
+  el.querySelectorAll('#yrSeg button').forEach(b=>b.onclick=()=>{setPeriod(b.dataset.y,0);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())});
+  el.querySelectorAll('#moSeg button').forEach(b=>b.onclick=()=>{setPeriod(YR,b.dataset.m==='H1'?'H1':+b.dataset.m);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())})}
 // ---- 推移チャート（右パネル）----
 function unitIdx(i){return i!=null?[i]:[47]}
 function series(y,ks,col){const ms=D.Y[YR].months;return ms.map(m=>{const Y=D.Y[y];if(!Y||!Y.m[String(m)])return null;const r=sumRows(y,[String(m)],ks);return col(r)})}
@@ -3444,6 +3469,12 @@ renderSub();refresh();
 window.__GEO=GEO;
 let FLIGHT=false,VIEWNOW='nw';
 const OVL={fl:['flightView','flightSrc','国際線定期便マップ','__fmap'],oc:['occView','occSrc','都道府県別 客室稼働率マップ','__omap']};
+const GA_VIEWS={nw:['/news','ニュースまとめ'],in:['/map','宿泊者・訪問者マップ'],fl:['/flights','フライト情報'],oc:['/occupancy','客室稼働率']};
+function gaView(v){
+  if(window.__gaOverlay)return;
+  const s=GA_VIEWS[v];
+  if(s&&window.__gaScreen)window.__gaScreen(s[0],s[1]);
+}
 function unesc(x){return x.replace(/<\\\/script/g,'</script').replace(/<\\!--/g,'<!--')}
 function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
   if(v==='nw'&&typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
@@ -3456,13 +3487,14 @@ function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
     VIEWNOW='nw';FLIGHT=false;
     if(window.__openNews)window.__openNews();
     if(window.__mSync)window.__mSync();
+    gaView(v);
     return}
   if(news){news.style.display='none';news.setAttribute('aria-hidden','true')}
   for(const [k,[id,src,ttl,mp]] of Object.entries(OVL)){const el=document.getElementById(id);
     if(k===v){if(!el.firstChild){const f=document.createElement('iframe');f.title=ttl;f.srcdoc=unesc(document.getElementById(src).textContent);el.appendChild(f)}
       el.style.display='block';const w=el.firstChild.contentWindow;if(w)setTimeout(()=>{try{if(w[mp])w[mp].invalidateSize()}catch(e){}if(w.__mFix)w.__mFix();if(w.__mSync)w.__mSync()},50)}
     else el.style.display='none'}
-  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in'){const fix=()=>{try{map.invalidateSize()}catch(e){}};setTimeout(fix,0);setTimeout(fix,80)};if(window.__mFix)window.__mFix();if(window.__mSync)window.__mSync()}
+  VIEWNOW=v;FLIGHT=v==='fl';if(v==='in'){const fix=()=>{try{map.invalidateSize()}catch(e){}};setTimeout(fix,0);setTimeout(fix,80)};if(window.__mFix)window.__mFix();if(window.__mSync)window.__mSync();gaView(v)}
 function showFlight(){showView('fl')}
 function showInbound(){showView('in')}
 document.querySelectorAll('header .vb[data-v]').forEach(b=>b.onclick=()=>showView(b.dataset.v));
@@ -3859,11 +3891,19 @@ function mOpen(){
   if(!m)return;
   m.hidden=false;
   document.querySelectorAll('.mmenu-btn').forEach(b=>b.setAttribute('aria-expanded','true'));
+  window.__gaOverlay='menu';
+  if(window.__gaScreen)window.__gaScreen('/menu','メニュー');
 }
-function mClose(){
+function mClose(restore){
   const m=document.getElementById('mMenu');
+  const back=window.__gaOverlay==='menu';
   if(m)m.hidden=true;
   document.querySelectorAll('.mmenu-btn').forEach(b=>b.setAttribute('aria-expanded','false'));
+  if(!back)return;
+  window.__gaOverlay=null;
+  if(restore===false)return;
+  const s=GA_VIEWS[VIEWNOW];
+  if(s&&window.__gaScreen)window.__gaScreen(s[0],s[1]);
 }
 function mFiltClose(){const f=document.getElementById('mFilt');if(f)f.hidden=true}
 function mSel(label,key,opts,cur){
@@ -3872,6 +3912,12 @@ function mSel(label,key,opts,cur){
 function mChk(id,label){
   const el=document.getElementById(id);
   return '<label class="mf chk"><input type="checkbox" data-src="'+id+'"'+(el&&el.checked?' checked':'')+'>'+label+'</label>';
+}
+function gaFilt(type,sel){
+  try{
+    const label=sel&&sel.selectedOptions&&sel.selectedOptions[0]?sel.selectedOptions[0].textContent.trim():'';
+    if(window.__gaFilter)window.__gaFilter(type,label||(sel?sel.value:''));
+  }catch(e){}
 }
 function mFillFilt(id){
   const body=document.getElementById('mFiltBody');
@@ -3944,19 +3990,19 @@ function mFillFilt(id){
   if(clr)clr.onclick=()=>{if(window.__newsClearExtra)window.__newsClearExtra();mFillFilt('nw')};
   body.querySelectorAll('select[data-k]').forEach(sel=>sel.onchange=()=>{
     const k=sel.dataset.k,v=sel.value;
-    if(k==='per'){const p=v.split('|');setPeriod(p[0],p[1]==='H1'?'H1':+p[1])}
-    else if(k==='ep')setEP(v);
-    else if(k==='view')setView(v);
+    if(k==='per'){const p=v.split('|');setPeriod(p[0],p[1]==='H1'?'H1':+p[1]);gaFilt('month',sel)}
+    else if(k==='ep'){setEP(v);gaFilt('month',sel)}
+    else if(k==='view'){setView(v);gaFilt('category',sel)}
     else if(k==='nat'){CI=+v;renderSub();refresh()}
     else if(k==='cm'){CMET=v;renderSub();refresh()}
     else if(k==='fm'){FMET=v;renderSub();refresh()}
-    else if(k==='nper'){NPER=v;renderNat()}
+    else if(k==='nper'){NPER=v;renderNat();gaFilt('month',sel)}
     else if(k==='rtab'){RTAB=+v;renderRep()}
-    else if(k==='rper'){RPER=v;renderRep()}
+    else if(k==='rper'){RPER=v;renderRep();gaFilt('month',sel)}
     else if(k==='rpu'){RPU=v;renderRep()}
     else if(k==='rq'){RQ=v;renderRep()}
     else if(k==='rsort'){RSORT=v;renderRep()}
-    else if(k==='r2per'){R2PER=v;renderRep()}
+    else if(k==='r2per'){R2PER=v;renderRep();gaFilt('month',sel)}
     else if(k==='r2pu'){R2PU=v;renderRep()}
     else if(k==='r2b'){R2B=v==='rep'?'rep':+v;renderRep()}
     else if(k==='t23n'){T23N=v;renderRep()}
@@ -4024,16 +4070,25 @@ function srcWait(v,pick,done){
   const f=ensureOv(v); if(!f){done(null);return}
   let n=0;(function go(){let val=null;try{const w=f.contentWindow;val=w&&pick(w)}catch(e){}if(val){done(val);return}if(++n<80)setTimeout(go,50);else done(null)})();
 }
-function mCloseSrc(){const box=document.getElementById('mSrc');if(box)box.hidden=true;if(window.__mSync)window.__mSync()}
+function mCloseSrc(){
+  const box=document.getElementById('mSrc');
+  if(box)box.hidden=true;
+  if(window.__mSync)window.__mSync();
+  if(window.__gaOverlay==='src'){
+    window.__gaOverlay=null;
+    const s=GA_VIEWS[VIEWNOW];
+    if(s&&window.__gaScreen)window.__gaScreen(s[0],s[1]);
+  }
+}
 function mOpenSrc(){
-  mClose();mFiltClose();
+  mClose(false);mFiltClose();
   const box=document.getElementById('mSrc'),body=document.getElementById('mSrcBody');
   if(!box||!body)return;
   const se=srcStayEst();
   let nat=''; try{if(!NATFOOT)renderNat();nat=NATFOOT}catch(e){}
   let rep=''; try{rep=srcRep()}catch(e){}
   const wait='<p>読み込み中…</p>';
-  body.innerHTML=[
+  body.innerHTML='<p class="srcga">このサイトは、訪問状況を把握するために Google アナリティクスを使用しています。</p>'+[
     srcPiece('宿泊者マップ',se.stay),
     srcPiece('訪問者マップ',se.est),
     srcPiece('全国比較',nat),
@@ -4047,12 +4102,14 @@ function mOpenSrc(){
   ].join('');
   const put=(i,html)=>{const s=body.querySelectorAll('.srcsec')[i];if(s)s.querySelector('.srctx').innerHTML=html||'<p>出典を取得できませんでした。</p>'};
   box.hidden=false; box.querySelector('.msrc-body').scrollTop=0;
+  window.__gaOverlay='src';
+  if(window.__gaScreen)window.__gaScreen('/sources','出典');
   if(window.__mSync)window.__mSync();
   srcWait('fl',w=>w.__srcFlight&&w.__srcFlight(),html=>put(4,html));
   srcWait('oc',w=>w.__srcOcc&&w.__srcOcc(),o=>{if(!o){put(5,null);put(6,null);put(7,null);return}put(5,o.pref);put(6,o.muni);put(7,o.reit)});
 }
 function mShow(id){
-  mClose();mFiltClose();
+  mClose(false);mFiltClose();
   if(id==='src'){mOpenSrc();return}
   mCloseSrc();
   if(id==='nw'){showView('nw');return}
@@ -4557,6 +4614,8 @@ scan();
   chips.addEventListener('click',e=>{
     const b=e.target.closest('.nw-chip'); if(!b||!data)return;
     filter=b.dataset.f||'all'; retarget(); render(true);
+    const lab=(data.filters.find(f=>f.id===filter)||{}).label||filter;
+    if(window.__gaFilter)window.__gaFilter('category',lab);
   });
   body.addEventListener('click',e=>{
     const sum=e.target.closest('.nw-sumh');
@@ -4588,6 +4647,8 @@ scan();
     nwMonthV=monthSel.value||'all';
     if(nwMonthV!=='all')openItems=new Set();
     retarget(); render(true);
+    const opt=monthSel.selectedOptions&&monthSel.selectedOptions[0];
+    if(window.__gaFilter)window.__gaFilter('month',opt?opt.textContent.trim():nwMonthV);
   });
   if(coBtn)coBtn.addEventListener('click',()=>{companies=!companies;retarget();render(true)});
   function clearExtra(){
