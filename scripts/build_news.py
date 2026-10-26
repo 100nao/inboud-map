@@ -123,9 +123,13 @@ _POLICY_RE = re.compile(
     r"オーバーツーリズム|二重価格|国際年|助成|制度調査|旅行業法|消費動向|次速報|"
     r"訪日\d+月|\d+月の?訪日|訪日客は|国・地域別"
 )
+# 国内OTAに加え、大手旅行会社・ランドオペレーター。海外OTA・卸は別の正規表現。
 _DOMESTIC_RE = re.compile(
     r"じゃらん|楽天トラベル|楽天スーパー|楽天「|一休|Relux|JTB|HIS|KNT|近畿日本ツーリスト|"
-    r"近ツー|(?<!訪日)日本旅行(?!料金|者|業)|エアトリ|skyticket|スカイチケット"
+    r"近ツー|(?<!訪日)日本旅行(?!料金|者|業)|エアトリ|skyticket|スカイチケット|"
+    r"阪急交通社|阪急トラベル|東武トップツアーズ|クラブツーリズム|農協観光|名鉄観光|"
+    r"読売旅行|ビッグホリデー|旅工房|はとバス|ジャルパック|(?<![A-Za-z])JALPAK(?![A-Za-z])|"
+    r"ミキ・ツーリスト|Miki\s*Travel"
 )
 _B2B_EXPLICIT_RE = re.compile(
     r"Hotelbeds|HBX|WebBeds|Webbeds|RateHawk|Ratehawk|Emerging Travel|\bETG\b|"
@@ -224,7 +228,15 @@ def _classify(text: str, *, allow_opening: bool) -> str | None:
     """1つの話題テキストをテーマにする。決まらなければ None。"""
     if not text:
         return None
+    # 主要旅行業者の取扱額は旅行会社の実績。観光庁の発表でも行政にしない。
+    if re.search(r"主要旅行業者", text) and re.search(r"取扱", text):
+        return "domestic"
     if _SECURITY_RE.search(text) and not re.search(r"宿泊税|応援割|旅行業法|訪日外客|取扱速報", text):
+        # 会社名がある流出・個人情報は、一般の注意喚起ではなくOTA・旅行会社のニュース。
+        if _DOMESTIC_RE.search(text):
+            return "domestic"
+        if _B2B_EXPLICIT_RE.search(text) or _EXPEDIA_RE.search(text) or _OVERSEAS_RE.search(text):
+            return "overseas"
         return "other"
     if _POLICY_RE.search(text):
         return "policy"
