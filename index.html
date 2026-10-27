@@ -913,7 +913,7 @@ footer#foot{flex:none;height:24px;min-height:24px;padding:0 14px;display:flex;fl
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}.vb-ev{--vc:#0f6b4c;background:#0f6b4c}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}h1.vt .asof{display:block;margin:2px 0 0;font-size:12px;font-weight:700;color:#3e4f6d}
 .vnav{margin-left:4px}
 
@@ -1252,16 +1252,62 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 .srcga{max-width:880px;margin:10px auto 0;font-size:12.5px;line-height:1.65;color:#3e4f6d}
 .srctx a{color:#1f5fbf}
 .srctx .fnl{margin-top:6px}
-.evsel{font:inherit;font-size:13px;padding:3px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#14284b;font-weight:700}
-.evgrp{margin:12px 0 2px;font-size:12px;font-weight:800;color:#14284b}
-.evrow{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid #e6eaf1;font-size:12.5px;line-height:1.45}
-.evrow .d{flex:0 0 92px;font-weight:800;color:#14284b;font-variant-numeric:tabular-nums}
+#evView{flex-direction:column;background:#f3f5fa;color:#14284b;overflow:hidden}
+#evView .ev-top{flex:none;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 8px}
+#evView .ev-scroll{flex:1;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch}
+#evView .ev-wrap{max-width:1180px;margin:0 auto;padding:12px 16px 40px}
+#evView .ev-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:2px 0 8px}
+#evView .ev-pref{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#14284b}
+#evView .ev-pref select{font:inherit;font-size:14px;font-weight:700;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#14284b;min-width:200px}
+#evView .ev-key{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:11.5px;font-weight:700;color:#3e4f6d}
+#evView .ev-key i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+#evView .ev-nav{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 8px}
+#evView .ev-nav h2{margin:0;min-width:8.5em;text-align:center;font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+#evView .ev-nav button{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#14284b;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit}
+#evView .ev-nav button:hover:not(:disabled){border-color:#14284b}
+#evView .ev-nav button:disabled{opacity:.35;cursor:default}
+#evView .ev-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+#evView .ev-wd{text-align:center;font-size:12px;font-weight:800;color:#5a6a88;padding:2px 0 4px}
+#evView .ev-wd.sun{color:#be123c}
+#evView .ev-wd.sat{color:#1d4ed8}
+#evView .ev-cell{background:#fff;border:1px solid #e6eaf1;border-radius:8px;min-height:96px;padding:4px 5px 6px;text-align:left;cursor:pointer;font:inherit;color:#14284b;display:flex;flex-direction:column;align-items:stretch;gap:2px;min-width:0}
+#evView .ev-cell.out{background:transparent;border-color:transparent;min-height:0;cursor:default;padding:0}
+#evView .ev-cell.on{box-shadow:inset 0 0 0 2px #14284b;background:#f4f7fc}
+#evView .ev-num{font-size:12px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+#evView .ev-cell.sun .ev-num{color:#be123c}
+#evView .ev-cell.sat .ev-num{color:#1d4ed8}
+#evView .ev-hol{display:block;font-size:10px;font-weight:800;line-height:1.35;background:#dbe7ff;color:#1d4ed8;border-radius:4px;padding:1px 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#evView .ev-names{display:flex;flex-direction:column;gap:2px;min-width:0}
+#evView .ev-item{display:block;font-size:11px;font-weight:700;line-height:1.35;padding:1px 4px;border-radius:4px;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#evView .ev-more{font-size:10px;font-weight:800;color:#5a6a88}
+#evView .ev-dots{display:none}
+#evView .ev-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+#evView .ev-count{font-size:10px;font-weight:800;color:#5a6a88;line-height:6px}
+#evView .ev-daybox{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 6px}
+#evView .ev-daybox h3{margin:0 0 4px;font-size:16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+#evView .ev-daybox h3 span{font-size:12px;font-weight:700;color:#5a6a88}
+.evrow{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid #e6eaf1;font-size:13px;line-height:1.45}
 .evtag{display:inline-block;font-size:10px;font-weight:800;line-height:1.5;border-radius:999px;padding:0 6px;color:#fff;margin-right:4px;vertical-align:1px}
 .evplan{display:inline-block;font-size:10px;font-weight:800;color:#8a4b08;background:#fff4e5;border-radius:999px;padding:0 6px;margin-right:4px}
 .evrow .nm{flex:1;min-width:0}
 .evrow .nm a{color:#1f5fbf;font-weight:700}
-.evmeta{display:block;color:#5a6a88;font-size:11px;margin-top:2px}
-.evempty{color:#5a6a88;font-size:12.5px;margin:8px 0}
+.evmeta{display:block;color:#5a6a88;font-size:12px;margin-top:2px}
+.evempty{color:#5a6a88;font-size:13px;margin:8px 0}
+@media (max-width:900px){
+  #evView .vnav{display:none!important}
+  #evView .ev-top{padding:8px 10px 6px}
+  #evView h1.vt{font-size:17px}
+  #evView h1.vt small{display:block;font-size:11px;font-weight:600;color:#5a6a88;margin-top:2px}
+  #evView .ev-wrap{padding:8px 8px 28px}
+  #evView .ev-pref{flex-direction:column;align-items:stretch;gap:4px;width:100%}
+  #evView .ev-pref select{width:100%;min-height:44px;font-size:16px}
+  #evView .ev-nav h2{font-size:18px;min-width:7.2em}
+  #evView .ev-cell{min-height:46px;padding:3px 2px 4px;align-items:center}
+  #evView .ev-names{display:none}
+  #evView .ev-dots{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px;max-width:100%}
+  #evView .ev-hol{align-self:stretch;font-size:9px;text-align:left}
+  #evView .ev-daybox{padding:10px 10px 4px}
+}
 .vb-src{--vc:#3e4f6d;background:#3e4f6d}
 </style>
 </head>
@@ -1271,7 +1317,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   <div class="titlerow">
     <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
     <b class="monly mtitle" id="mTitle">宿泊者マップ</b>
-    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
+    <h1 class="vt">国籍別 延べ宿泊者数マップ<small id="yr"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="vb_in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button class="vb vb-ev" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
     <div class="stats" id="stats"></div>
   </div>
   <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">すべて</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -1282,7 +1328,6 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
       <button data-v="country">国籍を選択</button>
       <button data-v="jp">日本人</button>
       <button data-v="foreign">外国人</button>
-      <button data-v="event">イベント</button>
     </div>
     <div id="subCtl"></div>
     <label class="chk"><input type="checkbox" id="labchk" checked>県ラベル</label>
@@ -1322,7 +1367,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
     <div class="titlerow">
       <button type="button" class="monly mmenu-btn" id="nwMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
       <h1 class="vt">ニュースまとめ<small id="nwMeta">読み込み中…</small></h1>
-      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
+      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw cur" data-v="nw">📰 ニュースまとめ</button><button class="vb vb-ev" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
     </div>
     <div class="monly mbar" id="nwBar"><button type="button" class="mfilt-btn" id="nwFiltBtn">絞り込み</button><button type="button" class="mchip" id="nwChip">すべて</button></div>
     <div class="nw-tools">
@@ -1355,6 +1400,32 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
       </div>
     </section>
     <div id="nwBody" class="nw-wrap"></div>
+  </div>
+</div>
+<div id="evView" class="ovl" aria-hidden="true">
+  <header class="ev-top">
+    <div class="titlerow">
+      <button type="button" class="monly mmenu-btn" id="evMenuBtn" aria-expanded="false" aria-controls="mMenu">☰ メニュー</button>
+      <h1 class="vt">イベントカレンダー<small>ドーム・スタジアム規模の公演、大型の大会・祭り、移動を伴う連休</small><span class="asof" id="evAsof">最終更新日 読み込み中</span></h1>
+      <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw">📰 ニュースまとめ</button><button class="vb vb-ev cur" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
+    </div>
+  </header>
+  <div class="ev-scroll">
+    <div class="ev-wrap">
+      <div class="ev-tools">
+        <label class="ev-pref">都道府県
+          <select id="evPref" aria-label="都道府県"><option value="">全国</option></select>
+        </label>
+        <div class="ev-key" id="evKey"></div>
+      </div>
+      <div class="ev-nav">
+        <button type="button" id="evPrev" aria-label="前の月">◀</button>
+        <h2 id="evMonthTitle">2026年11月</h2>
+        <button type="button" id="evNext" aria-label="次の月">▶</button>
+      </div>
+      <div id="evGrid"></div>
+      <div id="evDay" aria-live="polite"></div>
+    </div>
   </div>
 </div>
 <script id="lfjs">/* @preserve
@@ -1513,7 +1584,7 @@ footer a{color:#4a6390}
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}.vb-ev{--vc:#0f6b4c;background:#0f6b4c}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}h1.vt .asof{display:block;margin:2px 0 0;font-size:12px;font-weight:700;color:#3e4f6d}
 .vnav{margin-left:4px}
 
@@ -1745,7 +1816,7 @@ footer#foot{flex:none;height:44px;min-height:24px;padding:0 14px;display:flex;fl
  <div class="titlerow">
   <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
   <b class="monly mtitle" id="mTitle">フライト情報</b>
-  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
+  <h1 class="vt">国際線定期便（旅客）便数マップ<small id="ttlsub"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="backBtn">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl cur" data-v="fl" id="vb_fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc" id="occBtn">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button class="vb vb-ev" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">2026冬ダイヤ</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -2299,7 +2370,7 @@ footer a{color:#4a6390}
 .vb{border:0;border-radius:999px;padding:6px 14px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;letter-spacing:.02em;white-space:nowrap;opacity:.8;transition:opacity .15s,box-shadow .15s}
 .vb:hover{opacity:1}
 .vb.cur{opacity:1;filter:saturate(1.15) brightness(.92);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--vc),0 3px 8px rgba(0,0,0,.25);cursor:default}
-.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}
+.vb-in{--vc:#1f5fbf;background:#1f5fbf}.vb-fl{--vc:#0b8aa3;background:#0b8aa3}.vb-oc{--vc:#d4691a;background:#d4691a}.vb-nw{--vc:#5b3d8f;background:#5b3d8f}.vb-ev{--vc:#0f6b4c;background:#0f6b4c}
 h1.vt{display:block!important;line-height:1.2}h1.vt small{display:block;margin:2px 0 0!important}h1.vt .asof{display:block;margin:2px 0 0;font-size:12px;font-weight:700;color:#3e4f6d}
 .vnav{margin-left:4px}
 
@@ -2549,7 +2620,7 @@ table.ot td.sm{font-size:11px;color:#5a6a88}
  <div class="titlerow">
   <button type="button" class="monly mmenu-btn" id="mMenuBtn" aria-expanded="false">☰ メニュー</button>
   <b class="monly mtitle" id="mTitle">客室稼働率</b>
-  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button type="button" class="vb vb-src">出典</button></span>
+  <h1 class="vt" id="vtitle">都道府県別 客室稼働率マップ<small id="ttl"></small><span class="asof" id="dataAsof"></span></h1><span class="vnav"><button class="vb vb-in" data-v="in" id="occBack">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl" id="flightBtn">✈ フライト情報</button><button class="vb vb-oc cur" data-v="oc" id="vb_oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw" id="newsBtn">📰 ニュースまとめ</button><button class="vb vb-ev" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
   <div class="stats" id="stats"></div>
  </div>
  <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">客室稼働率</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
@@ -3186,38 +3257,35 @@ buildPeriod();
 
 // ---- 状態 ----
 let VIEW='top',CI=topIdx(NAT),CMET='abs',FMET='abs',HOV=null,PIN=null;
-// ---- 大規模イベント（events.json。地図の色は都道府県に紐づく件数。祝日・連休は色にしない）----
+// ---- イベントカレンダー（events.json。地図とは別画面。祝日・連休は都道府県で絞らない）----
 const EVCOL={'コンサート':'#6d28d9','スポーツ':'#0f766e','展示会':'#c2410c','祭り':'#be123c','祝日・連休':'#1d4ed8'};
-let EV={updated:'',items:[]},EVREADY=false,EVERR=false,EVM='2026-11',EVC='all';
-const EVM_LIST=(()=>{const o=[];let y=2026,m=11;while(y<2027||(y===2027&&m<=10)){o.push(y+'-'+String(m).padStart(2,'0'));m++;if(m===13){m=1;y++}}return o})();
+const EV_MIN='2026-11';
+let EV={updated:'',items:[]},EVREADY=false,EVERR=false,EVM='2026-11',EVP='',EVD=1,EVTOUCHED=false;
 const evMonthLabel=ym=>{const p=String(ym||'').split('-');return p.length===2?p[0]+'年'+Number(p[1])+'月':''};
 const evEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function evInMonth(it,ym){const [y,m]=String(ym).split('-').map(Number);if(!y||!m)return false;const start=ym+'-01';const end=ym+'-'+String(new Date(y,m,0).getDate()).padStart(2,'0');const a=it.date_start,b=it.date_end||it.date_start;return a<=end&&b>=start}
-function evPassCat(it){return EVC==='all'||it.category===EVC}
 function evIsHol(it){return it.category==='祝日・連休'||!it.prefecture}
-function evSort(a,b){return String(a.date_start).localeCompare(b.date_start)||String(a.date_end||'').localeCompare(b.date_end||'')||String(a.name||'').localeCompare(b.name||'','ja')}
-function evPool(){return (EV.items||[]).filter(it=>evInMonth(it,EVM)&&evPassCat(it))}
-function evHolidays(){return evPool().filter(evIsHol).sort(evSort)}
-function evLocated(){return evPool().filter(it=>!evIsHol(it)).sort(evSort)}
-function evCount(i){if(!EVREADY)return 0;const name=P[i].ja;return evLocated().reduce((n,it)=>n+(it.prefecture===name?1:0),0)}
-function evFill(n){if(!n)return '#f3f5f8';if(n===1)return '#d5e3f6';if(n===2)return '#8fb4e4';if(n===3)return '#3d74c6';return '#173e86'}
+function evSort(a,b){const ha=evIsHol(a)?0:1,hb=evIsHol(b)?0:1;return ha-hb||String(a.date_start).localeCompare(b.date_start)||String(a.name||'').localeCompare(b.name||'','ja')}
 function evDateLabel(a,b){b=b||a;const p=s=>{const x=String(s).split('-');return {y:+x[0],m:+x[1],d:+x[2]}};const A=p(a),B=p(b);const f=o=>o.m+'/'+o.d;if(a===b)return f(A);if(A.y!==B.y)return A.y+'/'+f(A)+'–'+B.y+'/'+f(B);return f(A)+'–'+f(B)}
-function setEvMonth(ym){if(EVM_LIST.indexOf(ym)<0)return;EVM=ym;if(VIEW==='event')refresh()}
-function setEvCat(c){EVC=c||'all';if(VIEW==='event')refresh()}
-function evTitle(on){const h1=document.querySelector('#app > header h1.vt');if(h1&&h1.firstChild&&h1.firstChild.nodeType===3)h1.firstChild.nodeValue=on?'大規模イベントカレンダー':'国籍別 延べ宿泊者数マップ'}
-function evRow(it){const col=EVCOL[it.category]||'#3e4f6d';const bits=[];if(it.source_country)bits.push(it.source_country);if(it.prefecture)bits.push(it.prefecture);if(it.venue)bits.push(it.venue);if(it.scale)bits.push(it.scale);if(it.note)bits.push(it.note);const st=it.status==='予定'?'<span class="evplan">予定</span>':'';const src=it.source?' <a href="'+evEsc(it.source)+'" target="_blank" rel="noopener">出典</a>':'';return '<div class="evrow"><div class="d">'+evEsc(evDateLabel(it.date_start,it.date_end))+'</div><div class="nm"><span class="evtag" style="background:'+col+'">'+evEsc(it.category||'')+'</span>'+st+' <b>'+evEsc(it.name)+'</b>'+src+'<span class="evmeta">'+evEsc(bits.join(' · '))+'</span></div></div>'}
-function renderEventInfo(){const el=document.getElementById('info');const i=cur();el.classList.toggle('pinned',PIN!=null);
-  if(!EVREADY){el.innerHTML='<div class="ttl"><b>'+evMonthLabel(EVM)+'</b></div><p class="evempty">'+(EVERR?'events.json を読み込めませんでした。':'読み込み中…')+'</p>';return}
-  const hol=evHolidays();let loc=evLocated();const pref=i!=null?P[i].ja:'';if(pref)loc=loc.filter(it=>it.prefecture===pref);
-  const head='<div class="ttl"><b>'+evEsc(evMonthLabel(EVM))+'</b><span class="sub">'+evEsc(pref?pref+' · '+loc.length+'件':'全都道府県 · '+evLocated().length+'件')+'</span>'+(PIN!=null?'<span class="pin" id="unpin">固定中 ×</span>':'')+'</div>';
-  el.innerHTML=head+'<h4>祝日・連休<span>都道府県には紐づけません</span></h4>'+(hol.length?hol.map(evRow).join(''):'<p class="evempty">この条件の祝日・連休はありません。</p>')+'<h4>'+(pref?evEsc(pref)+'のイベント':'都道府県ごとのイベント')+'<span>日付順</span></h4>'+(loc.length?loc.map(evRow).join(''):'<p class="evempty">'+(pref?'この月の'+evEsc(pref)+'に、条件に合う大規模イベントはありません。':'この月に、条件に合う大規模イベントはありません。')+'</p>')+'<p class="evempty">町のイベントや小規模な催事は載せていません。地図の色は件数です。</p>';
-  const up=document.getElementById('unpin');if(up)up.onclick=()=>{PIN=null;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(false)}}
-fetch('events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(d=>{EV=d||{items:[]};EVREADY=true;if(VIEW==='event')refresh()}).catch(()=>{EVERR=true;if(VIEW==='event')refresh()});
-window.__ev={setMonth:setEvMonth,setCat:setEvCat,get:()=>({m:EVM,c:EVC,ready:EVREADY,err:EVERR,n:(EV.items||[]).length})};
+function evMaxMonth(){let max='2027-10';(EV.items||[]).forEach(it=>{const d=String(it.date_end||it.date_start||'');const ym=d.slice(0,7);if(/^\d{4}-\d{2}$/.test(ym)&&ym>max)max=ym});return max<EV_MIN?EV_MIN:max}
+function evStartMonth(){const now=new Date();const ym=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');if(ym<EV_MIN)return EV_MIN;const max=evMaxMonth();return ym>max?max:ym}
+function evShift(ym,delta){const [y,m]=String(ym).split('-').map(Number);const d=new Date(y,m-1+delta,1);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')}
+function evDim(ym){const [y,m]=String(ym).split('-').map(Number);return new Date(y,m,0).getDate()}
+function evClampDay(){const n=evDim(EVM);if(EVD>n)EVD=n;if(EVD<1)EVD=1}
+function evOnDay(it,iso){const a=it.date_start,b=it.date_end||it.date_start;return !!a&&a<=iso&&b>=iso}
+function evVisible(it){if(evIsHol(it))return true;if(!EVP)return true;return it.prefecture===EVP}
+function evHolLabel(it){const c=it.source_country||'';const n=it.name||'祝日・連休';return c?c+'・'+n:n}
+function evGoMonth(delta){const max=evMaxMonth();const nxt=evShift(EVM,delta);if(nxt<EV_MIN||nxt>max)return;EVM=nxt;evClampDay();EVTOUCHED=true;evRender();if(window.__mSync)window.__mSync()}
+function evPickInitial(){if(EVTOUCHED||!EVREADY)return;const n=evDim(EVM);for(let d=1;d<=n;d++){const iso=EVM+'-'+String(d).padStart(2,'0');if((EV.items||[]).some(it=>evVisible(it)&&evOnDay(it,iso)&&!evIsHol(it))){EVD=d;return}}}
+function evDetail(it){const col=EVCOL[it.category]||'#3e4f6d';const st=it.status==='予定'?'<span class="evplan">予定</span>':'';const src=it.source?' <a href="'+evEsc(it.source)+'" target="_blank" rel="noopener">出典</a>':'';const bits=[evDateLabel(it.date_start,it.date_end)];if(it.prefecture)bits.push(it.prefecture);if(it.venue)bits.push(it.venue);if(it.scale)bits.push(it.scale);if(it.source_country)bits.push(it.source_country);if(it.note)bits.push(it.note);return '<div class="evrow"><div class="nm"><span class="evtag" style="background:'+col+'">'+evEsc(it.category||'')+'</span>'+st+' <b>'+evEsc(it.name)+'</b>'+src+'<span class="evmeta">'+evEsc(bits.filter(Boolean).join(' · '))+'</span></div></div>'}
+function evRenderDay(items){const el=document.getElementById('evDay');if(!el)return;const [y,m]=EVM.split('-').map(Number);const iso=EVM+'-'+String(EVD).padStart(2,'0');const dow=['日','月','火','水','木','金','土'][new Date(y,m-1,EVD).getDay()];const head=y+'年'+m+'月'+EVD+'日（'+dow+'）';if(!EVREADY){el.innerHTML='<div class="ev-daybox"><h3>'+head+'</h3><p class="evempty">'+(EVERR?'events.json を読み込めませんでした。':'読み込み中…')+'</p></div>';return}const day=(items||[]).filter(it=>evOnDay(it,iso)).sort(evSort);const scope=EVP||'全国';el.innerHTML='<div class="ev-daybox"><h3>'+head+'<span>'+evEsc(scope)+' · '+day.length+'件</span></h3>'+(day.length?day.map(evDetail).join(''):'<p class="evempty">この日のイベントはありません。</p>')+'</div>'}
+function evRender(){evClampDay();const [y,m]=EVM.split('-').map(Number);const max=evMaxMonth();const title=document.getElementById('evMonthTitle');if(title)title.textContent=y+'年'+m+'月';const prev=document.getElementById('evPrev'),next=document.getElementById('evNext');if(prev)prev.disabled=EVM<=EV_MIN;if(next)next.disabled=EVM>=max;const asof=document.getElementById('evAsof');if(asof)asof.textContent=EVREADY?asofText(EV.updated):(EVERR?'最終更新日不明':'最終更新日 読み込み中');const items=(EV.items||[]).filter(evVisible);const first=new Date(y,m-1,1).getDay();const dim=evDim(EVM);const cells=[];for(let i=0;i<first;i++)cells.push(null);for(let d=1;d<=dim;d++)cells.push(d);while(cells.length%7)cells.push(null);const wds=['日','月','火','水','木','金','土'];let html='<div class="ev-grid">'+wds.map((w,i)=>'<div class="ev-wd'+(i===0?' sun':i===6?' sat':'')+'">'+w+'</div>').join('');cells.forEach((d,idx)=>{if(d==null){html+='<div class="ev-cell out"></div>';return}const iso=EVM+'-'+String(d).padStart(2,'0');const dow=idx%7;const dayItems=items.filter(it=>evOnDay(it,iso)).sort(evSort);const hols=dayItems.filter(evIsHol),evs=dayItems.filter(it=>!evIsHol(it));const cls=['ev-cell'];if(dow===0)cls.push('sun');if(dow===6)cls.push('sat');if(d===EVD)cls.push('on');const shown=evs.slice(0,3),more=evs.length-shown.length;const holHtml=hols.slice(0,2).map(it=>{const lab=evHolLabel(it);return '<span class="ev-hol" title="'+evEsc(lab)+'">'+evEsc(lab)+'</span>'}).join('')+(hols.length>2?'<span class="ev-hol">ほか'+(hols.length-2)+'件</span>':'');const nameHtml=shown.map(it=>'<span class="ev-item" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'">'+evEsc(it.name)+'</span>').join('')+(more?'<span class="ev-more">+'+more+'</span>':'');const dots=evs.slice(0,4).map(it=>'<i class="ev-dot" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'"></i>').join('')+(evs.length>4?'<span class="ev-count">+'+ (evs.length-4)+'</span>':'');html+='<button type="button" class="'+cls.join(' ')+'" data-d="'+d+'" aria-pressed="'+(d===EVD?'true':'false')+'"><span class="ev-num">'+d+'</span>'+holHtml+'<span class="ev-names">'+nameHtml+'</span><span class="ev-dots">'+dots+'</span></button>'});html+='</div>';const grid=document.getElementById('evGrid');if(grid){grid.innerHTML=html;grid.querySelectorAll('.ev-cell[data-d]').forEach(b=>b.onclick=()=>{EVD=+b.dataset.d;EVTOUCHED=true;evRender()})}evRenderDay(items)}
+function evBoot(){EVM=evStartMonth();const key=document.getElementById('evKey');if(key)key.innerHTML=Object.entries(EVCOL).map(([k,c])=>'<span><i style="background:'+c+'"></i>'+evEsc(k)+'</span>').join('');const sel=document.getElementById('evPref');if(sel&&!sel.dataset.ready){let html='<option value="">全国</option>';(D.regions||[]).forEach((name,ri)=>{const prefs=P.filter(p=>p.r===ri);if(!prefs.length)return;html+='<optgroup label="'+evEsc(name)+'">'+prefs.map(p=>'<option value="'+evEsc(p.ja)+'">'+evEsc(p.ja)+'</option>').join('')+'</optgroup>'});sel.innerHTML=html;sel.dataset.ready='1';sel.onchange=()=>{EVP=sel.value||'';evRender();const label=sel.selectedOptions&&sel.selectedOptions[0]?sel.selectedOptions[0].textContent.trim():'全国';if(window.__gaFilter)window.__gaFilter('prefecture',label);if(window.__mSync)window.__mSync()}}const pv=document.getElementById('evPrev'),nx=document.getElementById('evNext');if(pv)pv.onclick=()=>evGoMonth(-1);if(nx)nx.onclick=()=>evGoMonth(1);evRender();fetch('events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(d=>{EV=d||{items:[]};EVREADY=true;evPickInitial();evRender();if(window.__mSync)window.__mSync()}).catch(()=>{EVERR=true;evRender()})}
+evBoot();
+window.__evPaint=evRender;
+window.__ev={setMonth(ym){const max=evMaxMonth();if(ym<EV_MIN||ym>max)return;EVM=ym;evClampDay();EVTOUCHED=true;evRender()},setPref(name){EVP=name||'';const sel=document.getElementById('evPref');if(sel)sel.value=EVP;evRender()},selectDay(d){EVD=+d||1;EVTOUCHED=true;evRender()},get:()=>({m:EVM,d:EVD,p:EVP,ready:EVREADY,err:EVERR,max:evMaxMonth(),n:(EV.items||[]).length})};
 
 const visIdx=()=>P.map((_,i)=>i);
 function metric(i){const p=P[i];
-  if(VIEW==='event')return evCount(i);
   if(VIEW==='top')return p.fr[0];
   if(VIEW==='country')return CMET==='abs'?(p.c[0][CI]||0):(p.f10[0]?(p.c[0][CI]||0)/p.f10[0]:0);
   if(VIEW==='jp')return p.jp[0];
@@ -3232,7 +3300,6 @@ function computeScale(){const v=visIdx().map(metric);SC={min:Math.min(...v),max:
   if(VIEW==='top'){SC.lmin=Math.log10(Math.max(1,SC.min));SC.lmax=Math.log10(Math.max(10,SC.max))}}
 const tOf=v=>isRatio()?(SC.max>0?v/SC.max:0):(SC.max>0?Math.sqrt(Math.max(0,v))/Math.sqrt(SC.max):0);
 function fillOf(i){
-  if(VIEW==='event')return evFill(metric(i));
   const v=metric(i);
   if(VIEW==='top'){const t=SC.lmax>SC.lmin?(Math.log10(Math.max(1,v))-SC.lmin)/(SC.lmax-SC.lmin):1;return mix(C[topIdx(P[i])].col,.28+.72*clamp01(t))}
   return ramp(tOf(v))}
@@ -3260,7 +3327,6 @@ window.__layerOf=i=>LAY[i];
 const labLayer=L.layerGroup().addTo(map);
 const SHORT={'オーストラリア':'豪州','シンガポール':'星','インドネシア':'インドネシア','フィリピン':'比'};
 function renderLabels(){labLayer.clearLayers();if(!document.getElementById('labchk').checked)return;
-  if(VIEW==='event'){const z=map.getZoom();P.forEach((p,i)=>{const n=metric(i);if(!n)return;const nm=p.ja.replace(/[都府県]$/,'').replace(/^北海道$/,'北海道');const txt=z>=5.2?nm+'<br>'+n+'件':nm;labLayer.addLayer(L.marker(p.ll,{interactive:false,keyboard:false,icon:L.divIcon({className:'plab',html:txt,iconSize:[110,26],iconAnchor:[55,13]})}))});return}
   const z=map.getZoom();const topN=new Set(visIdx().sort((a,b)=>metric(b)-metric(a)).slice(0,z>=6.5?99:12));
   P.forEach((p,i)=>{let txt;
     const nm=p.ja.replace(/[都府県]$/,'').replace(/^北海道$/,'北海道');
@@ -3273,11 +3339,6 @@ document.getElementById('labchk').onchange=renderLabels;
 
 // ---- ヘッダ ----
 function renderStats(){const u=NAT,t=topIdx(u),area='全国';
-  evTitle(VIEW==='event');
-  if(VIEW==='event'){const a=document.getElementById('dataAsof');if(a)a.textContent=EVREADY?asofText(EV.updated):(EVERR?'最終更新日不明':'最終更新日 読み込み中');
-    document.getElementById('yr').textContent=EVREADY?('大規模イベント｜'+evMonthLabel(EVM)):'大規模イベント｜読み込み中';
-    const hol=EVREADY?evHolidays().length:'…',loc=EVREADY?evLocated().length:'…',prefs=EVREADY?new Set(evLocated().map(it=>it.prefecture)).size:'…';
-    document.getElementById('stats').innerHTML=`<div class="stat main"><div class="lb">${evMonthLabel(EVM)}・地図のイベント</div><div class="v">${loc}<small>件</small></div></div><div class="stat"><div class="lb">都道府県</div><div class="v">${prefs}</div></div><div class="stat"><div class="lb">祝日・連休</div><div class="v">${hol}<small>件</small></div></div>`;return}
   {const a=document.getElementById('dataAsof');if(a)a.textContent=asofText(SRC==='est'?DATA_ASOF.est:DATA_ASOF.stay)}
   if(SRC==='est'){document.getElementById('yr').textContent='延べ訪問者数（JNTO統計）｜'+estLabel()+'（'+estStatus(EP)+'）';
     const st=stayFor(EP,[47]);
@@ -3306,7 +3367,7 @@ document.getElementById('stats').addEventListener('click',e=>{const k=e.target.c
 
 // ---- コントロール ----
 document.querySelectorAll('#viewSeg button').forEach(b=>b.onclick=()=>{setView(b.dataset.v);if(window.__gaFilter)window.__gaFilter('category',b.textContent.trim())});
-function setView(v){if(SRC==='est'&&v==='jp')return;VIEW=v;document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));const mm=document.getElementById('mmchk');if(mm&&mm.parentElement)mm.parentElement.style.display=v==='event'?'none':'';renderSub();refresh()}
+function setView(v){if(SRC==='est'&&v==='jp')return;VIEW=v;document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));renderSub();refresh()}
 window.__setView=setView;
 function seg(id,opts,cur,fn){return `<div class="seg sm" id="${id}">${opts.map(([k,l])=>`<button data-k="${k}" class="${k===cur?'on':''}">${l}</button>`).join('')}</div>`}
 function renderSub(){const el=document.getElementById('subCtl');
@@ -3330,9 +3391,6 @@ document.addEventListener('click',()=>document.querySelectorAll('.dd.open').forE
 
 // ---- 凡例 ----
 function renderLegend(){const el=document.getElementById('legend');
-  if(VIEW==='event'){if(!EVREADY){el.innerHTML='<div class="lt">イベント</div><div class="ln">'+(EVERR?'読み込めませんでした':'読み込み中')+'</div>';return}
-    const bins=[[0,'なし','#f3f5f8'],[1,'1件',evFill(1)],[2,'2件',evFill(2)],[3,'3件',evFill(3)],[4,'4件以上',evFill(4)]];
-    el.innerHTML='<div class="lt">'+evMonthLabel(EVM)+'の件数</div>'+bins.map(([n,lab,col])=>'<div class="li"><span class="sw" style="background:'+col+'"></span>'+lab+'</div>').join('')+'<div class="ln">祝日・連休は色に含めません</div><div class="lt" style="margin-top:6px">種類</div>'+Object.entries(EVCOL).map(([k,c])=>'<div class="li"><span class="sw" style="background:'+c+'"></span>'+k+'</div>').join('');return}
   if(VIEW==='top'){const cnt={};visIdx().forEach(i=>{const t=topIdx(P[i]);cnt[t]=(cnt[t]||0)+1});
     const ks=Object.keys(cnt).map(Number).sort((a,b)=>cnt[b]-cnt[a]);
     el.innerHTML=`<div class="lt">最多国籍（${TX().top} 1位）</div>`+ks.map(k=>`<div class="li"><span class="sw" style="background:${C[k].col}"></span>${C[k].ja}<span class="c">${cnt[k]}都道府県</span></div>`).join('')+
@@ -3344,7 +3402,7 @@ function renderLegend(){const el=document.getElementById('legend');
 
 // ---- 右パネル ----
 function cur(){const i=PIN!=null?PIN:HOV;return i}
-function renderInfo(){if(VIEW==='event'){renderEventInfo();return}const i=cur(),el=document.getElementById('info');
+function renderInfo(){const i=cur(),el=document.getElementById('info');
   const u=i!=null?P[i]:NAT;
   const name=i!=null?P[i].ja:'全国';
   const sub=i!=null?D.regions[P[i].r]:'47都道府県計';
@@ -3383,9 +3441,6 @@ function sbsHTML(i){const sr=D.Y['2025'].m.Y.d[i],er=EST['2025'].v[i],en=EST['20
   return `<h4>2025年 ソース比較<span>宿泊統計 vs 延べ訪問者数（いずれも2025年）</span></h4><div class="sbs ${diff?'diff':''}">${diff?`<div class="warn">1位が異なる：宿泊統計＝${C[a[0].j].ja}／延べ訪問者数＝${C[b[0].j].ja}</div>`:`<div class="ok">1位は一致：${C[a[0].j].ja}</div>`}
     <div class="scs">${col(a,'延べ宿泊者数（人泊）','人泊')}${col(b,'延べ訪問者数（人）','人',n1!=null&&n1<100?`<div class="smp">1位の回答数 n=${n1}（小標本）</div>`:'')}</div></div>`}
 function renderRank(){const el=document.getElementById('rankBox');
-  if(VIEW==='event'){const ids=visIdx().filter(i=>metric(i)>0).sort((a,b)=>metric(b)-metric(a)||P[a].ja.localeCompare(P[b].ja,'ja'));const h=cur();const show=ids.slice(0,15);if(h!=null&&metric(h)>0&&show.indexOf(h)<0)show.push(h);const mx=Math.max(1,...ids.map(metric));
-    el.innerHTML='<h4>都道府県ランキング：'+evMonthLabel(EVM)+'の件数<span>祝日・連休は除く</span></h4>'+(show.length?show.map(i=>{const v=metric(i),rk=ids.indexOf(i)+1;return '<div class="rk2 '+(i===h?'hl':'')+'" data-i="'+i+'"><span class="n">'+rk+'</span><span class="p">'+P[i].ja+'</span><span class="b"><div style="width:'+(v/mx*100).toFixed(1)+'%;background:'+evFill(v)+'"></div></span><span class="v">'+v+'件</span></div>'}).join(''):'<p class="evempty">この月に、都道府県へ紐づく大規模イベントはありません。</p>');
-    el.querySelectorAll('.rk2').forEach(r=>{const i=+r.dataset.i;r.onmouseenter=()=>{if(PIN==null){HOV=i;restyle();renderInfo()}};r.onmouseleave=()=>{if(PIN==null&&HOV===i){HOV=null;restyle();renderInfo()}};r.onclick=()=>{PIN=PIN===i?null:i;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(PIN!=null)}});return}
   const ids=visIdx().sort((a,b)=>metric(b)-metric(a));const show=ids.slice(0,15);
   const h=cur();if(h!=null&&!show.includes(h))show.push(h);
   const mx=Math.max(...ids.map(metric))||1;
@@ -3402,7 +3457,7 @@ function refresh(){renderFoot();renderPeriod();computeScale();restyle();renderLe
 const EST_TIP='精度について：JNTO訪日外客数（クルーズ客を除く一般客、消費動向調査の国籍別旅行者数）に、観光庁 インバウンド消費動向調査の都道府県別訪問率（標本調査）を掛けて配分した推計値です。回答数の少ない県×国籍は誤差が大きく、四半期は年間より誤差が大きくなります。';
 const EST_FOOT='延べ訪問者数＝JNTO訪日外客数（クルーズ客を除く）を観光庁 消費動向調査の都道府県別訪問率で都道府県に配分した値（1人が複数県を訪れると各県で数える）。訪問率は出入国空港の所在県を含むため千葉（成田）・大阪（関空）・福岡などは大きく出る。';
 let FOOTBASE='';
-function renderFoot(){if(VIEW==='event'){FOOTBASE='<div>ドーム・スタジアム規模の公演、大型のスポーツ・展示会・祭り、移動を伴う連休だけを表示。町の催事は含みません。祝日・連休は地図の色に含めません。出典はメニューの「出典」。</div>';if(window.__footReady)footApply();return}const t={innerHTML:''};renderFoot0(t);FOOTBASE=t.innerHTML+'<div class="fnl"><div>・延べ宿泊者数（人泊）は人数ではなく延べ泊数（1人が3泊で 3）。</div></div>';if(window.__footReady)footApply()}
+function renderFoot(){const t={innerHTML:''};renderFoot0(t);FOOTBASE=t.innerHTML+'<div class="fnl"><div>・延べ宿泊者数（人泊）は人数ではなく延べ泊数（1人が3泊で 3）。</div></div>';if(window.__footReady)footApply()}
 function renderFoot0(FE){
   if(SRC==='est'){const pv=estPrev(EP);FE.innerHTML=`出典：JNTO「訪日外客数」／観光庁「<a href="https://www.mlit.go.jp/kankocho/tokei_hakusyo/gaikokujinshohidoko.html" target="_blank">インバウンド消費動向調査</a>」${estLabel()}（${estStatus(EP)}）表6-1。`+EST_FOOT+(pv?`前年比＝${estLabel(pv)}（${estStatus(pv)}）との比較。`:'前年比なし。')+(EP.startsWith('2026')?'2026年の国籍区分は24区分（北欧・中東・メキシコは前年比なし）。':'');return}
   const y=YR,st=D.Y[y].status,cy=String(y-1);
@@ -3419,12 +3474,6 @@ function setSource(sv){SRC=sv;if(sv==='est'&&VIEW==='jp')VIEW='top';buildPeriod(
   renderSub();refresh()}
 window.__setSource=setSource;
 function renderPeriod(){const el=document.getElementById('perCtl');
-  if(VIEW==='event'){const months=EVM_LIST.map(ym=>'<option value="'+ym+'"'+(ym===EVM?' selected':'')+'>'+evMonthLabel(ym)+'</option>').join('');
-    const cats=[['all','すべての種類']].concat(Object.keys(EVCOL).map(k=>[k,k]));
-    el.innerHTML='<label class="chk">月 <select id="evMonth" class="evsel" aria-label="月">'+months+'</select></label><label class="chk">種類 <select id="evCat" class="evsel" aria-label="種類">'+cats.map(([k,l])=>'<option value="'+k+'"'+(k===EVC?' selected':'')+'>'+l+'</option>').join('')+'</select></label><span class="perlab">ドーム・スタジアム規模、大型の大会・展示会・祭り、移動を伴う連休<small>町の催事は含みません。県をクリックすると一覧を絞ります</small></span>';
-    el.querySelector('#evMonth').onchange=e=>{setEvMonth(e.target.value);if(window.__gaFilter)window.__gaFilter('month',evMonthLabel(e.target.value))};
-    el.querySelector('#evCat').onchange=e=>{setEvCat(e.target.value);if(window.__gaFilter)window.__gaFilter('category',e.target.value==='all'?'すべて':e.target.value)};
-    return}
   const src=`<div class="seg" id="srcSeg"><button data-s="stay" class="${SRC==='stay'?'on':''}">①延べ宿泊者数（宿泊旅行統計）</button><button data-s="est" class="${SRC==='est'?'on':''}" title="${EST_TIP}">②延べ訪問者数（JNTO統計）</button></div><button class="btn2" id="natBtn">全国比較（JNTO×宿泊）</button><button class="btn2" id="repBtn">訪日回数（リピーター）</button>`;
   if(SRC==='est')el.innerHTML=src+`<div class="seg sm" id="epSeg">${EPS.map(([k,l])=>`<button data-k="${k}" class="${k===EP?'on':''}">${l}</button>`).join('')}</div>
      <span class="perlab">${estLabel()}（${estStatus(EP)}）<small>月別は選択不可：都道府県別訪問率は四半期・年単位で公表${estPrev(EP)?`／比較：${estLabel(estPrev(EP))}（${estStatus(estPrev(EP))}）`:''}</small></span>`;
@@ -3529,7 +3578,7 @@ renderSub();refresh();
 window.__GEO=GEO;
 let FLIGHT=false,VIEWNOW='nw';
 const OVL={fl:['flightView','flightSrc','国際線定期便マップ','__fmap'],oc:['occView','occSrc','都道府県別 客室稼働率マップ','__omap']};
-const GA_VIEWS={nw:['/news','ニュースまとめ'],in:['/map','宿泊者・訪問者マップ'],fl:['/flights','フライト情報'],oc:['/occupancy','客室稼働率']};
+const GA_VIEWS={nw:['/news','ニュースまとめ'],in:['/map','宿泊者・訪問者マップ'],fl:['/flights','フライト情報'],oc:['/occupancy','客室稼働率'],ev:['/events','イベントカレンダー']};
 function gaView(v){
   if(window.__gaOverlay)return;
   const s=GA_VIEWS[v];
@@ -3537,19 +3586,23 @@ function gaView(v){
 }
 function unesc(x){return x.replace(/<\\\/script/g,'</script').replace(/<\\!--/g,'<!--')}
 function showView(v){const from=VIEWNOW;if(NATOPEN)openNat(false);
-  if(v==='nw'&&typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
+  if((v==='nw'||v==='ev')&&typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
   if(v==='nw'&&from!=='nw')window.__newsFrom=from;
   document.querySelectorAll('header .vb[data-v]').forEach(b=>b.classList.toggle('cur',b.dataset.v===v));
   const news=document.getElementById('newsView');
-  if(v==='nw'){
+  const ev=document.getElementById('evView');
+  if(v==='nw'||v==='ev'){
     for(const [, [id]] of Object.entries(OVL)){const el=document.getElementById(id);if(el)el.style.display='none'}
-    if(news){news.style.display='flex';news.setAttribute('aria-hidden','false')}
-    VIEWNOW='nw';FLIGHT=false;
-    if(window.__openNews)window.__openNews();
+    if(news){news.style.display=v==='nw'?'flex':'none';news.setAttribute('aria-hidden',v==='nw'?'false':'true')}
+    if(ev){ev.style.display=v==='ev'?'flex':'none';ev.setAttribute('aria-hidden',v==='ev'?'false':'true')}
+    VIEWNOW=v;FLIGHT=false;
+    if(v==='nw'&&window.__openNews)window.__openNews();
+    if(v==='ev'&&window.__evPaint)window.__evPaint();
     if(window.__mSync)window.__mSync();
     gaView(v);
     return}
   if(news){news.style.display='none';news.setAttribute('aria-hidden','true')}
+  if(ev){ev.style.display='none';ev.setAttribute('aria-hidden','true')}
   for(const [k,[id,src,ttl,mp]] of Object.entries(OVL)){const el=document.getElementById(id);
     if(k===v){if(!el.firstChild){const f=document.createElement('iframe');f.title=ttl;f.srcdoc=unesc(document.getElementById(src).textContent);el.appendChild(f)}
       el.style.display='block';const w=el.firstChild.contentWindow;if(w)setTimeout(()=>{try{if(w[mp])w[mp].invalidateSize()}catch(e){}if(w.__mFix)w.__mFix();if(w.__mSync)w.__mSync()},50)}
@@ -3832,7 +3885,7 @@ const MITEMS=[
   {id:'nw',icon:'📰',name:'ニュースまとめ',tag:'TOP',desc:'業界と海外OTAの新着をテーマ別に一覧'},
   {id:'stay',icon:'🏨',name:'宿泊者マップ',desc:'国籍別の延べ宿泊者数を都道府県別に表示'},
   {id:'est',icon:'🗾',name:'訪問者マップ',desc:'延べ訪問者数の推計を都道府県別に表示'},
-  {id:'ev',icon:'📅',name:'イベント',desc:'ドーム規模の公演、大型大会・祭りと、移動を伴う連休'},
+  {id:'ev',icon:'📅',name:'イベントカレンダー',desc:'月ごとの公演・大会・祭りと、移動を伴う連休'},
   {id:'nat',icon:'📊',name:'全国比較',desc:'JNTOの入国者数と延べ宿泊者数を国籍別に比較'},
   {id:'rep',icon:'🔁',name:'訪日回数',desc:'初訪日とリピーターの構成比'},
   {id:'fl',icon:'✈',name:'フライト情報',desc:'国際線の便数と、発表済みの新規・増便'},
@@ -3845,6 +3898,7 @@ const mEsc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;'
 function mItem(){
   if(VIEWNOW==='nw')return 'nw';
   if(VIEWNOW==='fl')return 'fl';
+  if(VIEWNOW==='ev')return 'ev';
   if(VIEWNOW==='oc'){
     try{
       const fr=document.getElementById('occView').firstChild;
@@ -3856,7 +3910,6 @@ function mItem(){
   }
   if(typeof REPOPEN!=='undefined'&&REPOPEN)return 'rep';
   if(NATOPEN)return 'nat';
-  if(VIEW==='event')return 'ev';
   return SRC==='est'?'est':'stay';
 }
 function mStayPer(){
@@ -3871,7 +3924,7 @@ function mNewsExtra(){
   return !!((mo&&mo.value&&mo.value!=='all')||(co&&co.getAttribute('aria-pressed')==='true'));
 }
 function mChipText(id){
-  if(id==='ev')return evMonthLabel(EVM)+'・'+(EVC==='all'?'すべて':EVC);
+  if(id==='ev')return evMonthLabel(EVM)+(EVP?'・'+EVP:'・全国');
   if(id==='nw'){
     const b=document.querySelector('#nwChips .nw-chip.on');
     let theme='すべて';
@@ -3942,7 +3995,7 @@ function mSync(){
   const box=document.getElementById('mSheet');
   if(det&&box){
     det.textContent=box.checked?'閉じる':'詳細';
-    det.style.display=(id==='nat'||id==='rep')?'none':'';
+    det.style.display=(id==='nat'||id==='rep'||id==='ev')?'none':'';
   }
   const srcOn=document.getElementById('mSrc')&&!document.getElementById('mSrc').hidden;
   document.querySelectorAll('#mMenuList .mitem').forEach(b=>b.classList.toggle('on',srcOn?b.dataset.id==='src':b.dataset.id===id));
@@ -3999,11 +4052,6 @@ function mFillFilt(id){
       +'<button type="button" class="mfilt-btn" id="mNwToggle">リストの開閉</button>'
       +(mNewsExtra()?'<button type="button" class="nw-clear" id="mNwClear">期間と他旅行会社動向を解除</button>':'')
       +'<p class="mhint">テーマは上のチップで切り替えます。期間を選ぶと、その月の記事を日付・テーマ・見出しの箇条書きでまとめます。</p>';
-  }else if(id==='ev'){
-    html+=mSel('月','evmonth',EVM_LIST.map(ym=>[ym,evMonthLabel(ym)]),EVM);
-    html+=mSel('種類','evcat',[['all','すべての種類']].concat(Object.keys(EVCOL).map(k=>[k,k])),EVC);
-    html+=mChk('labchk','県ラベル')+mChk('bgchk','背景地図');
-    html+='<p class="mhint">ドーム・スタジアム規模、大型の大会・展示会・祭り、移動を伴う連休です。町の催事は含みません。</p>';
   }else if(id==='stay'||id==='est'){
     if(id==='stay'){
       const opts=[];
@@ -4075,8 +4123,6 @@ function mFillFilt(id){
     else if(k==='r2b'){R2B=v==='rep'?'rep':+v;renderRep()}
     else if(k==='t23n'){T23N=v;renderRep()}
     else if(k==='t23m'){T23M=v;renderRep()}
-    else if(k==='evmonth'){setEvMonth(v);gaFilt('month',sel)}
-    else if(k==='evcat'){setEvCat(v);gaFilt('category',sel)}
     else if(k==='nwmonth'){const real=document.getElementById('nwMonth');if(real&&real.value!==v){real.value=v;real.dispatchEvent(new Event('change'))}}
     if(window.__mSync)window.__mSync();
     const f=document.getElementById('mFilt');
@@ -4169,7 +4215,7 @@ function mOpenSrc(){
     srcPiece('ブランド比較',wait),
     srcPiece('ニュースまとめ','<span class="up">▲+</span> は増加、<span class="dn">▼</span> は減少。出典は新しいタブで開きます。'),
     srcPiece('新規開業ホテル','カテゴリは当サイトの独自分類で、公式の格付けではありません。ホテル名のリンクが各件の出典です。'),
-    srcPiece('イベント','<p>ドーム・スタジアム規模のコンサート、大型のスポーツ・展示会・祭り、移動を伴う日本の連休と、主な送客地の連休だけを収録しています。町のイベントや小規模な催事は含みません。祝日・連休は都道府県に紐づけず、地図の色にも含めません。</p><p>各件のリンクが一次出典です。「予定」は、その年の正式な放假通知や個別の開催要項が未確定のもの（中国の2027年連休は全国銀行間同業拆借中心の暫定、タイのソンクラーンは2027年の閣議決定が未確認、ねぶた祭・祇園祭は主催者の例年日程）です。2027年5月以降のドーム公演は、まだ発表が少ない月があります。日程は変更されます。データは events.json（'+evEsc(EV.updated||'読み込み中')+'）。</p>')
+    srcPiece('イベントカレンダー','<p>ドーム・スタジアム規模のコンサート、大型のスポーツ・展示会・祭り、移動を伴う日本の連休と、主な送客地の連休だけを収録しています。町のイベントや小規模な催事は含みません。祝日・連休は都道府県に紐づけません。都道府県を選んでも、祝日・連休は表示したままです。</p><p>各件のリンクが一次出典です。「予定」は、その年の正式な放假通知や個別の開催要項が未確定のもの（中国の2027年連休は全国銀行間同業拆借中心の暫定、タイのソンクラーンは2027年の閣議決定が未確認、ねぶた祭・祇園祭は主催者の例年日程）です。2027年5月以降のドーム公演は、まだ発表が少ない月があります。日程は変更されます。データは events.json（'+evEsc(EV.updated||'読み込み中')+'）。</p>')
   ].join('');
   const put=(i,html)=>{const s=body.querySelectorAll('.srcsec')[i];if(s)s.querySelector('.srctx').innerHTML=html||'<p>出典を取得できませんでした。</p>'};
   box.hidden=false; box.querySelector('.msrc-body').scrollTop=0;
@@ -4185,15 +4231,14 @@ function mShow(id){
   mCloseSrc();
   if(id==='nw'){showView('nw');return}
   if(id==='fl'){showView('fl');return}
+  if(id==='ev'){showView('ev');return}
   if(id==='occ'||id==='muni'||id==='reit'){mOcc(id==='occ'?'pref':id==='muni'?'muni':'reit');return}
   showView('in');
-  if(id==='ev'){if(typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);if(NATOPEN)openNat(false);setView('event');mFix();return}
   if(id==='nat'){openNat(true);return}
   if(id==='rep'){openRep(true);return}
   if(typeof REPOPEN!=='undefined'&&REPOPEN)openRep(false);
   if(NATOPEN)openNat(false);
   const src=id==='est'?'est':'stay';
-  if(VIEW==='event')setView('top');
   if(SRC!==src)setSource(src);
   else if(window.__mSync)window.__mSync();
   mFix();
@@ -4206,6 +4251,7 @@ function mInit(){
   }
   const mb=document.getElementById('mMenuBtn');if(mb)mb.onclick=mOpen;
   const nb=document.getElementById('nwMenuBtn');if(nb)nb.onclick=mOpen;
+  const eb=document.getElementById('evMenuBtn');if(eb)eb.onclick=mOpen;
   const mc=document.getElementById('mMenuClose');if(mc)mc.onclick=mClose;
   const sc=document.getElementById('mSrcClose');if(sc)sc.onclick=mCloseSrc;
   document.querySelectorAll('.vb-src').forEach(b=>b.onclick=e=>{e.stopPropagation();mOpenSrc()});
