@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,209 @@
     }
   ],
   "counts": {
-    "items": 181,
-    "dates": 33,
-    "industry": 108,
+    "items": 188,
+    "dates": 34,
+    "industry": 115,
     "ota": 73,
-    "industryDates": 26,
+    "industryDates": 27,
     "otaDates": 27,
     "themes": {
-      "海外OTA": 71,
-      "国内OTA・旅行会社": 15,
-      "新規開業ホテル": 23,
-      "新規フライト情報": 72
+      "海外OTA": 72,
+      "国内OTA・旅行会社": 17,
+      "新規開業ホテル": 25,
+      "新規フライト情報": 74
     }
   },
   "items": [
+    {
+      "id": "industry-180",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "再開",
+        "運休"
+      ],
+      "highlight": false,
+      "headline": "アラスカ航空、成田＝アンカレッジを2027年5/13に開設（737-8で毎日、9月まで）　2028年1月から週3往復で再開",
+      "body": "・発表日：2026年10/27（アラスカ航空。TRAICYなどの報道は10/28）。政府認可を条件に、成田＝アンカレッジを2027年5/13に開設する。機材は737-8。同社の日本路線では、関西＝シアトル（別掲）に続く2本目。\n・夏は毎日運航する。アンカレッジ発は5/13〜9/7、成田発は5/14〜9/8。その後は運休し、2028年1月から週3往復で再開する。\n・AS22 成田21:45発→アンカレッジ12:00着（7時間15分）。AS21 アンカレッジ14:10発→成田翌日15:25着（8時間15分）。\n・5/13〜6/7搭乗分の導入運賃は往復999ドルからで、販売は10/31まで（アラスカ航空）。",
+      "note": "成田に北米の季節直行がもう1本増える。夏は毎日、その後は運休し、2028年1月から週3往復の予定で、政府認可が条件。成田周辺の取引ホテルとは、2027年夏の前後泊をどう受けるかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261028386160/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://news.alaskaair.com/destinations/alaska-airlines-to-launch-nonstop-service-between-anchorage-and-tokyo-narita/",
+          "label": "news.alaskaair.com"
+        },
+        {
+          "url": "https://sky-budget.com/2026/10/28/alaska-airlines-to-launch-seasonal-scheduled-service-between-tokyo-narita-and-anchorage-on-may-13-2027/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-181",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "減便"
+      ],
+      "highlight": false,
+      "headline": "国交省、冬期の国際定期便は週6,094.5便で前年比2%減　中国路線は49%減、関西は17%減・中部は16%減、地方空港は4%増",
+      "body": "・発表日：2026年10/26（国土交通省）。2026年冬期（10/25〜2027年3/27）の国際定期便を、130社（本邦9社、外航121社）が申請し認可された。便数は10/23時点の第1週（10/25〜31）の計画で、期中に変わる。\n・運航便数は週6,094.5便（旅客5,524.5便、貨物570便）で、前年同時期比2%減（旅客3%減、貨物2%増）。\n・中国路線は49%の減便。韓国は18%増、台湾11%増、香港10%増、マレーシア25%増、インド52%増、英国13%増、フィンランド36%増。外航社は5%減（週222便減）、本邦社は6%増（週67.5便増）。\n・主要5空港は成田4%増、羽田2%増、福岡5%増。関西は17%の減便、中部は16%の減便。地方空港全体は4%増で、中国便は86%減、韓国21%増、台湾19%増、香港15%増、シンガポール125%増、ベトナム133%増。\n・認可一覧では、タイガーエア台湾の高雄＝熊本が10/27から週2便の新規就航となっている。\n・鹿児島＝釜山、中部＝台中、新千歳のサンフランシスコ・バンクーバー、関西＝ダナン、広島＝仁川などは別掲。",
+      "note": "冬の入りは全国で2%減でも、減り方は空港で違う。関西と中部は大きく減り、地方空港は韓国・台湾が増えている。取引ホテルとは、自空港の方面別で冬の在庫を見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.mlit.go.jp/report/press/kouku03_hh_000304.html",
+          "label": "mlit.go.jp"
+        },
+        {
+          "url": "https://www.mlit.go.jp/report/press/content/002028375.pdf",
+          "label": "mlit.go.jp"
+        },
+        {
+          "url": "https://tms-media.jp/posts/99067/",
+          "label": "tms-media.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-182",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "エクスペディア、ホテル予約でPayPay決済に対応　10/28〜2027年2/21は最大20%のポイント付与",
+      "body": "・エクスペディアは10/27、ホテル予約でPayPayオンライン決済に対応すると発表した。航空券やその他の旅行商品は対象外。\n・10/28〜2027年2/21に「PayPayクーポンキャンペーン」を行う。事前にPayPayでクーポンを取り、ホテルをPayPayオンライン決済で払うと、決済額の最大20%分のPayPayポイントが付く。\n・第1弾は10/28〜11/29。付与上限は期間中2,000ポイント、利用は1回。第2弾は11/30〜2027年1/10、第3弾は1/11〜2/21。第2弾以降の付与率は、この発表には含まれていない。\n・クーポンは支払い前の取得が条件。利用額が上限に達すると、終了日前に終わる場合がある。",
+      "note": "日本のホテル予約でPayPayが使えるようになった。対象はホテルのみで、第1弾の付与上限は2,000ポイント。直販や他OTAの支払総額と比べるときの、国内決済の選択肢になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000329.000003373.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://paypay.ne.jp/notice/20261027/c-expedia/",
+          "label": "paypay.ne.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-183",
+      "date": "2026-10-27",
+      "dateLabel": "10/27（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "SQUEEZE、「Minn 那覇美栄橋」全42室を10/24に開業　福岡・春吉の第2弾は2028年春（当初は2027年冬）",
+      "body": "・発表日：2026年10/26（SQUEEZE、GLC GROUP）。アパートメントホテル「Minn 那覇美栄橋」が10/24に開業した。沖縄初出店で、全42室、各室41㎡、最大6名。ゆいレール美栄橋駅北口から徒歩約4分、国際通りまで徒歩約10分。全室にキッチンと洗濯機。運営はGLC COMPASSで、SQUEEZEのフランチャイズ。\n・協業の第2弾は福岡市中央区・春吉のホテルで、2028年春の開業予定。2026年6月の発表では2027年冬だった。\n・台東区の「Minn 上野入谷 East」「Minn 浅草花やしき North」（12月開業）は別掲。",
+      "note": "那覇に全室41㎡・最大6名のアパートメントホテルが開業した。福岡・春吉の第2弾は2027年冬から2028年春にずれている。那覇の取引ホテルとは、グループ需要の受け皿が増えた前提でプランを比べる材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000265.000015235.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000029.000052896.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261027-160718",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-184",
+      "date": "2026-10-27",
+      "dateLabel": "10/27（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "楽天トラベル台湾、訪日予約額の67%はゴールデンルート以外　福岡+4%・沖縄+2.5%、2人旅が5割超",
+      "body": "・楽天トラベル台湾の陳忠豪総経理は10/27の会見で、台湾から日本への予約取扱額の67%が、東京・京都・大阪のゴールデンルート以外だと説明した（中央社）。\n・2025年と比べ、福岡は4%増、沖縄は2.5%増。石川、広島、青森の人気も上がった。\n・1回の旅行の平均総予算は4万台湾ドルを超え、宿泊費が半分近い。2人旅の注文が5割を超える。\n・経済日報は同じ会見として、台湾の訪日宿泊が前年比153%増、5〜9月の台湾事業は前年同期の2.9倍、とも伝えている。",
+      "note": "台湾の楽天トラベルでは、予約額の67%が東京・京都・大阪以外に向いている。福岡と沖縄が伸び、宿泊費が予算の半分近い。地方の取引ホテルには、台湾の少人数需要を見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.cna.com.tw/news/ahel/202610270240.aspx",
+          "label": "cna.com.tw"
+        },
+        {
+          "url": "https://money.udn.com/money/story/5612/9840324",
+          "label": "money.udn.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-185",
+      "date": "2026-10-27",
+      "dateLabel": "10/27（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "沖縄ツーリスト、最大約73万人分の個人情報が漏えい　レンタカーやホテル予約の新規受付を停止",
+      "body": "・NHKは10/27、沖縄ツーリストが顧客の住所や運転免許証番号など最大約73万人分の個人情報が漏えいしたと発表した、と報じた。漏えいした情報が闇サイトで販売されていた可能性がある。\n・同社の10/23の第2報では、10/18に外部アクセスを遮断し、10/20 16:30からOTSレンタカー、OTS HOTEL、OTS ACTIVITIES、デジタルDMOプラットフォーム、OTS Clubの新規予約を止めている。それ以前の予約は予定どおり使える。\n・漏えいが疑われる項目は氏名、生年月日、性別、住所、電話番号、メールアドレス、Facebook ID、日本の運転免許証の発行日・有効期限・番号。クレジットカード情報は対象のシステムになく、漏えいは確認されていない。免許証の画像（最大6,000件）は別のデータベースにあり、漏えいの有無を調査中。\n・警察と個人情報保護委員会に報告している。",
+      "note": "沖縄の旅行会社で予約サイトが止まり、最大約73万人分の個人情報が漏えいした。レンタカーとホテル予約の新規受付も止めている。沖縄の取引施設とは、予約経路が戻る時期を確認する材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261027de66315",
+          "label": "news.web.nhk"
+        },
+        {
+          "url": "https://otspremium.com/news/3030",
+          "label": "otspremium.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-170",
       "date": "2026-10-27",
@@ -345,6 +534,30 @@
         }
       ],
       "companies": true
+    },
+    {
+      "id": "industry-186",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "Staple、「Portside Inn Hakodate」新棟8室を10/31に開業（函館市大町、ダイニング併設）",
+      "body": "・発表日：2026年10/26（Staple）。函館市西部地区の「Portside Inn Hakodate」新棟を10/31に開業する。客室8室と、宿泊者以外も使えるダイニング「PSI Table」を備える。木造3階で、所在地は函館市大町8-29。市電「大町」停留場から徒歩3分。\n・客室はすべて異なる8タイプで、1室2名（Group Roomのみ最大4名）。一棟貸しのHOUSE SUITEと合わせると全9室。料金は1泊1室13,200円から（2名利用、朝食なし、税・サービス料込）。",
+      "note": "函館西部地区に8室の新棟が10/31に開業する。小規模でも、徒歩圏にダイニングを足す開き方。函館の取引ホテルとは、月末の供給増を確認する材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000053.000080587.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
     },
     {
       "id": "industry-149",

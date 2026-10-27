@@ -129,7 +129,7 @@ _DOMESTIC_RE = re.compile(
     r"近ツー|(?<!訪日)日本旅行(?!料金|者|業)|エアトリ|skyticket|スカイチケット|"
     r"阪急交通社|阪急トラベル|東武トップツアーズ|クラブツーリズム|農協観光|名鉄観光|"
     r"読売旅行|ビッグホリデー|旅工房|はとバス|ジャルパック|(?<![A-Za-z])JALPAK(?![A-Za-z])|"
-    r"ミキ・ツーリスト|Miki\s*Travel"
+    r"ミキ・ツーリスト|Miki\s*Travel|沖縄ツーリスト"
 )
 _B2B_EXPLICIT_RE = re.compile(
     r"Hotelbeds|HBX|WebBeds|Webbeds|RateHawk|Ratehawk|Emerging Travel|\bETG\b|"
@@ -155,7 +155,7 @@ _COMPANY_NAME_RE = re.compile(
     r"エアトリ|skyticket|スカイチケット|"
     r"阪急交通社|阪急トラベル|東武トップツアーズ|クラブツーリズム|農協観光|名鉄観光|"
     r"読売旅行|ビッグホリデー|旅工房|はとバス|ジャルパック|(?<![A-Za-z])JALPAK(?![A-Za-z])|"
-    r"ミキ・ツーリスト|Miki\s*Travel|"
+    r"ミキ・ツーリスト|Miki\s*Travel|沖縄ツーリスト|"
     r"ランドオペレータ(?:ー)?|"
     r"ホールセラー|ホールセール|ベッドバンク|[Bb]edbank|"
     r"Hotelbeds|(?<![A-Za-z])HBX(?![A-Za-z])|Web[Bb]eds|Rate[Hh]awk|Emerging Travel|"
