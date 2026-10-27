@@ -771,6 +771,9 @@ h4 span{font-weight:400;font-size:10.5px;color:#7d8aa5}
 .legopen{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .legbtn{position:absolute;left:10px;bottom:22px;z-index:910;margin:0;cursor:pointer;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;font-weight:700;color:#14284b;box-shadow:0 2px 8px rgba(20,40,75,.12)}
 #legOpen:checked~#legend{display:block}
+#map .maplayer{display:none}
+#viewSeg[hidden],#subCtl[hidden],#roomKind[hidden],#roomKindM[hidden]{display:none!important}
+.roomnote{margin:0 0 8px;font-size:11px;line-height:1.45;color:#5a6a88}
 #legend .lt{font-weight:700;margin-bottom:5px;font-size:12px}
 #legend .li{display:flex;align-items:center;gap:6px;margin:2px 0}
 #legend .li .c{margin-left:auto;color:#7d8aa5;padding-left:10px}
@@ -1136,6 +1139,12 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   #info,#rankBox,#tbl{min-width:0;max-width:100%;overflow-x:auto}
   .cl,table.ot,table.mt,table.rt{width:max-content;min-width:max-content}
   aside a{overflow-wrap:anywhere}
+  #map .maplayer{
+    display:flex;position:absolute;top:10px;left:52px;right:8px;z-index:800;
+    flex-direction:column;align-items:flex-start;gap:4px;pointer-events:none
+  }
+  #map .maplayer .seg{pointer-events:auto;flex-wrap:wrap;max-width:100%}
+  #map .maplayer .seg button{padding:4px 7px;font-size:11px}
   .legbtn{left:8px;bottom:78px}
   #legend,#legend:has(.tkl){
     left:8px;right:auto;top:auto;bottom:118px;
@@ -1267,6 +1276,18 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   <div class="monly mbar" id="mBar"><button type="button" class="mfilt-btn" id="mFiltBtn">絞り込み</button><button type="button" class="mchip" id="mChip">すべて</button><button type="button" class="mdet" id="mDetBtn">詳細</button></div>
   <div class="row" id="perCtl"></div>
   <div class="row">
+    <div class="seg" id="layerSeg" role="group" aria-label="地図の色分け">
+      <button type="button" data-k="stay" class="on">宿泊者数</button>
+      <button type="button" data-k="rooms">総客室数</button>
+    </div>
+    <div class="seg sm" id="roomKind" role="group" aria-label="客室の種別" hidden>
+      <button type="button" data-k="all" class="on" title="厚生労働省 衛生行政報告例の客室数">合計（旅館・ホテル）</button>
+      <button type="button" data-k="hotel" title="リゾート・ビジネス・シティの施設数">ホテル</button>
+      <button type="button" data-k="ryokan" title="旅館の施設数">旅館</button>
+      <button type="button" data-k="resort">リゾート</button>
+      <button type="button" data-k="business">ビジネス</button>
+      <button type="button" data-k="city">シティ</button>
+    </div>
     <div class="seg" id="viewSeg">
       <button data-v="top" class="on">最多国籍</button>
       <button data-v="country">国籍を選択</button>
@@ -1283,7 +1304,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
   <input id="mSheet" class="msheet" type="checkbox">
   <div id="natCmp"></div>
   <div id="repCmp"></div>
-  <div id="map"><input id="legOpen" class="legopen" type="checkbox" onclick="event.stopPropagation()"><label class="legbtn" for="legOpen" onclick="event.stopPropagation()">凡例</label><div id="legend" onclick="event.stopPropagation()"></div></div>
+  <div id="map"><div class="maplayer" id="mapLayer"><div class="seg sm" id="layerSegM" role="group" aria-label="地図の色分け"><button type="button" data-k="stay" class="on">宿泊者</button><button type="button" data-k="rooms">総客室数</button></div><div class="seg sm" id="roomKindM" role="group" aria-label="客室の種別" hidden><button type="button" data-k="all" class="on">合計</button><button type="button" data-k="hotel">ホテル</button><button type="button" data-k="ryokan">旅館</button><button type="button" data-k="resort">リゾート</button><button type="button" data-k="business">ビジネス</button><button type="button" data-k="city">シティ</button></div></div><input id="legOpen" class="legopen" type="checkbox" onclick="event.stopPropagation()"><label class="legbtn" for="legOpen" onclick="event.stopPropagation()">凡例</label><div id="legend" onclick="event.stopPropagation()"></div></div>
   <label class="msheet-btn" for="mSheet"><span class="op">地図を広く</span><span class="cl">詳細</span></label>
   <aside><div id="info"></div><div id="rankBox"></div></aside>
 </main>
@@ -3110,6 +3131,153 @@ const D={"countries":[{"ja":"韓国","col":"#1f6fd1"},{"ja":"中国","col":"#d72
 window.__D=D;
 const C=D.countries, NC=C.length, OTH=NC-1;            // 最後の区分＝その他
 const P=D.prefs, NP=P.length;
+
+// 総客室数。厚生労働省「衛生行政報告例」令和7年度 第8表（旅館・ホテル営業、年度末現在）。公開 2026-10-27。
+// ホテル営業と旅館営業は平成30年度以降「旅館・ホテル営業」に統合されているため、この表では分けない。
+// ty は観光庁「宿泊旅行統計調査」2025年12月・年の確定値 第1表の施設数［旅館, リゾート, ビジネス, シティ］。客室数ではない。
+const ROOM={asof:'2026-10-27',natF:56773,natR:1797781,tyNat:[18700,3210,8410,1550],
+fac:[2886,550,703,643,482,729,1357,875,1403,1128,731,1237,8196,1328,1948,392,706,842,1328,2945,1078,2457,1438,1265,486,965,1739,1413,439,574,315,365,781,790,542,406,336,417,322,1667,357,687,958,1004,404,855,4304],
+rooms:[119914,19283,21261,32784,15577,18722,40738,28681,36839,30056,26986,62772,219461,58685,43869,15879,28903,15932,27239,63474,27324,67850,68211,29441,15240,50234,128218,46856,10341,16637,10136,11146,21588,33451,18025,9345,14479,18033,10292,66461,9617,23356,27228,24527,15766,27724,69200],
+ty:[[1090,330,530,100],[230,10,100,10],[350,20,90,20],[180,10,160,40],[230,10,70,10],[290,50,100,20],[590,30,170,0],[270,10,210,10],[510,170,210,10],[480,40,130,20],[80,30,110,10],[660,110,280,30],[1060,90,1050,410],[320,150,260,50],[920,70,140,10],[140,40,60,10],[280,40,110,20],[570,20,50,10],[750,100,60,0],[1720,320,170,20],[470,50,130,10],[830,280,270,60],[370,30,300,50],[510,40,150,10],[200,30,100,10],[440,40,230,110],[260,20,490,100],[380,130,240,30],[180,10,20,20],[300,30,120,10],[180,10,50,10],[300,10,70,10],[280,20,90,20],[250,40,210,30],[170,10,80,10],[270,10,90,10],[80,20,70,10],[160,10,90,10],[160,40,80,10],[290,20,370,110],[100,10,80,0],[250,50,130,20],[380,30,150,10],[400,60,180,10],[90,20,120,10],[290,120,200,20],[370,420,240,50]],
+};
+const ROOM_KINDS=[['all','合計（旅館・ホテル）'],['hotel','ホテル'],['ryokan','旅館'],['resort','リゾートホテル'],['business','ビジネスホテル'],['city','シティホテル']];
+let LAYER='stay',RKIND='all',PLAN=null;
+function roomSeries(){
+  if(RKIND==='all') return {v:ROOM.rooms,nat:ROOM.natR,unit:'室',name:'総客室数',stock:true};
+  const ix={ryokan:0,resort:1,business:2,city:3}[RKIND];
+  const v=ROOM.ty.map(t=>ix==null?t[1]+t[2]+t[3]:t[ix]);
+  const nat=ix==null?ROOM.tyNat[1]+ROOM.tyNat[2]+ROOM.tyNat[3]:ROOM.tyNat[ix];
+  const name=ROOM_KINDS.find(x=>x[0]===RKIND)[1];
+  return {v,nat,unit:'施設',name,stock:false};
+}
+function roomEdges(vals){
+  const mx=Math.max(...vals),mn=Math.min(...vals);
+  const cand=[10,20,50,100,200,300,500,1000,1500,2000,5000,10000,20000,30000,50000,80000,120000];
+  const inside=cand.filter(e=>e>mn&&e<mx);
+  if(!inside.length) return [Math.max(1,Math.round(mx/2))];
+  if(inside.length<=4) return inside;
+  const out=[];
+  for(let i=0;i<4;i++) out.push(inside[Math.round(i*(inside.length-1)/3)]);
+  return [...new Set(out)];
+}
+function binOf(v,edges){let i=0;while(i<edges.length&&v>=edges[i])i++;return i}
+function roomFill(v,vals){
+  const edges=roomEdges(vals),n=edges.length+1,i=binOf(v,edges);
+  return GSTOPS[Math.round(i*(GSTOPS.length-1)/Math.max(1,n-1))];
+}
+function edgeLab(n){return n>=10000?(n/10000).toLocaleString('ja-JP',{maximumFractionDigits:1})+'万':fmtN(n)}
+function renderRoomLegend(el){
+  const s=roomSeries(),edges=roomEdges(s.v),n=edges.length+1;
+  const rows=[];
+  for(let i=0;i<n;i++){
+    const lo=i?edges[i-1]:null,hi=i<n-1?edges[i]:null;
+    const lab=lo==null?edgeLab(hi)+s.unit+'未満':hi==null?edgeLab(lo)+s.unit+'以上':edgeLab(lo)+'〜'+edgeLab(hi)+s.unit;
+    const col=GSTOPS[Math.round(i*(GSTOPS.length-1)/Math.max(1,n-1))];
+    const cnt=s.v.filter(v=>binOf(v,edges)===i).length;
+    rows.push(`<div class="li"><span class="sw" style="background:${col}"></span>${lab}<span class="c">${cnt}</span></div>`);
+  }
+  const note=s.stock?'令和7年度末・旅館・ホテル営業の客室数。簡易宿所は含まない。':'2025年12月の施設数（推計）。客室数の内訳は非公表。公式の総客室数には加えていない。';
+  el.innerHTML=`<div class="lt">${s.stock?s.name:s.name+'の施設数'}</div>${rows.join('')}<div class="ln">${note}</div>`;
+}
+function planOn(x){
+  const st=x['ステータス'];
+  if(st!=='開業予定'&&st!=='開業済') return false;
+  const d=String(x['開業日']||'').trim(),prec=x['開業日の精度']||'';
+  if(prec==='日') return d.slice(0,10)>='2026-10-01';
+  if(prec==='月') return d.slice(0,7)>='2026-10';
+  const y=(d.match(/20\d\d/)||[])[0];
+  if(!y) return false;
+  if(prec==='年') return +y>=2027;
+  if(prec==='季節') return +y>2026||(+y===2026&&(d.includes('Q4')||d.includes('冬')));
+  return false;
+}
+function planOf(i){
+  if(!PLAN) return null;
+  if(PLAN.err) return {err:1};
+  if(i==null) return {rooms:PLAN.rooms.reduce((a,b)=>a+b,0),hotels:PLAN.hotels.reduce((a,b)=>a+b,0),miss:PLAN.miss.reduce((a,b)=>a+b,0)};
+  return {rooms:PLAN.rooms[i],hotels:PLAN.hotels[i],miss:PLAN.miss[i]};
+}
+function planText(p){
+  if(!p) return '<b>…</b><i class="fl">読み込み中</i>';
+  if(p.err) return '<b>–</b><i class="fl">読み込めませんでした</i>';
+  const miss=p.miss?`・室数不明${fmtN(p.miss)}件は室数に含めていない`:'';
+  return `<b>${fmtN(p.rooms)}<small>室</small></b><i class="fl">${fmtN(p.hotels)}件${miss}・公式の総客室数に含まない</i>`;
+}
+function roomPanel(i){
+  const rooms=i!=null?ROOM.rooms[i]:ROOM.natR,fac=i!=null?ROOM.fac[i]:ROOM.natF,s=roomSeries();
+  const sv=i!=null?s.v[i]:s.nat;
+  const extra=s.stock?'':`<div class="kpi"><span>${s.name}の施設数</span><b>${fmtN(sv)}<small>施設</small></b><i class="fl">2025年12月・推計。地図の色</i></div>`;
+  const note=s.stock
+    ?'令和7年度末（2026年3月31日）の旅館・ホテル営業。簡易宿所は含まない。開業予定は2026年10月以降で、上の客室数には加えていない。'
+    :'地図の色は宿泊旅行統計の施設数（2025年12月・確定値）。客室数をホテルと旅館に分けた公式の表はない。この施設数は総客室数に加えていない。';
+  return `<div class="kpis">
+    <div class="kpi"><span>総客室数</span><b>${fmtN(rooms)}<small>室</small></b><i class="fl">旅館・ホテル営業</i></div>
+    <div class="kpi"><span>施設数</span><b>${fmtN(fac)}<small>施設</small></b><i class="fl">旅館・ホテル営業</i></div>
+    <div class="kpi"><span>今後の開業予定 客室数</span>${planText(planOf(i))}</div>
+    ${extra}
+  </div><p class="roomnote">${note}</p>`;
+}
+function renderRoomStats(){
+  const a=document.getElementById('dataAsof');if(a)a.textContent=asofText(ROOM.asof);
+  const s=roomSeries();
+  document.getElementById('yr').textContent=s.stock
+    ?'厚生労働省 衛生行政報告例｜令和7年度末（2026年3月31日）旅館・ホテル営業'
+    :'色分けは'+s.name+'の施設数｜観光庁 宿泊旅行統計 2025年12月・確定値';
+  const p=planOf(null);
+  document.getElementById('stats').innerHTML=
+    `<div class="stat main"><div class="lb">全国・${s.stock?'総客室数（旅館・ホテル営業）':s.name+'の施設数'}</div><div class="v">${fmtN(s.nat)}<small>${s.unit}</small></div></div>`+
+    (s.stock
+      ?`<div class="stat"><div class="lb">施設数（旅館・ホテル営業）</div><div class="v">${fmtN(ROOM.natF)}<small>施設</small></div></div>`
+      :`<div class="stat"><div class="lb">総客室数（旅館・ホテル営業）</div><div class="v">${fmtN(ROOM.natR)}<small>室</small></div></div>`)+
+    `<div class="stat"><div class="lb">今後の開業予定 客室数</div><div class="v">${p&&!p.err?fmtN(p.rooms):p&&p.err?'–':'…'}<small>室</small></div></div>`;
+}
+function syncLayerUi(){
+  document.querySelectorAll('#layerSeg button,#layerSegM button').forEach(b=>b.classList.toggle('on',b.dataset.k===LAYER));
+  document.querySelectorAll('#roomKind button,#roomKindM button').forEach(b=>b.classList.toggle('on',b.dataset.k===RKIND));
+  const rk=document.getElementById('roomKind'),rm=document.getElementById('roomKindM');
+  if(rk) rk.hidden=LAYER!=='rooms';
+  if(rm) rm.hidden=LAYER!=='rooms';
+  const vs=document.getElementById('viewSeg'),sc=document.getElementById('subCtl');
+  if(vs) vs.hidden=LAYER==='rooms';
+  if(sc) sc.hidden=LAYER==='rooms';
+}
+function setLayer(k){
+  if(k!=='stay'&&k!=='rooms') return;
+  const changed=LAYER!==k; LAYER=k; syncLayerUi();
+  if(changed&&window.__gaFilter) window.__gaFilter('map_layer',k==='rooms'?'総客室数':'宿泊者数');
+  refresh();
+}
+function setRoomKind(k){
+  if(!ROOM_KINDS.some(x=>x[0]===k)) return;
+  const changed=RKIND!==k; RKIND=k; syncLayerUi();
+  if(changed&&window.__gaFilter) window.__gaFilter('map_layer',ROOM_KINDS.find(x=>x[0]===k)[1]);
+  if(LAYER==='rooms') refresh();
+}
+document.querySelectorAll('#layerSeg button,#layerSegM button').forEach(b=>b.onclick=e=>{e.stopPropagation();setLayer(b.dataset.k)});
+document.querySelectorAll('#roomKind button,#roomKindM button').forEach(b=>b.onclick=e=>{e.stopPropagation();setRoomKind(b.dataset.k)});
+function loadPlan(){
+  fetch('hotel_openings.json').then(r=>{if(!r.ok) throw new Error(r.status);return r.json()}).then(j=>{
+    const ix=Object.fromEntries(P.map((p,i)=>[p.ja,i]));
+    const rooms=Array(NP).fill(0),hotels=Array(NP).fill(0),miss=Array(NP).fill(0);
+    (j.items||[]).forEach(x=>{
+      if(!planOn(x)) return;
+      const i=ix[x['都道府県']]; if(i==null) return;
+      hotels[i]++;
+      const r=String(x['客室数']==null?'':x['客室数']).trim().replace(/,/g,'');
+      if(/^\d+$/.test(r)) rooms[i]+=+r; else miss[i]++;
+    });
+    PLAN={rooms,hotels,miss,updated:j.updated||''};
+    if(LAYER==='rooms') refresh();
+  }).catch(()=>{PLAN={err:1}; if(LAYER==='rooms') refresh()});
+}
+loadPlan();
+function roomSrcHtml(){
+  const upd=PLAN&&PLAN.updated?PLAN.updated:'2026-10-27';
+  return '厚生労働省「<a href="https://www.e-stat.go.jp/stat-search/files?layout=dataset&amp;stat_infid=000040516076&amp;toukei=00450027" target="_blank">衛生行政報告例</a>」令和7年度（2025年度）第8表「旅館・ホテル営業の施設数・客室数、都道府県別」（年度末現在、2026年3月31日）。公開日は2026年10月27日。全国の客室数は'+fmtN(ROOM.natR)+'室、施設数は'+fmtN(ROOM.natF)+'施設。平成30年6月15日施行の旅館業法改正でホテル営業と旅館営業は「旅館・ホテル営業」に統合されており、この表では分けられない。簡易宿所・下宿は施設数のみで、ここの客室数には含まない。'
+    +'<div class="fnl"><div>・ホテル／旅館の色分けは、観光庁「<a href="https://www.mlit.go.jp/kankocho/tokei_hakusyo/shukuhakutokei.html" target="_blank">宿泊旅行統計調査</a>」2025年1月～12月分（年の確定値）第1表の2025年12月・宿泊施設タイプ別施設数（推計）。客室数のタイプ別内訳は公表されていない。ホテルはリゾートホテル・ビジネスホテル・シティホテルの合計。調査上の施設タイプで、旅館業法の営業種別とは一致しない。表の施設数は推計で丸められており、都道府県の合計は全国の欄と一致しないことがある。公式の総客室数には加えていない。</div>'
+    +'<div>・今後の開業予定客室数は、当サイトの新規開業ホテル（'+upd+'更新）のうち開業日が2026年10月以降の開業予定・開業済。客室数が整数の件だけを合計し、空欄や「1棟」「約200」などは室数に含めず件数だけ示す。延期、2026年10月より前、2026年秋・後半のように10月より前を含むあいまいな時期は除く。2026年Q4・冬と、2027年以降の年・季節は含む。公式の総客室数には加えていない。</div></div>';
+}
+
 // ---- 期間（年×月）----
 let YR=String(Math.max(...Object.keys(D.Y).map(Number).filter(y=>D.Y[y-1]))), MO=0;   // MO=0: 2026=年初来累計／確定年=年計
 const YEARS=Object.keys(D.Y).filter(y=>D.Y[y-1]).sort().reverse();
@@ -3177,12 +3345,13 @@ buildPeriod();
 let VIEW='top',CI=topIdx(NAT),CMET='abs',FMET='abs',HOV=null,PIN=null;
 const visIdx=()=>P.map((_,i)=>i);
 function metric(i){const p=P[i];
+  if(LAYER==='rooms')return roomSeries().v[i];
   if(VIEW==='top')return p.fr[0];
   if(VIEW==='country')return CMET==='abs'?(p.c[0][CI]||0):(p.f10[0]?(p.c[0][CI]||0)/p.f10[0]:0);
   if(VIEW==='jp')return p.jp[0];
   return FMET==='abs'||SRC==='est'?p.fr[0]:p.fr[0]/p.tot[0]}
 const isRatio=()=>(VIEW==='country'&&CMET==='share')||(VIEW==='foreign'&&FMET==='ratio'&&SRC!=='est');
-const metU=()=>VIEW==='jp'?'人泊':(SRC==='est'?'人':'人泊');
+const metU=()=>LAYER==='rooms'?roomSeries().unit:(VIEW==='jp'?'人泊':(SRC==='est'?'人':'人泊'));
 const fmtMet=v=>isRatio()?pct(v):fmtM(v)+metU();
 const fN=v=>fmtM(v)+'人泊', fP=v=>fmtM(v)+'人';   // 延べ泊数＝人泊／人数＝人
 const NIGHT_NOTE='';
@@ -3192,6 +3361,7 @@ function computeScale(){const v=visIdx().map(metric);SC={min:Math.min(...v),max:
 const tOf=v=>isRatio()?(SC.max>0?v/SC.max:0):(SC.max>0?Math.sqrt(Math.max(0,v))/Math.sqrt(SC.max):0);
 function fillOf(i){
   const v=metric(i);
+  if(LAYER==='rooms')return roomFill(v,roomSeries().v);
   if(VIEW==='top'){const t=SC.lmax>SC.lmin?(Math.log10(Math.max(1,v))-SC.lmin)/(SC.lmax-SC.lmin):1;return mix(C[topIdx(P[i])].col,.28+.72*clamp01(t))}
   return ramp(tOf(v))}
 
@@ -3210,7 +3380,7 @@ const gl=L.geoJSON(GEO,{renderer:L.canvas({padding:.3,tolerance:2}),style:f=>bas
     l.on('mouseout',()=>{if(HOV===i){HOV=null;restyle();renderInfo();renderRank()}});
     l.on('click',e=>{L.DomEvent.stopPropagation(e);PIN=PIN===i?null:i;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(PIN!=null)});}}).addTo(map);
 map.on('click',()=>{if(PIN!=null){PIN=null;restyle();renderInfo();renderRank();if(window.__mDetail)window.__mDetail(false)}});
-function mmOn(){return VIEW==='top'&&document.getElementById('mmchk').checked}
+function mmOn(){return LAYER!=='rooms'&&VIEW==='top'&&document.getElementById('mmchk').checked}
 function baseStyle(i){const sel=(i===PIN||i===HOV),mm=mmOn()&&MISM.has(i);return {fillColor:fillOf(i),fillOpacity:.88,color:sel?'#0b1a33':mm?'#0b1a33':'#ffffff',weight:sel?2.6:mm?1.8:.8,dashArray:mm&&!sel?'5,4':null,opacity:1}}
 function restyle(){for(let i=0;i<NP;i++)LAY[i].setStyle(baseStyle(i));[HOV,PIN].forEach(i=>i!=null&&LAY[i].bringToFront())}
 window.__layerOf=i=>LAY[i];
@@ -3221,7 +3391,7 @@ function renderLabels(){labLayer.clearLayers();if(!document.getElementById('labc
   const z=map.getZoom();const topN=new Set(visIdx().sort((a,b)=>metric(b)-metric(a)).slice(0,z>=6.5?99:12));
   P.forEach((p,i)=>{let txt;
     const nm=p.ja.replace(/[都府県]$/,'').replace(/^北海道$/,'北海道');
-    if(VIEW==='top'){const t=C[topIdx(p)].ja;txt=z>=6.5?`${nm}<br>${t}`:t}
+    if(LAYER!=='rooms'&&VIEW==='top'){const t=C[topIdx(p)].ja;txt=z>=6.5?`${nm}<br>${t}`:t}
     else txt=z>=6.5?`${nm}<br>${fmtMet(metric(i))}`:(z>=5.25&&topN.has(i)?fmtMet(metric(i)):'');
     if(!txt)return;
     labLayer.addLayer(L.marker(p.ll,{interactive:false,keyboard:false,icon:L.divIcon({className:'plab',html:txt,iconSize:[110,26],iconAnchor:[55,13]})}))})}
@@ -3230,6 +3400,7 @@ document.getElementById('labchk').onchange=renderLabels;
 
 // ---- ヘッダ ----
 function renderStats(){const u=NAT,t=topIdx(u),area='全国';
+  if(LAYER==='rooms'){renderRoomStats();return}
   {const a=document.getElementById('dataAsof');if(a)a.textContent=asofText(SRC==='est'?DATA_ASOF.est:DATA_ASOF.stay)}
   if(SRC==='est'){document.getElementById('yr').textContent='延べ訪問者数（JNTO統計）｜'+estLabel()+'（'+estStatus(EP)+'）';
     const st=stayFor(EP,[47]);
@@ -3282,6 +3453,7 @@ document.addEventListener('click',()=>document.querySelectorAll('.dd.open').forE
 
 // ---- 凡例 ----
 function renderLegend(){const el=document.getElementById('legend');
+  if(LAYER==='rooms'){renderRoomLegend(el);return}
   if(VIEW==='top'){const cnt={};visIdx().forEach(i=>{const t=topIdx(P[i]);cnt[t]=(cnt[t]||0)+1});
     const ks=Object.keys(cnt).map(Number).sort((a,b)=>cnt[b]-cnt[a]);
     el.innerHTML=`<div class="lt">最多国籍（${TX().top} 1位）</div>`+ks.map(k=>`<div class="li"><span class="sw" style="background:${C[k].col}"></span>${C[k].ja}<span class="c">${cnt[k]}都道府県</span></div>`).join('')+
@@ -3305,15 +3477,16 @@ function renderInfo(){const i=cur(),el=document.getElementById('info');
   const tr=(j,rk,extra='')=>`<tr data-j="${j}" class="${VIEW==='country'&&j===CI?'selc':''} ${extra}"><td class="rk">${rk}</td><td class="nm"><span class="sw" style="background:${C[j].col}"></span> ${C[j].ja}${i!=null&&FLAG.has(i+','+j)?'<sup class="fl">＊</sup>':''}</td><td class="bar"><div style="width:${(u.c[0][j]/mx*100).toFixed(1)}%;background:${C[j].col}"></div></td><td class="v">${fmtM(u.c[0][j])+(SRC==='est'?'人':'人泊')}</td><td class="s">${pct(u.f10[0]?u.c[0][j]/u.f10[0]:0)}</td><td class="y">${yoy(u.c[0][j],u.c[1][j])}</td></tr>`;
   let body=rows.map((j,k)=>tr(j,k+1)).join('');
   if(selIn)body+=tr(CI,ord.indexOf(CI)+1,'sep');
-  const head=`<div class="ttl"><b>${name}</b><span class="sub">${sub}</span>${i!=null&&MISM.has(i)?'<span class="mmtag">1位不一致</span>':''}${PIN!=null?'<span class="pin" id="unpin">固定中 ×</span>':''}</div>`;
+  const head=`<div class="ttl"><b>${name}</b><span class="sub">${sub}</span>${i!=null&&LAYER!=='rooms'&&MISM.has(i)?'<span class="mmtag">1位不一致</span>':''}${PIN!=null?'<span class="pin" id="unpin">固定中 ×</span>':''}</div>`;
+  const roomHtml=LAYER==='rooms'?roomPanel(i):'';
   if(SRC==='est'){const st=stayFor(EP,unitIdx(i));
     const k1=i==null?'訪日外客数（クルーズ客除く）':'延べ訪問者数';
     const k3=i==null?`<div class="kpi"><span>JNTO 訪日外客数</span><b>${fP(jntoSum(EP))}</b><i class="fl">クルーズ客含む</i></div>`:`<div class="kpi"><span>人泊 ÷ 延べ訪問者数</span><b>${u.fr[0]?(st[1]/u.fr[0]).toFixed(2):'–'}</b><i class="fl">目安（泊数ではない）</i></div>`;
-    el.innerHTML=head+`<div class="kpis"><div class="kpi"><span>${k1}</span><b>${fP(u.fr[0])}</b><i>${yoy(u.fr[0],u.fr[1])}</i></div>
+    el.innerHTML=head+roomHtml+`<div class="kpis"><div class="kpi"><span>${k1}</span><b>${fP(u.fr[0])}</b><i>${yoy(u.fr[0],u.fr[1])}</i></div>
       <div class="kpi"><span>外国人 延べ宿泊者数（同期間）</span><b>${fN(st[1])}</b><i class="fl">宿泊旅行統計</i>${NIGHT_NOTE}</div>${k3}</div>
      <h4>国籍別 ${i==null?'訪日外客数（クルーズ客除く）':'延べ訪問者数'} 上位10<span>人・構成比・${estPrev(EP)?'前年比':'前年比なし'}</span></h4>
      <table class="cl">${body}</table>${i!=null?sbsHTML(i):''}`;
-  }else el.innerHTML=head+`
+  }else el.innerHTML=head+roomHtml+`
    <div class="kpis">
     <div class="kpi"><span>日本人 延べ宿泊者数</span><b>${fN(u.jp[0])}</b><i>${yoy(u.jp[0],u.jp[1])}</i>${NIGHT_NOTE}</div>
     <div class="kpi"><span>外国人 延べ宿泊者数</span><b>${fN(u.fr[0])}</b><i>${yoy(u.fr[0],u.fr[1])}</i>${NIGHT_NOTE}</div>
@@ -3335,10 +3508,11 @@ function renderRank(){const el=document.getElementById('rankBox');
   const ids=visIdx().sort((a,b)=>metric(b)-metric(a));const show=ids.slice(0,15);
   const h=cur();if(h!=null&&!show.includes(h))show.push(h);
   const mx=Math.max(...ids.map(metric))||1;
-  const ttl=VIEW==='top'?TX().top:VIEW==='country'?(CMET==='abs'?`${C[CI].ja}の${TX().cn}`:`${C[CI].ja}の構成比（外国人計に占める割合）`):VIEW==='jp'?'日本人延べ宿泊者数':(FMET==='abs'||SRC==='est'?TX().top:'外国人比率');
+  const rs=LAYER==='rooms'?roomSeries():null;
+  const ttl=rs?(rs.stock?rs.name+'（室）':rs.name+'の施設数'):VIEW==='top'?TX().top:VIEW==='country'?(CMET==='abs'?`${C[CI].ja}の${TX().cn}`:`${C[CI].ja}の構成比（外国人計に占める割合）`):VIEW==='jp'?'日本人延べ宿泊者数':(FMET==='abs'||SRC==='est'?TX().top:'外国人比率');
   el.innerHTML=`<h4>都道府県ランキング：${ttl}<span>上位15</span></h4>`+show.map(i=>{const v=metric(i),rk=ids.indexOf(i)+1;
-    const col=VIEW==='top'?C[topIdx(P[i])].col:(VIEW==='country'?C[CI].col:'#2e7d32');
-    return `<div class="rk2 ${i===h?'hl':''}" data-i="${i}"><span class="n">${rk}</span><span class="p">${P[i].ja}</span><span class="b"><div style="width:${(v/mx*100).toFixed(1)}%;background:${VIEW==='top'?col:ramp(.25+.75*tOf(v))}"></div></span><span class="v">${fmtMet(v)}</span></div>`}).join('');
+    const bg=rs?roomFill(v,rs.v):(VIEW==='top'?C[topIdx(P[i])].col:ramp(.25+.75*tOf(v)));
+    return `<div class="rk2 ${i===h?'hl':''}" data-i="${i}"><span class="n">${rk}</span><span class="p">${P[i].ja}</span><span class="b"><div style="width:${(v/mx*100).toFixed(1)}%;background:${bg}"></div></span><span class="v">${fmtMet(v)}</span></div>`}).join('');
   el.querySelectorAll('.rk2').forEach(r=>{const i=+r.dataset.i;
     r.onmouseenter=()=>{if(PIN==null){HOV=i;restyle();renderInfo()}};
     r.onmouseleave=()=>{if(PIN==null&&HOV===i){HOV=null;restyle();renderInfo()}};
@@ -3827,6 +4001,9 @@ function mChipText(id){
     }
     return parts.length?parts.join('・'):'すべて';
   }
+  if(id==='stay'||id==='est'){
+    if(LAYER==='rooms') return '総客室数・'+(ROOM_KINDS.find(x=>x[0]===RKIND)||['','合計'])[1];
+  }
   if(id==='stay'){
     const view=VIEW==='top'?'最多国籍':VIEW==='country'?C[CI].ja:VIEW==='jp'?'日本人':(FMET==='ratio'?'外国人比率':'外国人');
     return mStayPer()+'・'+view;
@@ -3867,7 +4044,7 @@ function mSync(){
   const id=mItem();
   const it=MITEMS.find(x=>x.id===id);
   const title=document.getElementById('mTitle');
-  if(title&&it)title.textContent=it.name;
+  if(title&&it)title.textContent=(typeof LAYER!=='undefined'&&LAYER==='rooms'&&(id==='stay'||id==='est'))?'総客室数':it.name;
   const chip=mChipText(id);
   const c1=document.getElementById('mChip'),c2=document.getElementById('nwChip');
   if(c1)c1.textContent=chip;
@@ -3948,6 +4125,8 @@ function mFillFilt(id){
     }else html+=mSel('期間','ep',EPS,EP);
     const views=[['top','最多国籍'],['country','国籍を選択'],['foreign','外国人']];
     if(id==='stay')views.splice(2,0,['jp','日本人']);
+    html+=mSel('色分け','layer',[['stay','宿泊者数'],['rooms','総客室数']],LAYER);
+    if(LAYER==='rooms') html+=mSel('種別','rkind',ROOM_KINDS,RKIND);
     html+=mSel('表示','view',views,VIEW);
     if(VIEW==='country'){
       const nats=C.map((c,j)=>({c,j})).filter(o=>o.j!==OTH&&NAT.c[0][o.j]!=null).sort((a,b)=>NAT.c[0][b.j]-NAT.c[0][a.j]);
@@ -3992,6 +4171,8 @@ function mFillFilt(id){
     const k=sel.dataset.k,v=sel.value;
     if(k==='per'){const p=v.split('|');setPeriod(p[0],p[1]==='H1'?'H1':+p[1]);gaFilt('month',sel)}
     else if(k==='ep'){setEP(v);gaFilt('month',sel)}
+    else if(k==='layer'){setLayer(v)}
+    else if(k==='rkind'){setRoomKind(v)}
     else if(k==='view'){setView(v);gaFilt('category',sel)}
     else if(k==='nat'){CI=+v;renderSub();refresh()}
     else if(k==='cm'){CMET=v;renderSub();refresh()}
@@ -4090,6 +4271,7 @@ function mOpenSrc(){
   const wait='<p>読み込み中…</p>';
   body.innerHTML='<p class="srcga">このサイトは、訪問状況を把握するために Google アナリティクスを使用しています。</p>'+[
     srcPiece('宿泊者マップ',se.stay),
+    srcPiece('総客室数',roomSrcHtml()),
     srcPiece('訪問者マップ',se.est),
     srcPiece('全国比較',nat),
     srcPiece('訪日回数',rep),
@@ -4105,8 +4287,8 @@ function mOpenSrc(){
   window.__gaOverlay='src';
   if(window.__gaScreen)window.__gaScreen('/sources','出典');
   if(window.__mSync)window.__mSync();
-  srcWait('fl',w=>w.__srcFlight&&w.__srcFlight(),html=>put(4,html));
-  srcWait('oc',w=>w.__srcOcc&&w.__srcOcc(),o=>{if(!o){put(5,null);put(6,null);put(7,null);return}put(5,o.pref);put(6,o.muni);put(7,o.reit)});
+  srcWait('fl',w=>w.__srcFlight&&w.__srcFlight(),html=>put(5,html));
+  srcWait('oc',w=>w.__srcOcc&&w.__srcOcc(),o=>{if(!o){put(6,null);put(7,null);put(8,null);return}put(6,o.pref);put(7,o.muni);put(8,o.reit)});
 }
 function mShow(id){
   mClose(false);mFiltClose();
