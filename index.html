@@ -1255,7 +1255,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #evView{flex-direction:column;background:#f3f5fa;color:#14284b;overflow:hidden}
 #evView .ev-top{flex:none;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px 8px}
 #evView .ev-scroll{flex:1;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch}
-#evView .ev-wrap{max-width:1180px;margin:0 auto;padding:12px 16px 40px}
+#evView .ev-wrap{max-width:1180px;margin:0 auto;padding:8px 16px 28px}
 #evView .ev-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:2px 0 8px}
 #evView .ev-pref{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#14284b}
 #evView .ev-pref select{font:inherit;font-size:14px;font-weight:700;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#14284b;min-width:200px}
@@ -1270,7 +1270,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #evView .ev-wd{text-align:center;font-size:12px;font-weight:800;color:#5a6a88;padding:2px 0 4px}
 #evView .ev-wd.sun{color:#be123c}
 #evView .ev-wd.sat{color:#1d4ed8}
-#evView .ev-cell{background:#fff;border:1px solid #e6eaf1;border-radius:8px;min-height:96px;padding:4px 5px 6px;text-align:left;cursor:pointer;font:inherit;color:#14284b;display:flex;flex-direction:column;align-items:stretch;gap:2px;min-width:0}
+#evView .ev-cell{background:#fff;border:1px solid #e6eaf1;border-radius:8px;min-height:72px;padding:3px 4px 4px;text-align:left;cursor:pointer;font:inherit;color:#14284b;display:flex;flex-direction:column;align-items:stretch;gap:2px;min-width:0}
 #evView .ev-cell.out{background:transparent;border-color:transparent;min-height:0;cursor:default;padding:0}
 #evView .ev-cell.on{box-shadow:inset 0 0 0 2px #14284b;background:#f4f7fc}
 #evView .ev-num{font-size:12px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
@@ -1283,7 +1283,7 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 #evView .ev-dots{display:none}
 #evView .ev-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
 #evView .ev-count{font-size:10px;font-weight:800;color:#5a6a88;line-height:6px}
-#evView .ev-daybox{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 6px}
+#evView .ev-daybox{margin-top:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px 4px}
 #evView .ev-daybox h3{margin:0 0 4px;font-size:16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
 #evView .ev-daybox h3 span{font-size:12px;font-weight:700;color:#5a6a88}
 .evrow{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px solid #e6eaf1;font-size:13px;line-height:1.45}
@@ -1295,10 +1295,11 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
 .evempty{color:#5a6a88;font-size:13px;margin:8px 0}
 @media (max-width:900px){
   #evView .vnav{display:none!important}
-  #evView .ev-top{padding:8px 10px 6px}
   #evView h1.vt{font-size:17px}
   #evView h1.vt small{display:block;font-size:11px;font-weight:600;color:#5a6a88;margin-top:2px}
-  #evView .ev-wrap{padding:8px 8px 28px}
+  #evView .ev-wrap{padding:6px 8px 12px}
+  #evView .ev-key{display:none}
+  #evView .ev-top{padding:6px 10px 2px}
   #evView .ev-pref{flex-direction:column;align-items:stretch;gap:4px;width:100%}
   #evView .ev-pref select{width:100%;min-height:44px;font-size:16px}
   #evView .ev-nav h2{font-size:18px;min-width:7.2em}
@@ -1409,20 +1410,20 @@ body.rz-dragging iframe,body.rz-dragging .leaflet-container{pointer-events:none}
       <h1 class="vt">イベントカレンダー<small>ドーム・スタジアム規模の公演、大型の大会・祭り、移動を伴う連休</small><span class="asof" id="evAsof">最終更新日 読み込み中</span></h1>
       <span class="vnav"><button class="vb vb-in" data-v="in">🗾 宿泊者・訪問者マップ</button><button class="vb vb-fl" data-v="fl">✈ フライト情報</button><button class="vb vb-oc" data-v="oc">🏨 客室稼働率</button><button class="vb vb-nw" data-v="nw">📰 ニュースまとめ</button><button class="vb vb-ev cur" data-v="ev">📅 イベントカレンダー</button><button type="button" class="vb vb-src">出典</button></span>
     </div>
+    <div class="ev-tools">
+      <label class="ev-pref">都道府県
+        <select id="evPref" aria-label="都道府県"><option value="">全国</option></select>
+      </label>
+      <div class="ev-key" id="evKey"></div>
+    </div>
+    <div class="ev-nav">
+      <button type="button" id="evPrev" aria-label="前の月">◀</button>
+      <h2 id="evMonthTitle">2026年11月</h2>
+      <button type="button" id="evNext" aria-label="次の月">▶</button>
+    </div>
   </header>
   <div class="ev-scroll">
     <div class="ev-wrap">
-      <div class="ev-tools">
-        <label class="ev-pref">都道府県
-          <select id="evPref" aria-label="都道府県"><option value="">全国</option></select>
-        </label>
-        <div class="ev-key" id="evKey"></div>
-      </div>
-      <div class="ev-nav">
-        <button type="button" id="evPrev" aria-label="前の月">◀</button>
-        <h2 id="evMonthTitle">2026年11月</h2>
-        <button type="button" id="evNext" aria-label="次の月">▶</button>
-      </div>
       <div id="evGrid"></div>
       <div id="evDay" aria-live="polite"></div>
     </div>
@@ -3278,7 +3279,7 @@ function evGoMonth(delta){const max=evMaxMonth();const nxt=evShift(EVM,delta);if
 function evPickInitial(){if(EVTOUCHED||!EVREADY)return;const n=evDim(EVM);for(let d=1;d<=n;d++){const iso=EVM+'-'+String(d).padStart(2,'0');if((EV.items||[]).some(it=>evVisible(it)&&evOnDay(it,iso)&&!evIsHol(it))){EVD=d;return}}}
 function evDetail(it){const col=EVCOL[it.category]||'#3e4f6d';const st=it.status==='予定'?'<span class="evplan">予定</span>':'';const src=it.source?' <a href="'+evEsc(it.source)+'" target="_blank" rel="noopener">出典</a>':'';const bits=[evDateLabel(it.date_start,it.date_end)];if(it.prefecture)bits.push(it.prefecture);if(it.venue)bits.push(it.venue);if(it.scale)bits.push(it.scale);if(it.source_country)bits.push(it.source_country);if(it.note)bits.push(it.note);return '<div class="evrow"><div class="nm"><span class="evtag" style="background:'+col+'">'+evEsc(it.category||'')+'</span>'+st+' <b>'+evEsc(it.name)+'</b>'+src+'<span class="evmeta">'+evEsc(bits.filter(Boolean).join(' · '))+'</span></div></div>'}
 function evRenderDay(items){const el=document.getElementById('evDay');if(!el)return;const [y,m]=EVM.split('-').map(Number);const iso=EVM+'-'+String(EVD).padStart(2,'0');const dow=['日','月','火','水','木','金','土'][new Date(y,m-1,EVD).getDay()];const head=y+'年'+m+'月'+EVD+'日（'+dow+'）';if(!EVREADY){el.innerHTML='<div class="ev-daybox"><h3>'+head+'</h3><p class="evempty">'+(EVERR?'events.json を読み込めませんでした。':'読み込み中…')+'</p></div>';return}const day=(items||[]).filter(it=>evOnDay(it,iso)).sort(evSort);const scope=EVP||'全国';el.innerHTML='<div class="ev-daybox"><h3>'+head+'<span>'+evEsc(scope)+' · '+day.length+'件</span></h3>'+(day.length?day.map(evDetail).join(''):'<p class="evempty">この日のイベントはありません。</p>')+'</div>'}
-function evRender(){evClampDay();const [y,m]=EVM.split('-').map(Number);const max=evMaxMonth();const title=document.getElementById('evMonthTitle');if(title)title.textContent=y+'年'+m+'月';const prev=document.getElementById('evPrev'),next=document.getElementById('evNext');if(prev)prev.disabled=EVM<=EV_MIN;if(next)next.disabled=EVM>=max;const asof=document.getElementById('evAsof');if(asof)asof.textContent=EVREADY?asofText(EV.updated):(EVERR?'最終更新日不明':'最終更新日 読み込み中');const items=(EV.items||[]).filter(evVisible);const first=new Date(y,m-1,1).getDay();const dim=evDim(EVM);const cells=[];for(let i=0;i<first;i++)cells.push(null);for(let d=1;d<=dim;d++)cells.push(d);while(cells.length%7)cells.push(null);const wds=['日','月','火','水','木','金','土'];let html='<div class="ev-grid">'+wds.map((w,i)=>'<div class="ev-wd'+(i===0?' sun':i===6?' sat':'')+'">'+w+'</div>').join('');cells.forEach((d,idx)=>{if(d==null){html+='<div class="ev-cell out"></div>';return}const iso=EVM+'-'+String(d).padStart(2,'0');const dow=idx%7;const dayItems=items.filter(it=>evOnDay(it,iso)).sort(evSort);const hols=dayItems.filter(evIsHol),evs=dayItems.filter(it=>!evIsHol(it));const cls=['ev-cell'];if(dow===0)cls.push('sun');if(dow===6)cls.push('sat');if(d===EVD)cls.push('on');const shown=evs.slice(0,3),more=evs.length-shown.length;const holHtml=hols.slice(0,2).map(it=>{const lab=evHolLabel(it);return '<span class="ev-hol" title="'+evEsc(lab)+'">'+evEsc(lab)+'</span>'}).join('')+(hols.length>2?'<span class="ev-hol">ほか'+(hols.length-2)+'件</span>':'');const nameHtml=shown.map(it=>'<span class="ev-item" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'">'+evEsc(it.name)+'</span>').join('')+(more?'<span class="ev-more">+'+more+'</span>':'');const dots=evs.slice(0,4).map(it=>'<i class="ev-dot" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'"></i>').join('')+(evs.length>4?'<span class="ev-count">+'+ (evs.length-4)+'</span>':'');html+='<button type="button" class="'+cls.join(' ')+'" data-d="'+d+'" aria-pressed="'+(d===EVD?'true':'false')+'"><span class="ev-num">'+d+'</span>'+holHtml+'<span class="ev-names">'+nameHtml+'</span><span class="ev-dots">'+dots+'</span></button>'});html+='</div>';const grid=document.getElementById('evGrid');if(grid){grid.innerHTML=html;grid.querySelectorAll('.ev-cell[data-d]').forEach(b=>b.onclick=()=>{EVD=+b.dataset.d;EVTOUCHED=true;evRender()})}evRenderDay(items)}
+function evRender(){evClampDay();const [y,m]=EVM.split('-').map(Number);const max=evMaxMonth();const title=document.getElementById('evMonthTitle');if(title)title.textContent=y+'年'+m+'月';const prev=document.getElementById('evPrev'),next=document.getElementById('evNext');if(prev)prev.disabled=EVM<=EV_MIN;if(next)next.disabled=EVM>=max;const asof=document.getElementById('evAsof');if(asof)asof.textContent=EVREADY?asofText(EV.updated):(EVERR?'最終更新日不明':'最終更新日 読み込み中');const items=(EV.items||[]).filter(evVisible);const first=new Date(y,m-1,1).getDay();const dim=evDim(EVM);const cells=[];for(let i=0;i<first;i++)cells.push(null);for(let d=1;d<=dim;d++)cells.push(d);while(cells.length%7)cells.push(null);const wds=['日','月','火','水','木','金','土'];let html='<div class="ev-grid">'+wds.map((w,i)=>'<div class="ev-wd'+(i===0?' sun':i===6?' sat':'')+'">'+w+'</div>').join('');cells.forEach((d,idx)=>{if(d==null){html+='<div class="ev-cell out"></div>';return}const iso=EVM+'-'+String(d).padStart(2,'0');const dow=idx%7;const dayItems=items.filter(it=>evOnDay(it,iso)).sort(evSort);const hols=dayItems.filter(evIsHol),evs=dayItems.filter(it=>!evIsHol(it));const cls=['ev-cell'];if(dow===0)cls.push('sun');if(dow===6)cls.push('sat');if(d===EVD)cls.push('on');const shown=evs.slice(0,2),more=evs.length-shown.length;const holHtml=hols.slice(0,2).map(it=>{const lab=evHolLabel(it);return '<span class="ev-hol" title="'+evEsc(lab)+'">'+evEsc(lab)+'</span>'}).join('')+(hols.length>2?'<span class="ev-hol">ほか'+(hols.length-2)+'件</span>':'');const nameHtml=shown.map(it=>'<span class="ev-item" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'">'+evEsc(it.name)+'</span>').join('')+(more?'<span class="ev-more">+'+more+'</span>':'');const dots=evs.slice(0,4).map(it=>'<i class="ev-dot" style="background:'+(EVCOL[it.category]||'#3e4f6d')+'"></i>').join('')+(evs.length>4?'<span class="ev-count">+'+ (evs.length-4)+'</span>':'');html+='<button type="button" class="'+cls.join(' ')+'" data-d="'+d+'" aria-pressed="'+(d===EVD?'true':'false')+'"><span class="ev-num">'+d+'</span>'+holHtml+'<span class="ev-names">'+nameHtml+'</span><span class="ev-dots">'+dots+'</span></button>'});html+='</div>';const grid=document.getElementById('evGrid');if(grid){grid.innerHTML=html;grid.querySelectorAll('.ev-cell[data-d]').forEach(b=>b.onclick=()=>{EVD=+b.dataset.d;EVTOUCHED=true;evRender()})}evRenderDay(items)}
 function evBoot(){EVM=evStartMonth();const key=document.getElementById('evKey');if(key)key.innerHTML=Object.entries(EVCOL).map(([k,c])=>'<span><i style="background:'+c+'"></i>'+evEsc(k)+'</span>').join('');const sel=document.getElementById('evPref');if(sel&&!sel.dataset.ready){let html='<option value="">全国</option>';(D.regions||[]).forEach((name,ri)=>{const prefs=P.filter(p=>p.r===ri);if(!prefs.length)return;html+='<optgroup label="'+evEsc(name)+'">'+prefs.map(p=>'<option value="'+evEsc(p.ja)+'">'+evEsc(p.ja)+'</option>').join('')+'</optgroup>'});sel.innerHTML=html;sel.dataset.ready='1';sel.onchange=()=>{EVP=sel.value||'';evRender();const label=sel.selectedOptions&&sel.selectedOptions[0]?sel.selectedOptions[0].textContent.trim():'全国';if(window.__gaFilter)window.__gaFilter('prefecture',label);if(window.__mSync)window.__mSync()}}const pv=document.getElementById('evPrev'),nx=document.getElementById('evNext');if(pv)pv.onclick=()=>evGoMonth(-1);if(nx)nx.onclick=()=>evGoMonth(1);evRender();fetch('events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(String(r.status));return r.json()}).then(d=>{EV=d||{items:[]};EVREADY=true;evPickInitial();evRender();if(window.__mSync)window.__mSync()}).catch(()=>{EVERR=true;evRender()})}
 evBoot();
 window.__evPaint=evRender;
