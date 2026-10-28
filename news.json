@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,211 @@
     }
   ],
   "counts": {
-    "items": 188,
-    "dates": 34,
-    "industry": 115,
-    "ota": 73,
+    "items": 196,
+    "dates": 35,
+    "industry": 120,
+    "ota": 76,
     "industryDates": 27,
-    "otaDates": 27,
+    "otaDates": 29,
     "themes": {
-      "海外OTA": 72,
-      "国内OTA・旅行会社": 17,
-      "新規開業ホテル": 25,
-      "新規フライト情報": 74
+      "海外OTA": 75,
+      "国内OTA・旅行会社": 20,
+      "新規開業ホテル": 26,
+      "新規フライト情報": 75
     }
   },
   "items": [
+    {
+      "id": "ota-133",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "エクスペディア、秋の製品更新でAI検索を拡大　Vrboは予約時に支払わない「Reserve Now, Pay Later」を開始",
+      "body": "・発表日：2026年10/28（Expedia Group。PhocusWireの報道は10/28、Skiftは日本時間10/29朝）。Expedia、Hotels.com、Vrboに、秋の製品更新として30超の機能を出した。\n・Expediaは、やりたいことを言葉で入れると行程を組んで体験を予約できる会話型のActivity Planner、施設情報・口コミ・予約内容から答えるProperty Expert、複数部屋の一括予約、行程をまたぐパッケージ、家族向けの地図を加えた。\n・Hotels.comは自然言語の検索と、関心に合わせた比較を強化した。ホームページは出張か休暇かで次の案内が変わる。\n・Vrboは、対象のバケーションレンタルを予約時の支払いなしで押さえられる「Reserve Now, Pay Later」をウェブサイトで開始し、アプリへは数週間で広げる。登録カードへの請求は、ホストの無料キャンセル期限の7日前。Airbnbは無料キャンセル期限の直前（最短で到着24時間前）に請求する。\n・Expedia Groupは、グループ旅行で参加者の確定や費用の分担に使う機能だと説明している。",
+      "note": "予約時に金を取らない押さえ方が、Airbnbに続いてVrboでも始まった。無料キャンセル期限の7日前に請求される点は、直前まで料金が動く宿では、直販のキャンセル規定と並べて見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/technology/expedia-group-expands-ai-features-across-expedia-hotels-vrbo",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://skift.com/2026/10/28/vrbo-launches-reserve-now-pay-later-with-a-twist-on-airbnbs-approach/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-187",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "変更"
+      ],
+      "highlight": false,
+      "headline": "エア・カンボジア、成田＝福州＝プノンペン線の便数追加を取りやめ　週3往復を維持",
+      "body": "・報道日：2026年10/28（TRAICY）。航空会社自身の発表日は記事に書かれていない。\n・成田＝福州＝プノンペンは、水・金・日曜の週3往復のままとする。火・土曜も運航して週5往復とする計画を取りやめた。\n・当初は10/25から週5往復とする予定で、その後は12/15へ延期していた。機材はA320。成田発の所要時間は9時間10分、プノンペン発は8時間。\n・現行ダイヤは、K6593 成田18:30発→福州21:50着／23:00発→プノンペン翌日1:40着、K6592 プノンペン7:30発→福州11:50着／13:00発→成田17:30着（いずれも水・金・日）。\n・同社は旧カンボジア・アンコール航空で、2025年10月にこの路線の運航を始めている。",
+      "note": "成田のプノンペン方面は、予定していた週5往復にならず週3往復のまま。成田周辺の取引ホテルとは、カンボジアからの冬の入りが当初計画より細い前提で、前後泊の見込みを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261028386087/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-134",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤖 海外OTA・AI",
+      "categoryLabel": "海外OTA・AI",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agoda、自社のAI助手をMetaのMuseに接続　シンガポールと日本で宿泊予約が可能、商業条件は非開示",
+      "body": "・発表日：2026年10/28（Agoda。Skiftが同日報じた）。Agodaは、自社のAI旅行助手をMetaのAIエージェント「Muse」につなぎ、シンガポールと日本で行き先の探索、宿泊の予約、旅程の管理ができるようにした。シンガポールでのMuse開始に合わせた発表。\n・日本でのMuse提供開始（10/23、Trip.com・Agoda・Klook）は別掲。今回の新しい点は、Agoda自身の接続と、シンガポールでは開始時からOTAへ直接つなぐ方式であること。北米では当初、ExpediaとHotels.comをブラウザ経由で開いていた。\n・シンガポールの初期の接続先には、Trip.com、シンガポール航空、Klookもある。\n・AgodaもMetaも商業条件は出していない。AgodaはSkiftの取材にコメントしなかった。ザッカーバーグCEOは、Museが生んだ価値の一定割合を受け取る課金を検討していると決算で述べている。",
+      "note": "日本のMuse経由の宿泊予約は、10/23の提供開始に続き、Agoda自身が接続を確認した。手数料がOTA分に上乗せされるかは非公開のまま。直販や他OTAと、AI経由の料金・在庫が同じかを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/10/28/agoda-plugs-into-metas-muse-in-singapore-and-japan/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-135",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Airbnb、米国とカナダの大規模ホストに仮の電話番号　10/30から、本物の番号は予約管理システムに出さない",
+      "body": "・発表日：2026年10/27（米国時間、Skift。日本時間10/28朝）。Airbnbは10/30から、米国とカナダの大規模ホストと物件管理会社、およびゲストに仮の電話番号を発行する。予約管理システム（API）でつながるホストは、ゲストの本物の電話番号を見られなくなる。\n・仮の番号は、予約時からチェックアウトの2日後まで、通話とSMSに使える。その後は無効になり、通話はAirbnbのサポートへ回る。サポートが本物の番号を伝えるかはAirbnbが判断する。\n・対象は、掲載物件が米国かカナダにあり、ホストとゲストの居住地と登録電話番号も両国にある予約。それ以外は、API接続のホストでもAirbnb上で番号を確認できる。\n・仮の番号はWhatsApp、写真の送信、グループSMSに対応しない。Airbnbはプライバシーと安全な連絡のためと説明している。一部の管理会社は、ゲストとの直接の連絡をAirbnb側が握る変更だと見ている。",
+      "note": "対象は米国とカナダの物件で、日本の掲載は今回の範囲に入らない。電話番号を予約管理システムに渡さない動きは、Booking.comがゲストの電話番号の送信を止めた件（別掲）と同じ方向。日本の施設でも、OTA経由の連絡をメッセージに寄せる前提は変わらない。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/10/27/airbnb-to-require-temporary-phone-numbers-for-large-hosts-and-guests/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-188",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "日本旅行、AFP子会社のMediaConnectと提携　地方の観光資源を2027年1月から海外へ発信",
+      "body": "・発表日：2026年10/28（日本旅行）。仏AFP通信の子会社で、海外メディア向けのPR配信を行うMediaConnectと戦略的提携の覚書を結んだ。2027年1月から、各地の観光資源や文化、企業の技術・サービスを海外メディアに出す事業を始める。\n・MediaConnect上に日本旅行の専用ページを置き、地域や企業の情報を記事にして蓄積する。記事制作にはAFPの日本法人も協力する。対象市場のジャーナリストへメールでも配信する。\n・発信の先に、海外メディアの取材、バイヤーとの商談、海外の旅行会社との連携、物産の紹介を想定する。最初の対象地域は未定で、取引のある自治体やDMOから広げる。\n・MediaConnectにとって、日本の企業との提携は初めてで、アジアでも初めて。同社のアンヌ・ブサリ代表は、翻訳だけでなく、届ける記者や読者に合わせた切り口が必要だと説明した。",
+      "note": "日本旅行が、地方の観光情報を海外メディアに継続して出す窓口を作る。取引ホテルとは、自治体やDMO経由で海外向けの素材に入るかどうか、訪日の個人予約とどうつなぐかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-124927",
+          "label": "travelvision.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC286W30Y6A021C2000000/",
+          "label": "nikkei.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-189",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "JTB、日本eスポーツ協会の正会員に　大会関係者の宿泊・移動と、開催地の観光を組み合わせる",
+      "body": "・発表日：2026年10/28（JTB）。JTBは10/1付で、日本eスポーツ協会（JESU）の正会員になった。eスポーツ大会を、選手やファンが開催地を訪れる交流の場にすると説明している。\n・選手、運営スタッフ、大会関係者の宿泊・移動を支えるサービス、大会の観戦と開催地の観光・体験を組み合わせる仕組み、企業やファン向けの観戦・交流プログラムを検討する。\n・背景として、日本スポーツ協会、JESU、国スポサポートセンターが9/3、全国都道府県対抗eスポーツ選手権を「JAPAN GAMES ESPORTS」へ発展させると発表したことに触れている。",
+      "note": "JTBが大会の宿泊・移動と、開催地での体験をセットにする方向を出した。地方の取引ホテルとは、試合や大会の前後で部屋をどう受けるかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.jtbcorp.jp/jp/newsroom/2026/10/28_jtb_esports.html",
+          "label": "jtbcorp.jp"
+        },
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-124930",
+          "label": "travelvision.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001650.000031978.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-190",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "インフィニ、旅行会社向けにANAのNDC販売を開始　有料座席指定も予約時に手配",
+      "body": "・発表日：2026年10/27（ANA、インフィニ トラベル インフォメーション）。同日から、インフィニのNDCサービス「INFINI NDC Connect」で、ANAの国際線航空券を販売する。\n・インフィニを使う旅行会社は、従来のEDIFACTに加えて、NDCの運賃とサービス情報を使える。旅行会社向けツール「INFINI NDC PLUS」とAPIで、空席・運賃の照会から予約・発券、変更・払い戻しまでを一つの流れで扱う。\n・従来のGDSでは予約時にまとめにくかった有料座席指定を、航空券と同時に手配できる。発券後の有料機内食、追加手荷物、有料ラウンジは、ANAの公式サイトかコンタクトセンターで手配する。\n・ANAは2024年にTrip.comで国際線のNDC販売を始め、2025年6月に接続対象を日本を含む12市場へ広げている。今回は日本の旅行会社向け端末への広がり。",
+      "note": "日本の旅行会社の端末から、ANAのNDC運賃と有料座席を予約時に取れるようになった。取引ホテルとは直接の在庫の話ではないが、団体や出張の手配がどのチャネルに寄るかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/353153",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261028-160753",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-180",
       "date": "2026-10-28",
@@ -131,6 +322,34 @@
         }
       ],
       "companies": true
+    },
+    {
+      "id": "industry-191",
+      "date": "2026-10-27",
+      "dateLabel": "10/27（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "ザ マリタイムホテル 横浜ベイ、2027年1/30開業で予約開始（全50室、横浜郵船ビルを転用）",
+      "body": "・発表日：2026年10/26（Plan・Do・See）。1936年竣工の横浜郵船ビルを転用する「ザ マリタイムホテル 横浜ベイ」の客室詳細を公開し、開業日以降の宿泊予約を始めた。開業日は2027年1/30。\n・全50室。みなとみらい線「馬車道駅」6番出口から徒歩約2分。発表では、ベンガルを着想した部屋が48〜54㎡、スイートが75〜80㎡など、港ごとのテーマで客室を構成する。掲載料金は1室44,000円から（税・サービス料込）。\n・館内はレストラン、バー、宿泊者ラウンジ、フィットネス、バンケット、チャペル。フィットネスには国内のホテルとして初めて「Nike Strength」の機器を入れる。運営はPlan・Do・See。公式サイトは maritimehotel.jp。",
+      "note": "横浜・馬車道に、2027年1月末開業の50室が予約を始めた。料金は1室4万4千円から。みなとみらい・関内の取引ホテルとは、開業前後の料金の位置取りを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000166.000051750.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://travel.watch.impress.co.jp/docs/news/2151295.html",
+          "label": "travel.watch.impress.co.jp"
+        }
+      ],
+      "companies": false
     },
     {
       "id": "industry-183",
