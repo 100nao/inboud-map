@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,279 @@
     }
   ],
   "counts": {
-    "items": 196,
-    "dates": 35,
-    "industry": 120,
-    "ota": 76,
-    "industryDates": 27,
-    "otaDates": 29,
+    "items": 209,
+    "dates": 36,
+    "industry": 129,
+    "ota": 80,
+    "industryDates": 29,
+    "otaDates": 31,
     "themes": {
-      "海外OTA": 75,
-      "国内OTA・旅行会社": 20,
-      "新規開業ホテル": 26,
-      "新規フライト情報": 75
+      "海外OTA": 79,
+      "国内OTA・旅行会社": 25,
+      "新規開業ホテル": 29,
+      "新規フライト情報": 76
     }
   },
   "items": [
+    {
+      "id": "ota-136",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤖 海外OTA・AI",
+      "categoryLabel": "海外OTA・AI",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "アゴダ、AIアシスタントを21市場に拡大　旅行計画から予約までアプリ内で完結",
+      "body": "・発表日：2026年10/30（Agoda。トラベルビジョン、WiT）。9月に限定テストとして入れた「アゴダのAIアシスタント」を、日本を含む21の国・地域のアプリ利用者へ広げた。\n・会話で希望を聞き、宿泊・航空券・ツアー・観光施設など600万件超の在庫と照らして候補を出す。価格と空室を確認したあと、会話を続けたまま予約に進める。\n・例として「大阪で5日間の家族旅行」と入れると、周辺の比較、飲食店や観光スポット、宿と航空券の確認に進める。会話で伝えた好みは保持する。\n・旅程は「トリッププランナーキャンバス」にまとめ、予約済み・行きたい場所・検討中を一覧する。ベータでは、宿と航空券、チケット、ツアーを組み合わせて予約する割合が高かった。\n・会話の中核はOpenAIのモデル。飲食店や観光スポットは、Google Maps Groundingを使ったGeminiで評価・写真・営業時間・所在地を出す。ウェブ検索もつなぎ、自社在庫とあわせて最新情報を出す。",
+      "note": "日本を含む21市場のアプリで、会話のまま在庫を見て予約まで進む。9月の限定テストの拡大。直販や他OTAと、AIの提案に自社の空室と料金が出ているかを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-124970",
+          "label": "travelvision.jp"
+        },
+        {
+          "url": "https://www.webintravel.com/agoda-launches-new-booking-system-with-its-a1-assistant/",
+          "label": "webintravel.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-192",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、旅行会社の事業承継M&A基盤を設立　中間持株会社を11/30に設置",
+      "body": "・発表日：2026年10/30（HIS。同日の取締役会で決議）。完全子会社の中間持株会社「株式会社旅行事業承継NEXTホールディングス」を、11/30に設立し、同日事業を始める。\n・後継者不在に加え、過去の債務負担や成長投資の余力不足を抱える国内の旅行会社を対象に、事業承継のM&Aの基盤にする。資本金は1,000万円で、HISが全額出資する。代表取締役には澤田秀太社長が就く予定。HISから役員・従業員を派遣する人数は未定。\n・参画各社の専門領域や地域の強みを補い合い、規模の利点と各社の独自性を両立する、と説明している。業績への直接の影響は軽微と見込む。\n・日本経済新聞は、HISが9月に、国内のバススキーツアーに強いラド観光（大阪市）を11月に完全子会社化すると発表したこと（取得額6億8,800万円）にも触れている。同日の代表取締役人事は別掲。",
+      "note": "後継者不在の旅行会社を、11/30設立の中間持株会社の下に入れる仕組み。地方の取引ホテルとは、窓口の社名が残っても手配の主体がHIS側に寄るかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-124967",
+          "label": "travelvision.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261030-160773",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC3075Q0Q6A031C2000000/",
+          "label": "nikkei.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-193",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、澤田社長が2027年1/27付でCEOに　矢田会長は代表取締役を退き取締役へ",
+      "body": "・発表日：2026年10/30（HIS）。11/1付の執行役員人事と、2027年1/27付の代表取締役の異動を出した。\n・澤田秀太氏は代表取締役社長CEO・社長執行役員となる。担当に経理財務を加える。矢田素史氏は代表取締役会長を退任し、取締役として国内関係会社の管理と対外関係を担い、新体制を支える。\n・11/1付では、花崎理氏が上席執行役員（経理財務本部長）、瀬川活氏の職務に社長補佐を加え、浅田尚樹氏が執行役員（投資戦略本部長）に就く。\n・1/27付の取締役の異動は、同日の定時株主総会と、その後の取締役会で正式に決まる。中間持株会社の設立は別掲。",
+      "note": "HISの代表が、2027年1月から澤田社長の1人体制になる。事業承継の受け皿を同じ日に出しており、取引ホテルとは、窓口の決裁がどこに寄るかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-124968",
+          "label": "travelvision.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-194",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「東横INN JR宇治駅南口」、12/25開業　宇治市初出店で全172室",
+      "body": "・報道日：2026年10/30（TRAICY）。東横インは「東横INN JR宇治駅南口」を12/25に開業する。宇治市では初出店。公式の施設ページは開業日を2026.12.25としている。\n・所在地は京都府宇治市宇治壱番26-2。JR奈良線「宇治駅」南口から徒歩5分。建物は7階建て。客室はシングル56室、ワイドスペースシングル16室、プレミアムプラス（シングル）4室、エコノミーダブル44室などを含む全8タイプ、全172室。\n・宿泊者向けの無料セルフロッカーと、平置き12台の駐車場（予約制・有料、1泊800円）を置く。朝食は無料のビュッフェ。シングルとワイドスペースシングルは8,800円から、プレミアムプラスは9,800円から、エコノミーダブルは10,800円から。予約受付は始まっている。",
+      "note": "宇治駅の南口に、12/25開業の172室が予約を始めた。京都南部の取引ホテルとは、年末の供給増と、駅から徒歩5分の料金の位置取りを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261030385934/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.toyoko-inn.com/search/detail/00381/",
+          "label": "toyoko-inn.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-195",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "クラブウィンダム丸池 志賀高原、12月開業　全16室のスキーイン・スキーアウト",
+      "body": "・発表日：2026年10/27（Travel + Leisure Co.。トラベルボイスの報道は10/30）。長野県・志賀高原の「クラブウィンダム丸池 志賀高原」を2026年12月に開業する。日は示していない。志賀高原では、既存の「クラブウィンダム白樺荘」に次ぐ2軒目。\n・2026年初頭に全16室を取得し、客室を改修した。ロビーは既存の雰囲気を残して整え、スキーレンタルルームとスキーロッカーを加えた。スキーイン・スキーアウトのレストランは続ける。\n・一般の宿泊者に加え、クラブウィンダム・サウスパシフィックとクラブウィンダム・アジアのオーナー、メンバーも使える。同社はアジア太平洋で約100軒、日本ではこの開業を含めて21施設を展開する、と説明している。東京からは北陸新幹線とバスで約3時間20分。",
+      "note": "志賀高原に、12月開業の16室がもう1軒増える。白樺荘の隣で、スキーイン・スキーアウト。長野の取引ホテルとは、会員制リゾートの冬の供給を確認する材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000007.000074871.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261030-160752",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-196",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "ホテルオークラJRハウステンボス、2027年10/1にオリエンタルホテルとして開業　ブランド初のFC",
+      "body": "・発表日：2026年10/16（JR九州ホテルズアンドリゾーツ。観光経済新聞の報道は10/29）。ホテルマネージメントジャパンとフランチャイズ契約を結び、ホテルオークラJRハウステンボス（佐世保市、全320室）を、2027年10/1に「オリエンタルホテルJRハウステンボス」として開業する。\n・オリエンタルホテルズ＆リゾーツの名でのFCは初めて。HMJは国内27ホテルを運営し、このブランドは国内18ホテル。会員組織「CLUB ORIENTAL」は入会金・年会費が無料。\n・2027年9/30まではオークラとして営業し、入っている予約はそのまま続ける。One Harmonyの会員特典は、9/30までの宿泊・利用に適用する。10/1以降の予約開始は、詳細が決まり次第出す。\n・ハウステンボスに隣接し、今年6月に開業31年。客室はスタンダード、スーペリア、プレミアムの3グレード。",
+      "note": "ハウステンボス隣の320室が、2027年10/1にオリエンタルへ名を変える。9/30まではオークラの予約が続く。佐世保の取引ホテルとは、ブランド変更の前後で料金の出し方を話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000070.000027869.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.kankokeizai.com/2610291600kks/",
+          "label": "kankokeizai.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-197",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、北九州都市圏域と観光振興で連携協定　18市町の周遊商品と訪日誘致",
+      "body": "・発表日：2026年10/29（HIS）。北九州市と近隣17市町の連携中枢都市圏「北九州都市圏域」と、観光振興と交流人口の拡大を目的に連携協定を結んだ。\n・内容は、観光施策やインバウンド動向の情報共有、体験素材の磨き上げと周遊ルートの造成、圏域のプロモーション、観光部門向けの研修。\n・HISは、18市町の既存のコンテンツに加え、新しいコンテンツを発掘し、国内向けと海外向けの商品を広げると説明している。",
+      "note": "HISが、北九州圏の18市町を束ねた周遊商品と訪日の誘致に入る。九州北部の取引ホテルとは、広域のコースに自館が入るかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.his.co.jp/news/21005.html",
+          "label": "his.co.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001394.000005110.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261030-160766",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-198",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、「BitSummit」の公式トラベルパートナーに　出展者向けの京都宿泊を受付開始",
+      "body": "・発表日：2026年10/29（HIS）。インディーゲームの祭典「BitSummit High」（2027年5/21〜23、京都市勧業館みやこめっせ）の、初めての公式トラベルパートナーになった。主催はBitSummit実行委員会と日本インディペンデント・ゲーム協会。\n・5/21は業界関係者のみ。2026年の「BitSummit PUNCH」は3日間で来場者6万8,208人だった。5月の京都は修学旅行と観光が重なり、遠方と海外の参加者の宿と移動が課題だ、と説明している。\n・第1弾として、同日から出展者とスポンサー向けの京都市内の公式宿泊プランを受け付ける。一般来場者向けの、入場チケット付き宿泊と、東京発着の深夜バスツアーは、11月下旬のチケット発売に合わせて出す予定。一般公開日（5/22・23）は、開場30分前に専用入口から入れる「HISプレミアムパス」が付く。",
+      "note": "HISが、2027年5月の京都の大会で、出展者の宿の公式窓口になる。京都の取引ホテルとは、5月下旬の団体と前後泊をどう受けるかを話す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.his.co.jp/news/21001.html",
+          "label": "his.co.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-199",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "エアソウル、米子＝ソウル（仁川）を12/26から毎日1往復に増便　2027年3/27まで",
+      "body": "・発表日：2026年10/25（エアソウルの金仲鎬代表が、鳥取県の平井伸治知事に伝達。日本海新聞の報道は10/26、朝日新聞は10/29）。現在の週5往復（月・水・木・金・日）を、12/26〜2027年3/27は週7往復にする。毎日1往復は9カ月ぶり。\n・RS471 仁川13:20発→米子14:50着（火・土は13:15発）。折り返しのRS472 米子15:50発→仁川17:40着。米子鬼太郎空港の時刻表も、この期間を毎日運航としている。\n・同社は2016年10月からこの路線を運航し、2019年10月以降は飛ばさず、2023年10月に週3往復で戻した。2025年12月から初めて毎日1往復とし、2026年3月からは「機材繰り」を理由に週5往復としていた。2027年夏も毎日にするかは未定。",
+      "note": "米子のソウル便が、12/26から3/27まで毎日戻る。午後の仁川発。山陰の取引ホテルとは、冬の韓国需要を曜日で見ていた前提を、毎日に直す材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.asahi.com/articles/ASVBX457MVBXPUUB002M.html",
+          "label": "asahi.com"
+        },
+        {
+          "url": "https://www.yonago-air.com/flight/seoul",
+          "label": "yonago-air.com"
+        },
+        {
+          "url": "https://www.nnn.co.jp/articles/-/819704",
+          "label": "nnn.co.jp"
+        }
+      ],
+      "companies": false
+    },
     {
       "id": "ota-133",
       "date": "2026-10-29",
@@ -55,6 +314,86 @@
         {
           "url": "https://skift.com/2026/10/28/vrbo-launches-reserve-now-pay-later-with-a-twist-on-airbnbs-approach/",
           "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-200",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "スカイチケット、口座番号など3万2341件が新たに流出　カード下4桁の可能性も",
+      "body": "・発表日：2026年10/28（アドベンチャー。朝日新聞は同日20:10）。予約サイト「スカイチケット」のサーバーへの不正アクセスで、銀行口座の情報3万2,341件が新たに流出した。\n・対象は、航空券の払い戻しなどのため、2022年3月〜2024年5月に口座を登録した客。金融機関名、口座番号、名義。\n・別に、2021年5月ごろ〜2024年5月中旬にクレジットカードで支払った一部の客について、カード名義と番号の一部（下4桁など）が流出した可能性がある。\n・同社は10/9に、氏名や生年月日、メール、電話、住所など約1,464万件の流出を発表し、10/16には最大6,140人のカード番号と名義の流出も発表している。観光庁への報告（10/21）は別掲。",
+      "note": "スカイチケットで、口座番号の流出が新たに出た。払い戻し用の口座を預けた客が対象。このチャネルで予約を受けている施設とは、客への連絡が届いているかを確認する材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.asahi.com/articles/ASVBX3HFQVBXULFA02XM.html",
+          "label": "asahi.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-137",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Etraveli、航空券の予約エンジンにMCPを追加　AIエージェントから検索・予約まで",
+      "body": "・発表日：2026年10/28（Etraveli Group。PhocusWire同日）。AIエージェント向けの「Flight MCP」を出した。Claude、ChatGPTなどMCP対応のクライアントから、検索から予約までをつなぐ。\n・対象は75以上の市場、550以上の航空会社。バーチャル・インターラインを含む。検索と運賃の確認は無料。座席と手荷物も会話の中で扱える。支払いはFlightnetworkのページで行い、変更・取り消し・払い戻しもFlightnetworkが担う。\n・自社で代金を受け取る、またはエージェントが客に代わって予約するには、Etraveliとの契約が要る。同社はBooking.comの航空券と、Skyscannerのフルフィルメントを担う、と説明している。以前のChatGPTアプリのプラグインは、別ページへ移す方式だった。\n・担当役員のAndreas Marquardt氏は、MCPは今や標準装備に近く、同社はAIとデジタル商取引の航空券の基盤を目指す、と話した。",
+      "note": "航空券の卸が、AIエージェントから予約完了まで出せるようになった。支払いはFlightnetwork経由が基本。日本の施設の航空券付き商品が、この経路に載るかを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/technology/etraveli-group-adds-mcp-player-flight-content",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://www.etraveligroup.com/etraveli-group-opens-its-flight-engine-to-ai-agents-with-new-flight-mcp/",
+          "label": "etraveligroup.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-138",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Airbnb、宿泊1件につき0.1ドルを非営利へ　5年で5億ドル、客の料金は据え置き",
+      "body": "・発表日：2026年10/28（Airbnb。PhocusWire同日）。完了した宿泊1件につき、Airbnbの売上から0.10ドルを、独立の非営利Airbnb.orgへ出す。チェックイン前のキャンセル、体験、サービスは対象外。客の支払額は増えず、ホストの受取額も減らない。客やホストの申込は不要。\n・他の資金とあわせ、今後5年で5億ドルを見込む。Airbnb.orgは、災害、治療のための移動、紛争などで住まいを失った人に、Airbnbの掲載で無料の滞在を出す。ホストには宿泊料を払う。2030年までに年100万泊を目標とし、2025年は12万9,000泊だった。\n・2020年の開始以来、135カ国で160万泊超を出した。治療のための滞在は、2026年末までに20カ国超へ広げる。Airbnbは運営費を負担し、一般からの寄付は滞在に充てる。このモデルは変更や終了があり得る。",
+      "note": "宿泊1件あたり0.10ドルを、Airbnbが自社の売上から非営利へ出す。客の料金とホストの受取は変わらない。日本の掲載でも、料金表の外でこの寄付が付く前提は同じ。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/online/airbnb-to-fund-its-nonprofit-with-share-of-stay-revenue",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://news.airbnb.com/every-home-booked-on-airbnb-helps-house-people-in-crisis",
+          "label": "news.airbnb.com"
         }
       ],
       "companies": true
@@ -750,6 +1089,34 @@
         {
           "url": "https://www.travelvoice.jp/20261023-160726",
           "label": "travelvoice.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-139",
+      "date": "2026-10-26",
+      "dateLabel": "10/26（月）",
+      "weekday": "月",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "MakeMyTrip、9月期は国際の長距離アウトバウンドが弱い　総予約額は恒常通貨で20.9%増",
+      "body": "・発表日：2026年10/26（MakeMyTrip。PhocusWire、Skift同日）。2026年9月30日までの第2四半期（2027年度Q2）。総予約額は27億2,470万ドル。ドル建てでは前年同期比約11%増、恒常通貨では20.9%増。ルピーは対ドルで約10%下落し、ドル建ての伸びを抑えた。\n・国際の長距離アウトバウンドは、燃油高による航空券の上昇とルピー安で弱い。インドの国内航空の出発は7%減、国際出発は4%減。運賃は約25〜30%上昇した（Skift）。国内航空券のシェアは30%超を維持した。\n・IFRSの売上は2億3,520万ドル（ドル建て2.5%増、恒常通貨11.2%増）。航空券の売上はドル建て7.2%減、ホテルとパッケージの売上はドル建て1.0%減（PhocusWireはホテルを1%減の1億700万ドル、航空券を7%減の5,700万ドルと伝えた）。調整後の営業利益は4,620万ドル。\n・ホテルとパッケージは事業の約40%。単独のホテル室泊は18.6%増で、国内は20%超。非航空（ホテル、バス、タクシー、体験）が総予約額の63.2%（前年61.5%）。バスの販売量は約25%増（Skift）。",
+      "note": "インド最大のOTAは、国際の航空が弱い一方、国内のホテル室泊は伸びた。日本向けの発表ではない。インド発の訪日を見るときは、航空券の高止まりと、宿の伸びを分けて聞く材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/finance/makemytrips-q2-impacted-subdued-outbound-travel",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://skift.com/2026/10/26/makemytrip-uses-an-air-travel-dip-to-reach-beyond-flights/",
+          "label": "skift.com"
         }
       ],
       "companies": true
