@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,218 @@
     }
   ],
   "counts": {
-    "items": 209,
-    "dates": 36,
-    "industry": 129,
-    "ota": 80,
-    "industryDates": 29,
+    "items": 221,
+    "dates": 37,
+    "industry": 138,
+    "ota": 83,
+    "industryDates": 30,
     "otaDates": 31,
     "themes": {
-      "海外OTA": 79,
-      "国内OTA・旅行会社": 25,
-      "新規開業ホテル": 29,
-      "新規フライト情報": 76
+      "海外OTA": 80,
+      "国内OTA・旅行会社": 28,
+      "新規開業ホテル": 34,
+      "新規フライト情報": 79
     }
   },
   "items": [
+    {
+      "id": "industry-201",
+      "date": "2026-10-31",
+      "dateLabel": "10/31（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "スクート、那覇＝シンガポール線を10/31から週5便に増便（土曜便を追加、A321neo）",
+      "body": "・運航開始日：2026年10/31（sky-budget同日。増便自体の発表は8/21、TRAICYは8/25）。月・水・木・日の週4便に土曜を足し、週5便にした。機材はA321neo。\n・TR835 那覇09:15発→シンガポール13:50着（月・水・木・土・日）。TR834 シンガポール01:50発→那覇08:00着（同じ曜日。水曜は01:10発）。\n・この路線は、ジェットスター・アジアの運航終了後にスクートが引き継いだ区間。2025年12月に週3便で運航を始めている。10/25の冬ダイヤ一覧にある同じ増便の、時刻つきの開始日。",
+      "note": "那覇の取引ホテルとは、シンガポール発の朝着が週5便になった前提で、土曜着の在庫を見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/31/scoot-increase-oka-sin-oct2026/",
+          "label": "sky-budget.com"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20260825379887/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-207",
+      "date": "2026-10-31",
+      "dateLabel": "10/31（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「スマイルホテル鹿児島中央駅前」、11/1にリブランド開業　全101室、鹿児島初出店",
+      "body": "・報道日：2026年10/31（TRAICY。公式のお知らせは9/30）。ホスピタリティオペレーションズは、旧「グッドイン鹿児島」を「スマイルホテル鹿児島中央駅前」として11/1にリブランド開業する。鹿児島県では初出店。\n・地上8階、全101室。シングル60室、ダブル17室、ツイン12室、8畳の和室12室。シングルとダブルは13.8㎡、ツインと和室は20.7㎡。\n・JR鹿児島中央駅から徒歩約2分。24時間営業の「ジョイフル」を併設する。記念プランは2027年1/31まで、公式サイト限定。2名1室で1人あたり、素泊まり3,000円から、食事券付き4,000円から。",
+      "note": "鹿児島中央駅から徒歩約2分の101室が、11/1にスマイルホテルへ切り替わる。記念プランは1人3,000円から。駅前の取引ホテルとは、年始までの価格の出方を見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261031385020/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://smile-hotels.com/hotels/kagoshimachuo/informations/",
+          "label": "smile-hotels.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-208",
+      "date": "2026-10-31",
+      "dateLabel": "10/31（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「京都マリオットホテル」、11/1にリブランド開業　旧ホテル平安の森京都、全215室",
+      "body": "・告知：予約サイトは11/1泊から「京都マリオットホテル」として販売している（JTBの施設ページ、マリオットの新ホテル一覧）。京都市左京区岡崎の「ホテル平安の森京都」（215室）のリブランド。運営はHMIホテルグループ。延期の発表は見当たらない。\n・同じ施設の案内では、改装のため駐車場は2026年2/1から当面使えず、大浴場も休止のまま、としている。京都駅八条口との無料シャトルは1日6往復。\n・HMIとマリオットが2024年4月に出した国内7軒のリブランド計画の一つ。コートヤード・バイ・マリオット神戸（10/1）の次の開業。",
+      "note": "岡崎の215室が、11/1からマリオットの名前で売り出されている。駐車場と大浴場は休止の案内が残る。東山・岡崎の取引ホテルとは、ブランドが変わったあとの料金の位置取りを見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.jtb.co.jp/kokunai-hotel/htl/6232127/",
+          "label": "jtb.co.jp"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/destinations/japan/kyoto/new-hotels.mi",
+          "label": "marriott.com"
+        },
+        {
+          "url": "https://innippon.news/articles/kyoto-marriott-hotel-opening/",
+          "label": "innippon.news"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-203",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "中国東方航空、羽田＝北京/大興を11/27から週4便に増便（現在は週2便）",
+      "body": "・報道日：2026年10/30（sky-budget）。中国東方航空は羽田＝北京/大興を、11/27から増便する計画で、増便分の販売を始めている。現在は両都市発とも水・日の週2便。月・金を足して週4便（月・水・金・日）にする。記事の時点では、一部の日付に設定がない。\n・MU790 羽田16:40発→大興19:50着。MU789 大興11:10発→羽田15:10着。機材はA321。\n・同じ区間は中国南方航空が毎日運航している。東方の週4便が乗ると、羽田＝北京/大興は週11便になる、と同記事は整理している。",
+      "note": "日中線で、羽田＝北京/大興に東方の週2便が足される計画。羽田側の取引ホテルとは、11/27以降の月・金着を、販売が続いているかと合わせて見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/10/30/china-eastern-airlines-increase-hnd-pkx/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-142",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "じゃらん「スペシャルウィーク」10/30開始　11/19まで、半額プランと最大1万円クーポン",
+      "body": "・予約受付：2026年10/30 10:00〜11/19 23:59（じゃらんニュースは10/26、TRAICYの配信は10/30）。限定の半額プラン、5%以上割引のセールプラン、最大20%のクーポンを重ね、最大25%以上割引になる、とじゃらんは案内している。\n・宿で使える最大10,000円クーポンと、スペシャルウィークのプランで使える最大10,000円クーポンを配る。じゃらんパック、レンタカー、遊び・体験のクーポンもある。\n・クーポンは10/26に先行配布、10/30に通常配布、11/10に第2弾。予約数の上限に達すると、期間中でも使えなくなる。",
+      "note": "じゃらんのセールは11/19まで。楽天トラベルの秋冬SALEと期間が重なる。取引施設とは、両方の対象プランで支払総額がどう見えるかを比べる材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.jalan.net/news/article/922528/",
+          "label": "jalan.net"
+        },
+        {
+          "url": "https://news.mixi.jp/view_news.pl?from=recent_list&id=9008555&media_id=157",
+          "label": "news.mixi.jp"
+        },
+        {
+          "url": "https://www.jalan.net/theme/specialweek/",
+          "label": "jalan.net"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-204",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "楽天、「ふるさと住民」で旅行と納税をつなぐ　2027年春にプラットフォームを開始",
+      "body": "・掲載日：2026年10/30（トラベルボイス）。楽天グループは2027年春に「楽天ふるさと住民」を始める。自治体の紹介、登録の支援、現地への来訪、担い手の活動、ふるさと納税、地域の産品購入までを一つのプラットフォームでつなぐ。\n・楽天市場で産品を買った人、楽天トラベルで泊まった人、楽天ふるさと納税で寄付した人の接点をまとめ、一度きりの旅行で終わらせない、と説明している。2027年4月は先行自治体で成果の型を作り、7月以降に連携先を広げる考え。\n・ふるさと住民応援コンソーシアムには、日本旅行、タイミー、おてつたび、LIFULL、JALが名を連ねる。上士幌町では楽天、タイミー、JALが担い手の確保で組んでいる。\n・課題として、活動の現場と宿が離れていても、交付税のクーポンが自治体の中だけで終わる点を挙げている。複数の県と、2027年3月までに広域の宿泊を組む仕組みを進めている。",
+      "note": "楽天トラベルの宿泊が、ふるさと納税や担い手活動と同じ会員の動線に入る。地方の取引ホテルとは、自治体クーポンが市町村の中で閉じる前提が、広域の泊まりにどこまで開くかを聞く材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.travelvoice.jp/20261030-160695",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-205",
+      "date": "2026-10-30",
+      "dateLabel": "10/30（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「THE NEST ISHIGAKI」、11/1開業　石垣市で全54室、全室58㎡以上",
+      "body": "・発表日：2026年10/30（ネストホテルジャパン）。旧「沖縄かりゆしリゾートEXES石垣」を閉めて改修し、最上位ブランド「THE NEST」の2軒目として11/1に開業する。ネストホテルとしては国内20軒目。\n・所在地は沖縄県石垣市宮良923-1。新石垣空港から車・タクシーで約10分。地上4階、全54室。客室は58㎡〜120㎡で、屋外バルコニー付き。\n・客室タイプはデラックスツイン、ジャパニーズツイン、スイート、ゲームルーム、ウェルカムベビールーム。プール、レストラン、バーを備える。月桃の蒸留とバレルサウナ、シーサー絵付けは11月から。サトウキビなどの収穫体験は2027年5月ごろの予定。\n・所有者は合同会社石垣宮良。運営はネストホテルジャパン。公共投資顧問が運用するファンドから運営を受ける石垣の施設としては、ネストホテル石垣マエサトビーチに続く2軒目。",
+      "note": "石垣空港から約10分の54室が、全室58㎡以上で11/1に開いた。石垣の取引ホテルとは、ファミリーとグループ向けの広い客室が、海側の在庫にどこまで重なるかを見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000020.000076532.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
     {
       "id": "ota-136",
       "date": "2026-10-30",
@@ -170,6 +368,62 @@
         }
       ],
       "companies": false
+    },
+    {
+      "id": "ota-140",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Booking.com",
+      "categoryLabel": "Booking.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.com、自社で動かすAI検索が最大20倍速に　宿泊説明文はGPT-4の3分の1未満の費用",
+      "body": "・発表日：2026年10/29（Amazon Science。Booking.comとの生産事例）。知識の蒸留とMedusaを組み合わせ、11億パラメータのモデルで、700億パラメータのLlama-3.1に近い品質のまま、用途により10〜20倍速くした。ACL 2025の産業部門で最優秀論文。\n・自然文の検索を絞り込みに変えるSmart Filtersは、99%の問い合わせで15倍速。提供地は米国、英国、豪州、ニュージーランド、シンガポールで、日本は記事にない。\n・会話型のAI Trip Plannerは、GPT-3.5との比較でクリックが2.9%増。米国、英国、フランス、ドイツ、イタリア、スペイン、オランダを含む10以上の国で動いている。\n・施設説明の自動生成は、GPT-4より「役に立った」が1.4ポイント高く、1件あたりの費用は3分の1未満。",
+      "note": "Booking.comの検索と施設説明が、自社で持つ小さいモデルに寄っている。日本の提供は確認できない。取引施設とは、説明文が自動生成に置き換わっても、自社の写真と設備が元のまま残るかを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.amazon.science/blog/speeding-up-language-models-for-travel-applications",
+          "label": "amazon.science"
+        },
+        {
+          "url": "https://www.travelerstoday.com/articles/61212/20261031/bookingcom-ai-hotel-search-gets-20-times-faster-award-winning-research.htm",
+          "label": "travelerstoday.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-141",
+      "date": "2026-10-29",
+      "dateLabel": "10/29（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "楽天トラベル「秋冬SALE」10/29〜11/19　国内宿泊はクーポン併用で最大30%オフ",
+      "body": "・開催：2026年10/29 10:00〜11/19 9:59（TRAICY、楽天トラベル特設）。国内宿泊はクーポンの併用（最大10%と最大20%）で最大30%オフ。遊び・体験は最大10%オフ。\n・楽パック（交通＋宿）は最大15,000円引き。レンタカーは併用（最大20%と最大30%）で最大50%オフ。高速バスは200円引き。海外旅行は最大50,000円引き。\n・抽選で50名に旅行代金を全額キャッシュバックする企画もある。楽天モバイルの契約者は当選確率が2倍。ポイント企画は別途エントリーが必要、と特設ページにある。\n・10/29朝までだった「スペシャルクーポンWEEK」の次の会場。",
+      "note": "楽天トラベルの国内宿は、11/19朝までクーポン併用のセールに入った。取引施設とは、対象プランの支払総額を、直販や他OTAと並べて見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261029386216/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://event.travel.rakuten.co.jp/special/sales/",
+          "label": "event.travel.rakuten.co.jp"
+        }
+      ],
+      "companies": true
     },
     {
       "id": "industry-196",
@@ -317,6 +571,93 @@
         }
       ],
       "companies": true
+    },
+    {
+      "id": "industry-202",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "ジェットスター・ジャパン、成田＝香港と関西＝マニラで12月に臨時便（計6便）",
+      "body": "・発表日：2026年10/27（ジェットスター・ジャパン。TRAICYは10/28）。冬ダイヤ（10/25〜2027年3/27）のホリデー需要向けに、2路線で計6便の臨時便を足し、販売を始めた。燃油サーチャージは不要。\n・成田＝香港は2便。GK27 成田19:20発→香港23:35着（12/17）、GK28 香港01:00発→成田06:10着（12/18）。機材はA320またはA321LR。片道は13,490円から（Starter、諸税別）。\n・関西＝マニラは4便。GK81 関西21:55発→マニラ翌日01:40着（12/13・16）、GK82 マニラ02:40発→関西07:20着（12/14・17）。機材はA320。片道は11,490円から。",
+      "note": "12月中旬の成田＝香港と関西＝マニラに、各1往復ずつの臨時便が入る。両空港の取引ホテルとは、13〜18日の前後泊が通常週より厚くなる材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261028386193/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://files.jetstar.com/api/public/content/20261027",
+          "label": "files.jetstar.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-206",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「東横INN大船駅西口」、10/31開業　鎌倉市で全122室、駅西口から徒歩1分",
+      "body": "・発表日：2026年10/28（東横イン。予約開始の案内は8/25）。「東横INN大船駅西口」を10/31に開業する。国内353店舗目、神奈川県では25店舗目。\n・所在地は神奈川県鎌倉市台1-1-6。JR「大船駅」西口から徒歩1分。地上5階、全122室、最大158人。\n・駐車場は平置き15台（うち身障者用1台）、予約制で1泊1,800円。予約受付は8/26に始まっている。",
+      "note": "大船駅の西口に122室が開いた。鎌倉・湘南と、横浜方面の出張の両方に使う立地。周辺の取引ホテルとは、駅から1分の料金の位置取りを見る材料になる。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://toyoko-inn.co.jp/news/news_261028.html",
+          "label": "toyoko-inn.co.jp"
+        },
+        {
+          "url": "https://www.toyoko-inn.com/eng/news/104D3/",
+          "label": "toyoko-inn.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-209",
+      "date": "2026-10-28",
+      "dateLabel": "10/28（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「GOOD HENRO HOSTEL T1 NARUTO」、11/1開業　鳴門・板東駅前、23床とツイン1室",
+      "body": "・発表日：2026年9/7（ピルグリマージュジャパン。JR四国の連携発表は10/28）。徳島県鳴門市に「GOOD HENRO HOSTEL T1 NARUTO」を11/1開業する。歩き遍路の前夜に泊まる宿。\n・所在地は鳴門市大麻町板東辻見堂70-1。JR高徳線「板東駅」の前。一番札所・霊山寺まで徒歩約10分。コンパートメント23床と、プライベートツイン1室。朝食付き。\n・JR四国は10/28、2027年度内に徳島県内で歩き遍路向けの宿4棟の開業を目指し、そのうち2棟の整備に参画すると発表した。場所と開業日は未定。鳴門の1号店は、その連携に先立つ開業、としている。",
+      "note": "鳴門の板東駅前に、遍路の前泊用の小さな宿が11/1に開く。室数は大きくない。2027年度に徳島へ同種の宿を足す計画は、場所が決まってから見る。",
+      "noteLabel": "話題の切り口",
+      "sources": [
+        {
+          "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/10/28/20261028%2003.pdf",
+          "label": "jr-shikoku.co.jp"
+        },
+        {
+          "url": "https://goodhenro.com/hostel-ja/",
+          "label": "goodhenro.com"
+        }
+      ],
+      "companies": false
     },
     {
       "id": "industry-200",
