@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,144 @@
     }
   ],
   "counts": {
-    "items": 293,
-    "dates": 40,
-    "industry": 194,
-    "ota": 99,
-    "industryDates": 35,
-    "otaDates": 35,
+    "items": 298,
+    "dates": 41,
+    "industry": 196,
+    "ota": 102,
+    "industryDates": 36,
+    "otaDates": 36,
     "themes": {
-      "海外OTA": 92,
+      "海外OTA": 95,
       "国内OTA・旅行会社": 36,
-      "新規開業ホテル": 36,
+      "新規開業ホテル": 37,
       "新規フライト情報": 82
     }
   },
   "items": [
+    {
+      "id": "ota-159",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Booking.com",
+      "categoryLabel": "Booking.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.comが規約を変え、VAT・GSTなど政府が課す税をコミッションの計算対象に。カリブ海のホテル協会が反発し、ジャマイカなどでは11/17の新規予約から適用（日本への適用は未確認）",
+      "body": "・カリブ海ホテル観光協会（CHTA）によると、Booking.comは一般規約を改定し、VAT・GSTなど政府が課す税をコミッション対象額に含めた。2026/5/15から一部地域で適用しており、ジャマイカとアンティグア・バーブーダには11/17以降の新規予約から適用すると通知した。\n・Booking.comは「コミッション計算のグローバル標準化」と説明しているとされる。\n・CHTAの試算では、表面の料率15%・税12%の場合、税抜き客室売上に対する実効料率は16.8%になる。\n・CHTAによると、米国の規約では税は対象外で、ドバイ・エジプトにも除外がある。英国は税込み額が対象。\n・Booking.comの日本語ヘルプでは、宿泊税などの地方税は対象外とする一方、VATなどは現地の税法によって含まれる場合があるとしている。日本の消費税の扱いは公開ページでは明示されていない。",
+      "note": "表面の料率が同じでも、計算対象が広がれば実効コストは上がる。日本の契約で消費税込みの金額にコミッションがかかっているかを請求書（基準額が税込か税抜か）で確認しておくと、他OTAと実効手数料を比べる材料になる。日本で同じ通知が来ているかは未確認。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.caribjournal.com/2026/11/02/caribbean-hotels-booking-challenge/",
+          "label": "caribjournal.com"
+        },
+        {
+          "url": "https://partner.booking.com/en-gb/help/payments-payouts-invoices/invoices/understanding-your-commission",
+          "label": "partner.booking.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-160",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Agoda",
+      "categoryLabel": "Agoda",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agodaで休館期間中の旅館が予約できる状態に。メトロエンジンの11/2調査では、函館の旅館が休館中14日のうち9日で予約可能、2020年閉館の旧ホテルナゴヤキャッスルのページでも販売が続いていた",
+      "body": "・休館日・閉館日が公表されている12施設を11/2にAgodaで確認した。平成館 海羊亭（函館、11/15〜2027/4/15休館）は休館中14日のうち9日で予約可能な客室を表示していた（例：12/10は2名21,650円、12/1に事前決済）。\n・2020年に営業を終えた旧ホテルナゴヤキャッスルのページで、旧館時代のものとみられる客室が販売されていた（跡地の新ホテルは別ページ）。改名やリブランドが反映されていない施設も複数あった。\n・残りの11施設は休館後の日付を販売していなかった。国内主要サイトで販売停止なのにAgodaへの掲載が続く480施設のうち、確認できた86施設の多くは営業中だった。\n・在庫が施設の設定・Agoda・卸業者のどこから来ているかは画面から判別できないとしている。Agodaに質問中で、回答はまだ掲載されていない。",
+      "note": "既報のAgoda非契約販売問題の続き。休館・改装・リブランドを予定している取引先には、サイトコントローラー経由の在庫だけでなく、旅行会社や卸に出している在庫も止め、海外OTAに旧施設のページが残っていないか確認するよう勧めたい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://en.hotelbank.jp/research/closed-ryokan-still-bookable-on-agoda-12-japan-closures-checked/",
+          "label": "en.hotelbank.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-266",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "規制・政策",
+      "categoryLabel": "規制・政策",
+      "theme": "policy",
+      "themeLabel": "行政・インバウンド施策",
+      "highlight": false,
+      "headline": "京都市が民泊（簡易宿所を含む）規制強化の骨子を11/2に了承。従業員の常駐義務化は「重要京町家」を免除し、地域と良好な関係の既存施設は猶予期間後の特例を検討。近く市民の意見を募集",
+      "body": "・近隣トラブルや悪質な事業者の増加を受け、京都市は8月末に打ち出した従業員の常駐義務化について、京町家保全の観点から重要京町家を免除する方針を示した。\n・地域と良好な関係を築いている既存施設には、義務化までの猶予期間を置いたうえで特例措置を検討する。\n・近くパブリックコメントを実施する予定。",
+      "note": "都内（大田区・中野区・世田谷区）に続き、京都でも民泊・簡易宿所の運営負担が重くなる方向。小規模な一棟貸しや簡易宿所の供給が絞られれば、多人数・長期滞在の需要がホテルに戻る余地がある。施行時期や対象の詳細は今後の条例案で確認が必要。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.kyoto-np.co.jp/articles/-/1819453",
+          "label": "kyoto-np.co.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-267",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "民泊運営最大手のマツリテクノロジーズが、4人以上で泊まれる部屋を中心にしたホテルを10カ所以上開業へ（日経11/2）。東京23区の民泊規制強化で新規民泊の余地が狭まっているため",
+      "body": "・民泊運営で国内最大手のマツリテクノロジーズ（東京・新宿）が、4人以上で泊まれる部屋をメインにしたホテルを10カ所以上開業する。\n・東京23区で民泊規制の強化が相次ぎ、新規開業の余地が狭まっていることが背景。民泊運営のノウハウをホテル開発に振り向ける。\n・吉田圭汰代表は「東京で大人数旅行の宿泊の受け皿にしていく」とコメント。\n・開業時期・場所・客室数の詳細は記事の有料部分にあり、確認できていない。",
+      "note": "民泊のグループ需要がアパートメント型ホテルへ移る流れが具体化。都内で多人数部屋を持つホテルには競合が増える一方、OTA上での「4人以上」条件での露出や人数別料金を見直すきっかけになる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOCC295E00Z21C26A0000000/",
+          "label": "nikkei.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-161",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Trip.com",
+      "categoryLabel": "Trip.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Trip.comがタイでBTS（バンコク高架鉄道）3駅・車両6編成のラッピングと『IRON CHEF THAILAND VS ASIA』を使ったキャンペーン。日本など4市場の提携ホテルのクーポンを2週間ごとに配布",
+      "body": "・駅の装飾はプロンポン・チットロム・ハーヤェクラートプラオの3駅（2026/10/1〜2027/1/15）。全面ラッピング車両6編成がBTS全線を走っている。\n・提携航空会社6社の航空券クーポン（最大1,000バーツ）を10〜12月に毎月2回、計6回配る。提携ホテルは日本・中国・韓国・オーストラリアの4市場で、市場ごとにクーポンと販促期間を分けている。\n・新しいディールは2週間ごとに公開され、数量限定の先着順。タイ語24時間サポートや航空券のカード手数料無料も打ち出している。",
+      "note": "タイは冬に訪日需要が伸びやすい市場。年末〜1月のタイ市場向け販促（日本の提携ホテル枠）に参加できる余地を取引先に案内できる。日本の対象ホテルや条件は記事に書かれていないので社内で確認する。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.techoffside.com/2026/11/trip-com-bts-iron-chef-campaign-service-offers/",
+          "label": "techoffside.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-261",
       "date": "2026-11-02",
