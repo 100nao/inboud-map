@@ -17,20 +17,152 @@
     }
   ],
   "counts": {
-    "items": 298,
+    "items": 303,
     "dates": 41,
-    "industry": 196,
-    "ota": 102,
+    "industry": 199,
+    "ota": 104,
     "industryDates": 36,
     "otaDates": 36,
     "themes": {
-      "海外OTA": 95,
-      "国内OTA・旅行会社": 36,
-      "新規開業ホテル": 37,
+      "海外OTA": 96,
+      "国内OTA・旅行会社": 37,
+      "新規開業ホテル": 40,
       "新規フライト情報": 82
     }
   },
   "items": [
+    {
+      "id": "industry-268",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "11/2開業：アパホテル〈高崎駅東口〉全199室、アパホテルステイ〈小松グランド〉は全125室へリブランド、阿蘇リトリート HONOは全17室",
+      "body": "・発表日：2026年11/2（アパホテル2件は同日の開業リリース。阿蘇リトリート HONOの開業日決定は7/1で、開業当日の案内は11/2）。\n・アパホテル〈高崎駅東口〉は新築・全199室。上越新幹線・北陸新幹線・JR高崎線の高崎駅東口から徒歩6分。高崎市内2軒目で、群馬県内のアパホテルは5軒・796室になる。\n・アパホテル〈小松グランド〉は同日、「アパホテルステイ〈小松グランド〉」へリブランドした。全125室（26室増室）。小松駅西口から徒歩約5分。アパホテルステイは富山に次ぐ2軒目で、サウナと朝食を宿泊料金に含む。\n・阿蘇リトリート HONO by 温故知新（熊本県南阿蘇村）は全17室、全室プライベート温泉付きで、予定どおり11/2に開業した。熊本空港から車で約30分。",
+      "note": "高崎駅東口に199室の新築が加わった。北関東の取引ホテルとは、平日のビジネス需要とイベント需要の取り合いを見る材料になる。小松は室数が増え、サウナ付きの滞在型に寄った。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000894.000018265.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000893.000018265.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000279.000118716.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-269",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "KOKO HOTEL Residence 北上野、2027年2/1開業　全39室のファミリータイプ、11/2から予約開始",
+      "body": "・発表日：2026年11/2（ポラリス・ホールディングス）。2027年2/1に開業し、予約受付は11/2から。\n・所在地は東京都台東区北上野2-1-1。日比谷線入谷駅と銀座線稲荷町駅から徒歩約7分、JR上野駅入谷出口から徒歩約10分。\n・全39室。すべて36.2㎡以上で4ベッド。スタンダード（36.2㎡、最大5名、25室）、コンフォート（37.7㎡、最大5名、13室）、モデレート（36.2㎡、最大4名、1室）。全室にキッチン、冷蔵庫、電子レンジ、洗濯機。\n・KOKO HOTEL Residenceの6店舗目。",
+      "note": "上野と浅草のあいだに、4〜5名で泊まれるキッチン付き客室が39室増える。入谷・浅草の取引ホテルとは、ファミリーやグループの連泊をどう出すかを話す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000057.000119847.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-270",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "「HOTEL みなと 歌舞伎町」、11/27グランドオープン予定　全室プライベートサウナ、予約は11/1から",
+      "body": "・発表日：2026年10/29（HOTEL みなと公式）。東京都新宿区歌舞伎町2-8-8。東新宿駅A1出口から徒歩5分、新宿三丁目駅E1出口から徒歩5分。\n・客室はプライベートサウナ付き。宿泊のほか、数時間からのデイユースもする。客室数は公式の案内では未記載。\n・オープン予定は11/27（金）。変更があり得る、としている。事前予約は11/1からで、対象は11/27以降のチェックイン。",
+      "note": "歌舞伎町・東新宿に、サウナ付きの客室が11/27から加わる予定。客室数は出ていない。新宿の取引ホテルとは、週末のデイユースと宿泊の両方で在庫がどう動くかを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://hotel-minato.net/news/2026-10-29-kabukicho-grand-opening/",
+          "label": "hotel-minato.net"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-162",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "楽天トラベル、「ハワイスペシャルオファー」を11/16朝まで開催　ハワイツアーで最大5万円クーポン",
+      "body": "・確認日：2026年11/2（TRAICY）。企画の開始は10/19 10:00で、終了は11/16 9:59。\n・ハワイツアー向けに、5万円分と3万円分の割引クーポンと、日本航空（JAL）限定の4万円分を先着で配る。11/4 10:00から使える5万円分と3万円分もある。上限に達したクーポンがある。\n・例として、東京発5日間・燃油サーチャージと諸税込みで、ハイアット プレイス ワイキキ ビーチ泊が180,339円から、とTRAICYは書いている。",
+      "note": "11/4から追加の高額クーポンが使える。ハワイを売る国内の取引では、楽天の支払総額と直販の差を、11/16の終了前に見ておく材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261102386499/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-163",
+      "date": "2026-11-03",
+      "dateLabel": "11/3（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.com、初の11.11 Super Sale　日本の施設も対象、11/9〜16の予約で客室料金を少なくとも30%引き",
+      "body": "・予約できる期間は2026年11/9〜11/16（8日間）。宿泊は11/9のチェックインから、2027年12/31までのチェックアウト。施設側のExtranetでの設定開始は9/24。\n・対象施設はアジア太平洋、中東、北アフリカの一部で、日本も含まれる。参加には客室料金を少なくとも30%引く。Geniusや他のプロモーションとは併用できない。検索結果と客室ページに「11.11」の印が付く。\n・世界中の利用者が見られる。税や追加料金は割引の対象外。予約を変更すると割引が消える場合がある、とパートナー向け案内にある。\n・消費者向けの案内は11/2（Booking.comのアジア太平洋向けリリースを引いたMissLobang）。",
+      "note": "日本の施設は、11/9からの8日間に客室料金を30%以上下げるかどうかの判断になる。直販や他OTAの同じ日の料金と、割引が客室料金だけに掛かる点を並べて見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://partner.booking.com/en-us/help/rates-availability/rates-special-offers/activating-1111-super-sale",
+          "label": "partner.booking.com"
+        },
+        {
+          "url": "https://www.misslobang.com/article/booking-com-11-11-super-sale-30-off-stays-nov-2026",
+          "label": "misslobang.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "ota-159",
       "date": "2026-11-03",
