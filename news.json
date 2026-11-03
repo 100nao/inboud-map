@@ -17,20 +17,100 @@
     }
   ],
   "counts": {
-    "items": 309,
+    "items": 312,
     "dates": 42,
-    "industry": 203,
+    "industry": 206,
     "ota": 106,
     "industryDates": 37,
     "otaDates": 37,
     "themes": {
       "海外OTA": 97,
       "国内OTA・旅行会社": 40,
-      "新規開業ホテル": 42,
+      "新規開業ホテル": 43,
       "新規フライト情報": 82
     }
   },
   "items": [
+    {
+      "id": "industry-275",
+      "date": "2026-11-04",
+      "dateLabel": "11/4（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "その他",
+      "categoryLabel": "その他",
+      "theme": "other",
+      "themeLabel": "その他",
+      "highlight": false,
+      "headline": "STR調べで、9月の日本のホテルADRは前年比+8.8%の20,657円。東京は+8.4%の28,276円、大阪は−19.7%の18,762円（日経11/3報道）",
+      "body": "・訪日客全体は減っているものの、秋の観光や国際会議・展示会による訪日需要が単価を押し上げたと分析。8月末からの関東の大雨やシルバーウィークにも触れている。\n・大阪の下落は、前年の大阪・関西万博期間中に高騰した反動とみられる。\n・STRは、インバウンド需要に支えられて来春まで前年比一桁台の単価上昇が続くと予想。\n・JNTOによると、1〜9月の訪日客は前年同期比−2.9%の3,073万200人で、中国は−55.5%。9月は韓国が84万2,300人（+25.6%）と9月として過去最多で、最大の市場だった。",
+      "note": "10/24既報の東京推定ADR（9月はシティ−10.3%、ビジネス+2.2%）とは調査元も集計対象も違い、数字の向きも一致しない。打合せでは出典を明示して使い分けたい。韓国の伸びは年末の韓国市場向け販促の根拠になる。原文は日経の有料記事で、聯合ニュースの引用をもとにしている。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261103088100009",
+          "label": "yna.co.kr"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-276",
+      "date": "2026-11-04",
+      "dateLabel": "11/4（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "都内で11月下旬に2施設が開業。「HOTEL みなと 歌舞伎町」（11/27予定、全室プライベートサウナ付き、デイユース対応）と「Minn 品川 East」（11月下旬予定、25室、1室最大8名、最大収容200名）",
+      "body": "・HOTEL みなと 歌舞伎町は新宿区歌舞伎町2-8-8。11/1から11/27以降チェックイン分の予約を受け付けており、デイユースにも対応する。\n・Minn 品川 EastはSQUEEZEが第一リアルターと共同で品川区東品川1-26-5に開業。客室は46〜49㎡の4タイプで、どのタイプも最大8名まで泊まれる。\n・インバウンドのグループ向けで、羽田から電車で約20分（天王洲アイル駅）。",
+      "note": "11/3既報のマツリテクノロジーズと同じく、都内で多人数向けアパートメントホテルの供給が増えている。品川・天王洲や新宿で多人数客室を持つ取引先には、人数別料金や「4名以上」条件での露出の見直しを勧めたい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://hotel-minato.net/news/2026-10-29-kabukicho-grand-opening/",
+          "label": "hotel-minato.net"
+        },
+        {
+          "url": "https://www.sankei.com/pressrelease/prtimes/KQKZI4QM65O6VCJHIKJLJ2MCVA/",
+          "label": "sankei.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-277",
+      "date": "2026-11-04",
+      "dateLabel": "11/4（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "キャンペーン・補助",
+      "categoryLabel": "キャンペーン・補助",
+      "theme": "policy",
+      "themeLabel": "行政・インバウンド施策",
+      "highlight": false,
+      "headline": "九州ふっこう応援割の宮崎県分を、じゃらんとじゃらんパックで11/4 10時から販売（クーポンまとめサイトの掲載情報）",
+      "body": "・旅行クーポンまとめサイト「トラベラーズナビ」の11/4更新分に、じゃらんとじゃらんパックで宮崎県の九州応援割が11/4 10時に始まると掲載。割引率や枠はじゃらん公式ページで確認が必要。\n・阪急交通社の案内では、九州ふっこう応援割の対象ツアーは旅行代金の50%引き（熊本・鹿児島は60%）、上限は1泊2万円・2泊以上3万円（10/14時点）。",
+      "note": "宮崎は九州ふっこう割の販売で後発の県。九州の取引先には、じゃらん枠の消化状況と、直販や他OTAにも枠があるかを確認しておきたい。一次情報は未確認なので、案内前にじゃらん公式ページで確かめる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://travelersnavi.com/coupon/goto-reserve",
+          "label": "travelersnavi.com"
+        },
+        {
+          "url": "https://touristjapan.jp/2026/11/03/travel-news-20261103/",
+          "label": "touristjapan.jp"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "ota-164",
       "date": "2026-11-04",
