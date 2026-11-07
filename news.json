@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-08",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,232 @@
     }
   ],
   "counts": {
-    "items": 312,
-    "dates": 42,
-    "industry": 206,
-    "ota": 106,
-    "industryDates": 37,
-    "otaDates": 37,
+    "items": 320,
+    "dates": 43,
+    "industry": 212,
+    "ota": 108,
+    "industryDates": 38,
+    "otaDates": 38,
     "themes": {
-      "海外OTA": 97,
-      "国内OTA・旅行会社": 40,
-      "新規開業ホテル": 43,
-      "新規フライト情報": 82
+      "海外OTA": 98,
+      "国内OTA・旅行会社": 43,
+      "新規開業ホテル": 44,
+      "新規フライト情報": 85
     }
   },
   "items": [
+    {
+      "id": "industry-282",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "タイ・ベトジェット、関西＝バンコクを11/13から週4→毎日（週7）へ増便　成田線は11/6から週11往復に増便済み",
+      "body": "・出典：Bangkok Times（2026年11/4）およびsky-budget「2026年11月の日本発着の国際線」。関西＝バンコク（スワンナプーム）は11/13から週4往復を週7往復（毎日）へ増便。\n・成田＝バンコクは11/6から週7→週11往復へ増便（月水金日を追加）。",
+      "note": "関空のタイ方面増便。成田側の増便は既存記事にもあるが、関空デイリー化は別途記載。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://bangkok-times.com/transport/2026-11-04-thai-vietjet-narita-11-weekly-kansai-daily/",
+          "label": "bangkok-times.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-283",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規",
+        "増便",
+        "再開"
+      ],
+      "highlight": false,
+      "headline": "11月の地方空港国際線：中部＝セブ（セブパシフィック 11/19・週4）、新千歳＝マニラはセブパシフィックが増便（11/27・週7）・フィリピン航空が再開（11/23・週5）",
+      "body": "・出典：sky-budget「2026年11月の日本発着の国際線」（2026年11/1）。\n・中部国際空港：セブパシフィックが中部＝セブを11/19から週4便で就航予定。\n・新千歳：セブパシフィックが新千歳＝マニラを11/27から週3→週7へ増便。フィリピン航空が同路線を11/23から週5便で運航再開予定。",
+      "note": "東京以外の空港の就航・増便・再開。全国対象のフライト枠向け。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/11/01/japan-international-flight-nov2026/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-278",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、「HIS BLACK FRIDAY 2026」を11/11〜12/6開催　海外・国内・ミステリーツアーを訴求、オンライン受付は12/7 10時まで",
+      "body": "・発表日：2026年11/6（HIS）。開催期間は11/11〜12/6、オンライン受付は12/7午前10時まで。\n・テーマは「価格をきっかけに、ワクワクにつなぐ」。関東発着のアジア・国内は11/11 9時、アジア以外の海外は11時、その他発着の海外は13時、ミステリーツアーは11/13 11時から受付。\n・一例：成田発ソウル3日間19,800円、ハワイ5日間99,800円、成田発沖縄3日間17,800円など。目玉第2弾は11/27 11時発売予定（詳細は11/20特設サイト）。",
+      "note": "ブラックフライデー需要の価格訴求とミステリー商品の組み合わせ。競合セールとの比較材料。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.his.co.jp/news/21025.html",
+          "label": "his.co.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-279",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "JTB、体験予約管理「JTB BÓKUN」で外部システムとリアルタイム接続するチャネルマネージャーAPIの提供を開始（11/5）　Viator・Klook・GetYourGuideなどへ在庫を一括連動",
+      "body": "・発表日：2026年11/5（JTB）。既存の予約・発券システムを切り替えず、単一APIでJTB BÓKUN経由の海外OTAへ在庫・価格を自動連動できる。\n・想定は演劇・コンサート、鉄道・バス・船舶、旅行会社・ツアーオペレーター、観光・レジャー施設。導入は既に1,400社以上。",
+      "note": "館内体験や提携アクティビティを海外OTAで売りたい施設向けの販路拡大話。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.jtbcorp.jp/jp/newsroom/2026/11/05_jtb_bokun_api.html",
+          "label": "jtbcorp.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-166",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "じゃらんnet、Googleホテル広告の表示料金を11/5からクーポン適用後価格に変更　Google経由ではクーポンが自動適用",
+      "body": "・2026年11/5から、じゃらんnetのGoogleホテル広告に出る宿泊料金がクーポン適用後の価格になる（施設向け公式案内、11/4時点）。\n・Google経由で流入するとクーポン適用済みのプラン詳細が出て、予約手続きで自動獲得（解除も可）。じゃらんnet内の検索結果一覧の表示は変わらない。\n・施設側の特別手続きは不要。クーポン原資・利用料の仕組みも従来どおり。適用除外は営業担当またはサポートへ問い合わせ。",
+      "note": "Google上の価格比較でじゃらんが安く見えやすくなる変更。公式サイト・他OTAとの表示差の確認が必要。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://kawashimablog.com/?p=65644",
+          "label": "kawashimablog.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-167",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Expedia Group、7〜9月期は総予約額11%増・売上12%増　B2B予約額は19%増、通期見通しを上方修正",
+      "body": "・発表日：2026年11/4（Expedia Group IR）。室泊7%増、総予約額340億ドル（+11%）、売上49.4億ドル（+12%）、調整後EBITDA 16.9億ドル（+17%）。\n・B2Bの総予約額は+19%、B2B売上は+23%。B2C総予約額は+7%。\n・10〜12月の総予約額見通しは279〜284億ドル（+3.3〜5.2%）。通期の総予約額見通しを約1,314〜1,319億ドル（+10%）へ上方修正。",
+      "note": "Booking HDに続く海外OTA決算。B2Bの伸びが目立つ一方、年末にかけては減速見通し。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://ir.expediagroup.com/news-and-events/news/news-details/2026/Expedia-Group-Reports-Third-Quarter-2026-Results/default.aspx",
+          "label": "ir.expediagroup.com"
+        },
+        {
+          "url": "https://www.phocuswire.com/news/finance/expedia-group-q3-2026-earnings",
+          "label": "phocuswire.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-280",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "変更",
+        "運休"
+      ],
+      "highlight": false,
+      "headline": "サウディア、成田＝リヤド線の航空券販売を2027年1/16運航便まで停止　当初11/17就航予定は現地報道で12/1延期後も販売停止が続く",
+      "body": "・発表日：2026年11/4（TRAICY）。サウディアは成田＝リヤド線の航空券販売を2027年1/16運航便まで停止した。\n・当初は11/17から週3往復で開設予定だったが、現地報道では12/1へ延期。フーシ派の攻撃の影響でリヤド発着便の一部をアル・カシム、ダンマーム発着で運航するなど混乱が続いている。",
+      "note": "11月の成田新規就航リストにあったリヤド線の実質的な延期・販売停止。既存の「就航予定」記事とセットで扱う。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261104386768/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-281",
+      "date": "2026-11-08",
+      "dateLabel": "11/8（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "リッチモンドホテルプレミア浅草、11/8に全館リニューアルオープン　全254室、ファミリーバンクルーム（48㎡・最大6名）8室とコーナーツイン（39㎡）8室を新設",
+      "body": "・発表日：2026年11/4（ロイヤルホールディングス／PR TIMES）。11/8に全館リニューアルオープン。\n・客室は全254室。ファミリーバンクルーム8室、コーナーツイン8室を新設。朝食ビュッフェは大人3,800円（握り寿司・天ぷら・しょうゆラーメンのライブキッチンなど）。\n・つくばエクスプレス浅草駅A1から徒歩約3分。運営はアールエヌティーホテルズ。",
+      "note": "浅草の大型既存館の改装。インバウンド向けの広い客室と朝食強化の事例。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000595.000071323.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://richmondhotel.jp/asakusa-international/",
+          "label": "richmondhotel.jp"
+        }
+      ],
+      "companies": false
+    },
     {
       "id": "industry-275",
       "date": "2026-11-04",
