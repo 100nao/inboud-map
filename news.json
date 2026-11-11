@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,244 @@
     }
   ],
   "counts": {
-    "items": 343,
-    "dates": 46,
-    "industry": 224,
-    "ota": 119,
-    "industryDates": 41,
-    "otaDates": 41,
+    "items": 351,
+    "dates": 47,
+    "industry": 229,
+    "ota": 122,
+    "industryDates": 42,
+    "otaDates": 42,
     "themes": {
-      "海外OTA": 108,
-      "国内OTA・旅行会社": 46,
-      "新規開業ホテル": 48,
-      "新規フライト情報": 91
+      "海外OTA": 111,
+      "国内OTA・旅行会社": 47,
+      "新規開業ホテル": 49,
+      "新規フライト情報": 94
     }
   },
   "items": [
+    {
+      "id": "industry-296",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "サウディア、成田＝リヤド線（当初11/17から週3往復）の就航延期を発表　航空券は2027年1/16運航便まで販売停止　ルフトハンザはA350-1000初号機を受領し12/3ミュンヘン発で羽田に初就航（300席）",
+      "body": "・トライシー（11/11）によると、サウディアは成田＝リヤド線の就航を延期した。当初は11/17から週3往復で開設予定で、航空券の販売はすでに2027年1/16運航便まで停止している（既報の販売停止の続報で、延期が正式に伝えられた）。\n・フーシ派によるサウジアラビアへの攻撃で、リヤド発着便の一部をアル・カシム、ダンマーム発着で運航するなど混乱が続いている。日本とサウジアラビアを結ぶ初の定期直行旅客便になる予定だった。\n・ルフトハンザはA350-1000初号機（D-AIFA、愛称「Deutschland」）を11/10（現地）に受領。12/3ミュンヘン発のLH714便で羽田に初就航する（羽田12/4着）。4クラス300席（ビジネス49席・プレミアムエコノミー35席）で、羽田線ではA350-900（267席）と交互に運航する（Aviation Wire 11/11）。",
+      "note": "サウジアラビアからの直行便は当面なく、中東客は引き続き乗り継ぎで来る。ルフトハンザ便は羽田に朝着くので、都心のホテルとは欧州客向けのアーリーチェックイン付きプランを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261111387582/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/354246",
+          "label": "aviationwire.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-297",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "スカンジナビア航空、羽田＝コペンハーゲン線を2027年夏ダイヤから毎日運航に増便（現在は週6往復、A350-900）",
+      "body": "・トライシー（11/11）によると、スカンジナビア航空は現在、羽田発土曜・コペンハーゲン発金曜を除く週6往復を運航しており、夏スケジュールから1日1往復にする。機材はA350-900。\n・ダイヤはSK984 羽田11:05発→コペンハーゲン17:30着、SK983 コペンハーゲン12:45発→羽田07:55着（翌日）。増便分の航空券はまだ販売していない。",
+      "note": "北欧からの直行便が来夏は毎日になる。羽田に朝着く便なので、北欧客の来夏の予約が見え始めたら、早めの販売やアーリーチェックインの話ができる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261111387622/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-298",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "highlight": false,
+      "headline": "エアロK、帯広＝清州線を2027年1/1〜3/1に運航再開（月・水・金・日の週4往復、A320）　3/2〜27は運休を追加",
+      "body": "・トライシー（11/12）によると、エアロKは帯広＝清州線を2027年1/1〜3/1に週4往復で運航する。12/31までの運休はすでに発表済みで、3/2〜27も運休期間に加えた。\n・ダイヤはRF353 帯広18:10発→清州21:20着、RF354 清州14:00発→帯広16:25着（いずれも月・水・金・日）。",
+      "note": "韓国から北海道・十勝への冬の直行便は2か月だけの運航。東京のホテルには直接の影響は小さいが、韓国客の地方直行便の動きとして押さえておく。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261112387153/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-299",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "東武鉄道、東京駅八重洲口近くの「（仮称）日本橋三丁目計画」（地上14階・地下2階、ホテル）を11/24に着工、2032年度開業予定　水星が日本橋浜町に「花と翳」（20室）を2027年6/1開業、ラッフルズ東京（浜松町）は2028年開業予定",
+      "body": "・東武鉄道のリリース（11/11）によると、計画地は中央区日本橋三丁目、敷地729.05㎡・延床8,781.77㎡、設計は日建設計。インバウンド旅行者の拠点としても位置づける。\n・「花と翳」は安田不動産のビル2棟を改修した20室（50〜104㎡）のホテル。半蔵門線水天宮前駅から徒歩4分、T-CATの最寄り出入口から徒歩1分。予約は11/6に始まった（Innippon）。\n・ラッフルズ＆フェアモントは総支配人106人の世界会議を11/11にフェアモント東京で開いた。ラッフルズ東京（浜松町、2028年開業予定）、フェアモント ニセコ（2028年1月開業予定）で日本の高級ホテルを増やす（トラベルボイス・PR TIMES）。",
+      "note": "東京駅・日本橋周辺は、高級から駅前型まで新しいホテルが続く。担当ホテルとは、開業前から周辺の競合として料金や部屋タイプを比べる話ができる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.tobu.co.jp/cms-pdf/releases/20261111124919XV5hegn9XATrwRJQJSwyHg.pdf",
+          "label": "tobu.co.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/hanatokage-opening/",
+          "label": "innippon.news"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261111-160836",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001155.000052177.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-300",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "HIS、最新客船「エクスプローラ III」を全船チャーター、2028年GWの東京発着6日間69.8万円から　東武トップツアーズはブラックフライデー第2弾を11/13 11時から（国内ツアー・宿泊に使えるクーポンを拡大）",
+      "body": "・HISのチャータークルーズは「エクスプローラ III」の世界初のチャーター。釜山・広島コース（4/26出発）は2名1室で1人69万8,000円から、済州島・博多コース（5/1出発）は89万9,000円から。食事・飲料・Wi-Fi・船内チップなどを含む（HIS・トラベルボイス11/11）。\n・東武トップツアーズの「ブラックフライデー2026」は第1弾が11/6〜30（国内ツアー・宿泊に最大6,000円引き、熱海後楽園ホテル限定6,000円引きは100枚限定）。第2弾は11/13 11:00から11/30までで、対象を広げたクーポンを出す。海外は台湾・ハワイの特別旅行代金商品（トライシー11/11・PR TIMES）。",
+      "note": "国内の旅行会社のブラックフライデーは11月後半まで続く。ホテルとは、旅行会社のクーポン期間と重なる時期のTrip.comでの販促や料金の出し方を話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.his.co.jp/news/21024.html",
+          "label": "his.co.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261111-160805",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261111387170/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000442.000072120.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-179",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Agoda",
+      "categoryLabel": "Agoda",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agoda、AIアシスタントを21市場のアプリ利用者に拡大（11/10発表）　会話しながら宿・航空券・体験の計画から予約まで",
+      "body": "・Agodaによると、9月に限定テストで始めたAIアシスタントを21市場に広げた。600万軒超の宿泊施設のほか、航空券・ツアー・アクティビティの在庫から、比較・空室確認・予約まで会話の中で進められる。\n・ベータ版では、AIアシスタントを使う人はホテル・航空券・体験などを組み合わせた予約をしやすいという。会話の中心はOpenAIのモデルで、飲食店や観光地の情報はGoogleマップのGeminiで出す。",
+      "note": "Agodaのアプリ内で「大阪5日間の家族旅行」のような相談から宿が選ばれる流れになる。ホテルとは、設備や周辺情報、写真をOTA上で詳しく載せておく大切さを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/apac/news-releases/agodas-ai-assistant-brings-travel-planning-and-booking-into-one-conversation-302934130.html",
+          "label": "prnewswire.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-180",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Airbnb共同創業者「ホテル流通をより競争的にする」　ExpediaやBooking.comに対抗してホテル掲載を拡大（ロンドンの投資会議、11/11報道）",
+      "body": "・The Caterer（11/11）によると、Airbnb共同創業者のネイサン・ブレチャージク氏は、ロンドンの投資会議で「より良い価格で、ホテルの流通をより競争的にできる」と話した。ホテルを載せないと客がBooking.comやExpediaに流れるため、自社の中にとどめたいという。\n・Airbnbの7〜9月期決算（11/5）では、60超の都市で数千のブティック・独立系ホテルを掲載。ホテルは泊数のまだ1桁%だが、最初の予約がホテルだった客の約35%が後で民泊も予約しているという。カスタマーサービスの約4割はAIで対応している。",
+      "note": "独立系ホテルにとって、Airbnbが新しい販売先になりつつある。若い層や海外客に強いチャネルとして、OTAの販売先の分け方を話す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.thecaterer.com/news/airbnb-to-challenge-otas-by-making-hotel-distribution-more-competitive",
+          "label": "thecaterer.com"
+        },
+        {
+          "url": "https://news.airbnb.com/airbnb-q3-2026-financial-results",
+          "label": "news.airbnb.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-181",
+      "date": "2026-11-12",
+      "dateLabel": "11/12（木）",
+      "weekday": "木",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Trip.com",
+      "categoryLabel": "Trip.com",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Trip.com韓国の「11.11メガセール」（11/11〜14）、初日にアクセスが集中し特価が早期完売　ソウル＝東京片道1,100ウォン、東京・大阪のホテルも1万9,000ウォン特価",
+      "body": "・国際ニュース（韓国、11/11）によると、11日11時から特価を出し、ソウル＝済州往復とソウル＝東京片道の航空券が1,100ウォン、大阪・福岡などの片道が1万1,000ウォンだった。アプリの接続が遅れ、特価はすぐに売り切れた。\n・ホテルは新羅ステイ、インスパイア・リゾート、東京・大阪のヴィラフォンテーヌなどが1万9,000ウォンで限定販売。14日までフライトデー・ホテルデーなどが続き、毎朝9時に最大80%割引のクーポンを先着で配る。",
+      "note": "韓国のTrip.comの大型セールで、日本行きの航空券とホテルが目玉になっている。ホテルとは、韓国市場向けセールへの限定在庫の出し方を話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3748657",
+          "label": "gukjenews.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-284",
       "date": "2026-11-11",
