@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-11",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,658 @@
     }
   ],
   "counts": {
-    "items": 320,
-    "dates": 43,
-    "industry": 212,
-    "ota": 108,
-    "industryDates": 38,
-    "otaDates": 38,
+    "items": 343,
+    "dates": 46,
+    "industry": 224,
+    "ota": 119,
+    "industryDates": 41,
+    "otaDates": 41,
     "themes": {
-      "海外OTA": 98,
-      "国内OTA・旅行会社": 43,
-      "新規開業ホテル": 44,
-      "新規フライト情報": 85
+      "海外OTA": 108,
+      "国内OTA・旅行会社": 46,
+      "新規開業ホテル": 48,
+      "新規フライト情報": 91
     }
   },
   "items": [
+    {
+      "id": "industry-284",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [],
+      "highlight": false,
+      "headline": "ANA、羽田＝ミラノ線の冬ダイヤ期間中の毎日運航化を取りやめ、週3往復（羽田発は月・水・土、B787-9）のまま運航",
+      "body": "・トライシー（11/10）によると、ANAは冬スケジュール期間中（〜2027/3/27）に羽田＝ミラノを毎日運航とする計画を取りやめた。現在の週3往復を維持する。\n・ダイヤはNH207 羽田21:40発→ミラノ（マルペンサ）04:50着（翌日、月・水・土）、NH208 ミラノ10:20発→羽田07:20着（翌日、火・木・日）。機材はボーイング787-9。\n・ANAホールディングスは10月、新ビジネスクラス「THE Room FX」を載せた787-9の早期受領に向け、ボーイングと調整を続けているとしていた。",
+      "note": "羽田＝ミラノは週3往復のままなので、イタリア発の訪日は直行便の席が増えない。欧州客は乗り継ぎ便の利用も多いため、ホテルとは国別の予約の動きを見ながら欧州向けの販促を続けるかを話す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261110387617/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20260819379495/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-285",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "森トラスト、箱根強羅に「WAKAN箱根強羅 by ラフォーレ」（34室・オールインクルーシブ）と「APARTHOTEL リルト 箱根強羅」（18室）を11/10に同時開業　アコーの「箱根 紅庵 ハンドリトゥン・コレクション」（15室）は2027年1〜3月に開業へ",
+      "body": "・TMSによると、森トラスト・ホテルズ＆リゾーツの2ホテルは、2025年10月に取得した「箱根強羅温泉 ゆとりろ庵」「ゆとりろ庵ANNEX」のリブランド。11/10に同時開業した。\n・WAKAN（34室）は食事・飲み物・貸切露天風呂を料金に含むオールインクルーシブ。開業記念プランは1名16,623円から（2名1室）。リルト（18室）は約48㎡・全室キッチン付きで4〜6名向け、1名4,905円から（6名1室）。いずれも宿泊は2027年2/28まで。\n・アコーのブティックブランド「Handwritten Collection」は日本初進出。「箱根 紅庵 ハンドリトゥン・コレクション」（旧箱根ごうら荘、全15室・20歳以上限定、客室33〜64㎡、露天風呂付きが中心）を2027年第1四半期（1〜3月）に強羅で開業する（トライシー11/11・PR TIMES 11/5）。強羅駅から徒歩約5分。\n・このほか、門司港の旧JR九州本社ビルを97室のホテルに再生する計画も発表された。2030年1月開業予定、2028年6月着工。企画・運営はStaple、代表は日鉄興和不動産。JR門司港駅から徒歩約1分（トラベルボイス・PR TIMES）。",
+      "note": "箱根では家族・グループ向けの大部屋型と、料金に全部込みの宿が増えている。多人数で泊まれる部屋タイプやオールインクルーシブのプランをTrip.comに分かりやすく載せると、訪日のグループ客にも届きやすいと提案できる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://tms-media.jp/posts/95231/",
+          "label": "tms-media.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001870.000006521.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261111387252/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001150.000052177.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261110-160825",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-168",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.com、インドでWhatsAppを予約チャネルに。次の候補にLINE・Kakao・WeChatを挙げる（APAC責任者が11/4に言及）",
+      "body": "・Booking.comのアジア太平洋責任者ローラ・ホールズワース氏によると、インドで初めてWhatsAppを予約チャネルとして導入し、初期結果は「想定どおり」（数字の公表なし）。\n・次の候補は韓国Kakao、中国WeChat、LINEで、規模に見合うプラットフォームに限って展開する方針。開始日や、チャット内決済かアプリへの誘導かは未公表。",
+      "note": "日本（LINE）での開始は未確認。Booking.comは9/28以降、ホテルのシステムに渡す予約から宿泊者の電話番号を外しており（既報）、ホテル側はWhatsApp・LINEでのゲスト連絡がしにくい一方、OTA側はメッセージアプリ内に入ってくる構図。直販のLINE予約・決済導線の整備を話題にできる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.hospitality.today/article/booking-com-now-takes-bookings-on-whatsapp",
+          "label": "hospitality.today"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-169",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.com CEO「ジェット燃料高が旅行需要に影響、欧州・アジアで軟化」（BBC、11/9）",
+      "body": "・グレン・フォーゲルCEOがBBCのインタビューで、原油高による航空券値上がりが旅行需要の重しになり、欧州・アジアを含め一部で軟化が見られると発言した。\n・7〜9月期は国内旅行が高い一桁％の伸びで、国際旅行（低〜中一桁％）を上回った。10〜12月の見通しは慎重。",
+      "note": "日本発の燃油サーチャージも11月発券分から上がっており（ANA欧米62,000円・片道）、海外旅行より国内旅行が強い流れが続く可能性。ホテルとは国内客向けの販促・露出強化の話につなげやすい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.bbc.com/audio/play/p0plv4hs",
+          "label": "bbc.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-170",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Airbnb Japan中川代表：7〜9月の日本人利用件数は約20%増、新規予約者は約35%増（日経、11/10）",
+      "body": "・日経のインタビューで、Airbnb Japanの中川晋太郎代表（2月就任）が、2026年7〜9月の日本人の利用件数が前年同期比約20%増、新規予約者が約35%増と説明した。\n・民泊規制の強化については「網が広く、まじめな事業者にも制約がかかる」との趣旨で発言。記事の残りは会員限定で未確認。",
+      "note": "Airbnbは国内旅行需要の開拓とホテル掲載を進めており（既報）、国内客の取り合いで競合度が上がる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC049IS0U6A101C2000000/",
+          "label": "nikkei.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-171",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking.com、ブラックフライデーを11/19〜12/2に実施（ニュージーランド向け発表、対象宿泊は最大40%オフ）",
+      "body": "・ニュージーランド向けの発表では、11/11〜18にGenius会員向け航空券の先行割引、11/19〜12/2が本番。\n・対象宿泊は最大40%オフ（宿泊期間は2027/12/31まで）、レンタカー最大25%、アクティビティ最大20%、空港送迎15%オフ。日本向けの日程・条件は未発表（2025年は11/20〜12/3）。",
+      "note": "11.11セール（11/9〜16、既報）に続く参加依頼が来る可能性があり、割引の重なりとパリティへの影響を確認しておきたい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://insidetourism.com/2026/11/10/booking-com-goes-big-on-black-friday/",
+          "label": "insidetourism.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-172",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Trip.com、「A Gift for You POP-UP」を渋谷モディ店頭プラザで11/10〜15に開催　旅の相談会とホテル18軒の宿泊券などが当たるガチャ",
+      "body": "・期間は11/10〜15、入場無料。営業は10時から（11/10は12:30から）。会場は渋谷モディ店頭プラザ（渋谷区神南1-21-3）。\n・旅行コンシェルジュによる旅程相談、AI旅行アシスタント「TripGenie」の体験、「Trip.Best」の案内を実施。キャセイパシフィック、スターラックス、エバー航空などが日替わりで登場する。\n・ヒルトン東京お台場、軽井沢プリンスホテル ウエスト、グランドニッコー東京ベイ 舞浜などホテル18軒の宿泊券やレジャー施設の入場券が当たるガチャを用意。2027年に行きたい旅先をカードに書いてツリーに飾り、アプリのダウンロードと公式Instagramのフォローで参加できる。\n・会場ではデジタル形式の「Trip.comギフトカード」を紹介し、5,000円以上の購入者にオリジナルノベルティを進呈。ギフトカード1件の販売ごとに100円を養護施設「クリスマスビレッジ」へ寄付する。同社調査（20〜50代500人）では「今年のクリスマスに旅行を贈りたい」が53%。",
+      "note": "Trip.comの国内向け対面施策。ホテルには宿泊券の協賛や、ギフトカード経由の予約が自施設にどう届くかを確認する入口になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261110387205/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000069.000159353.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-286",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "アパホテル〈羽田空港 大鳥居駅前〉212室を計画、2028年夏ごろ開業目標（11/10発表）",
+      "body": "・アパグループが大田区羽田1丁目に用地を取得。京急空港線・大鳥居駅から徒歩2分、9階建て212室。\n・近くのアパホテル〈羽田 穴守稲荷駅前〉（160室）の好調を受け、インバウンドとビジネス需要を狙う。大田区内の自社ブランドは9棟・1,714室の予定になる。",
+      "note": "羽田周辺の供給がさらに増える（EN HOTEL Tokyo Kamata 12/1開業も既報）。空港エリアの競合状況の材料に。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000897.000018265.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-287",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規"
+      ],
+      "highlight": false,
+      "headline": "ベトナム航空、成田空港会社（NAA）と新規路線開設に向けて覚書を締結（11/9）　長崎県・島根県とも覚書",
+      "body": "・ベトナム航空が成田国際空港会社と、成田での新規路線開設や旅客・貨物需要の拡大に向けた覚書を締結した（Aviation Wire）。\n・長崎県（チャーター便・将来の定期便）、島根県（チャーター便の拡充）とも覚書を結んだ。対象期間は2026〜2027年。具体的な路線・便数は未発表。",
+      "note": "ANA×ベトナム航空の共同事業合意（11/10既掲）とあわせ、ベトナム市場の動きとして押さえる。すぐに便が増える発表ではない。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/354161",
+          "label": "aviationwire.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-288",
+      "date": "2026-11-11",
+      "dateLabel": "11/11（水）",
+      "weekday": "水",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "日本旅行「首都圏ラグジュアリーホテル割引」5,000円引き、近畿日本ツーリスト「ほな、大阪行こか」第三弾（1人最大3,000円引き）",
+      "body": "・日本旅行：東京・横浜の対象ラグジュアリーホテルが、1回の旅行につき5,000円引き（12/30宿泊まで、予約は12/24まで）。\n・近畿日本ツーリスト：大阪府内の宿が1人最大3,000円引き（12/1〜2027/3/31宿泊、12/26〜1/2を除く、11/9申込開始、上限で終了）。\n・いずれもまとめサイト（11/10）の掲載情報で、詳細は各社公式で確認が必要。",
+      "note": "東京の高単価ホテルに旅行会社の割引が付いている点は参考になる。案内前に公式の対象施設・条件を確認したい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://touristjapan.jp/2026/11/10/travel-news-20261110/",
+          "label": "touristjapan.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-173",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "Relux、10/28からプランの掲載先に「ヨギオテ」を追加。国内向けプランにも「ヨギオテ」「海外販売」のチェックが自動で入り、海外販売の対象に",
+      "body": "・宿泊業向けブログ「川嶋Blog」（11/9）によると、従来の「グローバル同意・不同意」が廃止され、掲載先を選ぶ方式に変更された。\n・「国内販売（Relux）」を設定していた既存プランに「ヨギオテ」と「海外販売（海外向けサイト）」のチェックが追加され、販売対象になった。販売停止中のプランにも適用される（再開しない限り販売されない）。\n・DPプラン、Relux会員限定、Pontaパス会員限定プランは対象外。「海外販売」にはヨギオテを含む海外向けサイトが含まれる。\n・同ブログの試算では、Relux経由の費用は販売手数料12％＋事前決済手数料2％＋サイトコントローラー接続費月5,500円（税込）。Relux公式の発表文は未確認。",
+      "note": "Relux（ヨギオテ傘下）を使うホテルには、国内限定のつもりのプラン（会員向け・食事条件付きなど）が韓国ヨギオテや海外向けサイトに出ていないか、掲載先設定の確認を勧める。国内向け料金が海外チャネルに流れると海外OTA間の価格差（SSDR）やパリティに響くため、Trip.comとの料金比較で差が出たときの確認ポイントになる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://kawashimablog.com/?p=65767",
+          "label": "kawashimablog.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-174",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Expedia、2026年1〜9月に3社を計6.76億ドルで買収（Tiqets・CarTrawler・Layla）しB2Bを強化。Meta Museからの米国ホテル予約も開始",
+      "body": "・Skift（11/9）によると、Q3の財務書類で2026年1〜9月の買収額は6.76億ドル。B2Bが2件（アトラクション予約のTiqets、レンタカー・地上交通のCarTrawler）、B2Cが1件（AI旅行プランナーのLayla）で、2015年以来の活発な買収。\n・Gorin CEOは、航空会社・銀行・ポイントプログラム・旅行会社が自社の旅行商品を作るためのワンストップ化を目指し、B2B投資を続けると説明した。\n・別記事では、Meta MuseからExpediaの米国ホテルを検索・予約できるようになった（事前決済料金のみ、変更・取消はExpediaのサポート経由）。ExpediaはAI経由の流入はまだ大きくないとしている。",
+      "note": "Expediaは他社サイト向けのB2B配信を拡大中。ホテルにはExpedia B2B経由でどのサイトにどの料金が出ているかを確認する論点として使える。Muse連携は米国のみで、日本での提供は未確認。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/09/expedias-676-million-in-deals-points-to-more-b2b-buying/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://skift.com/2026/11/09/expedia-goes-live-on-muse-but-its-ai-wins-are-inside-its-own-apps/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-289",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [],
+      "highlight": false,
+      "headline": "ANAとベトナム航空、日本＝ベトナム路線の共同事業（ジョイントベンチャー）に向け基本合意（11/9）",
+      "body": "・ANAとベトナム航空は11/9、日本とベトナムを結ぶ路線での共同事業に向けた基本合意書を交わした。従来のコードシェア・マイレージ提携から進め、ダイヤ・運賃の共同調整、両社便を組み合わせる共通運賃、両国国内線や第三国への乗り継ぎ、空港・マイレージの連携を検討する。\n・開始には独占禁止法の適用除外認可が前提で、開始時期・対象路線・便数は未定。ANAにとってはスターアライアンス以外の会社との共同事業は初めて。両社は2016年から提携している（ANAホールディングスがベトナム航空株約8.8%を保有）。\n・ベトナム航空CEOは、今回の協力がネットワーク拡大の機会になるとの考えを示した。",
+      "note": "すぐに座席が増える話ではないが、ベトナム発の訪日（東京着）需要の中期的な追い風材料。ベトナム市場向けの販促を考えるホテルとの話題に。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261109387507/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/354113",
+          "label": "aviationwire.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-175",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Booking Holdings傘下のAIアシスタント「Lola」が航空券予約に対応、1億ドルの投資計画",
+      "body": "・PhocusWireおよびトラベルボイス（11/9、フォーカスワイヤ外電）によると、Lolaのアプリ内で航空券の検索から予約まで完結できるようになった（Duffel経由）。座席指定や手荷物の追加も画面内で済ませられる。\n・Booking Holdingsは、製品・市場の状況を条件にLolaへ1億ドル（約158億円）を投じる計画。別の旅行AI「Vayo」にも1億ドルの投資を計画している（既報）。創業者はKAYAK共同創業者。",
+      "note": "Booking HDのAI施策の一つ。日本での提供やホテル側への影響は未確認で、参考情報。AIが候補を絞る流れでは、ホテルの写真・設備・料金が正しく読まれることが大切になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/startups/bookings-lola-gets-flight-booking-capabilities-100-million-dollar-planned-investment",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261110-160813",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-176",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agoda、プレミアムホテルの在庫が4年で倍増と発表（11/9）",
+      "body": "・5つ星の検索上位はバンコク、バリ、クアラルンプール。韓国の旅行者はバンコクとバリ、シンガポールの旅行者はクアラルンプールへの関心が高い。\n・カペラ・ホテル・グループやシンガポールのマリーナベイ・サンズとの配信提携に続く動き。日本の数値は示されていない。",
+      "note": "Agodaが高級ホテルの獲得を強めている競合動向として、ラグジュアリーホテルとの打合せで触れられる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.rustourismnews.com/2026/11/09/agoda-doubles-premium-hotel-inventory-as-asian-luxury-travel-evolves/",
+          "label": "rustourismnews.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-290",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "BASE LAYER HOTEL、11/10に神戸三宮（82室）を開業、12/28に六本木（64室）、2027年1/9に名古屋栄UNION（86室）、2/1に長崎（140室）　ダイワロイネットホテル静岡駅前は2027/4/12、スマイルホテル大宮西口は12/1",
+      "body": "・霞ヶ関キャピタル系FHG HOTELSの「BASE LAYER HOTEL」が11/10、神戸三宮（82室・11タイプ）を開業した。サウナやミュージックバーを備えるカルチャー型のビジネスホテル。続く開業は六本木（12/28、64室・港区六本木7丁目）、名古屋栄UNION（2027/1/9、86室）、長崎（2027/2/1、140室）で、6拠点684室になる。\n・メトロエンジンリサーチ集計（11/9時点）では、六本木の半径1km圏で販売中の施設は25軒5,196室で、新ホテルの追加は約1.2%。最安プランは神戸・六本木・名古屋栄で2万〜2.3万円台（2名1室・税込）。六本木は圏内で中位の価格帯（WALK NEWS／HotelBank）。\n・ダイワロイネットホテル静岡駅前（224室）は2027年4/12開業、予約は12/1開始。JR静岡駅北口徒歩約5分、サウナ付き大浴場あり。スマイルホテル大宮西口（157室・全室禁煙）は12/1にリブランド開業。\n・このほか、スペースマーケットが錦糸町駅徒歩約4〜5分に貸切型「SpemaHOTEL 錦糸町」（2室、各最大5名、58㎡・キッチン付き）を展開。東京建物はペット同伴型「レジーナリゾート那須」（32室、2028年末頃）に着工した（Innippon）。",
+      "note": "六本木に12/28開業の64室は年末年始の繁忙期に重なる。周辺ホテルとは、新規開業の価格帯（2万円台）との比較や、年末年始の料金設定・在庫の出し方を話す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.walknews.com/1422489/",
+          "label": "walknews.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000060.000147007.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/2026/11/09/",
+          "label": "innippon.news"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-291",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "ZIPAIR、成田＝ソウル（仁川）を12/1〜2027年1/3に増便、12/1〜12/24の水・日と12/25〜1/3の毎日で計17往復　11/27〜12/21の臨時便16往復とは別枠",
+      "body": "・ZIPAIRは11/5、「ソウル線の旺盛な需要に応える」として、成田＝仁川を12/1〜2027年1/3に増便すると発表した（トライシー11/6）。12/1〜12/24は水・日、12/25〜1/3は毎日で、計17往復。\n・増便分のダイヤはZG43 成田10:55発→仁川13:35着、ZG44 仁川17:15発→成田19:40着。運賃はStandard 11,000円〜、ZIP Full-Flat 25,000円〜（成田発片道）。燃油サーチャージなし、7kgまでの機内持込手荷物込み。航空券は11/5午後3時から販売中。\n・増便分は機内インターネット・機内販売・エンタメがすべて利用可。11/27〜12/21の臨時便16往復（別掲）で使う新造機JA852Jはネット不可。10/11既報の12月期間増便（12/1〜24の一部曜日）とは日程・曜日が異なる。",
+      "note": "成田＝ソウルは臨時便と増便で年末年始まで席が大きく増える。成田・東京東側のホテルとは、韓国客の年末年始の予約の入り方と、成田着が夕方〜夜になる便に合わせたチェックインや食事の案内を話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261106386967/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.zipair.net/ja/notification/446",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://sky-budget.com/2026/11/05/zipair-increase-nrt-icn-nov2026/",
+          "label": "sky-budget.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-292",
+      "date": "2026-11-10",
+      "dateLabel": "11/10（火）",
+      "weekday": "火",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "エアロK、広島＝清州を11/16〜12/21に臨時増便し毎日運航（週4→週7往復）",
+      "body": "・Aviation Wire（11/9）によると、韓国LCCのエアロKは清州＝広島線を現地時間11/16から12/21まで臨時増便する。通常の週4往復（火・木・土・日）に月・水・金を足し、期間中は週7往復の毎日運航になる。\n・臨時増便日のダイヤは、RF386 清州14:15発→広島15:35着、RF385 広島16:45発→清州18:10着。12/22以降の臨時増便は未定。",
+      "note": "広島の韓国線が年末にかけて毎日になる。広島・中国地方のホテルとは、平日を含む韓国客の予約の入り方を見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/354100",
+          "label": "aviationwire.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "ota-177",
+      "date": "2026-11-09",
+      "dateLabel": "11/9（月）",
+      "weekday": "月",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Trip.com、Live Nationとコンサート旅行パッケージを拡大",
+      "body": "・Marketing-Interactiveによると、コンサート需要が旅行を後押しするなか、Trip.comとLive Nationは公演後の需要も見据えて旅行パッケージの取り組みを拡大する。",
+      "note": "ライブ入場券と宿泊・交通を組み合わせた需要の一例。東京の大型公演前後は、周辺ホテルの週末・連泊の動きを見る材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.marketing-interactive.com/as-concerts-drive-travel-trip-com-and-live-nation-look-beyond-the-encore",
+          "label": "marketing-interactive.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-178",
+      "date": "2026-11-09",
+      "dateLabel": "11/9（月）",
+      "weekday": "月",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "外部AI経由の予約はまだ小さい　Booking.comはLLM経由が1%未満、Expedia CEOも同様の見方",
+      "body": "・Travel Weeklyによると、Booking Holdingsは自社のAIアシスタントの利用は広がっているとする一方、ChatGPTなど外部の大規模言語モデル（LLM）経由の予約は1%未満にとどまると説明した。\n・CNBC（11/5）の取材で、Expediaの経営陣もAIエージェント経由の予約の習慣はまだ小さいとの認識を示している。",
+      "note": "「AI経由の予約が本格化している」との印象とは数字がまだ開いている。ホテルとの話では、自社AIと外部AIを分けて、いまの予約量は限定的と伝えたほうがよい。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelweekly.com/Travel-News/Travel-Technology/booking-holdings-sees-strong-adoption-of-its-ai-assistants",
+          "label": "travelweekly.com"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/11/05/expedia-ai-agents-booking-habits.html",
+          "label": "cnbc.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-293",
+      "date": "2026-11-09",
+      "dateLabel": "11/9（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "クラブツーリズム、11/7にホームページを再開（一部ページを除く）　同じ・似たパスワードの利用者には変更を推奨",
+      "body": "・目利き旅（11/8）によると、クラブツーリズムは11/7付「お詫びとお知らせ（第2信）」で、ホームページを一部のページを除いて再開した。11/2既報の不正アクセス（会員情報約432万件が流出した可能性）を受け、サイトは停止していた。\n・会員の新しい手続きは不要。ほかのサービスと同じ、または似たパスワードを使っている人には変更をすすめている。",
+      "note": "情報流出のあとの再開。取引先ホテルには、なりすましメールや不審な予約変更の連絡が増えないか、注意を促す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://touristjapan.jp/2026/11/08/travel-news-20261108/",
+          "label": "touristjapan.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "industry-294",
+      "date": "2026-11-09",
+      "dateLabel": "11/9（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "西鉄ホテルズ、アパートメントホテル新ブランド「CoATT」を2029年に両国（36室）・なんば（69室）・すすきの（63室）で開業へ　コートヤード・バイ・マリオット新横浜駅（203室）は12/18、VAYS 東京 STATION EAST（16室）は12/1",
+      "body": "・トライシー（11/7）によると、西鉄ホテルズはアパートメントホテル事業に参入し、新ブランド「CoATT（コアット）」を立ち上げる。家族・グループの多人数・中長期滞在向けで、4〜6名利用を中心にリビング・ダイニング、プロジェクター、ミニキッチン、洗濯乾燥機を備える。セルフチェックインと完全キャッシュレスに加え、スタッフにつながるサポートも置く。2029年に東京・両国36室、大阪・なんば69室、札幌・すすきの63室で開業予定。\n・コートヤード・バイ・マリオット新横浜駅は12/18に開業する（全203室、旧ホテルアソシア新横浜）。\n・12/1にはVAYS 東京 STATION EAST（全16室・全室36㎡・最大4名）が開業予定。EN HOTEL Tokyo Kamata（89室、12/1）は既報。",
+      "note": "東京東側で4〜6名向けの部屋が増え続けている。担当ホテルとは、家族・グループ客向けにコネクティングや多人数部屋をどう見せるか、洗濯機・キッチンなど長期滞在向け設備の訴求を話す。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261107387127/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.travelnews.co.jp/",
+          "label": "travelnews.co.jp"
+        },
+        {
+          "url": "https://hotetoku.com/columns/tokyo-kanto-new-hotels-2026-2027",
+          "label": "hotetoku.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-295",
+      "date": "2026-11-09",
+      "dateLabel": "11/9（月）",
+      "weekday": "月",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "ZIPAIR、成田＝ソウル（仁川）で11/27〜12/21に臨時便、月・金・土・日の週4往復・計16往復　10/25からの1日2往復に上乗せ",
+      "body": "・ZIPAIR Tokyoは11/5、成田＝仁川線で11/27（金）〜12/21（月）に臨時便を運航すると発表した（トライシー11/8）。月・金・土・日に1往復ずつ、計16往復。10/25から運航中の1日2往復に上乗せする。\n・成田発ZG685は9:55発・仁川12:35着、仁川発ZG686は15:00発・成田17:25着。運賃はStandard片道11,000円から、ZIP Full-Flat片道25,000円からで燃油サーチャージなし。新造機JA852Jを使う予定で、認証の遅れにより機内インターネットは使えない見込み。\n・12/1〜2027/1/3の期間増便（計17往復）とは別枠。",
+      "note": "韓国からの週末客がさらに増える。成田着17:25の便は夕方チェックイン、仁川行き9:55発は早朝チェックアウトになるので、週末の韓国客向けに朝食の時間や荷物預かりを合わせる話ができる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261108387289/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.zipair.net/ja/notification/445",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://www.jwing.net/news/115077",
+          "label": "jwing.net"
+        }
+      ],
+      "companies": false
+    },
     {
       "id": "industry-282",
       "date": "2026-11-08",
