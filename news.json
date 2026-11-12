@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,179 @@
     }
   ],
   "counts": {
-    "items": 351,
-    "dates": 47,
-    "industry": 229,
-    "ota": 122,
-    "industryDates": 42,
-    "otaDates": 42,
+    "items": 356,
+    "dates": 48,
+    "industry": 233,
+    "ota": 123,
+    "industryDates": 43,
+    "otaDates": 43,
     "themes": {
-      "海外OTA": 111,
-      "国内OTA・旅行会社": 47,
-      "新規開業ホテル": 49,
-      "新規フライト情報": 94
+      "海外OTA": 112,
+      "国内OTA・旅行会社": 48,
+      "新規開業ホテル": 51,
+      "新規フライト情報": 95
     }
   },
   "items": [
+    {
+      "id": "industry-301",
+      "date": "2026-11-13",
+      "dateLabel": "11/13（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規"
+      ],
+      "highlight": false,
+      "headline": "ZIPAIR、成田＝トロント線を2027年3/2に開設（日系初の直行便）　3/2〜27は火・木・土の週3往復、3/29から月曜を加え週4往復（B787-8、290席）、片道Standard 4万5,838円から",
+      "body": "・Aviation Wire（11/12）によると、就航当初の便はZG20 成田11:10発→トロント09:05着、ZG19 トロント11:05発→成田翌日14:30着。11/12正午から2027年10/30搭乗分まで販売を始めた。\n・クアラルンプール線（10/20開設）に続く11路線目。ZIPAIRはカナダからの訪日需要も増えているとしている。\n・ZIP Full-Flatは片道16万4,050円から。燃油サーチャージはなく、7kgまでの機内持ち込み手荷物を含む。",
+      "note": "カナダから成田に午後に着く便なので、成田や都心のホテルとは北米客向けの連泊プランや、カナダ市場での掲載強化を話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/354362",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.zipair.net/ja/notification/447",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261112-160847",
+          "label": "travelvoice.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-302",
+      "date": "2026-11-13",
+      "dateLabel": "11/13（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "星野リゾート、香川県初進出　高松競輪場の余剰地に新ホテル（78室・地上4階）を11月着工、2028年秋開業予定　アパホテル〈小倉駅前新幹線口〉（187室）も11/12起工、2028年11月開業予定",
+      "body": "・星野リゾートの「高松・新ホテル計画」は、高松競輪場の再整備で生まれた余剰地をチャリ・ロトが整備し、星野リゾートが運営を受託する。四国では「OMO7高知」に続く2軒目で、ブランドは決定次第発表する（星野リゾート・高松市11/6、NHK 11/13）。\n・アパホテル〈小倉駅前新幹線口〉は旧ホテル（96室）を建て替え、隣地を取り込んで187室・地上13階に増やす。小倉駅から徒歩2分（アパホテル11/12）。",
+      "note": "地方都市でも大手の新規供給が続く。担当外エリアの話題だが、星野・アパの開業計画は他社ホテルとの会話で供給の見通しとして使える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000002694.000033064.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261112de75095",
+          "label": "news.web.nhk"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000898.000018265.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-303",
+      "date": "2026-11-13",
+      "dateLabel": "11/13（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "熊本のスマートホテル「SOVA」が白川・魚屋町の2店舗を11/10に開業（熊本市内8店舗に）　福岡・祇園町に「TABIGOYA LIFE&TRIP HAKATA GION」（6室）が11/12開業",
+      "body": "・SIMPLEの「HOTEL SOVA」は積水ハウスが設計・施工し、全室にReFaのドライヤーやシモンズ製マットレスを備え、スマホでチェックインする。熊本白川は全室45㎡超で最大6名。今後は鹿児島・宮崎にも進出する（PR TIMES 11/12）。\n・TABIGOYA HAKATA GIONは賃貸マンションの一部を転用した全6室で、全室にミニキッチンとドラム式洗濯乾燥機を置く。キャナルシティ博多まで徒歩3分。予約は公式サイトのほか楽天トラベル・じゃらん・Booking.com・Agoda・Expedia・Airbnbで順次始める（Next STAY）。",
+      "note": "グループ・連泊向けの広い客室や住居転用の小規模ホテルが増えている。Trip.comでは家族・グループ向けの検索で見せやすい形態なので、新規掲載の候補として押さえておける。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000007.000183539.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000018.000178663.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-304",
+      "date": "2026-11-13",
+      "dateLabel": "11/13（金）",
+      "weekday": "金",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "KNT-CT、2027年3月期中間期は売上高1,439億9,100万円（▲1.7%）、営業利益10億9,200万円（▲63.3%）　通期営業利益予想を62億円→50億円に下方修正、日中関係悪化による訪日減も理由に",
+      "body": "・前年の大阪・関西万博関連の反動や中東情勢の影響で減収となった。海外旅行は欧州・北米・アジア方面、国内はバス旅行などが堅調だった（トラベルビジョン11/12）。\n・販管費は14億円（5.8%）増え、増加分の半分以上が人件費。システム投資は「おそらく来年がピーク」（小山社長）。\n・通期は売上高3,070億円→3,020億円、純利益60億円→50億円に修正。理由に中東情勢の長期化、国内旅行の伸び悩み、日中関係の悪化に伴う訪日中国人の減少、2027年4月の4社統合の費用を挙げた（11/10開示）。",
+      "note": "大手旅行会社も国内旅行の伸び悩みと訪日中国人の減少を業績の下押し要因に挙げている。ホテルとは、旅行会社経由の団体・パッケージが細る分をOTAの個人客でどう補うかを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-125136",
+          "label": "travelvision.jp"
+        },
+        {
+          "url": "https://japanir.jp/wp-content/uploads/2026/11/9726-20261110-01.pdf",
+          "label": "japanir.jp"
+        },
+        {
+          "url": "https://www2.jpx.co.jp/disc/97260/140120261110570490.pdf",
+          "label": "www2.jpx.co.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-182",
+      "date": "2026-11-13",
+      "dateLabel": "11/13（金）",
+      "weekday": "金",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "海外OTAの7〜9月期決算説明で、外部AIアシスタント経由の予約は「まだごく少ない」　Booking.comはLLM経由が宿泊数の1%を大きく下回り、Airbnbは自社AIエージェントを2027年上半期に開始、OpenAIは旅行AIのOdessiaを買収",
+      "body": "・PhocusWire（11/12）によると、Booking HDのCFOはLLMや個人向けAIアシスタントからの流入が宿泊数の1%を大きく下回るとしつつ、「ここ数週間で加速がみられる」と述べた。\n・AirbnbのチェスキーCEOは、MetaのMuseなどからの流入はわずかで予約はさらに少ないとし、自社のAI旅行エージェントを2027年上半期に始めると表明した。Expediaは直接連携で顧客やエージェントの行動を学んでいるとした。\n・OpenAIが会話で旅行の計画から予約までできるOdessiaを買収し、11/10にExpedia株は3.0%、Booking HDは2.1%、Airbnbは2.3%下げた（Kalkine・PYMNTS）。",
+      "note": "AI経由の予約はまだ小さいが、各社が自社アプリのAIに予約を集めようとしている。ホテルとは、AIに拾われやすい掲載情報（写真・設備・料金条件）の整備を今から進める話ができる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.phocuswire.com/news/technology/big-prospects-few-bookings-travel-execs-weigh-in-personal-ai-assistants",
+          "label": "phocuswire.com"
+        },
+        {
+          "url": "https://www.pymnts.com/transportation/travel-payments/2026/united-blocks-ai-agents-as-airbnb-and-openai-build-their-own/",
+          "label": "pymnts.com"
+        },
+        {
+          "url": "https://kalkine.ca/news/consumer/what-drove-expedia-nasdaqexpe-and-other-travel-stocks-lower-as-openai-acquired-odessia",
+          "label": "kalkine.ca"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-296",
       "date": "2026-11-12",
