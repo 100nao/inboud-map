@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,231 @@
     }
   ],
   "counts": {
-    "items": 356,
-    "dates": 48,
-    "industry": 233,
-    "ota": 123,
-    "industryDates": 43,
-    "otaDates": 43,
+    "items": 363,
+    "dates": 49,
+    "industry": 237,
+    "ota": 126,
+    "industryDates": 44,
+    "otaDates": 44,
     "themes": {
-      "海外OTA": 112,
-      "国内OTA・旅行会社": 48,
-      "新規開業ホテル": 51,
-      "新規フライト情報": 95
+      "海外OTA": 114,
+      "国内OTA・旅行会社": 50,
+      "新規開業ホテル": 53,
+      "新規フライト情報": 96
     }
   },
   "items": [
+    {
+      "id": "industry-305",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "スプリング・ジャパン、冬ダイヤの追加販売を11/13開始　成田＝ハルビン・寧波を2027年1/13〜3/27に毎日運航、成田＝天津は1/24・25〜3/27に週7往復",
+      "body": "・Aviation Wire・LCCjp（11/13）によると、追加設定は国際線3路線と国内線3路線（成田＝新千歳・函館、中部＝新千歳）で、11/13 15時から販売を始めた。\n・ハルビン線はIJ213 成田06:00発→ハルビン08:55着、IJ214 ハルビン09:55発→成田14:55着。寧波線はIJ101 成田08:20発、IJ102 寧波12:20発→成田16:20着。\n・天津線は火・木・日（成田11:00発）と月・水・金・土（成田12:10発）で時刻が異なる。同社は冬ダイヤの案内は今回で終えるとしている。",
+      "note": "中国路線の減便が続く中で、成田発着の中国3路線は1〜3月も毎日運航が続く。成田・都心のホテルとは春節前後の中国個人客の動きを話す材料にできる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/354473",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://dsk.ne.jp/news/springjapan_2026winter_20261113.html",
+          "label": "dsk.ne.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-306",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "三越伊勢丹HD、ホテル事業に参入　新宿5丁目の自社オフィス5棟を一体開発し、日本初上陸のブランドを誘致して2032年開業を目指す　リーガロイヤルホテルズは奈良市に新ホテル（99室）を2029年5月末ごろ開業予定",
+      "body": "・三越伊勢丹HDは11/13の決算説明会で、伊勢丹新宿本店近くの明治通り沿いの一角を再開発する構想を示した。外観は本店と連動させ、百貨店との相互送客や開店前・閉店後のプレミアムツアーなどで収益を広げる（Impress Watch・日経 11/13）。\n・ロイヤルホテルの奈良の新ホテルは地上5階・99室（予定）。2028年以降の新規開業予定は6件になり、ノワ・バイ・リーガ 神戸有馬（93室）は開業時期を2028年8月に変更した（PR TIMES 11/13）。",
+      "note": "新宿で百貨店と組む高級ホテルの計画は、都内のラグジュアリー帯の供給見通しとしてホテルとの会話に使える。奈良は滞在型への移行で客室が増える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.watch.impress.co.jp/docs/news/2156421.html",
+          "label": "watch.impress.co.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC136NH0T11C26A1000000/",
+          "label": "nikkei.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000002531.000016682.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-307",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "highlight": false,
+      "headline": "ナインアワーズ、蒲田のビジネスホテルをリブランドし「スマートプレイスイン東京蒲田」（91室）を2027年1/22に開業　奈良のホステル「WeBase NARA」は11/20開業、那覇の「NAPHA KWANYA」（19室）は2027年秋開業予定",
+      "body": "・スマートプレイスイン東京蒲田は個室型ホテルで、JR・東急蒲田駅と東急池上線蓮沼駅から徒歩6分。羽田空港へのアクセスもよい（ナインアワーズ）。\n・WeBase NARAは奈良市の商業施設「ミ・ナーラ」7階に入り、ドミトリー88床と個室5室で最大108名が泊まれる（PR TIMES）。\n・NAPHA KWANYAは座波商会と水星が琉球王国時代の迎賓館「天使館」跡地に開くスモールラグジュアリーホテルで、運営は両社の合弁会社（11/10発表）。",
+      "note": "蒲田は羽田の早朝・深夜便の利用者向けの供給が増えている。担当エリアの近くなので、周辺ホテルとは空港アクセスを訴求した掲載や料金の見直しを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000068.000023703.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000007.000156110.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000070.000061216.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-308",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "東武鉄道と東武トップツアーズ、「空飛ぶクルマ」のSkyDriveに出資　日光など東武沿線で離着陸場を整備し、東武トップツアーズが旅行商品化を担う",
+      "body": "・SkyDriveは東武鉄道と東武トップツアーズを引受先とする第三者割当増資を実施した（SkyDrive 11/12、トラベルボイス 11/13）。\n・日光などの観光資源を生かして離着陸場を整備し、東武トップツアーズは旅行商品や二次交通のパッケージをつくる。東武鉄道の生体認証の共通基盤の活用も検討する。\n・SkyDriveは2028年の商用サービス開始を目指している。",
+      "note": "旅行会社が二次交通まで含めた商品づくりに動いている。日光・鬼怒川のホテルとは、将来の新しい周遊商品の話題として使える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.travelvoice.jp/20261113-160852",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://skydrive.co.jp/news/72327/",
+          "label": "skydrive.co.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-183",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "エアトリ、2026年9月期は売上収益378.1億円（前年比134.5%）、営業利益50.5億円（減損等控除前、108.5%）で過去最高益　旅行事業は「成長鈍化・競争激化」",
+      "body": "・連結取扱高は1,276億円（前年比106.0%）。減損等控除後の営業利益は26.2億円（前年比84.4%）。旅行以外の事業が好調で、営業利益50億円超（減損等控除前）を目標より2期早く達成した（エアトリ 11/13）。\n・会社は「エアトリ旅行事業におけるさらなる成長鈍化・競争激化」を挙げた。\n・新しい中長期戦略「エアトリ100」で、M&Aも使って営業利益100億円（減損等控除前）を目指す。",
+      "note": "国内OTAの旅行事業は伸びが鈍り、競争が強まっている。ホテルとは、国内OTA経由の伸び悩みを海外OTA経由の訪日客でどう補うかを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.airtrip.co.jp/news/90770/",
+          "label": "airtrip.co.jp"
+        },
+        {
+          "url": "https://www.airtrip.co.jp/ir/library/report/",
+          "label": "airtrip.co.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-184",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Expedia Group、第三者のデータ基盤事業者を経由したサプライチェーン攻撃で自社システムに侵入されたと確認（11/12）　攻撃グループ「n0n」は会員データなど数億件の窃取を主張、Expediaは規模を明らかにしていない",
+      "body": "・Skift（11/12）によると、Expediaは「攻撃者が第三者のデータ基盤事業者を侵害し、その正規のアクセス権で複数の企業のシステムに入った」と説明した。すぐに封じ込めて外部の専門家と調査しており、旅行者とパートナーは引き続き安全に使えるとしている。\n・Forbes（11/13）・Cybernewsによると、n0nは35のロイヤルティ・プログラムの約8億3,000万行、旅行者プロフィール5,800万件、アカウント3億3,300万件などを盗んだと主張し、和解しなければ公開すると脅している。いずれもExpediaは認めていない。\n・WizとSentraは、かつてExpediaの委託先だったQuboleの認証情報を使った10/14〜26の攻撃を報告した。Expediaは関連を確認していない。",
+      "note": "流出の規模は未確認だが、予約確認を装ったフィッシングが増えるおそれがある。ホテルとは、Expedia経由の予約客から問い合わせがあったときの案内や、委託先のアクセス権の見直しを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/12/expedia-confirms-cyberattack-through-third-party-vendor/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.forbesmiddleeast.com/lifestyle/travel-hospitality/russian-cyberattackers-hit-expedia-nearly-a-billion-traveler-records-exposed",
+          "label": "forbesmiddleeast.com"
+        },
+        {
+          "url": "https://cybernews.com/security/expedia-data-breach-claim/",
+          "label": "cybernews.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-185",
+      "date": "2026-11-14",
+      "dateLabel": "11/14（土）",
+      "weekday": "土",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Trip.com Group、プロダクトと開発を一体にした「DRI（直接責任者）」型の組織を全社に広げると社内で発表　Booking.comのAPAC責任者は「民泊・アパートなど代替宿泊が世界の予約の約37%」",
+      "body": "・ChinaTravelNews（11/13）によると、Trip.comは先週の全社会議で、プロダクト・運営・フロントエンド・バックエンド・アルゴリズム・テストの社員でプロジェクト単位のチームをつくり、DRIが最終決定を持つ形にすると発表した。宿泊・航空・コンテンツの一部部門で導入が始まっている。正式な実施指針はまだ出ていない。\n・Booking.comのLaura Houldsworth APAC責任者はETTravelWorld（11/13）の取材で、代替宿泊が世界の予約の約37%を占めると述べ、AIで旅の着想段階から関わり、宿・航空・送迎・体験を一つにつなぐ「Connected Trip」を進めるとした。",
+      "note": "Trip.comは組織を小さなチームにまとめ、開発の速さを上げようとしている。Booking.comは民泊・アパート系の比重が大きい。ホテルとは、グループ・連泊客を取り合う競合として民泊の動きを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.chinatravelnews.com/article/191006/",
+          "label": "chinatravelnews.com"
+        },
+        {
+          "url": "https://travel.economictimes.indiatimes.com/news/technology/booking-com-looks-to-ai-and-connected-travel-to-deepen-india-play-as-consumer-preferences-evolve/135795512",
+          "label": "travel.economictimes.indiatimes.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-301",
       "date": "2026-11-13",
