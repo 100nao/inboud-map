@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,174 @@
     }
   ],
   "counts": {
-    "items": 363,
-    "dates": 49,
-    "industry": 237,
-    "ota": 126,
-    "industryDates": 44,
-    "otaDates": 44,
+    "items": 369,
+    "dates": 50,
+    "industry": 240,
+    "ota": 129,
+    "industryDates": 45,
+    "otaDates": 45,
     "themes": {
-      "海外OTA": 114,
-      "国内OTA・旅行会社": 50,
+      "海外OTA": 117,
+      "国内OTA・旅行会社": 51,
       "新規開業ホテル": 53,
-      "新規フライト情報": 96
+      "新規フライト情報": 98
     }
   },
   "items": [
+    {
+      "id": "industry-309",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "highlight": false,
+      "headline": "セブパシフィック航空、成田＝セブ線を12/9〜2027年1/29に期間増便　月・水・金の週3往復を足して週10往復（A320neo）",
+      "body": "・トライシー（11/14）によると、増便分は5J5065 成田21:00発→セブ01:35着（翌日）、5J5064 セブ14:15発→成田20:00着。\n・同路線はほかにフィリピン航空とユナイテッド航空が運航している。",
+      "note": "年末年始にかけて成田＝セブの席が増える。夜に成田へ着く便なので、成田・都心のホテルとはフィリピン客の到着日泊や年末年始の連泊プランを話す材料になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261114387201/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-310",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "減便"
+      ],
+      "highlight": false,
+      "headline": "マレーシア航空、福岡＝クアラルンプール線を2027年4/14〜8/31に期間減便し週5往復に（12/1からの毎日運航化は予定どおり）",
+      "body": "・トライシー（11/14）によると、期間中は福岡発が月・火・木・土・日、クアラルンプール発が月・水・金・土・日の週5往復。夏ダイヤのその他の期間は1日1往復。\n・MH57 福岡10:00発→クアラルンプール15:45着、MH56 クアラルンプール23:45発→福岡07:05着（翌日）。同路線はマレーシア航空だけが運航している。",
+      "note": "東京の路線ではないが、2027年春〜夏はマレーシアから九州への直行便が週2往復減る。マレーシア客の周遊ルートの話題として使える。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261114386035/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "id": "industry-311",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "highlight": false,
+      "headline": "JTB、18〜29歳の学生向けに旅行代金を最長6カ月後払いにできる「JTBの出世払い」を開始（11/12〜2027年3/20）",
+      "body": "・JTB旅カードJMB・JTB旅カードJCB GOLDの「ショッピングスキップ払い」を使い、手数料無料で支払い月を最長6カ月先に設定できる（JTB 11/12）。\n・対象はJTBが企画・実施する国内・海外の募集型企画旅行。",
+      "note": "若い層の旅行需要を後払いで取り込む動き。春休み・卒業旅行の時期に重なるので、ホテルとは学生グループ向けのプランや部屋タイプを話せる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.jtbcorp.jp/jp/newsroom/2026/11/12_jtb_shussebarai.html",
+          "label": "jtbcorp.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001661.000031978.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-186",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Agoda、一人旅の宿泊検索（2026年7〜10月）で東京が1位、バンコク・ソウル・大阪・クアラルンプールが続く　伸び率はハノイが下期＋22%で最大（11/14発表）",
+      "body": "・Agodaの発表（PR Newswire 11/14）によると、11.11（独身の日）にあわせて一人旅の宿泊検索データを集計した。\n・上位5都市は東京・バンコク・ソウル・大阪・クアラルンプール。ハノイは上位5都市以外で検索の伸びが最も大きかった。\n・数字は検索の伸びで、予約数や泊数ではない。",
+      "note": "アジアの一人旅の検索で東京が1位。シングル・ダブルの小さめの部屋や1名利用の料金をOTAでわかりやすく出すよう、東京のホテルに提案できる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/apac/news-releases/hanoi-emerges-as-2026s-fastest-growing-solo-travel-destination-agoda-reports-302938150.html",
+          "label": "prnewswire.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-187",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Klook、体験事業者向けのAIエージェント「K.ai」を公開、管理画面で在庫・予約・料金を指示どおりに変更　ExpediaはOpenAIの広告商品を試験中",
+      "body": "・Play Union（11/13）によると、K.aiは「先週の予約をまとめて」「週末の料金を10%上げて」といった指示をそのまま反映できる。年末の繁忙期に向けて世界で順に提供する。\n・Klookによると、在庫・料金の個別更新は95%速くなり、K.aiを使う事業者は使わない事業者より月間予約が3.4倍だった。\n・ExpediaのGorin CEOは7〜9月期決算説明でOpenAIの広告商品に参加していると述べた。",
+      "note": "OTAが事業者側の管理画面にもAIを入れ始めている。ホテルとは、Trip.comのエクストラネットでの料金・在庫更新の手間をどう減らすかを話す入口になる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://www.play-union.com/klook-ai-tool-merchants.html",
+          "label": "play-union.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "id": "ota-188",
+      "date": "2026-11-15",
+      "dateLabel": "11/15（日）",
+      "weekday": "日",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "highlight": false,
+      "headline": "Propellic調査：MetaのMuseなどAIエージェント経由の予約は仲介に流れやすい　航空券の57%はDuffel経由、ホテル・航空会社への直接予約は28%、Booking.com・Expediaは14%",
+      "body": "・旅行マーケティング会社Propellicの調査（eGlobal Travel Media 11/14）。利用者が特定の航空会社を指定しても、航空券の多くはAPI事業者Duffel経由で処理された。\n・ホテルで「直接予約したい」と頼んだ場合はすべてホテル直販に、ブランドを指定した場合はそのブランドに予約が入った。「一番安いもの」と頼むと、88%で表示中の最安値が選ばれた。\n・実際の会話の66%は下調べ・候補選びで止まり、支払いまでAIに任せると答えたのは36%だった。",
+      "note": "AIエージェントでは「最安値」で選ばれやすい。OTA上の料金の出し方と最安値の比較が、今後も露出に影響しうるとホテルに説明できる。",
+      "noteLabel": "実務メモ",
+      "sources": [
+        {
+          "url": "https://eglobaltravelmedia.com.au/2026/11/14/ai-travel-bookings-middlemen-still-rule-says-propellic/",
+          "label": "eglobaltravelmedia.com.au"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-305",
       "date": "2026-11-14",
