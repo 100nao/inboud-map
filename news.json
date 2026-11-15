@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,107 @@
     }
   ],
   "counts": {
-    "items": 369,
-    "dates": 50,
-    "industry": 240,
-    "ota": 129,
-    "industryDates": 45,
-    "otaDates": 45,
+    "items": 372,
+    "dates": 51,
+    "industry": 242,
+    "ota": 130,
+    "industryDates": 46,
+    "otaDates": 46,
     "themes": {
-      "海外OTA": 117,
+      "海外OTA": 118,
       "国内OTA・旅行会社": 51,
-      "新規開業ホテル": 53,
-      "新規フライト情報": 98
+      "新規開業ホテル": 54,
+      "新規フライト情報": 99
     }
   },
   "items": [
+    {
+      "date": "2026-11-16",
+      "dateLabel": "11/16（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-312",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "増便"
+      ],
+      "headline": "ターキッシュ・エアラインズ、成田＝イスタンブール線を来夏に週12〜13往復へ増やし、その後は週14往復をめざす方針　羽田は発着枠不足で増便できず、名古屋・札幌は東京・大阪の便数が十分になってから検討",
+      "body": "・トライシー（11/15）によると、シェケル会長が示した方針。現在の日本路線は成田週10往復、羽田・関西各週7往復の計週24往復。成田は週14往復の運航権を持ち、関西も増便余地があるとした。\n・日本人旅客のうちトルコが最終目的地は約20%で、残り80%はイタリア・スペイン・ブラジルなど欧州・南米・アフリカへの乗り継ぎ。\n・2027年2/2からの週12往復化は10/26に既報。今回は来夏の上積みと週14往復化の方針。",
+      "note": "成田の便が増えると、イスタンブール経由で欧州・南米からの訪日客も来やすくなる。成田・都心のホテルとは、乗り継ぎで来る欧州・南米客の到着日泊や連泊の売り方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261115388094/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-16",
+      "dateLabel": "11/16（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-313",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "headline": "JHAT、日本橋本町にレジデンス型「Premium MONday 日本橋 Ⅱ」（19室・全室45㎡以上のスイート）を2027年1/15開業　ワシントンR&Bホテル浜松南口（171室）は2027年3/10開業、コートヤード・バイ・マリオット京都駅（270室）は11/16開業",
+      "body": "・Premium MONday 日本橋 Ⅱは全室キッチン・乾燥機付き洗濯機付きで最大6名。小伝馬町駅徒歩約2分、新日本橋駅徒歩約3分。hotel MONdayグループ42施設目（JHAT発表11/13、Innippon 11/15）。\n・ワシントンR&Bホテル浜松南口はJR浜松駅南口徒歩約3分、シングル163室・ツイン8室。公式サイトの予約受付は11/24から、OTAでの販売は12月下旬開始予定（ワシントンホテル 11/13）。\n・コートヤード・バイ・マリオット京都駅は京都駅八条東口徒歩3分、JR東海ホテルズが運営（トライシー 11/15）。",
+      "note": "日本橋で6名まで泊まれるキッチン付きスイートが増える。東京駅周辺のホテルとは、家族・グループの訪日客向けに大部屋や連泊プランをどう見せるかを話せる。",
+      "sources": [
+        {
+          "url": "https://innippon.news/articles/premium-monday-nihonbashi-2-opening/",
+          "label": "innippon.news"
+        },
+        {
+          "url": "https://www.washingtonhotel.co.jp/corporation/news/242/",
+          "label": "washingtonhotel.co.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000286.000076395.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-16",
+      "dateLabel": "11/16（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-189",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🤝 B2B・卸",
+      "categoryLabel": "B2B・卸",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "アップルワールド、旅行会社向け予約手配システム「Rikisha Easy REZ!」に不正アクセス　予約情報最大58万2,024件、旅行会社最大3,542社・1万3,834名の情報が流出したおそれ、サービスとAPI予約受付を停止中（11/13発表）",
+      "body": "・アップルワールドの発表（11/13）によると、11/6夜に不正アクセスを検知。サーバーに不正プログラムが置かれ、ファイルやメールテンプレートの改ざんがあった。11/9にサービスを再停止し、11/11にはAPI経由の予約受付もすべて止めた。\n・流出したおそれがあるのは旅行者の氏名・予約内容・備考欄、旅行会社の会社名・担当者名・連絡先・請求情報など。持ち出しの有無は調査中で、悪用の被害は確認されていない。\n・原因は、開発委託先のソースコード保管場所が外から見える状態で、その中の認証情報が使われたこと（トラベルビジョン 11/15）。",
+      "note": "国内の旅行会社が海外・国内ホテルを手配するB2B経路が止まっている。取引ホテルには、この経路の予約の確認や、ホテルを装った不審なメール・請求先変更の連絡に注意するよう伝えたい。",
+      "sources": [
+        {
+          "url": "https://appleworld.co.jp/news/cp6xtywu279",
+          "label": "appleworld.co.jp"
+        },
+        {
+          "url": "https://www.travelvision.jp/news/detail/news-125159",
+          "label": "travelvision.jp"
+        }
+      ],
+      "companies": true
+    },
     {
       "id": "industry-309",
       "date": "2026-11-15",
