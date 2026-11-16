@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,135 @@
     }
   ],
   "counts": {
-    "items": 372,
-    "dates": 51,
-    "industry": 242,
-    "ota": 130,
-    "industryDates": 46,
-    "otaDates": 46,
+    "items": 376,
+    "dates": 52,
+    "industry": 245,
+    "ota": 131,
+    "industryDates": 47,
+    "otaDates": 47,
     "themes": {
-      "海外OTA": 118,
-      "国内OTA・旅行会社": 51,
-      "新規開業ホテル": 54,
-      "新規フライト情報": 99
+      "海外OTA": 119,
+      "国内OTA・旅行会社": 52,
+      "新規開業ホテル": 55,
+      "新規フライト情報": 100
     }
   },
   "items": [
+    {
+      "date": "2026-11-17",
+      "dateLabel": "11/17（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-314",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 東京国際線",
+      "categoryLabel": "東京国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "flightTags": [
+        "新規"
+      ],
+      "headline": "サン・フーコック航空（ベトナム）、成田＝ホーチミン線を2027年第1四半期（1〜3月）に開設と発表　日本初乗り入れ、機材はA321、ホーチミンでフーコック・ハノイ・ダナンなどへ接続",
+      "body": "・トライシー（11/16）・VIETJOによると、成田＝ホーチミン線を2027年1〜3月に開設する。具体的な就航日・便数は未発表。\n・ホーチミンでフーコック・ハノイ・ダナン・ハイフォン・ヴァンドンへ乗り継げる。当初はレジャー需要に注力し、今後は日本とフーコック・ダナンを結ぶ路線もめざす。\n・日本の総販売代理店（GSA）にインターアビエーション ジャパンを指名し、旅行会社との提携やベトナム観光地のPRを担う。",
+      "note": "ベトナム便が増え、ベトナムからの訪日客の受け皿づくりの話ができる。成田・都心のホテルとは、就航日が決まったらベトナム市場向けの料金・在庫の出し方を相談したい。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261116388219/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.viet-jo.com/news/tourism/261116113848.html",
+          "label": "viet-jo.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-17",
+      "dateLabel": "11/17（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-315",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "headline": "HIS、変なホテル初の沖縄進出「変なホテルプレミア沖縄 那覇美栄橋」（全56室・9階建て）を2027年4月に開業　11/16予約受付開始、ブランド初のプール・大浴場付き",
+      "body": "・H.I.S.ホテルホールディングスの発表（11/16）。那覇市前島、ゆいレール美栄橋駅徒歩約4分、国際通りに徒歩圏。客室はツイン・ダブル・トリプルの3タイプで、素泊まり1室11,000円から。\n・最上階9階に屋外プール（夜はナイトプール、冬は温水）とラウンジ、8階に大浴場・サウナ・ジム。3D映像のキャラクターチェックインを導入。\n・変なホテルは国内21軒・海外2軒。HISホテルHDは7つの国と地域で12ブランド51ホテルを展開。",
+      "note": "那覇の中心部でプール・大浴場付きのホテルが増える。沖縄のホテルとは、来春の開業前後の料金の見せ方や、家族・グループ向けトリプルの売り方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.zaikei.co.jp/releases/3716973/",
+          "label": "zaikei.co.jp"
+        },
+        {
+          "url": "https://www.hennnahotel.com/naha-miebashi/",
+          "label": "hennnahotel.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-17",
+      "dateLabel": "11/17（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-316",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "headline": "日本旅行、海外の旅行会社・OTA向け訪日商品販売システムを刷新し「Travel Kit for Japan」を開始　国内の宿泊と体験を一括手配、パッケージ販売にも対応　東急の定額宿泊「ツギツギ」は宿泊＋航空の実証が規制のサンドボックスに認定",
+      "body": "・日本旅行は、海外の旅行会社やOTA向けに、国内の宿泊施設と観光・体験コンテンツを一括手配できる「Travel Kit for Japan」の提供を始めた。宿泊と体験を自由に組み合わせた商品造成に加え、訪日パッケージ販売にも対応し、交通を含むコース提案で地方誘客につなげる（航空新聞社 11/16）。\n・東急は、定額宿泊サービス「ツギツギ」（提携500施設以上、登録者35万人超）で、先に買った宿泊利用権と航空を組み合わせ「個人包括旅行運賃」を使う実証計画について、国土交通大臣から規制のサンドボックス制度の認定を受けた。実施時期は今後案内（トライシー 11/16）。",
+      "note": "国内大手も海外の旅行会社・OTA向けに宿泊を卸す仕組みを強めている。ホテルとは、海外B2B経由の在庫の出し方と、Trip.comとの料金の整合を話せる。",
+      "sources": [
+        {
+          "url": "https://www.jwing.net/news/115398",
+          "label": "jwing.net"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261116388048/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-17",
+      "dateLabel": "11/17（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-190",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 Airbnb",
+      "categoryLabel": "Airbnb",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "Airbnb、ホスト反発を受けハウスルール方針を一部修正（チェックアウト時のルール設定や保険会社が求める契約書は可）　ただし掃除の強要・罰金・ゲストID収集の禁止は11/20予約分から予定どおり適用　ホテル事業は「今後数年で数十億ドルの売上」とCEO",
+      "body": "・Skift（11/16）によると、11/3更新の方針で「お願い」を「追加ルール」に改め、ゲストは従うことが求められると明記。食器をシンクに置くなどのルールや、保険会社が求める場合の別契約を認めた。\n・皿洗い・シーツはがしなどの作業、ホスト独自の罰金、予約後のルール追加、法令等の求めがない身分証・連絡先の収集は11/20以降の予約で禁止。掲載の審査は11/20〜2027年3月、是正・異議申し立てに最低20日。\n・Hotel Dive（11/16）によると、7〜9月もホテル予約が加速し、ホテルで初めて予約した人の約35%が1年以内に民泊も予約。元Booking.com幹部を採用してホテル事業を強化している。",
+      "note": "Airbnbはホテル掲載を広げつつ、民泊ホストへのルールを厳しくしている。都内のホテルとは、Airbnbのホテル掲載の条件や、民泊からホテルへ流れる家族・グループ客の取り込みを話せる。",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/16/airbnb-makes-concessions-on-house-rules-after-host-pushback/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.hoteldive.com/news/airbnb-hotel-strategy/874692/",
+          "label": "hoteldive.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "date": "2026-11-16",
       "dateLabel": "11/16（月）",
