@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,164 @@
     }
   ],
   "counts": {
-    "items": 376,
-    "dates": 52,
-    "industry": 245,
-    "ota": 131,
-    "industryDates": 47,
-    "otaDates": 47,
+    "items": 381,
+    "dates": 53,
+    "industry": 247,
+    "industryDates": 48,
+    "ota": 134,
+    "otaDates": 48,
     "themes": {
-      "海外OTA": 119,
-      "国内OTA・旅行会社": 52,
-      "新規開業ホテル": 55,
+      "海外OTA": 121,
+      "国内OTA・旅行会社": 53,
+      "新規開業ホテル": 57,
       "新規フライト情報": 100
     }
   },
   "items": [
+    {
+      "date": "2026-11-18",
+      "dateLabel": "11/18（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-317",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "headline": "立川「THE NEXTT HOTEL」（211室・最大1,500名の大宴会場）が2027年3/1開業、11/16予約開始　開業記念プランは2名1室朝食付24,178円〜　福井駅近くに「ダイワロイネットホテル福井」（204室・地上9階）が2028年春開業、県内初",
+      "body": "・立飛ホスピタリティマネジメントの発表（11/13）。JR立川駅北口から徒歩約5分、6〜12階に18㎡〜98㎡の全211室。ドッグフレンドリールーム10室、宿泊者専用サウナを備える。\n・約1,050㎡・最大1,500名の「THE NEXTT HALL」など宴会場は7室。開業記念プラン（2027年3/1〜6/30宿泊）はシンプルダブル1名朝食付15,356円〜、エッセンシャルツイン2名朝食付24,178円〜（税込）。\n・ダイワロイネットホテル福井は福井駅から徒歩5分ほど、地上9階・全204室で2028年春開業予定。総事業費約39億円のうち「県都まちなか再生ファンド」が2億円を支援する予定（セルタ 11/16）。",
+      "note": "都内でも多摩エリアに大型の宴会場付きホテルができる。都心のホテルとは、MICE・宴会需要の取り合いと、ペット同伴やサウナなど「泊まる理由」を作る付加価値の出し方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.tachihi.co.jp/2026/11/13/2026-1113/",
+          "label": "tachihi.co.jp"
+        },
+        {
+          "url": "https://serta-hotel.com/news/news20261116/",
+          "label": "serta-hotel.com"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-18",
+      "dateLabel": "11/18（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-318",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "headline": "女性専用キャビン「ホテル B4T キャビン 葛西臨海公園」（45室）を2027年2/4開業、11/18 10時に予約受付開始　舞浜まで1駅・無人運営　倉敷ロイヤルアートホテル（71室）は12/29に「アートホテル倉敷」へリブランド",
+      "body": "・ジェイアール東日本都市開発と日本ホテルの発表（11/11）。JR葛西臨海公園駅西口から徒歩1分、駅高架下の「パークベイテラス葛西臨海公園」2階。ホテル B4T ブランドの5施設目で、ブランド初の女性専用・全室キャビン。\n・スタッフは常駐せず、オンラインチャットで24時間遠隔対応。開業記念プランは1名1室6,800円〜（2027年2/4〜4/30宿泊、公式サイト限定）。予約は公式サイトとネット予約サイトで受け付ける。\n・アイコニア・ホスピタリティは、倉敷ロイヤルアートホテル（全71室、美観地区まで徒歩約2分）を客室・レストラン・ロビーを改装して12/29に「アートホテル倉敷」として再開業する。4〜11階は最大4名まで泊まれる。",
+      "note": "舞浜に近いエリアに、女性の一人客向けの低価格の宿が増える。湾岸・舞浜エリアのホテルとは、ライブ・イベント時の一人客の取り込みと、ネット予約サイトでの料金の見せ方を話せる。",
+      "sources": [
+        {
+          "url": "https://jrtk.jp/topics/archives/?id=4366",
+          "label": "jrtk.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/hotel-b4t-cabin-kasai-rinkai-koen-opening/",
+          "label": "innippon.news"
+        },
+        {
+          "url": "https://kyodonewsprwire.jp/release/202611120062",
+          "label": "kyodonewsprwire.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-18",
+      "dateLabel": "11/18（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-191",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "headline": "楽天トラベル、AIエージェント「Rakuten AI」にレンタカーの検索・予約機能を追加（11/17）　じゃらんnetは「じゃらんクーポンフェス」でクーポンを追加配布（11/17、次回は11/26）",
+      "body": "・楽天の発表（11/17）。「Rakuten AI」は自然な言葉で入力した条件から旅行先・宿・プランを検索・予約できるAIエージェントで、2025年9月から提供。今回、人数・車種・目的を会話で聞いてレンタカーを提案・予約できるようにした（例：スキー場ならスタッドレス・4WDのSUV）。アプリとウェブで無料。\n・じゃらんnetは11/17 10時から、対象の宿で使える20,000円〜500円の6種類の割引クーポンを追加配布。宿泊は2027年5/4チェックアウト分まで。「特別じゃらんクーポン」と併用でき、11/26にも追加配布する（トライシー 11/17）。",
+      "note": "国内OTAもAIで宿以外（レンタカーなど）まで一緒に予約させる流れが進んでいる。ホテルとは、楽天・じゃらんのクーポン期間中の料金と、Trip.comでの料金の差が出ないかを確認したい。",
+      "sources": [
+        {
+          "url": "https://corp.rakuten.co.jp/news/press/2026/1117_01.html",
+          "label": "corp.rakuten.co.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261117388337/",
+          "label": "traicy.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-18",
+      "dateLabel": "11/18（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-192",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "Booking Holdingsの AIエージェント「Vayo」が航空券・ホテル・レンタカーなどの予約に対応（11/17、招待制ベータ）　Booking.comの在庫はGenius Level 3料金（最大20%オフ）、Expediaのサイトでも自動で予約　Sabreは対話型AI「Grok」向けに航空券・ホテルの検索・予約プラグインを公開",
+      "body": "・Vayoは10/14に始まったBooking Holdingsの旅行AI。Booking.com（ホテル・レンタカー・体験）、OpenTable、SeatGeekとは直接つなぎ、航空券などは各社のサイトをAIが操作して予約する。ExpediaのサイトでもAIが予約するが、提携はしていない。予約はすべて利用者の承認が必要（Vayo発表・GeekWire・Skift 11/17）。\n・利用者は全員Booking.comのGenius Level 3料金（一部の宿で最大20%オフ）を使える。Booking Holdingsは進み具合に応じて最大1億ドルを投資する予定。\n・Sabreは11/17の投資家説明会で、対話型AI「Grok」の中で航空券・ホテルを検索・比較・予約・変更できる「Sabre Mosaic Travel Connector」を先行公開。運賃の値下がりや遅延を知らせるAPIも出す（PhocusWire 11/17）。",
+      "note": "AI経由の予約でも、Booking.comは自社の会員料金を前に出してくる。ホテルとは、AIエージェントに出る料金がどの販路の料金になるかと、Trip.comでも同じ条件で料金・在庫を出しておく大切さを話せる。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/booking-holdings-vayo-now-books-the-entire-trip-302942055.html",
+          "label": "prnewswire.com"
+        },
+        {
+          "url": "https://skift.com/2026/11/17/booking-holdings-ai-agent-vayo-can-now-reserve-flights-and-hotels/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.phocuswire.com/sabre-brings-conversational-travel-booking-grok",
+          "label": "phocuswire.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-18",
+      "dateLabel": "11/18（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-193",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "タイ運輸省、年末年始の航空券高騰対策でExpedia・Agoda・Booking.com・Trip.comなどの海外OTAにタイでの登録とタイ法の順守を求める方針（11/17）　同意済みはTravelokaのみ",
+      "body": "・ネーション（11/17）によると、イーペン祭りのチェンマイ便が売り切れ、OTA上で往復2万8,000〜3万バーツの表示が出たことを受け、運輸副大臣がOTAとの協議を急ぐと述べた。\n・登録させることで価格の監視や、航空券が届かない場合の損害回収などの法的措置をとりやすくする狙い。少なくとも1社はブラックリスト入りを検討。チェンマイ空港の運用時間の延長も話し合う。",
+      "note": "東南アジアでもOTAの料金表示への規制が強まっている。ホテルとは、繁忙期の高すぎる料金表示が苦情や規制の対象になりうる点と、年末年始の料金の出し方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.nationthailand.com/news/tourism/40073594",
+          "label": "nationthailand.com"
+        }
+      ],
+      "companies": true
+    },
     {
       "date": "2026-11-17",
       "dateLabel": "11/17（火）",
