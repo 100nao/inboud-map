@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,132 @@
     }
   ],
   "counts": {
-    "items": 381,
-    "dates": 53,
-    "industry": 247,
-    "industryDates": 48,
-    "ota": 134,
-    "otaDates": 48,
+    "items": 385,
+    "dates": 54,
+    "industry": 248,
+    "industryDates": 49,
+    "ota": 137,
+    "otaDates": 49,
     "themes": {
-      "海外OTA": 121,
-      "国内OTA・旅行会社": 53,
-      "新規開業ホテル": 57,
+      "海外OTA": 123,
+      "国内OTA・旅行会社": 54,
+      "新規開業ホテル": 58,
       "新規フライト情報": 100
     }
   },
   "items": [
+    {
+      "date": "2026-11-19",
+      "dateLabel": "11/19（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-319",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "headline": "アパホテル、〈TKP日暮里駅前〉新館（仮称・63室、ツイン54室・クイーン9室）を2028年夏に開業へ　11/18に安全祈願祭、既存棟（278室）は2016年12月開業以来連日満室で訪日客の割合は6割超、荒川区で3棟目",
+      "body": "・アパホテルはTKPとフランチャイズ契約を結び、日暮里駅徒歩2分に地上10階建ての新館を建てる（PR TIMES 11/18）。\n・成田空港（空港第2ビル駅）まで京成スカイライナーで最短36分。新館はツインとクイーン中心で、ベッド1台の客室が中心の既存棟と合わせて観光・ビジネス需要を取り込む。\n・荒川区では建設中の〈東京三ノ輪駅前〉（227室・2028年夏開業予定）もある。",
+      "note": "成田へのアクセスがよい日暮里・上野エリアは訪日客比率が6割を超えるほど強い。ホテルとは、東京東側の訪日需要や、家族・グループ向けツイン客室の売り方、成田発着便に合わせた前後泊の打ち出しを話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000901.000018265.html",
+          "label": "prtimes.jp"
+        }
+      ],
+      "companies": false
+    },
+    {
+      "date": "2026-11-19",
+      "dateLabel": "11/19（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-194",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "Booking Holdings、B2B新組織「Booking Partner Division」を発表（11/18）　Booking.com Strategic PartnershipsとAgodaのRocket Travelを統合し2027年1月始動、トップはAgodaのOmri Morgenshtern CEO　Pricelineは対象外",
+      "body": "・銀行・金融機関・航空会社・OTA・旅行テック・アフィリエイトなどに、ホワイトレーベルや組み込み型の旅行販売、ホテルチェーン料金の配信を提供する（Booking Holdings IR 11/18）。\n・宿泊施設470万軒超・掲載3,300万件、航空会社500社超、レンタカー200社超の在庫を使う。\n・CNBCは、B2B売上が2025年に48億ドル（18%増）まで伸びたExpediaの法人向け事業を意識した動きと伝えた。\n・Skiftによると、FTCの調査を受けているPricelineは新組織に含めない。",
+      "note": "Booking.com・Agodaの在庫が、銀行やカード会社・航空会社のポイントサイトなど外部の販売先へ広く流れる方向。ホテルとは、Booking.com・Agodaに出している料金が提携先サイトにも出る可能性と、販売先ごとの料金管理（パリティ）の確認を話せる。",
+      "sources": [
+        {
+          "url": "https://ir.bookingholdings.com/news/news-details/2026/Booking-Holdings-Unveils-Booking-Partner-Division-to-Accelerate-B2B-Travel-Innovation/default.aspx",
+          "label": "ir.bookingholdings.com"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/11/18/booking-holdings-enterprise.html",
+          "label": "cnbc.com"
+        },
+        {
+          "url": "https://skift.com/2026/11/18/booking-holdings-leaves-priceline-out-of-b2b-unit-amid-ftc-scrutiny/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-19",
+      "dateLabel": "11/19（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-195",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "headline": "Airbnb、Phocuswrightで独立系・ブティックホテルに「Booking.comはホテル中心ではない」と名指しで営業（11/18）　手数料は「競争力がある」と説明、Highgateは歓迎・Hiltonは慎重",
+      "body": "・Airbnbのホテル法人・接続提携の責任者（元Booking.com）が、Airbnbは「ホテル・滞在中心のブランド」で、ホストから直接予約することに慣れた客を数百万人規模でホテルに送れると説明した（Skift 11/18）。\n・Highgate Hotelsは独立系ホテルにとって「大きな勝利」と評価。Hiltonは、オーナーにとって適正なコストで客を送る販売先を選ぶとし、稼働の70%はHilton Honors会員と述べた。\n・Booking Holdingsはコメントしていない。",
+      "note": "Airbnbがホテル在庫の獲得を本格化している。独立系ホテルとは、Airbnbへの掲載を検討する場合の手数料・キャンセル規定、既存OTAとの料金のそろえ方を話せる。",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/18/airbnb-pitches-hotels-we-care-more-about-stays-than-booking-com-does/",
+          "label": "skift.com"
+        }
+      ],
+      "companies": true
+    },
+    {
+      "date": "2026-11-19",
+      "dateLabel": "11/19（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-196",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "headline": "HIS、若年層向けブランド「TABIOOPS!」で初のブラックフライデーセール（11/18〜24、全3回・各48時間、各商品先着30名）　12/1から渋谷モディにポップアップストア　Yahoo!トラベル「超得ブラックフライデー」と一休「旅館・リゾートスペシャル」は11/19開始",
+      "body": "・TABIOOPS!は25歳以下向けに10/1に始めたブランド。第1弾（11/18〜20）はソウル3日間19,800円・シンガポール4日間49,800円など、第2弾（11/20〜22）は台北・バンコク・グアム・パース、第3弾（11/22〜24）は上海・ホーチミン・バリ島・ホノルル。ソウルとケアンズは初日に売り切れ（トライシー 11/18）。\n・渋谷モディ3階のポップアップストアは12/1〜2027年3/31。\n・Yahoo!トラベル（宿泊）の「超得ブラックフライデー」は11/19 12時〜12/1、一休の「一休の日セール 旅館・リゾートスペシャル」は11/19〜12/1。楽天トラベルのブラックフライデーは11/18時点で未発表（比較記事 11/18）。",
+      "note": "年末に向けて国内OTA・旅行会社のセールが重なる時期。ホテルとは、11月下旬〜12月初めのセール枠への参加と、セール期間中の料金・在庫の出し方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261118388432/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://www.his.co.jp/news/20968.html",
+          "label": "his.co.jp"
+        },
+        {
+          "url": "https://exseed.biz/travel-black-friday-sale-comparison-2026/",
+          "label": "exseed.biz"
+        }
+      ],
+      "companies": true
+    },
     {
       "date": "2026-11-18",
       "dateLabel": "11/18（水）",
