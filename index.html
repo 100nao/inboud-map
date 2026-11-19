@@ -3484,14 +3484,15 @@ function setSource(sv){SRC=sv;if(sv==='est'&&VIEW==='jp')VIEW='top';buildPeriod(
 window.__setSource=setSource;
 function renderPeriod(){const el=document.getElementById('perCtl');
   const src=`<div class="seg" id="srcSeg"><button data-s="stay" class="${SRC==='stay'?'on':''}">①延べ宿泊者数（宿泊旅行統計）</button><button data-s="est" class="${SRC==='est'?'on':''}" title="${EST_TIP}">②延べ訪問者数（JNTO統計）</button></div><button class="btn2" id="natBtn">全国比較（JNTO×宿泊）</button><button class="btn2" id="repBtn">訪日回数（リピーター）</button>`;
-  if(SRC==='est')el.innerHTML=src+`<div class="seg sm" id="epSeg">${EPS.map(([k,l])=>`<button data-k="${k}" class="${k===EP?'on':''}">${l}</button>`).join('')}</div>
-     <span class="perlab">${estLabel()}（${estStatus(EP)}）<small>月別は選択不可：都道府県別訪問率は四半期・年単位で公表${estPrev(EP)?`／比較：${estLabel(estPrev(EP))}（${estStatus(estPrev(EP))}）`:''}</small></span>`;
+  if(SRC==='est')el.innerHTML=src+`<div class="seg sm" id="epSeg">${EPS.map(([k,l])=>`<button data-k="${k}" class="${k===EP?'on':''}">${l}</button>`).join('')}</div><div class="seg sm" id="npgSeg" title="全国（JNTO・国籍別）のみ。都道府県別は訪問率が未公表のため地図には出ません">${['2026Q3','2026M10','2026YTD10'].map(k=>`<button class="natgo" data-np="${k}">${NPERS[k].lab}<small style="font-weight:400;opacity:.75">（全国）</small></button>`).join('')}</div>
+     <span class="perlab">${estLabel()}（${estStatus(EP)}）<small>月別は選択不可：都道府県別訪問率は四半期・年単位で公表。2026年7〜9月・10月・1〜10月は訪問率が未公表のため全国（JNTO）のみ（右のボタン）${estPrev(EP)?`／比較：${estLabel(estPrev(EP))}（${estStatus(estPrev(EP))}）`:''}</small></span>`;
   else el.innerHTML=src+`<div class="seg" id="yrSeg">${YEARS.map(y=>`<button data-y="${y}" class="${y===YR?'on':''}">${y}年（${D.Y[y].status==='確定値'?'確定値':'速報'}）</button>`).join('')}</div>
-   <div class="seg sm" id="moSeg"><button data-m="0" class="${MO===0?'on':''}">${isFull(YR)?'年計':'年初来累計'}</button><button data-m="H1" class="${MO==='H1'?'on':''}">上半期（1〜6月）</button>${D.Y[YR].months.map(m=>`<button data-m="${m}" class="${MO===m?'on':''}">${m}月</button>`).join('')}</div>
+   <div class="seg sm" id="moSeg"><button data-m="0" class="${MO===0?'on':''}">${isFull(YR)?'年計':'年初来累計'}</button><button data-m="H1" class="${MO==='H1'?'on':''}">上半期（1〜6月）</button>${D.Y[YR].months.map(m=>`<button data-m="${m}" class="${MO===m?'on':''}">${m}月</button>`).join('')}${YR==='2026'?'<button disabled style="opacity:.45;cursor:not-allowed" title="宿泊旅行統計は9月1次速報まで。10月分は11月末公表見込み">10月（未公表）</button>':''}</div>
    <span class="perlab">${periodLabel()}<small>比較：${YR-1}年同期（確定値）</small></span>`;
   el.querySelectorAll('#srcSeg button').forEach(b=>b.onclick=()=>setSource(b.dataset.s));
   {const nb=el.querySelector('#natBtn');nb.classList.toggle('on',NATOPEN);if(NATOPEN)nb.textContent='全国比較を閉じる（地図に戻る）';nb.onclick=()=>openNat(!NATOPEN)}
   {const rb=el.querySelector('#repBtn');if(rb){rb.classList.toggle('on',!!REPOPEN);if(REPOPEN)rb.textContent='訪日回数を閉じる（地図に戻る）';rb.onclick=()=>openRep(!REPOPEN)}}
+  el.querySelectorAll('#npgSeg button').forEach(b=>b.onclick=()=>{NPER=b.dataset.np;if(!NPERS[NPER].prev&&/Y$|D$/.test(NSORT.k))NSORT={k:'arr',d:-1};openNat(true);if(window.__gaFilter)window.__gaFilter('month',NPERS[NPER].lab)});
   el.querySelectorAll('#epSeg button').forEach(b=>b.onclick=()=>{setEP(b.dataset.k);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())});
   el.querySelectorAll('#yrSeg button').forEach(b=>b.onclick=()=>{setPeriod(b.dataset.y,0);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())});
   el.querySelectorAll('#moSeg button').forEach(b=>b.onclick=()=>{setPeriod(YR,b.dataset.m==='H1'?'H1':+b.dataset.m);if(window.__gaFilter)window.__gaFilter('month',b.textContent.trim())})}
@@ -3521,13 +3522,18 @@ const NKEY={c:'国籍',arr:'入国者数',nights:'延べ宿泊者数',ppa:'1人�
 function natSort(R,o){return R.slice().sort((a,b)=>{const x=a[o.k],y=b[o.k];if(o.k==='c')return o.d*String(x).localeCompare(String(y),'ja');return o.d*((x==null?-1e18:x)-(y==null?-1e18:y))})}
 const NEWC=['北欧地域','中東地域','メキシコ'];                 // 2026年新設区分 → 21区分比較では「その他」に合算
 const CAT21=C.map(c=>c.ja).filter(c=>!NEWC.includes(c));
-const NPERS={'2025':{lab:'2025年（年間）',y:'2025',ms:[...Array(12).keys()],sk:['Y']},'2026H1':{lab:'2026年上半期（1〜6月）',y:'2026',ms:[0,1,2,3,4,5],sk:H1K,prev:{y:'2025',ms:[0,1,2,3,4,5],sk:H1K}}};
+const NPERS={'2025':{lab:'2025年（年間）',y:'2025',ms:[...Array(12).keys()],sk:['Y']},'2026H1':{lab:'2026年上半期（1〜6月）',y:'2026',ms:[0,1,2,3,4,5],sk:H1K,prev:{y:'2025',ms:[0,1,2,3,4,5],sk:H1K}},
+ // JNTO（国籍別・月別）のみで出せる期間。宿泊旅行統計は10月分が未公表（9月1次速報まで）、9月分もこのサイトには未収録のため宿泊列は出さない。
+ '2026Q3':{lab:'2026年7〜9月',y:'2026',ms:[6,7,8],jonly:'q3',prev:{y:'2025',ms:[6,7,8]}},
+ '2026M10':{lab:'2026年10月',y:'2026',ms:[9],jonly:'m10',prev:{y:'2025',ms:[9]}},
+ '2026YTD10':{lab:'2026年1〜10月',y:'2026',ms:[0,1,2,3,4,5,6,7,8,9],jonly:'ytd',prev:{y:'2025',ms:[0,1,2,3,4,5,6,7,8,9]}}};
+const NJNOTE={q3:'延べ宿泊者数：観光庁の宿泊旅行統計は9月1次速報まで公表済みだが、このサイトには8月分までしか収録しておらず、7〜9月の合計は出せないため表示しません',m10:'延べ宿泊者数：10月は未公表（宿泊旅行統計は9月1次速報まで。10月分は11月末公表見込み）',ytd:'延べ宿泊者数：10月は未公表（宿泊旅行統計は9月1次速報まで）のため1〜10月の合計は出せません'};
 function natVals(o,c){const J=CM.jnto[o.y],arr=J&&J.v[c]?o.ms.reduce((a,i)=>a+(J.v[c][i]||0),0):null;
-  const row=sumRows(o.y,o.sk,[47]).slice(3),js=[C.findIndex(x=>x.ja===c),...(c==='その他'?NEWC.map(n=>C.findIndex(x=>x.ja===n)):[])];
-  const nights=js.reduce((a,j)=>row[j]!=null?a+row[j]:a,0);return {arr,nights}}
-function natRows(per){const P0=NPERS[per];const R=CAT21.map(c=>{const a=natVals(P0,c),r={c,arr:a.arr,nights:a.nights,ppa:a.arr?a.nights/a.arr:null};
-    if(P0.prev){const b=natVals(P0.prev,c);r.arrP=b.arr;r.nightsP=b.nights;r.ppaP=b.arr?b.nights/b.arr:null;r.arrY=b.arr?a.arr/b.arr-1:null;r.nightsY=b.nights?a.nights/b.nights-1:null;r.ppaD=r.ppaP!=null&&r.ppa!=null?r.ppa-r.ppaP:null}return r});
-  const rk=k=>R.slice().sort((a,b)=>b[k]-a[k]).forEach((r,i)=>r[k==='arr'?'rA':'rN']=i+1);rk('arr');rk('nights');return R}
+  const row=o.sk?sumRows(o.y,o.sk,[47]).slice(3):[],js=[C.findIndex(x=>x.ja===c),...(c==='その他'?NEWC.map(n=>C.findIndex(x=>x.ja===n)):[])];
+  const nights=o.sk?js.reduce((a,j)=>row[j]!=null?a+row[j]:a,0):null;return {arr,nights}}
+function natRows(per){const P0=NPERS[per];const R=CAT21.map(c=>{const a=natVals(P0,c),r={c,arr:a.arr,nights:a.nights,ppa:a.arr&&a.nights!=null?a.nights/a.arr:null};
+    if(P0.prev){const b=natVals(P0.prev,c);r.arrP=b.arr;r.nightsP=b.nights;r.ppaP=b.arr&&b.nights!=null?b.nights/b.arr:null;r.arrY=b.arr?a.arr/b.arr-1:null;r.nightsY=b.nights&&a.nights!=null?a.nights/b.nights-1:null;r.ppaD=r.ppaP!=null&&r.ppa!=null?r.ppa-r.ppaP:null}return r});
+  const rk=k=>R.slice().sort((a,b)=>(b[k]||0)-(a[k]||0)).forEach((r,i)=>r[k==='arr'?'rA':'rN']=i+1);rk('arr');rk('nights');return R}
 const GREY='#a7afbd';
 let NATOPEN=false;
 function openNat(on){NATOPEN=!!on;const el=document.getElementById('natCmp');el.style.display=on?'flex':'none';if(on)renderNat();
@@ -3539,26 +3545,27 @@ window.__natOpen=()=>NATOPEN;
 window.__openNat=openNat;window.__natSort=()=>({NSORT,NPER});window.__setNPer=p=>{NPER=p;renderNat()};
 window.__natRows=natRows;
 function pdiff(d){if(d==null||!isFinite(d))return '<span class="fl">–</span>';return d>=0.005?`<span class="up">▲${d.toFixed(2)}</span>`:d<=-0.005?`<span class="dn">▼${Math.abs(d).toFixed(2)}</span>`:'<span class="fl">±0.00</span>'}
-function renderNat(){const el=document.getElementById('natCmp'),H1=NPER==='2026H1',ALL=natRows(NPER),R=natSort(ALL,NSORT);
+function renderNat(){const el=document.getElementById('natCmp'),H1=!!NPERS[NPER].prev,JO=!!NPERS[NPER].jonly,ALL=natRows(NPER),R=natSort(ALL,NSORT);
   const mxA=Math.max(...R.map(r=>r.arr)),mxN=Math.max(...R.map(r=>r.nights)),cidx=c=>C.findIndex(x=>x.ja===c);
-  const tA=R.reduce((a,r)=>a+r.arr,0),tN=R.reduce((a,r)=>a+r.nights,0),pA=H1?R.reduce((a,r)=>a+r.arrP,0):0,pN=H1?R.reduce((a,r)=>a+r.nightsP,0):0;
+  const tA=R.reduce((a,r)=>a+r.arr,0),tN=R.reduce((a,r)=>a+r.nights,0),pA=H1?R.reduce((a,r)=>a+r.arrP,0):0,pN=H1&&!JO?R.reduce((a,r)=>a+r.nightsP,0):0;
+  document.querySelectorAll('#perCtl .natgo').forEach(b=>b.classList.toggle('on',NATOPEN&&b.dataset.np===NPER));
   const arrow=o=>o.d<0?'▼':'▲',dir=o=>o.d<0?'降順':'昇順';
   const hd=(k,l,cs)=>`<td class="sortable ${NSORT.k===k?'act':''}" data-sk="${k}" ${cs?`colspan="${cs}"`:''}>${l}<span class="ar">${NSORT.k===k?arrow(NSORT):'⇅'}</span></td>`;
   const rows=R.map(r=>{const j=cidx(r.c),col=j>=0?C[j].col:'#999';return `<tr><td class="nm"><span class="sw" style="background:${col}"></span> ${r.c}</td>
     <td class="v">${fP(r.arr)}</td><td class="bar"><div style="width:${(r.arr/mxA*100).toFixed(1)}%;background:#14284b"></div></td>${H1?`<td class="y">${yoy(r.arr,r.arrP)}</td>`:''}
-    <td class="v">${fN(r.nights)}</td><td class="bar"><div style="width:${(r.nights/mxN*100).toFixed(1)}%;background:#2e7d32"></div></td>${H1?`<td class="y">${yoy(r.nights,r.nightsP)}</td>`:''}
+    ${JO?`<td class="v fl">–</td><td class="bar"></td><td class="y fl">–</td>`:`<td class="v">${fN(r.nights)}</td><td class="bar"><div style="width:${(r.nights/mxN*100).toFixed(1)}%;background:#2e7d32"></div></td>${H1?`<td class="y">${yoy(r.nights,r.nightsP)}</td>`:''}`}
     <td class="v"><b>${r.ppa!=null?r.ppa.toFixed(2):'–'}</b></td>${H1?`<td class="y">${pdiff(r.ppaD)}</td>`:`<td class="v">${r.rA}</td><td class="v">${r.rN}</td>`}</tr>`}).join('');
-  const tot=`<tr class="tot"><td>21区分計</td><td class="v">${fP(tA)}</td><td></td>${H1?`<td class="y">${yoy(tA,pA)}</td>`:''}<td class="v">${fN(tN)}</td><td></td>${H1?`<td class="y">${yoy(tN,pN)}</td>`:''}<td class="v"><b>${(tN/tA).toFixed(2)}</b></td>${H1?`<td class="y">${pdiff(tN/tA-pN/pA)}</td>`:'<td></td><td></td>'}</tr>`;
+  const tot=`<tr class="tot"><td>21区分計</td><td class="v">${fP(tA)}</td><td></td>${H1?`<td class="y">${yoy(tA,pA)}</td>`:''}${JO?`<td class="v fl">–</td><td></td><td class="y fl">–</td><td class="v fl">–</td><td class="y fl">–</td>`:`<td class="v">${fN(tN)}</td><td></td>${H1?`<td class="y">${yoy(tN,pN)}</td>`:''}<td class="v"><b>${(tN/tA).toFixed(2)}</b></td>${H1?`<td class="y">${pdiff(tN/tA-pN/pA)}</td>`:'<td></td><td></td>'}`}</tr>`;
   const head=hd('c','国籍')+hd('arr','JNTO訪日外客数（人）',2)+(H1?hd('arrY','前年比'):'')+hd('nights','延べ宿泊者数（人泊）',2)+(H1?hd('nightsY','前年比'):'')+hd('ppa','1人あたり<br>宿泊数（泊）')+(H1?hd('ppaD','前年差<br>（泊）'):hd('rA','外客順位')+hd('rN','人泊順位'));
-  el.innerHTML=`<div class="nc-head"><div><b>全国比較：${H1?'2026年上半期（1〜6月）':'2025年（年間・確定値）'}のJNTO 訪日外客数 × 延べ宿泊者数</b><div class="nc-sub">${H1?'前年比＝2025年1〜6月との比較（JNTO：2026年は暫定値／宿泊統計：2026年は第2次速報、2025年は確定値）':'前年比較ではなく、2025年1年分の2つの統計を並べています'}</div></div>
+  el.innerHTML=`<div class="nc-head"><div><b>全国比較：${H1?NPERS[NPER].lab:'2025年（年間・確定値）'}の${JO?'JNTO 訪日外客数（全国・国籍別）':'JNTO 訪日外客数 × 延べ宿泊者数'}</b><div class="nc-sub">${JO?'前年比＝2025年同期との比較（各区分の合計から計算）。JNTO：2026年9・10月は推計値、2025年は確定値。'+NJNOTE[NPERS[NPER].jonly]:H1?'前年比＝2025年1〜6月との比較（JNTO：2026年は暫定値／宿泊統計：2026年は第2次速報、2025年は確定値）':'前年比較ではなく、2025年1年分の2つの統計を並べています'}</div></div>
     <div class="seg" id="npSeg">${Object.entries(NPERS).map(([k,o])=>`<button data-k="${k}" class="${k===NPER?'on':''}">${o.lab}</button>`).join('')}</div><button class="btn2" id="natClose">地図に戻る</button></div>
    <div class="nc-grid"><div class="nc-box"><h4>国籍別 入国者数・延べ宿泊者数・1人あたり宿泊数<span>${NPERS[NPER].lab}・${NKEY[NSORT.k]}の${dir(NSORT)}</span></h4>
      <div class="unote nc1">1人あたり宿泊数＝延べ宿泊者数÷入国者数。1人が日本のホテル・旅館に平均何泊したかの目安</div>
      <table class="cl nct"><tr class="th">${head}</tr>${rows}${tot}</table></div>
     <div><div class="nc-box"><h4>JNTO 訪日外客数 月別推移<span>2026年 vs 2025年・2024年</span></h4><div class="jsel" id="jsel"></div><div id="jchart"></div></div></div></div>
-   <div class="nc-note">出典：JNTO「訪日外客数」（2025年＝確定値、${jstLab('2026')}）／観光庁「宿泊旅行統計調査」参考第1表（2025年＝確定値・従業者10人以上の施設、2026年＝第2次速報・客室数20室以上の施設）。JNTO外客数はクルーズ客を含む。${H1?'2026年1月から宿泊旅行統計の調査設計を見直し（層化基準：従業者数→客室数、国籍24区分）、前年比には見直しの影響を含む。北欧・中東・メキシコは「その他」に合算。':''}</div>`;
+   <div class="nc-note">${JO?'※都道府県別の地図は、②延べ訪問者数の元になる訪問率（インバウンド消費動向調査 表6-1）が2026年4-6月期までのため、この期間は全国（JNTO）のみです。<br>':''}出典：JNTO「訪日外客数」（2025年＝確定値、${jstLab('2026')}）／観光庁「宿泊旅行統計調査」参考第1表（2025年＝確定値・従業者10人以上の施設、2026年＝第2次速報・客室数20室以上の施設）。JNTO外客数はクルーズ客を含む。${H1&&!JO?'2026年1月から宿泊旅行統計の調査設計を見直し（層化基準：従業者数→客室数、国籍24区分）、前年比には見直しの影響を含む。北欧・中東・メキシコは「その他」に合算。':''}</div>`;
   document.getElementById('natClose').onclick=()=>openNat(false);
-  el.querySelectorAll('#npSeg button').forEach(b=>b.onclick=()=>{NPER=b.dataset.k;if(NPER==='2025'&&/Y$|D$/.test(NSORT.k))NSORT={k:'arr',d:-1};renderNat()});
+  el.querySelectorAll('#npSeg button').forEach(b=>b.onclick=()=>{NPER=b.dataset.k;if(!NPERS[NPER].prev&&/Y$|D$/.test(NSORT.k))NSORT={k:'arr',d:-1};renderNat()});
   el.querySelectorAll('td.sortable').forEach(td=>td.onclick=()=>{const k=td.dataset.sk;NSORT=NSORT.k===k?{k,d:-NSORT.d}:{k,d:(k==='c'||k==='rA'||k==='rN')?1:-1};renderNat()});
   document.getElementById('jsel').innerHTML=CM.jcats.map(c=>`<button class="${c===JCAT?'on':''}" data-c="${c}">${c==='*'?'総数':c}</button>`).join('');
   document.querySelectorAll('#jsel button').forEach(b=>b.onclick=()=>{JCAT=b.dataset.c;renderNat()});
