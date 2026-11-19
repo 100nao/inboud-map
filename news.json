@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,216 @@
     }
   ],
   "counts": {
-    "items": 385,
-    "dates": 54,
-    "industry": 248,
-    "industryDates": 49,
-    "ota": 137,
-    "otaDates": 49,
+    "items": 392,
+    "dates": 55,
+    "industry": 250,
+    "industryDates": 50,
+    "ota": 142,
+    "otaDates": 50,
     "themes": {
-      "海外OTA": 123,
-      "国内OTA・旅行会社": 54,
-      "新規開業ホテル": 58,
+      "海外OTA": 126,
+      "国内OTA・旅行会社": 56,
+      "新規開業ホテル": 60,
       "新規フライト情報": 100
     }
   },
   "items": [
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-320",
+      "headline": "「ナインアワーズ名古屋栄」（184室）が12/1に開業へ　名鉄都市開発が取得・コンバージョンした栄の商業ビル「MUSUBIA NAGOYA SAKAE」5〜8階に入居、入口にハッチ型パネルを付けたカプセル客室とラウンジ・カフェを併設",
+      "body": "・名鉄都市開発が11/18に発表。栄駅から徒歩圏内で、24時間年中無休（PR TIMES 11/18）。\n・名鉄都市開発・ナインアワーズ・名古屋大学医学部附属病院・名古屋鉄道の4者による共同プロジェクト（2025年7月発表）の一環。\n・ビジネスから観光・イベント利用まで対応する滞在拠点とする。",
+      "note": "名古屋・栄に低価格帯の客室が184室増える。栄・錦エリアのホテルとは、12月以降の単価の出し方や、一人旅・イベント客向けの最安プランの見せ方を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000038.000142009.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/2026/11/19/",
+          "label": "innippon.news"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-321",
+      "headline": "アコー、ニセコに初進出「メルキュール ニセコ リゾート」（全176室）を11/20に開業　東比羅夫エリア",
+      "body": "・アコーのブランドとしてニセコエリアに初めて出る（PR TIMES）。\n・ニセコ・東比羅夫に全176室。冬のスキーシーズン直前の開業。",
+      "note": "ニセコは冬に訪日客の需要が集中するエリア。ニセコのホテルとは、新しい国際ブランドの開業後の料金の動きや、年末年始・2月の在庫の出し方を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001130.000052177.html",
+          "label": "prtimes.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "id": "ota-197",
+      "headline": "楽天トラベル、「楽天トラベルBLACK FRIDAY」を11/19 10時〜12/1 9:59に開催　国内宿泊は「楽天トラベルクーポン」最大10%オフと宿が出す「宿クーポン」最大20%オフの併用で毎日最大30%オフ、楽パックは最大20,000円オフ",
+      "body": "・13日間のセールで、国内外の宿泊・パッケージツアー・レンタカー・高速バス・アクティビティなどのクーポンを配る（楽天グループ PR TIMES 11/19）。\n・楽パックはANA楽パック専用最大10,000円、JAL楽パック専用最大13,000円、JR楽パック赤い風船専用12,000円のクーポンも出す。\n・トライシーによると、アプリ予約限定で10,000円オフ・4,000円オフ、海外ツアーは最大50,000円オフのクーポンがある。",
+      "note": "Yahoo!トラベル・一休も11/19から同時期のセールを始めており、11月下旬〜12月初めは国内OTAのセールが重なる。ホテルとは、宿クーポンの割引率と在庫の出し方、他社セールとの料金のそろえ方を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000551.000021228.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261119388705/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "id": "ota-198",
+      "headline": "HIS、イタリアのコスタクルーズと日本地区の総販売代理店（GSA）契約を締結（11/18）　コスタ日本支社のスタッフがHISに合流し、全国の旅行会社への販売支援とMICE需要の獲得を進め、2030年をめどに日本発着クルーズの再開をめざす",
+      "body": "・HISはコスタクルーズ日本支社の事業運営とサポート機能を引き受ける（HIS 11/18）。\n・国土交通省の「2030年に日本人のクルーズ人口100万人」目標に向け、初心者・家族でも参加しやすいカジュアルクルーズを広げる。\n・トラベルボイスによると、セールでは10万円未満の商品にも挑戦する。",
+      "note": "日本発着クルーズが戻れば、寄港地や発着港の前後泊の需要が見込める。港に近いホテルとは、クルーズ客の前後泊プランや団体の受け入れを話せる。",
+      "sources": [
+        {
+          "url": "https://www.his.co.jp/news/21034.html",
+          "label": "his.co.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/news",
+          "label": "travelvoice.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "id": "ota-199",
+      "headline": "Trip.com、年間ランキング「Trip.Best 2027 Global 100」を発表（11/19）　全98ランキング・計3,729件、日本は上野公園（春旅）・嵐山（紅葉）・USJ（家族向け）が世界1位、アマン京都が「現地体験ホテル」3位、アマン東京が「豪華なホテル」4位",
+      "body": "・ホテル・観光スポット・ナイトライフ・レストランの4カテゴリーで年間ランキング98件を発表。「魅惑の旅先」49ランキングも同時公開（Trip.com International Travel Japan 11/19）。\n・「豪華なホテル」はパーク ハイアット 京都が40位、フォーシーズンズホテル京都が49位。「スキーホテル」は日本から25施設で山翠ニセコが4位、クラブメッド キロロが11位。\n・東京ディズニーランドホテル（ファミリー向け7位）、星のや富士（絶景8位）、アンダーズ 東京（インスタ映え12位）。温泉は有馬温泉2位・草津温泉5位。\n・12/4には嵐山の嵯峨野トロッコ列車の貸切運行をTrip.comで販売（片道大人880円）。",
+      "note": "ランキング入りしたホテルとは、Trip.com上でのランキング表示を使った販促や、ランキング経由の閲覧増に合わせた在庫・料金の準備を話せる。上野公園の春旅1位は、上野・浅草エリアのホテルへの春の需要の話の材料になる。",
+      "sources": [
+        {
+          "url": "https://www.jiji.com/jc/article?g=prt&k=000000073.000159353",
+          "label": "jiji.com"
+        },
+        {
+          "url": "https://jp.trip.com/toplist/tripbest/annual/2027/100200586747/",
+          "label": "jp.trip.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "id": "ota-200",
+      "headline": "Trip.com Group、シドニーで「Global Partner Summit」（11/19）　ジェーン・スンCEOは中国→オーストラリアの予約が前年比＋36%で市場（＋18%）の2倍と説明　7〜9月期決算は12/1（米国時間）に発表予定",
+      "body": "・オーストラリア政府観光局とBusiness Events Sydneyが共催。スンCEOは「オーストラリアを中国だけでなく世界とつなげたい」と述べた（Travel Trade Desk 11/19）。\n・オーストラリア政府観光局によると、中国は過去12か月で休暇目的の訪問者が38%増え、休暇目的の訪問者数・消費額ともに1位。\n・＋36%は会社発表の数字で、予約の絶対数は公表していない。\n・Trip.com Groupは7〜9月期決算を12/1（米国時間、市場終了後）に発表する（11/19発表）。",
+      "note": "Trip.comは中国発の送客の強さを他国の観光局との連携に使っている。ホテルとは、12/1の決算で出る日本向け・アジア域内の数字を、来年の中国・アジア客の見通しの話に使える。",
+      "sources": [
+        {
+          "url": "https://traveltradedesk.com/articles/trip-com-doubles-market-growth-on-china-australia-routes",
+          "label": "traveltradedesk.com"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1269238/0001193125-26-467690.txt",
+          "label": "sec.gov"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "dateLabel": "11/20（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "id": "ota-201",
+      "headline": "OpenAI、ChatGPTに旅行機能を作るエンジニアの募集を開始　宿泊・交通をリアルタイムで比べる画面を開発し、予約まで見込む内容でOTAと直接競合の可能性（Skift、トラベルボイス 11/19）",
+      "body": "・買収したOdessiaの創業者を初の旅行責任者に起用。求人では外部プロバイダーとの統合、マーケットプレイス・コマースの経験を重視している（Skift 11/16）。\n・実装されればGoogle Travel、Kayak、OTAと競合する領域に入る（トラベルボイス 11/19）。\n・同じAIエージェントの分野では、B.Rileyが11/19、MetaのAIエージェント「Muse」で米国発のホテル検索はアカウント連携の有無にかかわらずExpediaが既定の検索先になっていると分析した（Museの登録は1,000万超）。",
+      "note": "AIアシスタント経由の宿泊検索が、OTAの在庫や料金をそのまま使う形で広がりつつある。ホテルとは、OTAに出している料金・写真・施設情報がAI経由の検索にも使われる点と、情報の正確さの確認を話せる。",
+      "sources": [
+        {
+          "url": "https://www.travelvoice.jp/20261119-160899",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://skift.com/2026/11/16/openai-is-hiring-engineers-to-build-travel-into-chatgpt/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.investing.com/news/analyst-ratings/briley-reiterates-expedia-stock-rating-on-meta-muse-integration-93CH-5038347",
+          "label": "investing.com"
+        }
+      ]
+    },
     {
       "date": "2026-11-19",
       "dateLabel": "11/19（木）",
