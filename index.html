@@ -3213,7 +3213,7 @@ let SRC='stay',EP='2026H1';
 // 画面タイトルの最終更新日。データ更新時はここだけ差し替える。
 const DATA_ASOF={
   stay:'2026-10-30', // 観光庁 宿泊旅行統計 2026年9月・第1次速報／8月・第2次速報
-  est:'2026-11-18'   // JNTO 訪日外客数 2026年10月推計値（2026-11-18公表）。インバウンド消費動向調査 7-9月期1次速報は2026-10-21公表のまま
+  est:'2026-11-19'   // JNTO 訪日外客数 2026年10月推計値（2026-11-18公表）。インバウンド消費動向調査 7-9月期1次速報は2026-10-21公表のまま
 };
 const asofText=iso=>{const p=String(iso||'').split('-');return p.length===3?'最終更新日 '+p[0]+'年'+Number(p[1])+'月'+Number(p[2])+'日':'最終更新日不明'};
 const CM=D.cmp, EST=CM.est, MISM=new Set(CM.mism);
@@ -3341,6 +3341,12 @@ map.on('zoomend',renderLabels);
 document.getElementById('labchk').onchange=renderLabels;
 
 // ---- ヘッダ ----
+function jnto10Card(){try{const A=CM.jnto['2026'].v,B=CM.jnto['2025'].v;if(!A['*']||A['*'][9]==null)return '';
+ const ytd=(o,k)=>o[k].slice(0,10).reduce((a,v)=>a+(v||0),0),pc=(x,y)=>y?((x/y-1)*100).toFixed(1).replace(/^(\d)/,'+$1').replace('-','▼'):'-';
+ const rows=Object.keys(A).filter(k=>k!=='*'&&A[k][9]!=null&&B[k]).map(k=>[k,A[k][9],B[k][9],ytd(A,k),ytd(B,k)]).sort((x,y)=>y[1]-x[1]);
+ const f=n=>n.toLocaleString('ja-JP');
+ return `<div class="stat" style="grid-column:1/-1"><div class="lb">JNTO 訪日外客数 2026年10月（推計値・2026年11月18日公表）</div><div class="v">${(A['*'][9]/1e4).toFixed(1)}<small>万人（前年同月比 ${pc(A['*'][9],B['*'][9])}%）／1〜10月累計 ${(ytd(A,'*')/1e4).toFixed(1)}万人（${pc(ytd(A,'*'),ytd(B,'*'))}%）</small></div>
+ <details style="margin-top:6px"><summary style="cursor:pointer">国籍別 2026年10月・1〜10月累計を見る（都道府県別は未公表）</summary><table style="font-size:12px;border-collapse:collapse;margin-top:6px"><tr><th align=left>国籍</th><th>10月</th><th>前年比</th><th>1〜10月</th><th>前年比</th></tr>${rows.map(r=>`<tr><td>${r[0]}</td><td align=right>${f(r[1])}</td><td align=right>${pc(r[1],r[2])}%</td><td align=right>${f(r[3])}</td><td align=right>${pc(r[3],r[4])}%</td></tr>`).join('')}</table></details></div>`}catch(e){return ''}}
 function renderStats(){const u=NAT,t=topIdx(u),area='全国';
   {const a=document.getElementById('dataAsof');if(a)a.textContent=asofText(SRC==='est'?DATA_ASOF.est:DATA_ASOF.stay)}
   if(SRC==='est'){document.getElementById('yr').textContent='延べ訪問者数（JNTO統計）｜'+estLabel()+'（'+estStatus(EP)+'）';
@@ -3349,7 +3355,7 @@ function renderStats(){const u=NAT,t=topIdx(u),area='全国';
      `<div class="stat main"><div class="lb">${area}・${estLabel()}・訪日外客数（クルーズ客除く）</div><div class="v">${fmtM(u.fr[0])}<small>人</small></div></div>
       <div class="stat"><div class="lb">JNTO 訪日外客数（全国）</div><div class="v">${fmtM(jntoSum(EP))}<small>人</small></div></div>
       <div class="stat"><div class="lb">外国人 延べ宿泊者数（同期間）</div><div class="v">${fmtM(st[1])}<small>人泊</small></div>${NIGHT_NOTE}</div>
-      <div class="stat"><div class="lb">最多国籍</div><div class="v"><span class="sw" style="background:${C[t].col}"></span> ${C[t].ja}</div></div>`;return}
+      <div class="stat"><div class="lb">最多国籍</div><div class="v"><span class="sw" style="background:${C[t].col}"></span> ${C[t].ja}</div></div>${jnto10Card()}`;return}
   const lab=area+'・'+shortLabel();document.getElementById('yr').textContent='観光庁 宿泊旅行統計調査｜'+periodLabel();
   document.getElementById('stats').innerHTML=
    `<div class="stat main"><div class="lb">${lab}・外国人 延べ宿泊者数</div><div class="v">${fmtM(u.fr[0])}<small>人泊</small></div>${NIGHT_NOTE}</div>
