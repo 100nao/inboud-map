@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,208 @@
     }
   ],
   "counts": {
-    "items": 392,
-    "dates": 55,
-    "industry": 250,
-    "industryDates": 50,
-    "ota": 142,
-    "otaDates": 50,
+    "items": 399,
+    "dates": 56,
+    "industry": 255,
+    "industryDates": 51,
+    "ota": 144,
+    "otaDates": 51,
     "themes": {
-      "海外OTA": 126,
-      "国内OTA・旅行会社": 56,
-      "新規開業ホテル": 60,
-      "新規フライト情報": 100
+      "海外OTA": 127,
+      "国内OTA・旅行会社": 57,
+      "新規開業ホテル": 61,
+      "新規フライト情報": 104
     }
   },
   "items": [
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 東京国際線",
+      "categoryLabel": "東京国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "id": "industry-322",
+      "flightTags": [
+        "増便"
+      ],
+      "headline": "ZIPAIR、成田＝ソウル（仁川）線を2027年1/12〜31に増便し週14便（毎日2往復）、1月は計40便　11/19発表・同日12時に販売開始　2027年夏ダイヤのロサンゼルス・サンフランシスコ・バンコク・ソウル（9〜10月搭乗分）も追加販売",
+      "body": "・ZIPAIRは「ソウル線における旺盛な需要」に応えるための増便と説明（ZIPAIR公式 11/19）。運航は関係当局の認可が前提。\n・トライシー（11/20）によると、1月の成田＝ソウル線は計40便になる。\n・夏ダイヤ追加分の片道運賃（Standard）はソウル1万2,500円〜、バンコク2万4,900円〜、ロサンゼルス6万5,000円〜、サンフランシスコ7万1,500円〜（Aviation Wire 11/19）。",
+      "note": "韓国は1〜10月の訪日客が前年より2割強増えている市場。成田・都心のホテルとは、1月中旬〜下旬の韓国客の取り込みと、LCC利用客に合う価格帯の客室の出し方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.zipair.net/ja/notification/456",
+          "label": "zipair.net"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/354839",
+          "label": "aviationwire.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 東京国際線",
+      "categoryLabel": "東京国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "id": "industry-323",
+      "flightTags": [
+        "新規"
+      ],
+      "headline": "タイガーエア台湾、春節期に羽田＝高雄のチャーター便を運航（高雄発2/1〜14・羽田発2/2〜15の計14往復、A320）　同社の羽田発着は現在は台北（桃園）線だけ",
+      "body": "・IT8266便は高雄22:25発→羽田翌3:00着、IT8267便は羽田4:00発→高雄7:30着（sky-budget 11/18）。\n・春節期の台湾南部からの訪日需要に対応する期間限定便。定期便化につながるかが注目される。",
+      "note": "春節（2027年2月上旬）に台湾南部からの客が羽田に深夜・早朝に着く。羽田・都心のホテルとは、アーリーチェックインやレイトチェックアウト付きのプランを台湾市場向けに出せるかを話せる。",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/11/18/tiger-air-taiwan-launch-hnd-khh/",
+          "label": "sky-budget.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "id": "industry-324",
+      "flightTags": [
+        "増便"
+      ],
+      "headline": "エアプサン、静岡＝釜山線を2027年1/3〜2/28に週3往復から週5往復（月・水・木・土・日）に増便　長崎＝釜山線は1/5〜2/28に週3往復（火・金・日）で運航再開（11/19発表）",
+      "body": "・どちらもエアプサンだけが金海空港（釜山）から飛ばしている路線（朝鮮日報日本語版 11/19）。\n・静岡＝釜山線は2026年3月の就航から平均搭乗率80%台。週5往復になり、東京と組み合わせた旅行もしやすくなるとしている。\n・長崎＝釜山線は2025年10月〜2026年4月の平均搭乗率が80%台だった。",
+      "note": "釜山から静岡に入り、東京まで回る韓国客が増える可能性がある。静岡・箱根・東京のホテルとは、1〜2月の韓国客向けの料金と在庫を話せる。",
+      "sources": [
+        {
+          "url": "https://www.chosun.com/jp/economy-jp/2026/11/19/AR5LLXFF3BABRFLZDXIDAF5TCI/",
+          "label": "chosun.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "id": "industry-325",
+      "flightTags": [
+        "再開"
+      ],
+      "headline": "九元航空、関西＝広州線を11/25に運航再開　毎週水曜の週1往復、2027年1/20までの期間限定、機材は737",
+      "body": "・AQ1260便は関西14:10発→広州17:50着、AQ1259便は広州8:45発→関西13:10着（sky-budget 11/21）。航空券は販売中。\n・日中関係の悪化で中国路線の冷え込みが続くなか、冬ダイヤでは小さな増加の動きも出ている。",
+      "note": "中国便はまだ少ないが、戻る兆しの一つ。関西のホテルとは、中国客の戻り方と、年末年始・春節に向けた中国市場の在庫の考え方を話せる。",
+      "sources": [
+        {
+          "url": "https://sky-budget.com/2026/11/21/9air-resume-kix-can/",
+          "label": "sky-budget.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "industry-326",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "東急ホテルズ、「ホテル・トリフィート宮古島」（207室）をリブランドし「宮古島エクセルホテル東急スカイテラス」として2027年4月に開業へ（11/20発表）　エクセルホテル東急ブランドは沖縄県で初めて",
+      "body": "・琉球キャピタルのファンド（琉球ファンド2号）が清水総合開発・西松建設・長谷工総合開発と共同出資し、琉球銀行などの融資でホテルを取得した。運営は東急ホテルズ＆リゾーツ（東急ホテルズ 11/20）。\n・宮古空港から車で約3分、市街地へ約15分。5階建て・207室で、レストラン・屋外プール・レンタカー店舗がある。\n・東急ホテルズは宮古島で40年以上「宮古島東急ホテル＆リゾーツ」を運営しており、連携して集客する。",
+      "note": "宮古島はリゾート客室の供給が増えている。宮古島・沖縄のホテルとは、2027年春以降の競合の増え方と、空港近くの立地を生かした料金・連泊プランを話せる。",
+      "sources": [
+        {
+          "url": "https://www.tokyuhotels.co.jp/company/pressrelease/159133/index.html",
+          "label": "tokyuhotels.co.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOJC206HQ0Q6A121C2000000/",
+          "label": "nikkei.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-202",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "Airbnb、民泊でも「最低価格保証」導入の可能性　チェスキーCEOがXで「価格保証を出せないと決めつけている」と返信　SkiftがAIエージェントで16件を比べると10件は施設の公式サイトの方が安く、差は最大42%（11/20）",
+      "body": "・AirbnbはホテルではすでにPrice match（価格の合わせ込み）をしているが、民泊での保証は発表していない（Skift 11/20）。\n・Skiftは AIエージェント「Instinct」で45件を調べたが、23件は公式予約サイトがなく、公式サイトのある22件のうち6件は価格を取れなかった。\n・税込みかどうかやキャンセル条件がそろっておらず、単純比較はできない。Savvy社のCEOは、Airbnbが価格を合わせるには自社の利益を削るか、Vrboのように料金パリティ条項を課すしかないと話した。",
+      "note": "AIエージェントがOTAと公式サイトの料金をすぐ比べる時代になりつつある。ホテルとは、OTAと自社サイトの料金パリティ（税・キャンセル条件を含む）を合わせておく大切さを話せる。",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/20/airbnb-floats-price-matching-a-skift-test-shows-where-direct-booking-wins/",
+          "label": "skift.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "dateLabel": "11/21（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "id": "ota-203",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "HIS、ブラックフライデーで首都圏発ミステリーツアー6コースを11/21 11時から販売　成田発アジア3日間3万円・南半球5日間5万円など、出発は2027年1〜6月、オンライン予約限定で合計50名まで",
+      "body": "・成田発のアジア3日間3万円・4日間4万円・10日間10万円、南半球5日間5万円・6日間6万円、羽田発のアジア7日間7万円の6コース（トライシー 11/21）。\n・HISのブラックフライデー（オンライン予約は12/7 10時まで）の追加企画。",
+      "note": "旅行会社のブラックフライデーは12月上旬まで続く。ホテルとは、年末〜春の閑散期を埋めるセール枠への参加を話せる。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261121388848/",
+          "label": "traicy.com"
+        }
+      ]
+    },
     {
       "date": "2026-11-20",
       "dateLabel": "11/20（金）",
