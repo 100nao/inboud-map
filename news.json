@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,175 @@
     }
   ],
   "counts": {
-    "items": 399,
-    "dates": 56,
-    "industry": 255,
-    "industryDates": 51,
-    "ota": 144,
-    "otaDates": 51,
+    "items": 405,
+    "dates": 57,
+    "industry": 260,
+    "industryDates": 52,
+    "ota": 145,
+    "otaDates": 52,
     "themes": {
-      "海外OTA": 127,
-      "国内OTA・旅行会社": 57,
-      "新規開業ホテル": 61,
-      "新規フライト情報": 104
+      "海外OTA": 128,
+      "国内OTA・旅行会社": 59,
+      "新規開業ホテル": 63,
+      "新規フライト情報": 105
     }
   },
   "items": [
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-327",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "flightTags": [
+        "運休"
+      ],
+      "headline": "イースター航空、徳島＝ソウル（仁川）線（週3往復）を2027年1/2から当面運休　10/29に正式発表、徳島県は1月下旬〜3月上旬に大韓航空のチャーター便を調整中",
+      "body": "・韓国LCCのイースター航空は、厳しい事業環境が続き安定した収益を確保できず、運航継続が困難と説明（JRT四国放送 10/29）。\n・徳島県は2026年4月から航空会社への運航支援金の補助率を引き上げ、韓国の学生の無料招待なども行っていた。\n・後藤田知事は、国際定期便の再開と新たな誘致に挑戦を続けるとした。",
+      "note": "徳島の韓国定期便は1月から止まる。徳島・四国東部のホテルとは、1月以降の韓国客の減り方と、チャーター便が飛ぶ期間（1月下旬〜3月上旬）の団体受け入れを話せる。",
+      "sources": [
+        {
+          "url": "https://news.ntv.co.jp/n/jrt/category/society/jr7d2b444936fa4a689e126e5274599e8f",
+          "label": "news.ntv.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-328",
+      "headline": "グッドルーム、京都・河原町三条の元オフィスビル（1992年築・地上8階地下1階、近鉄不動産所有）をアパートメントホテル「goodroom hotel 京都」に転用して開業（11/19発表）　内装工事は坪約65万円",
+      "body": "・所在地は京都市中京区恵比須町437。京都市役所前駅から徒歩4分、京阪三条駅から徒歩5分（gooddaysホールディングス PR TIMES 11/19）。\n・2階にエントランスと24時間のワークラウンジ、直営カフェ「goodcoffee」（11/16開業）を併設。予約は公式サイト。\n・発表資料に客室数の記載はない。Innipponによると掲載価格は1泊2名4万2,000円から。",
+      "note": "京都中心部で、オフィスビルを転用したキッチン付きの長期滞在向け客室が増えている。河原町・烏丸のホテルとは、連泊・グループ客向けの料金と、アパートメント型との違いの見せ方を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000140.000046420.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/goodroom-hotel-kyoto-opening/",
+          "label": "innippon.news"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-329",
+      "headline": "12月の開業：「スマイルホテル千葉勝田台」（12/15リブランド、全97室・シングル83室、勝田台駅徒歩約3分）、「ペットリゾート ブレインズ湯布院」（12/24、全18室、犬種・サイズ制限なし）",
+      "body": "・スマイルホテル千葉勝田台は、12/14まで「ホテル ドエル」として営業し、12/15にリブランド。スマイルブランドの83店舗目で千葉県初（ホスピタリティオペレーションズ PR TIMES 11/20）。京成線で成田空港にもアクセスできる。\n・ペットリゾート ブレインズ湯布院は由布市湯布院町川北の洋館を改装。離れ2棟を含む全18室、源泉かけ流しの温泉と24時間の室内ドッグラン付き。1泊2食付1名4万4,000円から、予約は11/16開始（PR TIMES 11/18）。",
+      "note": "千葉・八千代エリアにビジネス向けの客室が97室加わる。勝田台・成田方面のホテルとは12月以降の平日単価、湯布院のホテルとはペット同伴客の需要を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000140.000078364.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000008.000138380.html",
+          "label": "prtimes.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "id": "industry-330",
+      "headline": "東武トップツアーズ、9月の販売実績は総額170億8,744万円（前年同月比107.3%）　訪日旅行は132.9%、海外旅行は110.9%、国内旅行は97.0%（11/20発表）",
+      "body": "・国内旅行は83億5,920万円（97.0%）。団体は95.2%で、一般団体99.2%・教育団体87.8%。個人の企画商品は42.7%、企画商品を除く個人旅行は135.6%（東武トップツアーズ 11/20）。\n・海外旅行は29億4,609万円（110.9%）。団体は113.8%で、一般団体127.5%・教育団体85.6%。海外の人員は125.7%。\n・訪日旅行は10億6,263万円（132.9%）。4〜9月の累計は総額691億7,732万円（100.7%）。",
+      "note": "企画商品の個人旅行が大きく減り、企画以外の個人と訪日が伸びる流れが8月に続いている。東武経由の団体・訪日の送客と、個人の動きを聞く材料になる。",
+      "sources": [
+        {
+          "url": "https://www.tobutoptours.co.jp/newsrelease/TT26083.pdf",
+          "label": "tobutoptours.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "id": "industry-331",
+      "headline": "HIS、グアム政府観光局（GVB）と日本市場の観光振興と新しい旅行体験づくりで覚書（MOU）を締結（調印11/6、11/20発表）　ウェルネス・スポーツ・文化・家族旅行が重点分野",
+      "body": "・調印はグアム政府観光局のオフィスで行われ、GVBのフランク・アリオラ局長兼CEO代行とHIS執行役員の吉野真司氏が署名した（GVB PR TIMES 11/20）。\n・HISは「ウェルネス＆ファン」を軸に、チャモロ文化などを生かした体験型の商品や、家族・教育旅行の促進、デジタルを使った販促を検討する。",
+      "note": "HISは海外の観光局との提携で海外旅行の需要を掘り起こしている。日本人の海外旅行が戻ると国内宿泊の取り合いにもなるため、ホテルとは年末年始・春休みの日本人需要の見通しを話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000062.000077461.html",
+          "label": "prtimes.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "dateLabel": "11/22（日）",
+      "weekday": "日",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-204",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "Trip.com Group、2026年7〜9月期決算を12/1（米国時間）の引け後に発表へ（11/19発表）　電話会議は米東部時間12/1 19時（香港時間12/2 8時）",
+      "body": "・対象は9/30までの3カ月間。電話会議はIRサイト（investors.trip.com）でライブ配信し、12カ月間アーカイブする（Trip.com Group PR Newswire 11/19）。\n・Booking Holdings・Expedia・Airbnbの7〜9月期決算は11月上旬に出ており、Trip.comが最後になる。",
+      "note": "日本時間では12/2朝に発表が出る。中国の訪日自粛の影響と、Trip.comの国際事業（Trip.com）の伸びが話題になりそう。ホテルとは決算後に、アジア各市場からの予約の動きを共有できる。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/tripcom-group-limited-to-report-third-quarter-of-2026-financial-results-on-december-1-2026-us-time-302945070.html",
+          "label": "prnewswire.com"
+        }
+      ]
+    },
     {
       "date": "2026-11-21",
       "dateLabel": "11/21（土）",
