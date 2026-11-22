@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,151 @@
     }
   ],
   "counts": {
-    "items": 405,
-    "dates": 57,
-    "industry": 260,
-    "industryDates": 52,
-    "ota": 145,
-    "otaDates": 52,
+    "items": 410,
+    "dates": 58,
+    "industry": 264,
+    "industryDates": 53,
+    "ota": 146,
+    "otaDates": 53,
     "themes": {
-      "海外OTA": 128,
-      "国内OTA・旅行会社": 59,
-      "新規開業ホテル": 63,
-      "新規フライト情報": 105
+      "海外OTA": 129,
+      "国内OTA・旅行会社": 60,
+      "新規開業ホテル": 65,
+      "新規フライト情報": 106
     }
   },
   "items": [
+    {
+      "date": "2026-11-23",
+      "dateLabel": "11/23（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-332",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "flightTags": [
+        "新規"
+      ],
+      "headline": "タイ民間航空局（CAAT）の2027年夏期スロット協議で、タイ・ベトジェットエアがチェンマイ＝成田の直行便（週3便）、プーケット＝台北＝福岡線（週4便）の計画を提示（11/20明らかに、正式決定ではない）",
+      "body": "・CAATは11/17〜19にブダペストで開かれたIATAの第159回スロット会議に参加し、旅客・貨物87社と2027年夏期の発着枠を協議した。対象はスワンナプーム・ドンムアン・プーケット・チェンマイ・サムイ・ウタパオの6空港（タイランドハイパーリンクス 11/21、InfoQuest・Khaosod English 11/20）。\n・日本関連では、タイ・ベトジェットエアのチェンマイ＝成田（週3便）と、プーケット＝台北＝福岡（週4便）の計画が示された。\n・いずれも発着枠の協議段階の計画で、就航日や運航スケジュールは決まっていない。",
+      "note": "タイ北部・南部と日本を結ぶ直行便の計画。正式発表前なので確定情報としては扱わず、成田・福岡のホテルとは2027年夏以降のタイ客の取り込み余地として話す程度にとどめる。",
+      "sources": [
+        {
+          "url": "https://www.thaich.net/news/20261121zq.htm",
+          "label": "thaich.net"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "dateLabel": "11/23（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-333",
+      "headline": "京阪ホテルズ＆リゾーツ、比叡山に全33室の東洋リトリート「THE THOUSAND HIEI ── 無為奥山」を2027年3/31に開業（11/10発表・同日予約開始）",
+      "body": "・世界文化遺産の延暦寺がある比叡山に開業する「THE THOUSAND」ブランドの施設。基本構想には水星（京都市）が参画（京阪ホテルズ＆リゾーツ 11/10）。\n・ロート製薬と組み、自分で調合する“養生湯”・“養生茶”を提供。火と発酵のレストラン「無為奥山 HO-MA」、岩盤浴「温堂」、鍼灸所、バー「日枝薬酒堂」などを備える。\n・客室にはテレビなどの音響・映像機器を置かない。",
+      "note": "京都・滋賀でウェルネス型の高単価リトリートが2027年春に加わる。京都市内・大津のラグジュアリー施設とは、連泊・ウェルネス目的の客層と春の単価の見せ方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.keihan.co.jp/corporate/info/release/assets/261110_the-thousand-hiei.pdf",
+          "label": "keihan.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "dateLabel": "11/23（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "id": "industry-334",
+      "headline": "11/21の開業：岐阜・ひるがの高原のスキー場前に「登れる宿 YUKIYAMA」（全11室、築約100年の老舗宿を改修）、山梨・韮崎に築約400年の古民家一棟貸し「ohm nirasaki」（1日1組・大人6名まで）",
+      "body": "・登れる宿 YUKIYAMAは岐阜県郡上市高鷲町ひるがの、標高900m超のスキー場前。nagomiya hotels（スローデザイン）が築約100年の宿を改修し、共有キッチン付きの全11室（スローデザイン PR TIMES）。\n・ohm nirasakiは韮崎市穂坂町のぶどう畑の丘に建つ古民家を、シンガポール出身の夫妻のOHM株式会社が約1年かけて再生。貸切サウナ付きで、予約は公式サイトとAirbnb（ウレぴあ総研 11/21）。都内から車で約1時間50分。",
+      "note": "小規模の一棟貸し・再生宿は公式サイトとAirbnbで売る例が多い。周辺の旅館・ホテルとは、冬のスキー客やグループ・訪日客向けの一棟・大部屋の在庫をOTAにどう出すかを話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000001.000195143.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://ure.pia.co.jp/articles/-/3572979",
+          "label": "ure.pia.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "dateLabel": "11/23（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "id": "industry-335",
+      "headline": "旅行会社のブラックフライデー：日本旅行は会員限定で国内最大3,000円・海外最大4万円のクーポン（11/30 14:59まで）、読売旅行は国内ツアー割引（11/30まで）、HISは11/27 11時から2027年4〜7月出発の次の受付　クラブツーリズムはネパール全コースでビザ無料、阪急交通社は公式サイトのメンテナンスが続く",
+      "body": "・日本旅行の会員限定セールは、出発が国内11/17〜2027年2/28、海外11/23〜2027年2/28。ほかのクーポン・割引とは併用できない（目利き旅 11/21・11/22）。\n・読売旅行の「ブラックフライデー」2026は温泉・イベント・日帰りバスツアーなど国内ツアーが対象で、2027年3/31までの出発。\n・HISのBLACK FRIDAYは11/27 11時から成田発シンガポール・台北・セブ島・ケアンズなど2027年4〜7月出発のツアーを追加（オンライン予約は12/7 10時まで）。\n・クラブツーリズムは2027年1〜12月出発のネパール全コースで、査証（ビザ）を無料で代行取得する「ネパール観光応援キャンペーン」を開始。\n・阪急交通社は11/22朝も公式サイトの閲覧・予約・会員サービスが止まっており、終了日時は未発表。",
+      "note": "大手旅行会社のセールは11/30〜12/1締めが多く、年末から春の国内ツアー需要がこの週に動く。ホテルとは旅行会社向けの在庫・料金の追加と、阪急のウェブ停止中の電話・店頭経由の予約の動きを話せる。",
+      "sources": [
+        {
+          "url": "https://touristjapan.jp/2026/11/22/travel-news-20261122/",
+          "label": "touristjapan.jp"
+        },
+        {
+          "url": "https://touristjapan.jp/2026/11/21/travel-news-20261121/",
+          "label": "touristjapan.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "dateLabel": "11/23（月）",
+      "weekday": "月",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-205",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "エクスペディアグループのホテルズドットコム、「ブラックフライデーセール」を11/17〜12/3に開催　対象ホテルが最大50%オフ、宿泊は2027年12/31まで",
+      "body": "・税・サービス料は割引の対象外。空室状況により使えない日や適用除外日がある（TRAICY 11/22）。\n・日本の料金例（2名1室）は、ホテルヴィスキオ京都 by GRANVIA 2万6,705円（32%オフ）、プレミアホテル -CABIN- 新宿 1万5,439円（32%オフ）、ホテルモントレ ラ・スール大阪 9,319円（40%オフ）、品川プリンスホテル 1万9,510円（35%オフ）、東急ステイ新宿 4万5,530円（57%オフ）、ノーガ ホテル 上野 東京 5万9,104円（64%オフ）など。",
+      "note": "楽天トラベル（〜12/1）、Booking.com（〜12/2）に続き、ホテルズドットコムも12/3までセール。東京・大阪・京都の掲載例が多いので、ホテルとは各OTAのセール参加状況と、Trip.com側のキャンペーン参加の比較を話せる。",
+      "sources": [
+        {
+          "url": "https://www.mapion.co.jp/news/local/traicy-20261122389062-all/",
+          "label": "mapion.co.jp"
+        }
+      ]
+    },
     {
       "date": "2026-11-22",
       "dateLabel": "11/22（日）",
