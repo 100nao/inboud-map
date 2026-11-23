@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,136 @@
     }
   ],
   "counts": {
-    "items": 410,
-    "dates": 58,
-    "industry": 264,
-    "industryDates": 53,
-    "ota": 146,
-    "otaDates": 53,
+    "items": 414,
+    "dates": 59,
+    "industry": 266,
+    "industryDates": 54,
+    "ota": 148,
+    "otaDates": 54,
     "themes": {
-      "海外OTA": 129,
-      "国内OTA・旅行会社": 60,
-      "新規開業ホテル": 65,
-      "新規フライト情報": 106
+      "海外OTA": 130,
+      "国内OTA・旅行会社": 61,
+      "新規開業ホテル": 66,
+      "新規フライト情報": 107
     }
   },
   "items": [
+    {
+      "date": "2026-11-24",
+      "dateLabel": "11/24（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-336",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "headline": "ピーチ、2027年夏ダイヤ（2027/3/28～10/30）の国際線9路線を11/19から先行販売　関空＝ソウル（金浦・仁川）は片道5,280円から、羽田＝ソウル（仁川）は5,680円から",
+      "body": "・対象は関空発着4路線（ソウル金浦・仁川が各5,280円から、上海浦東1万3,480円から、香港1万5,180円から）、羽田発着2路線（ソウル仁川5,680円から、上海浦東1万7,480円から）、中部発着2路線（ソウル金浦5,780円から、台北桃園1万4,480円から）、那覇＝台北（桃園）9,790円から（Aviation Wire 11/19、Peach 11/19発表）。\n・運賃は片道1席あたりのミニマム運賃で、空席状況により変動する。発券手数料・空港使用料は別途、受託手荷物・座席指定も有料。燃油サーチャージは徴収しない。\n・販売は公式サイトとコンタクトセンター（コンタクトセンターは予約手数料あり）。対象外の路線は準備が整い次第販売する。関係当局の申請・認可が前提。",
+      "note": "来夏の韓国・中国・台湾・香港方面のLCCが先行販売された。羽田・関空・中部・那覇のホテルとは、3月下旬以降の早期予約の動きと、週末・連休の在庫の出し方を話せる。認可前提のため、便数の確定情報としては扱わない。",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/354854",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.flypeach.com/application/files/5417/9507/1547/20261119-Press-Release-J.pdf",
+          "label": "flypeach.com"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261119388680/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "dateLabel": "11/24（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-337",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "11/24、佐賀・嬉野に全22室の温泉旅館「奥嬉野 無名滝」が開業　ほか11月開業の追加は徳島駅前「ホテルノスタル徳島」（11/5、全149室）と博多「unito HAKATA STATION North」（11/17、全39室）",
+      "body": "・奥嬉野 無名滝は嬉野市岩屋川内の滝と岩壁の前に建つ全22室（全室スイート、露天風呂・内湯は敷地内の自家源泉のかけ流し）。運営は株式会社GOTENリゾート。貸切サウナ2室、最上階THE FALLS SUITE 2室には客室サウナと水風呂（公式 11/10、スパワークス 11/14）。西九州新幹線・嬉野温泉駅から車で約12分。\n・ホテルノスタル徳島は徳島市新町橋1-34、JR徳島駅徒歩約5分。全149室で、11/5に開業（公式）。\n・unito HAKATA STATION Northは福岡市博多区堅粕、全39室のアパートメントホテル（全室キッチン・ランドリー、32.4㎡）。運営は株式会社Unito、所有者はユナイテッド・アーバン投資法人。11/17グランドオープン（10/16プレオープン、Unito 10/2発表）。博多駅徒歩約13分。",
+      "note": "地方の温泉リゾートと駅近の新築・アパートメントが11月に開業している。嬉野・徳島・博多のホテルとは、開業直後の公式サイトとOTAへの在庫の出し方、周辺施設との料金の見え方を話せる。",
+      "sources": [
+        {
+          "url": "https://goten-resort.jp/mumeidaki/news/1/",
+          "label": "goten-resort.jp"
+        },
+        {
+          "url": "https://spaworks.jp/article/10676",
+          "label": "spaworks.jp"
+        },
+        {
+          "url": "https://nostal-tokushima.com/1/",
+          "label": "nostal-tokushima.com"
+        },
+        {
+          "url": "https://unito.life/company/press_release/development_open/20261002-1/",
+          "label": "unito.life"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "dateLabel": "11/24（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-206",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "アゴダ、「2027 Asia Travel Pulse」を11/23発表　アジアの旅行者の53%がAIで旅の計画をする（前年は33%）一方、予約の最終判断は自分でしたい人が89%",
+      "body": "・11市場3,395人を2026年9〜10月に調査。AIの使い方は行程づくり64%、旅の着想45%、ホテルや航空券の比較44%で、予約そのものに使う人は7%（Agoda / PR Newswire 11/23）。\n・完全にAIに予約を任せる人は6%。条件付きを含めAIに予約させてもよい人は38%で、うち23%は確定前に自分で確認したいとした。韓国・ベトナムはAI予約への開放度が高く、ベトナムは完全に任せる人が19%。\n・AIへの信頼を高める要素は、実在の口コミ（25%）、情報源の明示（24%）、人に相談できること（18%）、推奨理由の説明（15%）。日本の旅行者は情報源の明示を重視する割合が29%（タイ30%に次いで高い）。",
+      "note": "AIは下調べや比較には使われるが、宿泊予約の最終判断は自分でしたい人が多い。日本では情報源の明示が特に重視される。ホテルとは、口コミと公式情報の正確さがAI経由の露出と信頼につながる点を話せる。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/apac/news-releases/agoda-2027-asia-travel-pulse-53-of-asian-travelers-plan-with-ai-but-89-want-the-final-say-on-hotel-bookings-302948023.html",
+          "label": "prnewswire.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "dateLabel": "11/24（火）",
+      "weekday": "火",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-207",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "じゃらんnet、「じゃらんのお得な10日間」を11/20 10時頃〜11/30に開催　15日に一部クーポンを先行配布、22日10時頃にもクーポンを追加",
+      "body": "・毎月20日から月末頃まで開催する定期キャンペーンの11月分。宿・ホテル用とじゃらんパック（交通＋宿泊）用のクーポンがあり、割引率は最大約36%（じゃらんニュース 11/13）。\n・一部クーポンは15日10時頃から先行配布、20日10時頃に予約受付と対象クーポンがそろい、22日10時頃にさらに追加される。\n・クーポンは先着の予約数に限りがあり、上限に達すると期間中でも獲得済みクーポンが使えなくなる。宿・ホテル用のじゃらんクーポン・宿泊施設クーポン・地域クーポン・特別クーポンは併用できる。",
+      "note": "楽天トラベルのBLACK FRIDAY（〜12/1）と開催期間が重なる。ホテルとは、じゃらんクーポンと宿クーポンの併用を見据えた在庫・料金の出し方、先着枠の消化スピードを話せる。",
+      "sources": [
+        {
+          "url": "https://www.jalan.net/news/article/919372/",
+          "label": "jalan.net"
+        }
+      ]
+    },
     {
       "date": "2026-11-23",
       "dateLabel": "11/23（月）",
