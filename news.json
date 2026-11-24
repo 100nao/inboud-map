@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,136 @@
     }
   ],
   "counts": {
-    "items": 414,
-    "dates": 59,
-    "industry": 266,
-    "industryDates": 54,
-    "ota": 148,
-    "otaDates": 54,
+    "items": 418,
+    "dates": 60,
+    "industry": 269,
+    "industryDates": 55,
+    "ota": 149,
+    "otaDates": 55,
     "themes": {
-      "海外OTA": 130,
-      "国内OTA・旅行会社": 61,
-      "新規開業ホテル": 66,
+      "海外OTA": 131,
+      "国内OTA・旅行会社": 63,
+      "新規開業ホテル": 67,
       "新規フライト情報": 107
     }
   },
   "items": [
+    {
+      "date": "2026-11-25",
+      "dateLabel": "11/25（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-338",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "浅草にキッチン・洗濯機付きの「KOKO HOTEL Residence 浅草二天門」（全39室）が12/17開業へ　新潟では「東横INN長岡駅前」（13階建て215室）の開業日が2027年2/6に決まり、11/25 12時から予約受付",
+      "body": "・KOKO HOTEL Residence 浅草二天門は台東区花川戸1-15-11、浅草駅徒歩約5分。全39室・6タイプ（33.5〜55.9㎡）で最大6名まで泊まれ、全室にキッチンと洗濯機を備える。運営はポラリス・ホールディングスで、同ブランド5店舗目（9/17発表・同日予約開始）。\n・レストラン・大浴場・無料朝食・館内駐車場は無い。開業日〜2027/4/23の掲載価格（2名1室）は中央値5万8,800円で、2月が4万3,300円と最も低い（Innippon 11/23、メトロエンジンリサーチの集計）。\n・東横INN長岡駅前はJR長岡駅近くで、13階建て215室・最大429人。東横インの長岡市初進出で、県内5店舗目（東横イン 11/24、新潟日報 11/24）。",
+      "note": "浅草で家族・グループや連泊向けのキッチン付き客室が増える。浅草のホテルとは、連泊の料金設計や多人数部屋の見せ方を話せる。長岡は開業日が決まり予約が始まったので、周辺のホテルとは2月以降の出張・観光需要の取り合いを話せる。",
+      "sources": [
+        {
+          "url": "https://innippon.news/articles/koko-hotel-residence-asakusa-nitenmon-opening/",
+          "label": "innippon.news"
+        },
+        {
+          "url": "https://www.toyoko-inn.co.jp/news/news_261124.html",
+          "label": "toyoko-inn.co.jp"
+        },
+        {
+          "url": "https://www.niigata-nippo.co.jp/articles/-/948483",
+          "label": "niigata-nippo.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "dateLabel": "11/25（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-339",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "JTB、体験予約管理「JTB BÓKUN」と『食べログ』多言語版アプリ（累計400万DL）のAPI連携を完了し、11/24から食体験アクティビティの販売を開始　WTTCサミットではJTB山北会長とアコーのバザンCEOが対談",
+      "body": "・JTB BÓKUNに登録された食体験（グルメツアー・料理教室・酒蔵ツアーなど）を、管理画面の手続きだけで食べログ多言語版アプリでも販売できる。商品情報・在庫・料金はリアルタイムで同期し、クレジットカードの事前決済でノーショーを抑える（JTB 11/24）。\n・食べログ多言語版は英語・中国語（簡体字・繁体字）・韓国語・タイ語に対応し、全国7万店以上を即時予約できる。JTB BÓKUNの導入は1,500社以上（10月末時点）。\n・WTTCグローバルサミット（マルタ）で、山北会長は「旅先と何をするかを決めるのは人間」と人材育成を最優先に挙げ、ホテルとは客室の仕入れにとどまらず戦略レベルで協力する必要があると述べた。バザンCEOはAIでブランドの価値がさらに高まり、約束した体験を実際に届けることが大切と指摘した（トラベルボイス 11/24）。",
+      "note": "訪日客の食・体験の予約がアプリ経由で広がる。ホテルとは、朝食・夕食や体験付きプランをOTAでどう見せて単価を上げるかを話せる。JTBが客室仕入れ以外の協業を打ち出している点も、旅行会社との付き合い方を話す材料になる。",
+      "sources": [
+        {
+          "url": "https://www.jtbcorp.jp/jp/newsroom/2026/11/24_jtb_bokun_tabelog.html",
+          "label": "jtbcorp.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261124-160817",
+          "label": "travelvoice.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "dateLabel": "11/25（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-340",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "阪急交通社、11/19 22時ごろから止まっていた公式サイト・アプリの閲覧・予約・会員サービスを再開（11/24確認）　九州ふっこう応援割は11/25に楽天トラベル（宮崎・鹿児島）とじゃらん（長崎・宮崎）で受付が戻る",
+      "body": "・阪急交通社はメンテナンスを終えて再開した。古い表示が残ってエラーになるときは、ブラウザの履歴を消すと開けるとしている（目利き旅 11/24）。\n・楽天トラベルは九州ふっこう応援割の宮崎県を11/25 10時、鹿児島県を12時に再開し、国内宿泊・ANA/JAL楽パック用のクーポンを先着で配る。割引上限は国内宿泊・国内ツアー1泊あたり2万円（トラベル Watch 11/24）。\n・じゃらんnetも、予算の上限で止まっていた長崎県・宮崎県を11/25 10時〜12時ごろに再開する（宿だけ・JAL／ANAじゃらんパック）。",
+      "note": "阪急交通社の予約が約5日止まっていたため、ツアー経由の予約が遅れて入る可能性がある。九州のホテルとは、応援割の再開分で在庫と料金をどう出すかを話せる。",
+      "sources": [
+        {
+          "url": "https://touristjapan.jp/2026/11/24/travel-news-20261124/",
+          "label": "touristjapan.jp"
+        },
+        {
+          "url": "https://travel.watch.impress.co.jp/docs/news/2158680.html",
+          "label": "travel.watch.impress.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "dateLabel": "11/25（水）",
+      "weekday": "水",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-208",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "Expedia GroupのB2B、10〜12月期は成長が鈍る見通し　大手パートナーの収益配分拡大や、Booking Holdingsの「Booking Partner Division」（2027年1月稼働）との競合が課題とSkiftが分析（11/23）",
+      "body": "・7〜9月期のB2B総予約高は前年比19%増、売上は23%増の17.1億ドル。調整後EBITDAは17%増の4.70億ドルだが、利益率は134bp低下の27.5%。会社側はパートナー構成の変化とTiqets・CarTrawlerへの投資を理由に挙げた（Skift 11/23）。\n・CFOは11/4の決算説明会で、前年の高い比較基準、米国の需要の軟化、中東・欧州の地政学リスク、秋のセールでの前倒しを理由に、10〜12月期の鈍化を示していた。Bernsteinは、大手パートナーの収益配分拡大、低マージン商品の拡充、Booking Partner Divisionとの競合などを指摘した。\n・Phocuswright Conference 2日目では、ExpediaのB2B責任者が、AIを使った新しい画面でパートナーの立ち上げ期間を3〜4カ月から3〜4日に縮めたと説明。Booking Partner DivisionにはPricelineのB2BはFTCの調査中のため入らないとAgoda CEOが述べた（Hospitality Net）。",
+      "note": "卸・提携チャネル（B2B）での海外OTA同士の競争が強まっている。ホテルとは、B2B経由で流れる在庫と料金の管理、パリティの確認を話せる。日本のホテル契約条件の変更を示す発表ではない。",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/23/the-pressures-on-expedia-b2b/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.hospitalitynet.org/news/4135675/b2b-growth-ai-booking-and-pressure-on-us-travel-close-the-phocuswright-conference-2026",
+          "label": "hospitalitynet.org"
+        }
+      ]
+    },
     {
       "date": "2026-11-24",
       "dateLabel": "11/24（火）",
