@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,184 @@
     }
   ],
   "counts": {
-    "items": 418,
-    "dates": 60,
-    "industry": 269,
-    "industryDates": 55,
-    "ota": 149,
-    "otaDates": 55,
+    "items": 423,
+    "dates": 61,
+    "industry": 273,
+    "industryDates": 56,
+    "ota": 150,
+    "otaDates": 56,
     "themes": {
-      "海外OTA": 131,
-      "国内OTA・旅行会社": 63,
-      "新規開業ホテル": 67,
-      "新規フライト情報": 107
+      "海外OTA": 132,
+      "国内OTA・旅行会社": 65,
+      "新規開業ホテル": 68,
+      "新規フライト情報": 108
     }
   },
   "items": [
+    {
+      "date": "2026-11-26",
+      "dateLabel": "11/26（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-341",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "headline": "JAL、エアアスタナ運航のアルマトイ＝成田線（週2往復、成田発初便12/1）などでコードシェア販売を11/25に開始（12/10以降の搭乗分）　長崎県は長崎＝ハノイの初の国際チャーター便（ベトナム航空、ハノイ発12/29・長崎発2027年1/2の1往復）を発表",
+      "body": "・JL便名の対象は、エアアスタナが11/30（現地時間）に開設するアルマトイ＝成田線と、カザフスタン国内線のアルマトイ＝アスタナ線・アルマトイ＝シムケント線の3路線。11/25に販売を始めたのは成田線とアスタナ線で、シムケント線は2027年1月以降の予定（JAL 11/25発表、Aviation Wire）。\n・成田線はA321LR（2クラス166席）で週2往復。成田行きKC171便はアルマトイを月・木曜に出発し、成田発KC172便は火・金曜に運航する。エアアスタナは10/2から自社便名で販売していた。\n・長崎県の平田知事が11/25に発表。長崎とベトナムを結ぶチャーター便は初めてで、県は国際定期便の就航につなげたい考え（NHK・日テレNEWS NNN 11/25）。",
+      "note": "成田のカザフスタン直行便がJALの便名でも買えるようになり、中央アジアからの客と乗り継ぎ客が増えやすくなる。成田周辺・都心のホテルとは、12月以降の中央アジア市場の動きを話せる。長崎のホテルとは、年末年始のベトナムからの団体客の受け入れを話せる。",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/355130",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261125de81273",
+          "label": "news.web.nhk"
+        },
+        {
+          "url": "https://news.ntv.co.jp/category/society/ni0a8fb428d2e04ccd9db7210f4c443043",
+          "label": "news.ntv.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "dateLabel": "11/26（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-342",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "ヒルトン、埼玉県初の「ダブルツリーbyヒルトンさいたま浦和」を2027年夏に開業と11/25発表　ロイヤルパインズホテル浦和（196室）をリブランド　沖縄初のドーミーイン「天然温泉 美らの湯 ドーミーイン那覇＜県庁前＞」（216室）は2027年2/3プレオープン、東京では「Minn 上野鶯谷」（34室）が12月開業予定",
+      "body": "・ダブルツリーbyヒルトンさいたま浦和は、1999年開業のロイヤルパインズホテル浦和（さいたま市浦和区）をソラーレ ホテルズ アンド リゾーツ、ユナイテッド・アーバン投資法人、ヒルトンの3社でリブランドする。全196室、レストラン・宴会場・婚礼施設を引き継ぎ、ヒルトン・オナーズは2026年末から使える予定。ダブルツリーは国内8軒を展開（ヒルトン 11/25、日本経済新聞）。\n・ドーミーイン那覇＜県庁前＞は那覇市久茂地1-5-15、ゆいレール県庁前駅徒歩約4分、地上14階・全216室。サウナ付き天然温泉大浴場、貸切風呂4つ、貸切サウナがあり、11/18から公式サイトで予約を受け付けている（共立メンテナンス 11/18）。\n・Minn 上野鶯谷は台東区根岸2-1-4、鶯谷駅北口徒歩約2分。全34室・最大174名で、4〜7名で泊まれる客室が中心。1階に宿泊者以外も使える飲食スペースを置き、12月で台東区内のMinnは11施設になる（SQUEEZE 11/6）。",
+      "note": "浦和は既存のシティホテルが外資ブランドに替わり、会員経由の直販が増える可能性がある。埼玉・都内北部のホテルとは、競合の看板替えに合わせた料金とOTA露出を話せる。那覇は2月に216室が加わるので、県庁前・国際通り周辺のホテルとは春先の料金設定を話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000203.000033161.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC258RJ0V21C26A1000000/",
+          "label": "nikkei.com"
+        },
+        {
+          "url": "https://www.kyoritsugroup.co.jp/news/detail.html?dispmid=1156&itemid=1731",
+          "label": "kyoritsugroup.co.jp"
+        },
+        {
+          "url": "https://squeeze-inc.co.jp/archives/4830/",
+          "label": "squeeze-inc.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "dateLabel": "11/26（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-343",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "東京都、貸切バスを営業区域外で手配したとして旅行サービス手配業のBeauty of Japan Toursと旅行業の未来B計画に9日間の業務停止命令（11/19〜27、11/18発表）",
+      "body": "・Beauty of Japan Tours（港区、旅行サービス手配業）は2025年9月に実施した貸切バスの旅行3件で、バス事業者の営業区域外で旅客を運ぶバスを手配した（旅行業法第31条第3項など違反）。本店営業所の旅行サービス手配業務を停止する（東京都 11/18）。\n・未来B計画（新宿区、旅行業）は2025年11/12〜13の貸切バス旅行で同様の手配をした（旅行業法第13条第3項第2号違反）。本店営業所の旅行業務を停止する。\n・どちらも、処分前に結んだ契約の履行に必要な業務は停止の対象外（TRAICY 11/25）。",
+      "note": "訪日団体ツアーを手配するランドオペレーターへの行政処分が続いている。団体を受けるホテルとは、取引しているランドオペレーターの登録や手配の確認、処分時の予約の扱いを話せる。",
+      "sources": [
+        {
+          "url": "https://www.metro.tokyo.lg.jp/information/press/2026/11/2026111810",
+          "label": "metro.tokyo.lg.jp"
+        },
+        {
+          "url": "https://www.metro.tokyo.lg.jp/information/press/2026/11/2026111809",
+          "label": "metro.tokyo.lg.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261125389377/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "dateLabel": "11/26（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-344",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "九州ふっこう応援割、11/25はHIS（熊本・航空券＋宿のツアー）、ANA（福岡・熊本）、一休・ヤフートラベル（福岡）が販売を再開、エアトリは福岡を11/26 13時に再開　9月のネット旅行関係費は二人以上世帯で6,255円（前年比＋8.0%）と総務省の家計消費状況調査",
+      "body": "・HISは熊本県の対象ツアー（航空券＋宿泊）の販売を再開し、クーポンコードの入力が必要。割引率は50%、熊本・鹿児島は60%で、上限は1泊2万円、交通付き2泊以上3万円、2県以上の周遊3万5,000円（TRAICY 11/25）。\n・旅行支援の配布状況のまとめでは、11/25は近ツー（長崎・熊本・鹿児島）、ANA（14時、福岡・熊本）、ヤフー・一休（16時、福岡）も再開した（トラベラーズナビ）。\n・総務省「家計消費状況調査」（2026年9月）では、二人以上世帯のネットショッピング支出は2万6,303円（＋0.6%）で、うち旅行関係費は6,255円（＋8.0%）と全体の伸びをけん引した（トラベルボイス 11/25）。",
+      "note": "応援割の予算がOTA・旅行会社ごとに少しずつ戻っている。九州のホテルとは、どのチャネルで再開したかを見て在庫を出す先を話せる。ネットでの旅行支出が伸びているので、OTA・自社サイトでの見せ方を話す材料にもなる。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261125389464/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://travelersnavi.com/coupon/ryokoshien-book",
+          "label": "travelersnavi.com"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261126-160910",
+          "label": "travelvoice.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "dateLabel": "11/26（木）",
+      "weekday": "木",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-209",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "Expedia Group、チェコのOTA「Kiwi.com」の買収で合意（11/25発表）　欧州の航空券の品ぞろえと技術を強化し、ブランドExpediaとB2B事業に使う　Airbnbは体験の卸「GlobalTix」と連携",
+      "body": "・Kiwi.comは2012年創業の航空券予約サイト。航空会社同士の提携が無い便を1つの旅程に組み合わせる技術を持つ。買収は2027年上半期に完了する見込みで、金額は公表していない（Expedia Group 11/25）。\n・Kiwiの2025年の売上は2億2,700万ユーロで、2023年のピークから約20%減った一方、営業利益は5倍の1,500万ユーロ。ExpediaはTiqets・CarTrawler・Laylaに続く4件目の買収で、B2Bの利益率は7〜9月期に27.5%へ下がっている（Skift 11/25）。\n・Airbnbは、アジア太平洋の体験チケット卸GlobalTix（取引先1万5,000社以上）と連携し、その体験をAirbnbで予約できるようにする（GlobalTix 11/25）。",
+      "note": "Expediaは航空券・体験・レンタカーまで品ぞろえを広げ、ホテルと他の商品を一緒に売る力を強めている。ホテルとは、パッケージ（航空券＋ホテル）経由の料金の出し方とパリティの確認を話せる。日本のホテル契約の変更を示す発表ではない。",
+      "sources": [
+        {
+          "url": "https://ir.expediagroup.com/news-and-events/news/news-details/2026/Expedia-Group-Announces-Agreement-to-Acquire-Kiwi-com-to-Augment-Flights-Capabilities/default.aspx",
+          "label": "ir.expediagroup.com"
+        },
+        {
+          "url": "https://skift.com/2026/11/25/expedia-to-buy-kiwi-com-extending-its-acquisition-spree-into-flights/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://globaltix.com/globaltixs-network-of-experiences-now-bookable-through-airbnb/",
+          "label": "globaltix.com"
+        }
+      ]
+    },
     {
       "date": "2026-11-25",
       "dateLabel": "11/25（水）",
