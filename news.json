@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,148 @@
     }
   ],
   "counts": {
-    "items": 423,
-    "dates": 61,
-    "industry": 273,
-    "industryDates": 56,
-    "ota": 150,
-    "otaDates": 56,
+    "items": 427,
+    "dates": 62,
+    "industry": 276,
+    "industryDates": 57,
+    "ota": 151,
+    "otaDates": 57,
     "themes": {
-      "海外OTA": 132,
-      "国内OTA・旅行会社": 65,
-      "新規開業ホテル": 68,
-      "新規フライト情報": 108
+      "海外OTA": 133,
+      "国内OTA・旅行会社": 66,
+      "新規開業ホテル": 69,
+      "新規フライト情報": 109
     }
   },
   "items": [
+    {
+      "date": "2026-11-27",
+      "dateLabel": "11/27（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-345",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "headline": "スターフライヤー、北九州＝台北（桃園）線を2027年3/28から週5往復に増便、4/28〜7/31は昼間便（1日1往復）を追加し週12往復に　北九州＝高雄線は2027年夏ダイヤ中に約3カ月の定期チャーター便（1日1往復）を開設（11/26発表）",
+      "body": "・北九州＝台北線は現在の深夜・早朝便（週3往復）を3/28から週5往復にし、4/28〜7/31は昼間便7G803/804便を毎日追加。合計で週12往復と現行の4倍になる。販売開始日と8/1以降のダイヤは未定（スターフライヤー 11/26、Aviation Wire）。\n・北九州＝高雄線は昼間時間帯に1日1往復の定期チャーター便。航空券は自社サイトでも買える。運航日・期間・販売開始は認可状況を見て発表する。2027年1/21〜2/14には高雄への初のチャーター便（旅客6往復）も予定。\n・中部＝台北線（2020年3/11から運休）は引き続き運休。\n・成田空港の10月実績（11/26発表）は国際線旅客310万8,006人（前年比103%）で10月の過去最高。国際線旅客便は中国線1,405回（57%）、韓国線3,322回（129%）、欧州線538回（121%）（sky-budget）。",
+      "note": "北九州の台湾便は来春から大きく増え、昼間便ができて台湾からの客が九州北部に入りやすくなる。北九州・小倉・福岡のホテルとは、2027年4〜7月の台湾市場向け在庫と料金を早めに話せる。成田は中国線が減っても韓国・欧州線で過去最高なので、東京東部・千葉のホテルとは韓国・欧州客向けの見せ方を話せる。",
+      "sources": [
+        {
+          "url": "https://www.aviationwire.jp/archives/355200",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/355198",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.starflyer.jp/int_jp/news/2026/news_20261126_2.pdf",
+          "label": "starflyer.jp"
+        },
+        {
+          "url": "https://sky-budget.com/2026/11/26/naa-data-oct2026/",
+          "label": "sky-budget.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "dateLabel": "11/27（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-346",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "丸紅都市開発と東急不動産、広島市中区銀山町で地上20階・全286室のホテルに11/24着工、2029年開業予定（運営はソラーレ ホテルズ アンド リゾーツ）　山形では「東横INN鶴岡駅」が2027年2/20開業予定で11/26に予約受付を開始",
+      "body": "・広島のホテルは広島電鉄「銀山町」駅から徒歩1分、相生通り沿い。客室は21.60〜56.92㎡のダブル・ツイン中心でフォースルームも含む全286室。ラウンジ、レストラン、大浴場、フィットネス、最上階にルーフトップバーを置く。ブランド名は未定（東急不動産 11/24、Innippon）。\n・東横INN鶴岡駅は2027年2/20オープン予定で、11/26に宿泊予約を始めた（東横イン 11/26）。",
+      "note": "広島市中心部では2028〜29年にかけて大浴場付きの中規模ホテルが増える。広島駅〜八丁堀のホテルとは、数年先の競合増を見すえた訪日客・家族客向けの客室タイプと料金を話せる。",
+      "sources": [
+        {
+          "url": "https://www.tokyu-land.co.jp/news/2026/001819.html",
+          "label": "tokyu-land.co.jp"
+        },
+        {
+          "url": "https://innippon.news/articles/hiroshima-ginzancho-hotel-plan-2029/",
+          "label": "innippon.news"
+        },
+        {
+          "url": "https://www.toyoko-inn.co.jp/news/news_261126.html",
+          "label": "toyoko-inn.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "dateLabel": "11/27（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-347",
+      "category": "🗾 国内OTA",
+      "categoryLabel": "国内OTA",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "九州ふっこう応援割、じゃらんnetは11/26時点で全県の受付を停止　楽天トラベルは11/27に福岡（10時）・佐賀（12時・宿のみ）・長崎（14時）で追加受付、鹿児島はビッグホリデーが11/27 10時に発売　旅行各社のセールはHIS BLACK FRIDAYが11/27 11時に次の受付、近ツーは国内の宿・DPで最大1万円引きを12/4まで",
+      "body": "・じゃらんnetは11/25に長崎・宮崎を再開したが、11/26時点では国内宿（全7県）・じゃらんパック（4県）ともに受付停止（タビワザ 11/26）。\n・楽天トラベルの11/27分は国内宿泊・国内ツアーが対象で、福岡・佐賀は12/1〜12/16、長崎は12/1〜12/26の宿泊分。クーポンは予約完了の先着順で消費される。宮崎は11/25再販分の楽パック2券種が残っていた（11/26朝時点）。\n・HISは成田発の海外ツアー（2027年4〜7月出発）を11/27 11時から受付（オンラインは12/7 10時まで）。JTBは2027年4〜10月出発の「先どりキャンペーン」を2027年1/31予約まで行う（目利き旅 11/26）。",
+      "note": "応援割は予算がチャネルごとに出たり止まったりしている。九州のホテルとは、どのOTA・旅行会社に枠が残っているかを見て在庫の出し先を話せる。年末のセールで来春・夏の予約が早まるので、2027年春夏の料金を早めに出すかも話せる。",
+      "sources": [
+        {
+          "url": "https://www.tabiwaza.jp/articles/38451",
+          "label": "tabiwaza.jp"
+        },
+        {
+          "url": "https://tabitokuclub.com/campaign/kyushu-fukko-ouenwari/",
+          "label": "tabitokuclub.com"
+        },
+        {
+          "url": "https://touristjapan.jp/2026/11/26/travel-news-20261126/",
+          "label": "touristjapan.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "dateLabel": "11/27（金）",
+      "weekday": "金",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-210",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "Hotelbedsを運営するHBX Group、2026年度（9月期）の取扱高は14%増の92億ユーロ、売上は2%減の6.97億ユーロ（11/25発表）　Traveloka・Dida・Trip.comとの提携拡大を挙げる　Trip.comは日本版アプリで11/25に「スーパーフライトデー」（ソウル片道6,900円〜）",
+      "body": "・HBXの取扱高（TTV）は3地域とも2ケタ増だった一方、中東の紛争で約3ポイントのマイナス影響があった。調整後EBITDAは4%減の4.03億ユーロ（利益率58%）、税引後利益は1.38億ユーロ。2027年度1〜3月期（10〜12月）の取扱高も2ケタ増を見込み、売上は小幅減の見通し。共同創業者のCarlos Muñoz氏が12/1にCEOに就く（HBX Group 11/25）。\n・Trip.comのスーパーフライトデーは11/25 10:00〜23:59、日本版アプリの会員が対象で1人1回。片道はソウル6,900円、釜山7,900円、台北8,900円、バンコク1万900円、ダナン1万6,900円、グアム2万3,900円から。11/23〜25は航空券最大2,500円・航空券＋ホテル最大5,000円の割引クーポンも配った（TRAICY 11/24）。",
+      "note": "Hotelbedsは取扱高が伸びても売上が伸びず、ホテルの卸値や手数料の条件に圧力がかかりやすい。卸経由の比率が高いホテルとは、B2Bの料金と公開料金の差、どこで販売されているかの確認を話せる。Trip.comの航空券＋ホテルの割引は、日本人の海外旅行向けの動き。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/hbx-group-announces-full-year-2026-financial-results-302950349.html",
+          "label": "prnewswire.com"
+        },
+        {
+          "url": "https://en.traicy.com/posts/2026112442662/",
+          "label": "en.traicy.com"
+        }
+      ]
+    },
     {
       "date": "2026-11-26",
       "dateLabel": "11/26（木）",
