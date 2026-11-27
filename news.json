@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "year": 2026,
   "source": "news_bc4f.xlsx",
   "filters": [
@@ -17,20 +17,164 @@
     }
   ],
   "counts": {
-    "items": 427,
-    "dates": 62,
-    "industry": 276,
-    "industryDates": 57,
-    "ota": 151,
-    "otaDates": 57,
+    "items": 431,
+    "dates": 63,
+    "industry": 279,
+    "industryDates": 58,
+    "ota": 152,
+    "otaDates": 58,
     "themes": {
-      "海外OTA": 133,
-      "国内OTA・旅行会社": 66,
-      "新規開業ホテル": 69,
-      "新規フライト情報": 109
+      "海外OTA": 134,
+      "国内OTA・旅行会社": 67,
+      "新規開業ホテル": 70,
+      "新規フライト情報": 110
     }
   },
   "items": [
+    {
+      "date": "2026-11-28",
+      "dateLabel": "11/28（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-348",
+      "category": "✈️ 国際線",
+      "categoryLabel": "国際線",
+      "theme": "flights",
+      "themeLabel": "新規フライト情報",
+      "companies": false,
+      "headline": "ニュージーランド航空、成田＝クライストチャーチ線を11/27に約11年ぶりに再開（2027年5/8まで火・木・土の週3往復、787-9・272席、初便の搭乗率は約8割）　オークランド線と合わせ日本路線は最大週14往復に　ZIPAIRは成田＝ヒューストン週4往復・バンクーバー週5往復の2027年夏ダイヤを11/26に販売開始",
+      "body": "・クライストチャーチ線は2015年3月以来の再開。NZ52便は成田21:40発→翌12:50着、NZ51便はクライストチャーチ12:35発→成田20:10着（2027年4月以降は現地時刻が変わる）。初便のみ機材繰りで11/27（金）成田16:00発（TRAICY・成田空港 11/27）。\n・日本支社長は、初便の搭乗率は約8割で今後の予約も同程度と説明。日本からNZへの訪問者を約8万人からまず10万人に増やしたい考えで、NZから日本への需要も強いとした（TRAICY・AIRLINE web）。\n・ZIPAIRの2027年夏ダイヤはヒューストン線が週4往復、バンクーバー線が週5往復（Aviation Wire 11/27）。",
+      "note": "NZからの直行便が南島からも出るようになり、NZ客（日本の冬＝南半球の夏）が東京に入りやすくなる。成田着が夜20時台なので、成田・東京東部のホテルとはNZ・豪州市場向けの夜着プランやスキー場への乗り継ぎ前泊を話せる。ZIPAIRの北米線は来夏も続くので、米国・カナダ客向けの在庫の出し方も話せる。",
+      "sources": [
+        {
+          "url": "https://www.traicy.com/posts/20261127389819/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000001116.000004762.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://airline.ikaros.jp/news/64326/",
+          "label": "airline.ikaros.jp"
+        },
+        {
+          "url": "https://www.aviationwire.jp/archives/355212",
+          "label": "aviationwire.jp"
+        },
+        {
+          "url": "https://www.zipair.net/ja/notification/459",
+          "label": "zipair.net"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "dateLabel": "11/28（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-349",
+      "category": "🏨 ホテル",
+      "categoryLabel": "ホテル",
+      "theme": "openings",
+      "themeLabel": "新規開業ホテル",
+      "companies": false,
+      "headline": "ANAクラウンプラザホテル神戸（592室）、12/1に「SHIN KOBE HOTEL（新神戸ホテル）」へ名称変更しIHGからマリオット系へ　同日Marriott Bonvoyに参加し、数年かけて改装後に日本初の「マリオット・マーキス」へ（11/27発表）　HOTEL AZは島根安来（2027/1/15）・宮崎西都（4月）・香川三豊（7/1）に各158室、金沢・片町に「edit x seven 金沢」（59室）が2027年初夏開業",
+      "body": "・SHIN KOBE HOTELは新神戸駅直結の37階建て。IHGとの契約が11月末で満了し、12/1から当面はマリオットの既存ブランドを使わずに営業。改装は2〜3年かかる見込みで、国際会議や大規模展示会の取り込みを狙う（新神戸ホールディング 11/27、神戸新聞）。神戸市内では旧ホテルパールシティ神戸・旧ホテルクラウンパレス神戸に続くマリオット系への転換。\n・HOTEL AZ（アメイズ）の3店はロードサイド型で、365日同一価格帯・朝食無料・駐車場無料。広島県安芸高田市にも「ホテルAZ広島安芸高田店（仮称）」を2027年12月に開業予定（中国新聞 11/25）。\n・edit x seven 金沢（FHG hotels）は全59室・平均40㎡超で最大6名まで泊まれ、最上階にルーフトップスパ＆サウナ。客室価格は2万3,200円〜（1泊2名・素泊まり）で、11/26に公式サイトと各OTAで予約受付を開始。",
+      "note": "神戸の大型ホテルがマリオット系に入ると、Marriott Bonvoy会員の予約が直販に寄りやすくなる。神戸・三宮のホテルとは、12月以降の外資系会員需要の動きと、改装期間中の料金・在庫の変化を話せる。金沢ではグループ向けの広い客室が増えるので、片町・香林坊のホテルとは訪日客の家族・グループ向けプランを話せる。",
+      "sources": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000066.000071454.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/news/economy/202611/0021079071.shtml",
+          "label": "kobe-np.co.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261128389876/",
+          "label": "traicy.com"
+        },
+        {
+          "url": "https://yomileeblog.com/blog/2026-11-27-open-a51185/",
+          "label": "yomileeblog.com"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000080.000147007.html",
+          "label": "prtimes.jp"
+        },
+        {
+          "url": "https://www.chugoku-np.co.jp/articles/-/929251",
+          "label": "chugoku-np.co.jp"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "dateLabel": "11/28（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "industry",
+      "feedLabel": "旅行業界",
+      "id": "industry-350",
+      "category": "旅行会社",
+      "categoryLabel": "旅行会社",
+      "theme": "domestic",
+      "themeLabel": "国内OTA・旅行会社",
+      "companies": true,
+      "headline": "JTB、2026年4〜9月期（中間期）の連結売上高は5,613億円（前年比106%）、営業利益28億円（55%）、純利益21億円（32%）　海外旅行1,267億円（117%）・訪日旅行387億円（108%）が伸び、国内旅行は2,097億円（97%）（11/27発表）",
+      "body": "・部門別では第三国間旅行566億円（102%）、旅行以外1,296億円（112%）。国内旅行は市場の伸び悩み、第三国間旅行は中東情勢による需要の停滞があった（JTB 11/27）。\n・賃金改善と要員増による人件費、M&Aに伴うのれん・無形資産の償却費、新会計システムの減価償却費で販管費が110%に増えた。投資による費用増は計画の範囲内で、営業利益は計画を上回っているとしている。\n・期中には米国のImprint Events Groupをグループに加え、アジアではEXO Travel Groupの株式を取得した。宿泊事業者向けの決済・商事分野も伸びた。",
+      "note": "JTBでも国内旅行は前年割れで、伸びているのは訪日と海外旅行。国内のホテルとは、国内旅行会社経由の団体・パックの数字を前年と比べ、訪日客向けの販路（海外OTA・訪日旅行会社）にどれだけ在庫を回すかを話せる。",
+      "sources": [
+        {
+          "url": "https://www.jtbcorp.jp/jp/newsroom/asset/20261127_16/JTB_Group_Reports_Consolidated_Financial_Results_for_the_First_Half_of_FY2026.pdf",
+          "label": "jtbcorp.jp"
+        },
+        {
+          "url": "https://www.travelvoice.jp/20261127-160936",
+          "label": "travelvoice.jp"
+        },
+        {
+          "url": "https://www.traicy.com/posts/20261127389851/",
+          "label": "traicy.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "dateLabel": "11/28（土）",
+      "weekday": "土",
+      "highlight": false,
+      "noteLabel": "実務メモ",
+      "feed": "ota",
+      "feedLabel": "海外OTA",
+      "id": "ota-211",
+      "category": "🌐 海外OTA",
+      "categoryLabel": "海外OTA",
+      "theme": "overseas",
+      "themeLabel": "海外OTA",
+      "companies": true,
+      "headline": "アゴダのCOO、AIエージェント経由の予約は「業界を確実に変える」が、手数料などのビジネスモデルは「誰にも分からない」と発言（11/26バンコク、Skift 11/27）　1月発足のBooking Partner DivisionにはPricelineのパートナー事業は入らず、FTCの調査が理由と説明",
+      "body": "・アゴダのIttai Chorev COOは、AI各社は成長段階で今は「すべて無料」なのでアゴダに有利と説明。AIエージェントは技術連携の質と速さで仕入れ先を選ぶとし、ChatGPTやGeminiは脅威ではなく機会とした。アゴダはMetaのAIエージェント「Muse」と10月にシンガポール・日本で連携済みで、在庫データとつながった自社アシスタントも作っている（Skift 11/27）。\n・Booking Holdingsでは、Booking.comの戦略提携部門とアゴダの「Rocket Travel」を1月に統合してBooking Partner Divisionにする。率いるアゴダのOmri Morgenshtern CEOは、FTCの調査による「運営上の複雑さ」でPricelineのパートナー網は入れず、Pricelineは引き続き自社で提携先に対応すると話した。B2B事業の業績を分けて開示することも検討しているとみられる（Hospitality.today 11/27）。",
+      "note": "AI経由の予約はまだ少ないが、アゴダはAIに選ばれる仕入れ先になることを狙っている。ホテルとは、OTAに出している客室情報・写真・料金がAIにも使われる前提で、情報の正確さと料金の一貫性を話せる。BookingグループのB2B統合で、銀行・航空会社など提携先経由の販売がどこから出ているかの確認も話題になる。",
+      "sources": [
+        {
+          "url": "https://skift.com/2026/11/27/agodas-coo-on-ai-booking-nobody-knows-the-business-model-yet/",
+          "label": "skift.com"
+        },
+        {
+          "url": "https://www.hospitality.today/article/bookings-new-b2b-division-leaves-out-priceline-the-ftc-is-why",
+          "label": "hospitality.today"
+        }
+      ]
+    },
     {
       "date": "2026-11-27",
       "dateLabel": "11/27（金）",
